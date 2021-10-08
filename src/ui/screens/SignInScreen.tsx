@@ -4,13 +4,9 @@ import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextI
 
 const { width, height } = Dimensions.get('screen')
 
-const SplashScreen = ({ navigation }) => {
+const SignInScreen = ({ navigation }) => {
 
-    useEffect(() => {
-        setTimeout(() => {
-            navigation.replace('LandingScreen')
-        }, 1500);
-    }, [])
+
 
     return (
         <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
@@ -28,4 +24,4 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     }
 })
-export default SplashScreen;
+export default SignInScreen;

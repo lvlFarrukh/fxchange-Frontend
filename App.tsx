@@ -25,9 +25,9 @@ import Routes from './src/Routes/Routes'
 
 const App = () => {
   return(
-    <Provider theme={theme} children={undefined}>
+    <Provider theme={theme}>
     <AppProvider>
-    <NavigationContainer children={undefined}>
+    <NavigationContainer>
       <Routes/>
     </NavigationContainer>
     </AppProvider>
