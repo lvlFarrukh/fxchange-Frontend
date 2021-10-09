@@ -16,6 +16,15 @@ const SignInScreen = ({ navigation }) => {
 
             <View style={[styles.whiteCardBg]}>
                 <Text style={[styles.Heading]}>LOGIN TO YOUR ACCOUNT</Text>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.replace('ModeratorScreen')
+                }}
+                >
+                    <Text>
+                        navigate to main page
+                    </Text>
+                </TouchableOpacity>
             </View>
         </View>
     )

@@ -14,8 +14,11 @@
     "@react-navigation/stack": "^6.0.9",
     "@types/react": "^17.0.27",
     "@types/react-native": "^0.65.5",
+    "error-ex": "github:Qix-/node-error-ex",
+    "jetifier": "^2.0.0",
     "react": "17.0.2",
     "react-native": "0.66.0",
+    "react-native-cli": "^2.0.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-paper": "^4.9.2",
     "react-native-safe-area-context": "^3.3.2"
