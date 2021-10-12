@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -9,9 +10,9 @@ const SignInScreen = ({ navigation }) => {
 
 
     return (
-        <View style={{ height: height, width: width, flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
+        <SafeAreaView style={{ height: height, width: width, flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
             <View style={{ alignSelf: 'center' }}>
-                <Image source={require('../../Assets/whiteLogo.png')} style={styles.image} />
+                <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
             </View>
 
             <View style={[styles.whiteCardBg]}>
@@ -26,7 +27,7 @@ const SignInScreen = ({ navigation }) => {
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -41,8 +42,9 @@ const styles = StyleSheet.create({
         borderRadius: 40
     },
     Heading: {
-        fontWeight: 'bold',
-        alignSelf: "center"
+        fontWeight: '900',
+        alignSelf: "center",
+        fontSize:15
     }
 })
 export default SignInScreen;

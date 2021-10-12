@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from '../ui/screens/SplashScreen'
-import LandingScreen from '../ui/screens/LandingScreen';
-import SignInScreen from '../ui/screens/SignInScreen';
-import CreateAccountScreen from '../ui/screens/CreateAccountScreen';
+import SplashScreen from '../ui/screens/SplashScreen/SplashScreen'
+import LandingScreen from '../ui/screens/LandingScreen/LandingScreen';
+import SignInScreen from '../ui/screens/SignInScreen/SignInScreen';
+import CreateAccountScreen from '../ui/screens/CreateAccountScreen/CreateAccountScreen';
 import Moderator from '../ui/screens/Moderator/Home';
 import CardDetails from '../ui/screens/Moderator/CardDetails';
 
