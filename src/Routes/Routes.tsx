@@ -5,6 +5,7 @@ import LandingScreen from '../ui/screens/LandingScreen';
 import SignInScreen from '../ui/screens/SignInScreen';
 import CreateAccountScreen from '../ui/screens/CreateAccountScreen';
 import Moderator from '../ui/screens/Moderator/Home';
+import CardDetails from '../ui/screens/Moderator/CardDetails';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ const Routes = () => {
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="CreateAccountScreen" component={CreateAccountScreen} />
             <Stack.Screen name="ModeratorScreen" component={Moderator} />
+            <Stack.Screen name="CardDetails" component={CardDetails} />
 
         </Stack.Navigator>
     )

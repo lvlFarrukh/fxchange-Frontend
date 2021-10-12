@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable semi */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
@@ -13,22 +8,29 @@ import {
   TouchableOpacity,
   TextInput,
   Dimensions,
-  TouchableHighlight,
+  ScrollView,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import ModeratePageCard from '../../../components/ModeratePageCard';
+import styles from './Style';
+import {trades} from '../../../../Assets/dumyData';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
-  fontWeight : 'bold'
+  fontWeight: 'bold',
   //padding: '3%',
 };
 
-const index = () => {
-  const [pendingBtn, setpendingBtn] = useState({});
-  const [ongoingBtn, setOngoing] = useState(btnSetected);
+const index = ({navigation}) => {
+  const [pendingBtn, setpendingBtn] = useState(btnSetected);
+  const [ongoingBtn, setOngoing] = useState({});
   const [CompletedBtn, setCompleted] = useState({});
+  const [navigateState, setnavigateState] = useState(0);
+  const navigateCardDetails = () => {
+    navigation.navigate('CardDetails');
+  };
 
   const activeButton = (buttonType: string) => {
     console.log(buttonType);
@@ -36,16 +38,19 @@ const index = () => {
       setpendingBtn(btnSetected);
       setOngoing({});
       setCompleted({});
+      setnavigateState(0);
     }
     if (buttonType === 'ongoing') {
       setpendingBtn({});
       setOngoing(btnSetected);
       setCompleted({});
+      setnavigateState(1);
     }
     if (buttonType === 'completed') {
       setpendingBtn({});
       setOngoing({});
       setCompleted(btnSetected);
+      setnavigateState(2);
     }
   };
   // eslint-disable-next-line prettier/prettier
@@ -87,68 +92,56 @@ const index = () => {
           </Text>
         </View>
 
-        <TouchableOpacity
-          onPress={() => {
-            console.log('Working');
-          }}>
-          <Text>Checking</Text>
-        </TouchableOpacity>
+        {navigateState === 0 &&
+          trades['pending'].map((pending: any, index: number) => {
+            return (
+              <ModeratePageCard
+                key={index}
+                cardImage={pending?.cardImage}
+                title={pending?.title}
+                id={pending?.id}
+                amount={pending?.amount}
+                date={pending?.date}
+                userName={pending?.userName}
+                reDirecttoCardDetail={() => navigateCardDetails()}
+              />
+            );
+          })}
+
+        {navigateState === 1 &&
+          trades['ongoing'].map((ongoing: any, index: number) => {
+            return (
+              <ModeratePageCard
+                key={index}
+                cardImage={ongoing?.cardImage}
+                title={ongoing?.title}
+                id={ongoing?.id}
+                amount={ongoing?.amount}
+                date={ongoing?.date}
+                userName={ongoing?.userName}
+                reDirecttoCardDetail={() => navigateCardDetails()}
+              />
+            );
+          })}
+
+        {navigateState === 2 &&
+          trades['completed'].map((completed: any, index: number) => {
+            return (
+              <ModeratePageCard
+                key={index}
+                cardImage={completed?.cardImage}
+                title={completed?.title}
+                id={completed?.id}
+                amount={completed?.amount}
+                date={completed?.date}
+                userName={completed?.userName}
+                reDirecttoCardDetail={() => navigateCardDetails()}
+              />
+            );
+          })}
       </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  header: {
-    width: width,
-    height: 100,
-    backgroundColor: '#0a8a40',
-  },
-  headerHeading: {
-    color: 'white',
-    textAlign: 'center',
-    marginTop: '3.5%',
-    fontSize: 16,
-  },
-  mainBody: {
-    alignSelf: 'center',
-    width: width,
-    height: height - 100,
-    backgroundColor: '#f2f2f2',
-    borderTopRightRadius: 30,
-    borderTopLeftRadius: 30,
-    position: 'absolute',
-    zIndex: 1,
-    top: '10%',
-  },
-  headerButtons: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    height: 45,
-    width: '87%',
-    backgroundColor: 'white',
-    borderRadius: 30,
-    flexDirection: 'row',
-    marginTop: 30,
-    justifyContent: 'center',
-  },
-  headerButtom: {
-    fontSize: 13,
-    textAlign: 'center',
-    width: '38%',
-    borderRadius: 30,
-    color: '#0a8a40',
-    padding: '3%',
-    alignSelf:'center',
-  },
-  JoinLeft: {
-    position: 'relative',
-    left: 25,
-  },
-  JoinRight: {
-    position: 'relative',
-    right: 25,
-  },
-});
 
 export default index;
