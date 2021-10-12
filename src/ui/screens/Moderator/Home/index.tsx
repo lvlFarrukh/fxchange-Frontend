@@ -91,6 +91,7 @@ const index = ({navigation}) => {
             Completed
           </Text>
         </View>
+        <ScrollView>     
 
         {navigateState === 0 &&
           trades['pending'].map((pending: any, index: number) => {
@@ -139,6 +140,8 @@ const index = ({navigation}) => {
               />
             );
           })}
+
+</ScrollView>
       </View>
     </SafeAreaView>
   );

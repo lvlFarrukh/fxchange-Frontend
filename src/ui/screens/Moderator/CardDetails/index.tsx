@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Dimensions, Image} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import styles from './Style';
 
@@ -18,7 +19,9 @@ const index = ({navigation}) => {
         flex: 1,
       }}>
       <View style={styles.header}>
-        <Image source={require('../../../../Assets/ICONS/arrow=white.png')} style={styles.backArrow} onPress={()=>navigateBack()}/>
+        <TouchableOpacity style={{marginLeft : 15}}>
+        <Image source={require('../../../../Assets/ICONS/arrow=white.png')} style={styles.backArrow} />
+        </TouchableOpacity>
         <Text style={styles.headerHeading}>ITUNES - #FGRAC23287843</Text>
         <Text></Text>
       </View>

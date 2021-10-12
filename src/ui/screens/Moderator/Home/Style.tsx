@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   headerButtons: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '7%',
+    height: 40,
     width: '86%',
     backgroundColor: 'white',
     borderRadius: 30,

@@ -11,13 +11,16 @@ const styles = StyleSheet.create({
       backgroundColor: '#0a8a40',
       flexDirection: 'row',
       justifyContent: 'space-between',
+      alignItems:'center',
+      paddingBottom:30
 
     },
     headerHeading: {
       color: 'white',
       textAlign: 'center',
-      marginTop: '3.5%',
+      //marginTop: '3.5%',
       fontSize: 15,
+      marginLeft:-15
     },
     mainBody: {
       alignSelf: 'center',
@@ -63,10 +66,10 @@ const styles = StyleSheet.create({
       right: 25,
     },
     backArrow: {
-        height: '10%',
-        width: '5%',
-        marginTop: '5%',
-        marginLeft: '5%',
+        height: 15,
+        width: 20,
+        // marginTop: '5%',
+        // marginLeft: '5%',
     }
   });
 
