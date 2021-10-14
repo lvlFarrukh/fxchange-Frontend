@@ -7,7 +7,7 @@ import Header from '../../components/ModeratePageCard/Header';
 
 const { width, height } = Dimensions.get('screen')
 
-const SignInScreen = ({ navigation }) => {
+const ForgetPasswordScreen = ({ navigation }) => {
 
     const [isKeyboardVisible, setKeyboardVisible] = useState(false);
 
@@ -37,29 +37,21 @@ const SignInScreen = ({ navigation }) => {
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
-                        <View style={{ height: isKeyboardVisible ? '10%' : '25%' }}>
+                        <View style={{ height: (height*25)/100 }}>
                             <Header navigation={navigation} />
                             <View style={{ alignSelf: 'center', }}>
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
                             </View>
                         </View>
-                        <View style={[styles.whiteCardBg, { height: isKeyboardVisible ? '90%' : '75%' }]}>
-                            <Text style={[styles.Heading]}>LOGIN TO YOUR ACCOUNT</Text>
+                        <View style={[styles.whiteCardBg, { height: (height*75)/100 }]}>
+                            <Text style={[styles.Heading]}>FORGET PASSWORD?</Text>
+
+                            <Text style={{ alignSelf: "center" }}>A link will be sent to your email address</Text>
 
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Email or Phone'}
                                 placeholderTextColor={'#949494'}
-                            >
-                            </TextInput>
-
-                            <TextInput
-                                style={styles.TextInputStyle}
-                                placeholder={'Password'}
-                                placeholderTextColor={'#949494'}
-                            //onChangeText={text => setTitle(text)}
-                            //value={Title}
-
                             >
                             </TextInput>
 
@@ -74,42 +66,14 @@ const SignInScreen = ({ navigation }) => {
                                     <Text
                                         style={styles.GreenButton}
                                     >
-                                        LOGIN
+                                        SEND
                                     </Text>
                                 </TouchableOpacity>
 
-                                <View style={styles.BottomRowContainer}>
-                                    <View>
-                                        <Text style={{ fontSize: 11, }}>
-                                            Don't have an account?
-                                            <TouchableNativeFeedback
-                                                onPress={() => {
-                                                    navigation.navigate('CreateAccountScreen')
-                                                }}
-                                            >
-                                                <Text style={{ color: '#66b486' }}>SIGNUP</Text>
-                                            </TouchableNativeFeedback>
-                                        </Text>
-                                    </View>
-                                    <TouchableNativeFeedback
-                                        onPress={() => {
-                                            navigation.navigate('ForgetPasswordScreen')
-                                        }}
-                                    >
-                                        <Text style={{ fontSize: 11, color: '#2f568f' }}>Forget Password?</Text>
-                                    </TouchableNativeFeedback>
-                                </View>
-
                             </View>
 
-                            <View style={styles.lastViewStyle}>
-                                <Text style={{ fontSize: 12, }}>Having any troubles?
-                                    <TouchableNativeFeedback>
-                                        <Text style={{ color: '#d5431c' }}>contact us</Text>
-                                    </TouchableNativeFeedback>
-                                </Text>
+                            <View style={{ height:"50%" }}>
                             </View>
-
                         </View>
                     </SafeAreaView>
                 </View>
@@ -177,11 +141,11 @@ const styles = StyleSheet.create({
     BottomRowContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop:8
+        marginTop: 8
     },
     lastViewStyle: {
         marginTop: 20,
         alignSelf: "center"
     }
 })
-export default SignInScreen;
+export default ForgetPasswordScreen;

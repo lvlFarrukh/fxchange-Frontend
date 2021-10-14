@@ -6,6 +6,7 @@ import SignInScreen from '../ui/screens/SignInScreen/SignInScreen';
 import CreateAccountScreen from '../ui/screens/CreateAccountScreen/CreateAccountScreen';
 import Moderator from '../ui/screens/Moderator/Home';
 import CardDetails from '../ui/screens/Moderator/CardDetails';
+import ForgetPasswordScreen from '../ui/screens/ForgetPasswordScreen/ForgetPasswordScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,9 @@ const Routes = () => {
             <Stack.Screen name="CreateAccountScreen" component={CreateAccountScreen} />
             <Stack.Screen name="ModeratorScreen" component={Moderator} />
             <Stack.Screen name="CardDetails" component={CardDetails} />
+            <Stack.Screen name="ForgetPasswordScreen" component={ForgetPasswordScreen} />
+
+           
 
         </Stack.Navigator>
     )
