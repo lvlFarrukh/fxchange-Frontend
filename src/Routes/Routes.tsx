@@ -6,7 +6,7 @@ import SignInScreen from '../ui/screens/SignInScreen/SignInScreen';
 import CreateAccountScreen from '../ui/screens/CreateAccountScreen/CreateAccountScreen';
 import Moderator from '../ui/screens/Moderator/Home';
 import CardDetails from '../ui/screens/Moderator/CardDetails';
-
+import TransactionHistoryScreen from '../ui/screens/TransactionHistoryScreen';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -23,6 +23,7 @@ const Routes = () => {
             <Stack.Screen name="CreateAccountScreen" component={CreateAccountScreen} />
             <Stack.Screen name="ModeratorScreen" component={Moderator} />
             <Stack.Screen name="CardDetails" component={CardDetails} />
+            <Stack.Screen name="TransactionHistoryScreen" component={TransactionHistoryScreen} />
 
         </Stack.Navigator>
     )

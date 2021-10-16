@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
   headerHeading: {
     color: 'white',
     textAlign: 'center',
-    marginTop: '3.5%',
+    marginTop: '6.5%',
     fontSize: 16,
   },
   mainBody: {
     alignSelf: 'center',
     width: width,
     height: height - 100,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#ffffff',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
@@ -57,7 +57,31 @@ const styles = StyleSheet.create({
     position: 'relative',
     right: 25,
   },
- 
+
+  item: {
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 18,
+  },
+  date: {
+    fontSize: 10,
+  },
+  totalAmount: {
+    fontSize: 10,
+  },
+  amount: {
+    fontSize: 18,
+    color: '#72c688',
+  },
+  hr: {
+    borderWidth: 0.2,
+    borderColor: 'gray',
+    marginTop: 8,
+    marginBottom: 8,
+  },
 });
 
 export default styles;
