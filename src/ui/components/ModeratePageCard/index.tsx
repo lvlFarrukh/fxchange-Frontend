@@ -43,7 +43,7 @@ const index = ({
                         View
                     </Text>
 
-                    <Image  onPress={()=>reDirecttoCardDetail()} source={require('../../../Assets/ICONS/arrow=right.png')} style={Style.arrowIcon}/>
+                    <Image source={require('../../../Assets/ICONS/arrow=right.png')} style={Style.arrowIcon}/>
 
 
                 </View>
