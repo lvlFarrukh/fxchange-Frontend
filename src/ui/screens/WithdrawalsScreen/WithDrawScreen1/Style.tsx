@@ -4,25 +4,82 @@ const {width, height} = Dimensions.get('screen');
 const styles = StyleSheet.create({
   header: {
     width: width,
-    height: 100,
+    height: 300,
     backgroundColor: '#0a8a40',
+    alignItems:"center",
+   
+    
   },
   headerHeading: {
     color: 'white',
     textAlign: 'center',
-    marginTop: '3.5%',
-    fontSize: 16,
+    marginTop: '15%',
+    fontSize: 25,
+    backgroundColor:"#435c5f",
+    paddingVertical:"6%",
+    paddingHorizontal:"8%",
+    borderRadius:100
+  
+  },
+  headerText: {
+    color: 'white',
+    textAlign: 'center',
+    
+    
+    
+    
+  
   },
   mainBody: {
-    alignSelf: 'center',
     width: width,
-    height: height - 100,
-    backgroundColor: '#f2f2f2',
+    height:height-200,
+    backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    zIndex: 1,
-    top: '10%',
+    top:"30%",
+    
+  
+  },
+  mainBodyContent:{
+    marginTop:"7%",
+    marginLeft:"10%",
+    height:'20%'
+    
+  },
+  mainBodyCards:{
+   
+        width:"95%",
+        backgroundColor: 'white',
+        marginTop: 5, 
+        marginBottom: 0, 
+       
+        borderRadius: 6,
+        shadowColor: "#000", 
+        shadowOffset: { width: 0, height: 10, }, 
+        shadowOpacity: 0.3, 
+        shadowRadius: 2, 
+        elevation: 1, 
+        paddingVertical:20,
+        paddingHorizontal:20
+  },
+  iconStyle:{
+  
+  
+    width: 10,
+    height: 20,
+  },
+  mainBodyCardContent:{
+    display:'flex',
+    flexDirection:"row",
+    justifyContent:"space-between",
+   
+  
+    
+  },
+  mainBodyBottomItems:{
+    width:width,
+    alignItems:"center",
   },
   headerButtons: {
     marginLeft: 'auto',

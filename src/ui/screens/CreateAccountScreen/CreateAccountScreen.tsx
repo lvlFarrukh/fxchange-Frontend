@@ -5,7 +5,7 @@ import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextI
 const { width, height } = Dimensions.get('screen')
 
 const CreateAccountScreen = ({ navigation }) => {
-
+console.log('creat account screen')
 
 
     return (
