@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, KeyboardAvoidingView, Platform, ScrollView, TouchableNativeFeedback, Keyboard } from 'react-native';
+import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, KeyboardAvoidingView, Platform, ScrollView, TouchableNativeFeedback, Keyboard, StatusBar } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../components/ModeratePageCard/Header';
@@ -34,6 +34,7 @@ const SignInScreen = ({ navigation }) => {
 
     return (
         <KeyboardAvoidingView style={{ flex: 1 }}>
+            <StatusBar hidden/>
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>

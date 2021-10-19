@@ -9,6 +9,7 @@ import {
   TextInput,
   Dimensions,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ModeratePageCard from '../../../components/ModeratePageCard';
@@ -61,6 +62,7 @@ const index = ({navigation}) => {
         width: width,
         flex: 1,
       }}>
+      <StatusBar hidden/>
       <View style={styles.header}>
         <Text style={styles.headerHeading}>Trades</Text>
       </View>

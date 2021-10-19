@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 const {width, height} = Dimensions.get('screen');
 
-const styles = StyleSheet.create({
+const Style = StyleSheet.create({
     header: {
       width: width,
       height: 100,
@@ -69,10 +69,33 @@ const styles = StyleSheet.create({
         height: 12,
         width: 18,
         marginLeft: 12,
-        marginTop: 3,
+        marginTop: 5,
         // marginTop: '5%',
         // marginLeft: '5%',
-    }
+    },
+    titleImage: {
+      width: 32,
+      height: 32,
+  },
+  hr: {
+    borderWidth: 0.2,
+    borderColor:'gray',
+    marginTop: 8,
+    marginBottom: 8,
+}, 
+lowerPortion: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  marginTop: 2
+},
+smFontSize: {
+  fontSize: 11,
+  marginBottom: 2
+},
+mdFontBlackColor: {
+  color: 'black'
+},
+
   });
 
-  export default styles
+  export default Style
