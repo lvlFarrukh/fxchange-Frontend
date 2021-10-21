@@ -58,8 +58,8 @@ const LandingScreen = ({ navigation }) => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={() => {
-                                navigation.navigate('ModeratorScreen')
-                                //navigation.navigate('TransactionHistoryScreen')
+                                //navigation.navigate('ModeratorScreen')
+                                navigation.navigate('TransactionHistoryScreen')
                                 // navigation.navigate('CreateAccountScreen')
                             }}
                         >
