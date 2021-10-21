@@ -12,6 +12,7 @@ import {
   Button,
   Alert,
   FlatList,
+  StatusBar,
 } from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -53,6 +54,7 @@ const DATA = [
 
 const Item = ({item, onPress, backgroundColor, textColor}) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
+    <StatusBar hidden />
     <View
       style={{
         display: 'flex',

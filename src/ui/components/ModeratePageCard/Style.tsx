@@ -6,11 +6,10 @@ const {width, height} = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
     mainBody: {
-        height: 150,
+        height: 130,
         width: '86%',
         backgroundColor: 'white',
-        marginTop: 20, 
-        marginBottom: 0, 
+        marginBottom: 20, 
         marginLeft: 'auto', 
         marginRight: 'auto',
         borderRadius: 16,

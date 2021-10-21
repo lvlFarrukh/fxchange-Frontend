@@ -29,7 +29,7 @@ const index = ({
                             {title}
                         </Text>
 
-                        <Text>
+                        <Text style={{color: 'gray'}}>
                             {id}
                         </Text>
 
@@ -56,7 +56,7 @@ const index = ({
             <View style={Style.lowerPortion}>
 
                 <View>
-                    <Text style={Style.smFontSize}>
+                    <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                         Amount
                     </Text>
                     <Text style={Style.mdFontBlackColor}>
@@ -65,10 +65,10 @@ const index = ({
                 </View>
 
                 <View>
-                    <Text style={Style.smFontSize}>
+                    <Text style={[Style.smFontSize, {color: 'gray'}]}>
                         {date}
                     </Text>
-                    <Text style={[Style.smFontSize, {textAlign: 'right',}]}>
+                    <Text style={[Style.smFontSize, {textAlign: 'right', color: 'gray'}]}>
                         {userName}
                     </Text>
                 </View>

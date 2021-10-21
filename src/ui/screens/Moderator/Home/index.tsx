@@ -9,6 +9,7 @@ import {
   TextInput,
   Dimensions,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ModeratePageCard from '../../../components/ModeratePageCard';
@@ -61,6 +62,7 @@ const index = ({navigation}) => {
         width: width,
         flex: 1,
       }}>
+      <StatusBar hidden/>
       <View style={styles.header}>
         <Text style={styles.headerHeading}>Trades</Text>
       </View>
@@ -91,57 +93,55 @@ const index = ({navigation}) => {
             Completed
           </Text>
         </View>
-        <ScrollView>     
+        <ScrollView>
+          {navigateState === 0 &&
+            trades['pending'].map((pending: any, index: number) => {
+              return (
+                <ModeratePageCard
+                  key={index}
+                  cardImage={pending?.cardImage}
+                  title={pending?.title}
+                  id={pending?.id}
+                  amount={pending?.amount}
+                  date={pending?.date}
+                  userName={pending?.userName}
+                  reDirecttoCardDetail={() => navigateCardDetails()}
+                />
+              );
+            })}
 
-        {navigateState === 0 &&
-          trades['pending'].map((pending: any, index: number) => {
-            return (
-              <ModeratePageCard
-                key={index}
-                cardImage={pending?.cardImage}
-                title={pending?.title}
-                id={pending?.id}
-                amount={pending?.amount}
-                date={pending?.date}
-                userName={pending?.userName}
-                reDirecttoCardDetail={() => navigateCardDetails()}
-              />
-            );
-          })}
+          {navigateState === 1 &&
+            trades['ongoing'].map((ongoing: any, index: number) => {
+              return (
+                <ModeratePageCard
+                  key={index}
+                  cardImage={ongoing?.cardImage}
+                  title={ongoing?.title}
+                  id={ongoing?.id}
+                  amount={ongoing?.amount}
+                  date={ongoing?.date}
+                  userName={ongoing?.userName}
+                  reDirecttoCardDetail={() => navigateCardDetails()}
+                />
+              );
+            })}
 
-        {navigateState === 1 &&
-          trades['ongoing'].map((ongoing: any, index: number) => {
-            return (
-              <ModeratePageCard
-                key={index}
-                cardImage={ongoing?.cardImage}
-                title={ongoing?.title}
-                id={ongoing?.id}
-                amount={ongoing?.amount}
-                date={ongoing?.date}
-                userName={ongoing?.userName}
-                reDirecttoCardDetail={() => navigateCardDetails()}
-              />
-            );
-          })}
-
-        {navigateState === 2 &&
-          trades['completed'].map((completed: any, index: number) => {
-            return (
-              <ModeratePageCard
-                key={index}
-                cardImage={completed?.cardImage}
-                title={completed?.title}
-                id={completed?.id}
-                amount={completed?.amount}
-                date={completed?.date}
-                userName={completed?.userName}
-                reDirecttoCardDetail={() => navigateCardDetails()}
-              />
-            );
-          })}
-
-</ScrollView>
+          {navigateState === 2 &&
+            trades['completed'].map((completed: any, index: number) => {
+              return (
+                <ModeratePageCard
+                  key={index}
+                  cardImage={completed?.cardImage}
+                  title={completed?.title}
+                  id={completed?.id}
+                  amount={completed?.amount}
+                  date={completed?.date}
+                  userName={completed?.userName}
+                  reDirecttoCardDetail={() => navigateCardDetails()}
+                />
+              );
+            })}
+        </ScrollView>
       </View>
     </SafeAreaView>
   );

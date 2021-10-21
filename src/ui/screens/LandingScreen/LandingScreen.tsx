@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions } from 'react-native'
+import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, StatusBar } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 
@@ -12,6 +12,7 @@ const LandingScreen = ({ navigation }) => {
             style={{ height: height, width: width, flex: 1 }}
             imageStyle={{}}
         >
+            <StatusBar hidden/>
             <SafeAreaView style={{ height: height, width: width, flex: 1, backgroundColor: 'rgba(0,0,0,0.1)' }}>
                 <View style={styles.LogoNTextContainer}>
                     <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
@@ -57,8 +58,9 @@ const LandingScreen = ({ navigation }) => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={() => {
+                                navigation.navigate('ModeratorScreen')
                                 //navigation.navigate('TransactionHistoryScreen')
-                                navigation.navigate('CreateAccountScreen')
+                                // navigation.navigate('CreateAccountScreen')
                             }}
                         >
                             <Text style={{ color: 'green', fontWeight: 'bold', alignSelf: "center" }}>Create Account</Text>

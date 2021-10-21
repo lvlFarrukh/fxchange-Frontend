@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     alignSelf: 'center',
+    marginBottom: 20,
     width: width,
     height: height - 100,
     backgroundColor: '#f2f2f2',
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
   headerButtons: {
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginBottom: 20,
     height: 40,
     width: '86%',
     backgroundColor: 'white',
@@ -41,6 +43,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   headerButtom: {
+    height: 38,
     fontSize: 13,
     textAlign: 'center',
     width: '39%',

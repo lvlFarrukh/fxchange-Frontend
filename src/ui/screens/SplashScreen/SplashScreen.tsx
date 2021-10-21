@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, StatusBar } from 'react-native';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -14,6 +14,7 @@ const SplashScreen = ({ navigation }) => {
 
     return (
         <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
+            <StatusBar hidden/>
             <View style={{ alignSelf: 'center' }}>
                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
             </View>
