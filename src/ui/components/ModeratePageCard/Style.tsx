@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     hr: {
-        borderWidth: 0.2,
+        borderTopWidth: 1,
         borderColor:'gray',
-        marginTop: 8,
+        marginTop: 10,
         marginBottom: 8,
     },
     lowerPortion: {

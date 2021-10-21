@@ -146,7 +146,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#949494',
-        paddingLeft: 10
+        paddingLeft: 10,
+        color:'#000'
 
     },
     GreenButton: {

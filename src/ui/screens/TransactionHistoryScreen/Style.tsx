@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
   },
   hr: {
     borderWidth: 0.2,
-    borderColor: 'gray',
-    marginTop: 8,
-    marginBottom: 8,
+    borderColor: 'rgba(0,0,0,0.2)',
+    marginTop: 20,
+    //marginBottom: 8,
   },
 });
 

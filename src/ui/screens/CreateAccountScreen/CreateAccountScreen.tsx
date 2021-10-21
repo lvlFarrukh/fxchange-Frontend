@@ -52,7 +52,7 @@ const CreateAccountScreen = ({ navigation }) => {
                                     <Text style={{fontSize: 11, color:"#000" }}>Click Here to
                                     <TouchableNativeFeedback
                                         onPress={() => {
-                                            navigation.navigate('CreateAccountScreen')
+                                            navigation.navigate('SignInScreen')
                                         }}
                                     >
                                         <Text style={{color: '#66b486'  }}> LOGIN</Text>
@@ -157,7 +157,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#949494',
-        paddingLeft: 10
+        paddingLeft: 10,
+        color:'#000'
 
     },
     GreenButton: {
