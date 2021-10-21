@@ -9,6 +9,9 @@ import CardDetails from '../ui/screens/Moderator/CardDetails';
 import ForgetPasswordScreen from '../ui/screens/ForgetPasswordScreen/ForgetPasswordScreen';
 import TransactionHistoryScreen from '../ui/screens/TransactionHistoryScreen';
 
+import WithdrawalsScreen from '../ui/screens/WithdrawalsScreen/WithDrawScreen1/WIthdrawalScreen';
+import WithdrawalsScreenTwo from '../ui/screens/WithdrawalsScreen/WithDrawScreen2/WithDrwaScreenTwo';
+import WithdrawalsScreenThree from '../ui/screens/WithdrawalsScreen/WithDrawScreen3/WithDrarScreenThree';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -27,6 +30,9 @@ const Routes = () => {
             <Stack.Screen name="CardDetails" component={CardDetails} />
             <Stack.Screen name="ForgetPasswordScreen" component={ForgetPasswordScreen} />
             <Stack.Screen name="TransactionHistoryScreen" component={TransactionHistoryScreen} />
+            <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />
+            <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />
+            <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />
 
         </Stack.Navigator>
     )
