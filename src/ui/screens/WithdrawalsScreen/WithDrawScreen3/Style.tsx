@@ -81,5 +81,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex: 1,
   },
+  giftCardBodyPatOne:{
+    width: width,
+    height: height ,
+    backgroundColor: '#f2f2f2',
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
+    position: 'absolute',
+    top: '9%',
+    // alignItems:"center",
+    
+  },
+  giftCardsBodyPartTwo: {
+    width: width,
+    height: height -450,
+    backgroundColor: '#ffffff',
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    position: 'absolute',
+    top: "70%",
+    alignItems: 'center',
+    zIndex: 1,
+  },
 });
 export default styles;

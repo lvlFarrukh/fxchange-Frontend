@@ -12,6 +12,8 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
+import Bitcoin from './Bitcoin';
+import GiftCards from './giftCard'
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -21,16 +23,19 @@ const btnSetected: any = {
   //padding: '3%',
 };
 const WithdrawalsScreenThree = ({navigation}) => {
-  const [pendingBtn, setpendingBtn] = useState(btnSetected);
-  const [ongoingBtn, setOngoing] = useState({});
+  const [giftCards, setGiftCards] = useState(btnSetected);
+  const [bitcoin, setBitcoin] = useState({});
+  const [screen, setScreen] = useState(0);
   const activeButton = (buttonType: string) => {
-    if (buttonType === 'pending') {
-      setpendingBtn(btnSetected);
-      setOngoing({});
+    if (buttonType === 'giftCards') {
+      setGiftCards(btnSetected);
+      setScreen(0)
+      setBitcoin({});
     }
-    if (buttonType === 'ongoing') {
-      setpendingBtn({});
-      setOngoing(btnSetected);
+    if (buttonType === 'bitcoin') {
+      setGiftCards({});
+      setBitcoin(btnSetected);
+      setScreen(1)
     }
   };
   return (
@@ -60,64 +65,14 @@ const WithdrawalsScreenThree = ({navigation}) => {
             </Text>
           </View>
         </View>
-        <View style={styles.mainBodyPartOne}>
-          <View style={[styles.partOneButtons]}>
-            <Text
-              style={[
-                styles.partOneButton,
-                styles.JoinLeft,
-                {...pendingBtn},
-                {marginRight: 20},
-              ]}
-              onPress={() => {
-                activeButton('pending');
-              }}>
-              Giftcards
-            </Text>
+        {
+          screen===0?<GiftCards activeButton={activeButton} giftCards={giftCards} bitcoin={bitcoin}/>
 
-            <Text
-              style={[styles.partOneButton, styles.JoinRight, {...ongoingBtn}]}
-              onPress={() => {
-                activeButton('ongoing');
-              }}>
-              Bitcoin
-            </Text>
-          </View>
-          <TextInput
-            style={{
-              backgroundColor: 'white',
-              // textAlignVertical: 'top',
-              borderRadius:4,
-              width: '90%',
-              marginRight: 'auto',
-              marginLeft: 'auto',
-              marginVertical: 20,
-            
-              // paddingTop:20,
-              paddingLeft:25
-            }}
-            underlineColorAndroid="transparent"
-            placeholder="Enter Account in USD"
-            placeholderTextColor="black"
-            
-            textAlign={"left"}
-            numberOfLines={2}
-            multiline={true}
-          />
-          <View style={styles.checkrateButtonContainer}>
-            <TouchableOpacity style={styles.checkrateButton}>
-              <Text style={{color: 'white', fontSize: 15}}>CHECK RATE</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.mainBodyPartTwo}>
-          <Text style={{marginTop:30}}>
-            Estimate rate
-          </Text>
-          <Text style={{fontSize:30,color:"black",marginTop:10,fontWeight:"400"}}>
-            N3,303,330
-          </Text>
-        </View>
+          :
+          <Bitcoin activeButton={activeButton} giftCards={giftCards} bitcoin={bitcoin}/>
+
+        }
+        
       </SafeAreaView>
     </ScrollView>
   );
