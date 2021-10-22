@@ -57,7 +57,7 @@ const LandingScreen = ({ navigation }) => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={() => {
-                                navigation.navigate('WithdrawalsScreenThree')
+                                navigation.navigate('WithdrawalsScreenFive')
                             }}
                         >
                             <Text style={{ color: 'green', fontWeight: 'bold', alignSelf: "center" }}>Create Account</Text>
