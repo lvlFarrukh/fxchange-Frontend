@@ -12,6 +12,7 @@ import TransactionHistoryScreen from '../ui/screens/TransactionHistoryScreen';
 import WithdrawalsScreen from '../ui/screens/WithdrawalsScreen/WithDrawScreen1/WIthdrawalScreen';
 import WithdrawalsScreenTwo from '../ui/screens/WithdrawalsScreen/WithDrawScreen2/WithDrwaScreenTwo';
 import WithdrawalsScreenThree from '../ui/screens/WithdrawalsScreen/WithDrawScreen3/WithDrarScreenThree';
+import Test from '../ui/screens/test';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -33,6 +34,8 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />
             <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />
+            <Stack.Screen name="Test" component={Test} />
+
 
         </Stack.Navigator>
     )

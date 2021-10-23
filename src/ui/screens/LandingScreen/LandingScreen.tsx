@@ -60,8 +60,10 @@ const LandingScreen = ({ navigation }) => {
                             onPress={() => {
                                 //navigation.navigate('ModeratorScreen') //faruukh bhais
                                 //navigation.navigate('TransactionHistoryScreen') //anas
-                                 navigation.navigate('CreateAccountScreen') // hassans
+                                 //navigation.navigate('CreateAccountScreen') // hassans
                                 //navigation.navigate('WithdrawalsScreenThree') // imran bhaiis
+
+                                navigation.navigate('Test') // TestScreenContaing all screens
                             }}
                         >
                             <Text style={{ color: 'green', fontWeight: 'bold', alignSelf: "center" }}>Create Account</Text>

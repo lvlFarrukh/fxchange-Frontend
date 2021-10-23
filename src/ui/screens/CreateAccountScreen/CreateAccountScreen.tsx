@@ -38,13 +38,13 @@ const CreateAccountScreen = ({ navigation }) => {
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
-                        <View style={{ height: isKeyboardVisible ? '10%' : '25%' }}>
+                        <View style={{ height: isKeyboardVisible ? '8%' : '25%' }}>
                             <Header navigation={navigation} />
                             <View style={{ alignSelf: 'center', }}>
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
                             </View>
                         </View>
-                        <View style={[styles.whiteCardBg, { height: isKeyboardVisible ? '95%' : '75%' }]}>
+                        <View style={[styles.whiteCardBg, { height: isKeyboardVisible ? '60%' : '75%' }]}>
                             <View>
                                 <Text style={[styles.Heading]}>CREATE AN ACCOUNT</Text>
 
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     TextInputStyle: {
         backgroundColor: '#fafafa',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 5,
         borderColor: '#949494',
         paddingLeft: 10,
         color:'#000'

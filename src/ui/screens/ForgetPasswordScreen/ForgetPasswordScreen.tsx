@@ -39,7 +39,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
                         <View style={{ height: (height*25)/100 }}>
-                            <Header navigation={navigation} />
+                            <Header navigation={navigation}/>
                             <View style={{ alignSelf: 'center', }}>
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
                             </View>
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     TextInputStyle: {
         backgroundColor: '#fafafa',
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 5,
         borderColor: '#949494',
         paddingLeft: 10,
         color:'#000'
