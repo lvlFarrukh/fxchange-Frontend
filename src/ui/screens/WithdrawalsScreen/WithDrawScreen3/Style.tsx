@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#3f8b41',
     padding: 15,
+    borderRadius:4
   },
 
   mainBodyPartTwo: {

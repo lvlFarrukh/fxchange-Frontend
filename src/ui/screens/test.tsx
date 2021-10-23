@@ -40,14 +40,6 @@ const Test = ({ navigation }) => {
 
             <TouchableOpacity
                 onPress={() => {
-                    navigation.navigate('WithdrawalsScreenTwo')
-                }}
-            >
-                <Text style={{ padding: 10 }}>WithdrawalsScreenTwo</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                onPress={() => {
                     navigation.navigate('WithdrawalsScreen')
                 }}
             >
@@ -56,10 +48,34 @@ const Test = ({ navigation }) => {
 
             <TouchableOpacity
                 onPress={() => {
+                    navigation.navigate('WithdrawalsScreenTwo')
+                }}
+            >
+                <Text style={{ padding: 10 }}>WithdrawalsScreenTwo</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
                     navigation.navigate('WithdrawalsScreenThree')
                 }}
             >
                 <Text style={{ padding: 10 }}>WithdrawalsScreenThree</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('WithDrawScreenFour')
+                }}
+            >
+                <Text style={{ padding: 10 }}>WithDrawScreenFour</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('WithdrawalsScreenFive')
+                }}
+            >
+                <Text style={{ padding: 10 }}>WithdrawalsScreenFive</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
