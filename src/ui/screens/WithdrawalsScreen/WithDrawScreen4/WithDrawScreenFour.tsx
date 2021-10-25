@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import {
   Image,
   ScrollView,
@@ -14,36 +14,40 @@ import {
 } from 'react-native';
 import styles from './Style';
 
-const {width, height} = Dimensions.get('screen');
+const { width, height } = Dimensions.get('screen');
 
-const WithDrawScreenFour = ({navigation}) => {
+const WithDrawScreenFour = ({ navigation }) => {
   console.log('with drawel screen');
 
   return (
-    <ScrollView>
+
+    <View
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+      }}>
       <SafeAreaView
-        style={{
-          height: height,
-          width: width,
-          flex: 1,
-        }}>
-        <View>
+      style={{backgroundColor: '#0a8a40',flex:1}}
+      >
           <View style={styles.header}>
             <View style={styles.headerUpperArea}>
               <TouchableOpacity>
                 <Image
                   source={require('../../../../Assets/ICONS/arrow=white.png')}
-                  style={{width: 30, height: 20, marginTop: 6, marginRight: 50}}
+                  style={{ width: 30, height: 20, marginTop: 6, marginRight: 50 }}
                 />
               </TouchableOpacity>
             </View>
           </View>
-          <View style={styles.headerHeadingContainer}>
-            <Text style={styles.headerHeading2}>H</Text>
-          </View>
+          
           <View style={styles.mainBody}>
+          {/* <View style={styles.headerHeadingContainer}> */}
+            <Text style={styles.headerHeading2}>H</Text>
+          {/* </View> */}
             <View style={styles.mainBodyContent}>
-              <Text style={{fontSize: 14}}>CHANGE PASSWORD</Text>
+              <View>
+              <Text style={{ fontSize: 14 }}>CHANGE PASSWORD</Text>
               <TextInput
                 style={{
                   backgroundColor: 'white',
@@ -107,16 +111,17 @@ const WithDrawScreenFour = ({navigation}) => {
                 numberOfLines={2}
                 multiline={true}
               />
+              </View>
               <View style={styles.updatePassword}>
                 <TouchableOpacity style={styles.updatePasswordButton}>
-                  <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
+                  <Text style={{ color: 'white', fontSize: 15 }}>UPDATE</Text>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
-        </View>
+       
       </SafeAreaView>
-    </ScrollView>
+    </View>
   );
 };
 

@@ -17,13 +17,14 @@ const {width, height} = Dimensions.get('screen');
 const WithdrawalsScreenTwo = ({navigation}) => {
   console.log('with drawel screen');
   return (
-    <ScrollView>
+    
       <SafeAreaView
         style={{
           height: height,
           width: width,
           flex: 1,
         }}>
+          <ScrollView contentContainerStyle={{flex:1}}>
         <View style={styles.header}>
           <View style={styles.headerUpperArea}>
             <Image
@@ -79,8 +80,9 @@ const WithdrawalsScreenTwo = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
+        </ScrollView>
       </SafeAreaView>
-    </ScrollView>
+    
   );
 };
 export default WithdrawalsScreenTwo;
