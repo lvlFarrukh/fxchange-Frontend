@@ -14,6 +14,8 @@ import WithdrawalsScreenTwo from '../ui/screens/WithdrawalsScreen/WithDrawScreen
 import WithdrawalsScreenThree from '../ui/screens/WithdrawalsScreen/WithDrawScreen3/WithDrarScreenThree';
 import WithDrawScreenFour from '../ui/screens/WithdrawalsScreen/WithDrawScreen4/WithDrawScreenFour';
 import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScreen5/WithDrawScreenFive';
+import SwitchGiftCard from '../ui/screens/Moderator/SwitchGiftCard'
+import BitcoinCardDetail from '../ui/screens/Moderator/BitcoinCardDetail'
 
 import Test from '../ui/screens/test';
 const Stack = createStackNavigator();
@@ -39,6 +41,8 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
             <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
+            <Stack.Screen name="SwitchGiftCard" component={SwitchGiftCard} />
+            <Stack.Screen name="BitcoinCardDetail" component={BitcoinCardDetail} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>

@@ -25,7 +25,7 @@ const Header : React.FC<Props> = (props) => {
                 <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />
             </TouchableOpacity>
 
-            <Text style={{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -20,marginTop:-5}}>
+            <Text style={{color:"#fafafa",fontSize:17  ,alignSelf:'center', marginLeft: -30,marginTop:-5}}>
             {Heading}
             </Text>
 

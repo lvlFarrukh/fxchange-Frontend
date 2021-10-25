@@ -85,6 +85,22 @@ const Test = ({ navigation }) => {
             >
                 <Text style={{ padding: 10 }}>ModeratorScreen</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('SwitchGiftCard')
+                }}
+            >
+                <Text style={{ padding: 10 }}>ModeratorScreen (Switch Giftcard)</Text>
+            </TouchableOpacity> 
+            
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('BitcoinCardDetail')
+                }}
+            >
+                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetail)</Text>
+            </TouchableOpacity>
+
         </View>
     )
 }
