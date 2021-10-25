@@ -1,12 +1,37 @@
-import React from 'react';
-import {View, Text, Dimensions, Image, StatusBar} from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  StatusBar,
+  ImageBackground,
+} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import Modal from 'react-native-modal';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import SelectDropdown from 'react-native-select-dropdown';
 import Style from './Style';
 
 const {width, height} = Dimensions.get('screen');
 
 const index = ({navigation}) => {
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [isDelineModalVisible, setdelineModalVisible] = useState(false);
+  const declineReason = [
+    'Already redeemed by someone else',
+    'Card is not activated',
+    'Card is not clear',
+  ];
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
+  const toggleDelineModal = () => {
+    setdelineModalVisible(!isDelineModalVisible);
+  };
+
   const navigateBack = () => {
     console.log('WORKING');
     navigation.goBack(null);
@@ -247,7 +272,7 @@ const index = ({navigation}) => {
                       paddingLeft: 7,
                       paddingTop: 2,
                     }}>
-                      {2}
+                    {2}
                   </Text>
                 </View>
                 <Image
@@ -341,7 +366,10 @@ const index = ({navigation}) => {
                   Style.btnShadow,
                 ]}>
                 <Text
-                  style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}>
+                  style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}
+                  onPress={() => {
+                    toggleDelineModal();
+                  }}>
                   DECLINE
                 </Text>
               </TouchableOpacity>
@@ -375,6 +403,9 @@ const index = ({navigation}) => {
                   Style.btnShadow,
                 ]}>
                 <Text
+                  onPress={() => {
+                    toggleModal();
+                  }}
                   style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}>
                   ACCEPT
                 </Text>
@@ -405,7 +436,7 @@ const index = ({navigation}) => {
                       paddingLeft: 7,
                       paddingTop: 2,
                     }}>
-                      {3}
+                    {3}
                   </Text>
                 </View>
                 <Image
@@ -478,6 +509,288 @@ const index = ({navigation}) => {
             </View>
           </View>
         </View>
+        <Modal
+          //style={{ backgroundColor:'#fafafa' , height:height/2}}
+          isVisible={isModalVisible}
+          //coverScreen={true}
+          // swipeDirection='down'
+          // onSwipeComplete={toggleModal}
+          // swipeThreshold={50}
+        >
+          <View
+            style={{
+              width: width - 100,
+              height: width - 125,
+              borderRadius: 50,
+              alignSelf: 'center',
+              backgroundColor: '#0a8a40',
+            }}>
+            <View
+              style={{
+                width: width - 100,
+                height: width - 145,
+                marginTop: 20,
+                borderRadius: 40,
+                alignSelf: 'center',
+                backgroundColor: 'white',
+                justifyContent: 'space-between',
+              }}>
+              <View>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 18,
+                    margin: 5,
+                    fontWeight: '500',
+                    color: '#0a8a40',
+                  }}>
+                  ACCEPT
+                </Text>
+
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 0}]}></View>
+              </View>
+
+              <View>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 15,
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                  }}>
+                  Are you sure you want to
+                </Text>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontSize: 15,
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                  }}>
+                  accept this transaction
+                </Text>
+              </View>
+
+              <View>
+                <TouchableOpacity activeOpacity={0.5}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 15,
+                      fontWeight: '500',
+                      color: '#0a8a40',
+                    }}>
+                    YES ACCEPT
+                  </Text>
+                </TouchableOpacity>
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 6}]}></View>
+                <TouchableOpacity
+                  style={{marginBottom: 8, marginTop: -4}}
+                  onPress={() => toggleModal()}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 15,
+                      fontWeight: '500',
+                      color: 'black',
+                    }}>
+                    Cancel
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
+
+        <Modal
+          //style={{ backgroundColor:'#fafafa' , height:height/2}}
+          isVisible={isDelineModalVisible}
+          //coverScreen={true}
+          // swipeDirection='down'
+          // onSwipeComplete={toggleModal}
+          // swipeThreshold={50}
+        >
+          <View
+            style={{
+              width: width - 50,
+              height: width - 10,
+              borderRadius: 50,
+              alignSelf: 'center',
+              backgroundColor: '#ef2a22',
+            }}>
+            <View
+              style={{
+                width: width - 50,
+                height: width - 30,
+                marginTop: 20,
+                borderRadius: 40,
+                alignSelf: 'center',
+                backgroundColor: 'white',
+                justifyContent: 'space-between',
+              }}>
+              <View>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 18,
+                    margin: 8,
+                    fontWeight: '500',
+                    color: '#ef2a22',
+                  }}>
+                  DECLINE
+                </Text>
+
+                {/* hr */}
+                <View
+                  style={[
+                    Style.hr,
+                    {marginTop: 0, marginLeft: 36, marginRight: 36},
+                  ]}></View>
+              </View>
+
+              <View style={{flex: 1}}>
+                <SelectDropdown
+                  data={declineReason}
+                  onSelect={(selectedItem, index) => {
+                    console.log(selectedItem, index);
+                  }}
+                  buttonTextAfterSelection={(selectedItem, index) => {
+                    // text represented after item is selected
+                    // if data array is an array of objects then return selectedItem.property to render after item is selected
+                    return selectedItem;
+                  }}
+                  rowTextForSelection={(item, index) => {
+                    // text represented for each item in dropdown
+                    // if data array is an array of objects then return item.property to represent item in dropdown
+                    return item;
+                  }}
+                  renderDropdownIcon={() => {
+                    return (
+                      <Image
+                        source={require('../../../../Assets/ICONS/dropdwo.png')}
+                        style={{width: 10, height: 5}}
+                      />
+                    );
+                  }}
+                  defaultButtonText={'Reason'}
+                  buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+                  rowStyle={{backgroundColor: 'white', width: '100%'}}
+                  rowTextStyle={{fontSize: 15}}
+                  buttonStyle={{
+                    backgroundColor: 'white',
+                    borderWidth: 0.5,
+                    borderColor: 'gray',
+                    borderRadius: 4,
+                    height: 42,
+                    width: '80%',
+                    paddingRight: 10,
+                    paddingVertical: 10,
+                    alignSelf: 'center',
+                  }}
+                />
+
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    marginVertical: 10,
+                    width: '80%',
+                    alignSelf: 'center',
+                  }}>
+                  <View
+                    style={{
+                      backgroundColor: 'white',
+                      margin: 2,
+                      width: '32%',
+                      height: width - 300,
+                    }}>
+                    {/* <TouchableOpacity style={{}}> */}
+                    <Image
+                      source={require('../../../../Assets/ICONS/close.png')}
+                      style={{
+                        width: '20%',
+                        height: '20%',
+                        position: 'absolute',
+                        zIndex: 1,
+                        margin: 1,
+                      }}
+                    />
+                    {/* </TouchableOpacity> */}
+
+                    <Image
+                      source={require('../../../../Assets/IMG_3151.jpg')}
+                      style={{width: '100%', height: '100%'}}
+                    />
+                  </View>
+                  <View style={{margin: 2, width: '32%', height: width - 300}}>
+                    {/* Upload Button */}
+                    <TouchableOpacity
+                      style={[
+                        Style.btnShadow,
+                        {
+                          backgroundColor: '#fefefe',
+                          width: width - 328,
+                          height: width - 328,
+                          borderRadius: 50,
+                          alignSelf: 'center',
+                          justifyContent: 'center'
+                        },
+                      ]}>
+                      <Text
+                        style={{
+                          fontSize: 25,
+                          fontWeight: '500',
+                          color: '#0a8a40',
+                          alignSelf: 'center'
+                        }}>
+                        +
+                      </Text>
+                    </TouchableOpacity>
+                    <Text style={{
+                      color: "#0a8a40",
+                      fontSize: 10,
+                      fontWeight: '500',
+                      alignSelf: 'center',
+                      marginTop: 5
+
+                    }}>Upload Image</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View>
+                <TouchableOpacity activeOpacity={0.5}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 14,
+                      fontWeight: '500',
+                      color: '#ef2a22',
+                    }}>
+                    YES DECLINE
+                  </Text>
+                </TouchableOpacity>
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 6}]}></View>
+                <TouchableOpacity
+                  style={{marginBottom: 8, marginTop: -5}}
+                  onPress={() => toggleModal()}>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 14,
+                      fontWeight: '500',
+                      color: 'black',
+                    }}>
+                    CANCEL
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
       </SafeAreaView>
     </ScrollView>
   );
