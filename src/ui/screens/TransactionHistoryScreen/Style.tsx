@@ -59,12 +59,14 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    padding: 20,
-    marginVertical: 8,
+    //padding: 20,
+    marginVertical: 5,
     marginHorizontal: 16,
+    //backgroundColor:'pink'
   },
   title: {
     fontSize: 18,
+    fontWeight:"500"
   },
   date: {
     fontSize: 10,
@@ -74,10 +76,10 @@ const styles = StyleSheet.create({
   },
   amount: {
     fontSize: 18,
-    color: '#72c688',
+    color: 'rgb(10, 138, 64)',
   },
   hr: {
-    borderWidth: 0.2,
+    borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.2)',
     marginTop: 20,
     //marginBottom: 8,

@@ -13,7 +13,7 @@ import {
   Button,
 } from 'react-native';
 import Bitcoin from './Bitcoin';
-import GiftCards from './giftCard'
+import GiftCards from './giftCard';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -29,13 +29,13 @@ const WithdrawalsScreenThree = ({navigation}) => {
   const activeButton = (buttonType: string) => {
     if (buttonType === 'giftCards') {
       setGiftCards(btnSetected);
-      setScreen(0)
+      setScreen(0);
       setBitcoin({});
     }
     if (buttonType === 'bitcoin') {
       setGiftCards({});
       setBitcoin(btnSetected);
-      setScreen(1)
+      setScreen(1);
     }
   };
   return (
@@ -65,14 +65,19 @@ const WithdrawalsScreenThree = ({navigation}) => {
             </Text>
           </View>
         </View>
-        {
-          screen===0?<GiftCards activeButton={activeButton} giftCards={giftCards} bitcoin={bitcoin}/>
-
-          :
-          <Bitcoin activeButton={activeButton} giftCards={giftCards} bitcoin={bitcoin}/>
-
-        }
-        
+        {screen === 0 ? (
+          <GiftCards
+            activeButton={activeButton}
+            giftCards={giftCards}
+            bitcoin={bitcoin}
+          />
+        ) : (
+          <Bitcoin
+            activeButton={activeButton}
+            giftCards={giftCards}
+            bitcoin={bitcoin}
+          />
+        )}
       </SafeAreaView>
     </ScrollView>
   );

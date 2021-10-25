@@ -4,28 +4,47 @@ import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextI
 
 const { width, height } = Dimensions.get('screen')
 
-const Header = ({ navigation }) => {
+interface Props {
+    navigation?: any
+    Heading?: any
+    style?: any
+ }
 
+const Header : React.FC<Props> = (props) => {
+   const navigation=props.navigation
+   const Heading=props.Heading
+   const style=props.style
 
     return (
-        <View style={{ backgroundColor: 'rgb(10, 138, 64)', flexDirection: 'row',height:50 }}>
+        <View style={[styles.container , style]}>
 
-        <TouchableOpacity 
-        style={{alignSelf:"center" ,marginLeft:20,}}
-        onPress={()=>{navigation.goBack()}}
-        >
-            <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />
-        </TouchableOpacity>
+            <TouchableOpacity
+                style={{ alignSelf: "center", marginLeft: 20, }}
+                onPress={() => { navigation.goBack() }}
+            >
+                <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />
+            </TouchableOpacity>
 
-    </View>
+            <Text style={{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -20,marginTop:-5}}>
+            {Heading}
+            </Text>
+
+            <View>
+
+            </View>
+
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    image : {
-        height:20,
-        width:25,
-        
+    image: {
+        height: 15,
+        width: 25,
+
+    },
+    container : {
+        backgroundColor: 'transparent', flexDirection: 'row', height: 50,justifyContent:"space-between"
     }
 })
 export default Header;
