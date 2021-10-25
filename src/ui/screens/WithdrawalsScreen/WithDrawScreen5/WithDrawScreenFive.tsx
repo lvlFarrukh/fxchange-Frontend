@@ -47,11 +47,11 @@ const WithDrawScreenFive = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 , backgroundColor:'#fff' }}
-    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    behavior={Platform.OS === "ios" ? "padding" : "padding"}
     >
       
     <StatusBar hidden/>
-    <ScrollView>
+    <ScrollView contentContainerStyle={{flex:isKeyboardVisible? 0 :1}} >
       <SafeAreaView
         style={{
           height: height,
