@@ -44,7 +44,7 @@ const index = ({navigation}) => {
                 marginTop: 12,
                 borderRadius: 15,
                 paddingTop: 8,
-                paddingBottom: 5,
+                paddingBottom: 12,
                 paddingLeft: 18,
                 paddingRight: 18,
               },
