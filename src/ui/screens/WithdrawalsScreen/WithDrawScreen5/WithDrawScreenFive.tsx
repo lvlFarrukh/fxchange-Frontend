@@ -47,7 +47,7 @@ const WithDrawScreenFive = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 , backgroundColor:'#fff' }}
-    behavior={Platform.OS === "ios" ? "padding" : "padding"}
+    //behavior={Platform.OS === "ios" ? "padding" : "padding"}
     >
       
     <StatusBar hidden/>

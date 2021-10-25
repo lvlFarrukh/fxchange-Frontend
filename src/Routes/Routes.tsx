@@ -16,6 +16,7 @@ import WithDrawScreenFour from '../ui/screens/WithdrawalsScreen/WithDrawScreen4/
 import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScreen5/WithDrawScreenFive';
 
 import Test from '../ui/screens/test';
+import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -39,6 +40,7 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
             <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
+            <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>
