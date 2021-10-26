@@ -17,6 +17,11 @@ import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScree
 
 import Test from '../ui/screens/test';
 import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
+import GiftCardScreen from '../ui/screens/GiftCardsScreen/GiftCardScreen';
+import ItunesGiftCardScreen from '../ui/screens/ItunesGiftCardScreen/ItunesGiftCardScreen';
+import TradeSuccessfull from '../ui/screens/TradeSuccessfull/TradeSuccessfull';
+import TradeSuccesfullScreen2 from '../ui/screens/TradeSuccesfullScreen2/TradeSuccesfullScreen2';
+import SellBitcoinScreen1 from '../ui/screens/SellBitcoinScreen/SellBitcoinScreen1';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -40,7 +45,15 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
             <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
+            <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />
             <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />
+            <Stack.Screen name="ItunesGiftCardScreen" component={ItunesGiftCardScreen} />
+            <Stack.Screen name="TradeSuccessfull" component={TradeSuccessfull} />
+            <Stack.Screen name="TradeSuccesfullScreen2" component={TradeSuccesfullScreen2} />
+            <Stack.Screen name="SellBitcoinScreen1" component={SellBitcoinScreen1} />
+            
+            
+
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>

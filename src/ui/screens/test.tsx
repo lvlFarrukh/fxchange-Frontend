@@ -93,6 +93,46 @@ const Test = ({ navigation }) => {
             >
                 <Text style={{ padding: 10 }}>DashBoardScreen</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('GiftCardScreen')
+                }}
+            >
+                <Text style={{ padding: 10 }}>GiftCardScreen</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('ItunesGiftCardScreen')
+                }}
+            >
+                <Text style={{ padding: 10 }}>ItunesGiftCardScreen</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('TradeSuccessfull')
+                }}
+            >
+                <Text style={{ padding: 10 }}>TradeSuccessfull</Text>
+            </TouchableOpacity>
+          
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('TradeSuccesfullScreen2')
+                }}
+            >
+                <Text style={{ padding: 10 }}>TradeSuccesfullScreen2</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('SellBitcoinScreen1')
+                }}
+            >
+                <Text style={{ padding: 10 }}>SellBitcoinScreen1</Text>
+            </TouchableOpacity>
         </View>
     )
 }
