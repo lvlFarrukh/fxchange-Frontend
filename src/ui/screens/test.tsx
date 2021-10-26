@@ -85,6 +85,13 @@ const Test = ({ navigation }) => {
             >
                 <Text style={{ padding: 10 }}>ModeratorScreen</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('WithDrawScreenSix')
+                }}
+            >
+                <Text style={{ padding: 10 }}>WithDrawScreenSix</Text>
+            </TouchableOpacity>
         </View>
     )
 }
