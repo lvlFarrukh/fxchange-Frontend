@@ -1,0 +1,274 @@
+import React, {useState} from 'react';
+import {View, Text, Dimensions, Image, TextInput} from 'react-native';
+import Modal from 'react-native-modal';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import SelectDropdown from 'react-native-select-dropdown';
+import Header from '../../../components/ModeratePageCard/Header';
+import Style from './Style';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const {width, height} = Dimensions.get('screen');
+
+const index = ({navigation}) => {
+  const [isProcessModalVisible, setProcessModalVisible] = useState(false);
+  const [isDelineModalVisible, setdelineModalVisible] = useState(false);
+
+  const toggleDeclineModal = () => {
+    setdelineModalVisible(!isDelineModalVisible);
+  };
+
+  const toggleProcessModal = () => {
+    setProcessModalVisible(!isProcessModalVisible);
+  };
+
+  return (
+    <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
+      <ScrollView>
+        <Header
+          style={{marginTop: 10}}
+          navigation={navigation}
+          Heading={'BITCOIN - #FG4558668900'}
+          style={{marginTop: 0}}
+        />
+        <View
+          style={{
+            marginTop: 10,
+            // height: height,
+            width: width,
+            backgroundColor: '#ffffff',
+            borderTopRightRadius: 35,
+            borderTopLeftRadius: 35,
+            paddingLeft: '10%',
+            paddingRight: '8%',
+          }}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Text style={{fontSize: 9, color: 'black', marginTop: 25}}>
+              Opened By Thomas
+            </Text>
+          </View>
+
+          <View style={{alignSelf: 'center', marginTop: -22}}>
+            <Image
+              source={require('../../../../Assets/ICONS/Bitcoin.png')}
+              style={{
+                width: 32,
+                height: 32,
+                alignSelf: 'center',
+              }}
+            />
+            <Text
+              style={{
+                color: 'black',
+                fontSize: 13,
+                marginTop: 5,
+              }}>
+              Bitcoin Trade
+            </Text>
+          </View>
+
+          <View style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+          }}>
+          <View>
+            <View style={Style.lowerPortion}>
+              <View>
+                <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  Amount Sent
+                </Text>
+                <Text style={[Style.mdFontBlackColor, {fontSize: 19}]}>
+                  {'0.2356 BTC ($2300)'}
+                </Text>
+              </View>
+            </View>
+            <View style={{
+              flexDirection: 'row'
+            }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={[
+                  {
+                    backgroundColor: '#f2f2f2',
+                    borderRadius: 5,
+                    padding: 3,
+                    width: 80,
+                    marginTop: 15,
+                    marginBottom: 5,
+                  },
+                  Style.btnShadow,
+                ]}>
+                <Text
+                  style={[{color: '#0a8a40', fontSize: 11, alignSelf: 'center'}]}
+                  onPress={() => {}}>
+                  COMPLETED
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={{
+            backgroundColor: '#0a8a40',
+            width: 115,
+            height: 85,
+            padding: 12,
+            borderRadius: 8,
+            marginTop: 32
+          }}>
+           <Text style={{fontSize: 10, color: 'white', marginBottom: 2}}>Amount Received</Text>
+            <Text style={{fontSize: 13, color: 'white'}}>$2000</Text>
+            <TouchableOpacity
+                activeOpacity={0.5}
+                style={[
+                  {
+                    backgroundColor: 'white',
+                    borderRadius: 30,
+                    padding: 3,
+                    width: '100%',
+                    marginTop: 10,
+                    marginBottom: 5,
+                  },
+                  Style.btnShadow,
+                ]}>
+                <Text
+                  style={[{color: '#0a8a40', fontSize: 10, alignSelf: 'center'}]}
+                  onPress={() => {}}>
+                  VIEW REPORT
+                </Text>
+              </TouchableOpacity>
+          </View>
+          </View>
+
+          {/* hr */}
+          <View style={Style.hr}></View>
+
+          <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 12}]}>
+            <View>
+              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+                Wallet Address
+              </Text>
+              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+                23kjhsdfk1kjjkdfskf1kjkhjkkd
+              </Text>
+            </View>
+
+            <Image
+              source={require('../../../../Assets/ICONS/barCode.png')}
+              style={{
+                width: 85,
+                height: 85,
+                alignSelf: 'center',
+              }}
+            />
+          </View>
+
+          {/* hr */}
+          <View style={[Style.hr, {marginTop: 3}]}></View>
+
+          <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
+            <View>
+              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+                Transaction Value in Naira (570/5)
+              </Text>
+              <Text style={[{color: 'black', fontSize: 13, marginBottom: 2}]}>
+                N1,311,000
+              </Text>
+            </View>
+          </View>
+
+          {/* hr */}
+          <View style={[Style.hr, {marginTop: 3}]}></View>
+
+          <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
+            <View>
+              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+                Transaction ID
+              </Text>
+              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+                ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd
+                askdakldja alsdkaasd asdhajkd aksjdna asd
+              </Text>
+            </View>
+          </View>
+
+          {/* hr */}
+          <View style={[Style.hr, {marginTop: 3}]}></View>
+
+          <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
+            <View>
+              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+                Attachment
+              </Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              marginLeft: -30,
+              // position: 'relative',
+              // right: 50,
+            }}>
+            <View
+              style={{
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                width: 30,
+                height: 30,
+                borderRadius: 20,
+                alignSelf: 'center',
+                position: 'relative',
+                left: 65,
+                zIndex: 1,
+                // marginHorizontal: 'auto'
+              }}>
+              <Image
+                source={require('../../../../Assets/ICONS/zoom.png')}
+                style={{
+                  width: 18,
+                  height: 18,
+                  alignSelf: 'center',
+                  marginTop: 5,
+                }}
+              />
+            </View>
+            <Image
+              source={require('../../../../Assets/IMG_3151.jpg')}
+              style={{width: 100, height: 100}}
+            />
+
+            <View
+              style={{
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                width: 30,
+                height: 30,
+                borderRadius: 20,
+                alignSelf: 'center',
+                position: 'relative',
+                left: 45,
+                zIndex: 1,
+                // marginHorizontal: 'auto'
+              }}>
+              <Image
+                source={require('../../../../Assets/ICONS/zoom.png')}
+                style={{
+                  width: 18,
+                  height: 18,
+                  alignSelf: 'center',
+                  marginTop: 5,
+                }}
+              />
+            </View>
+            <Image
+              source={require('../../../../Assets/IMG_3151.jpg')}
+              style={{width: 100, height: 100, marginLeft: -20}}
+            />
+          </View>
+
+          <View style={{paddingBottom: 60}}></View>
+        </View>
+      </ScrollView>
+
+    </View>
+  );
+};
+
+export default index;

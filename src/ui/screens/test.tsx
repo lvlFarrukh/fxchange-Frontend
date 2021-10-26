@@ -95,12 +95,29 @@ const Test = ({ navigation }) => {
             
             <TouchableOpacity
                 onPress={() => {
-                    navigation.navigate('BitcoinCardDetail')
+                    navigation.navigate('BitcoinCardDetailPending')
                 }}
             >
-                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetail)</Text>
+                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailPending)</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('BitcoinCardDetailDecline')
+                }}
+            >
+                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailDecline)</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('BitcoinCardDetailComplete')
+                }}
+            >
+                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</Text>
+            </TouchableOpacity>
+
+            
         </View>
     )
 }
