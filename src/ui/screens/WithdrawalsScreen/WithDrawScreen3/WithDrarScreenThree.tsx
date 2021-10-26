@@ -20,6 +20,7 @@ const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
   fontWeight: 'bold',
+  zIndex:5,
   //padding: '3%',
 };
 const WithdrawalsScreenThree = ({ navigation }) => {
