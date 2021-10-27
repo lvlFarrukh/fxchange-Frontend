@@ -6,23 +6,24 @@ import {
   Image,
   TextInput,
   ImageBackground,
+  ScrollView, TouchableOpacity
 } from 'react-native';
 import Modal from 'react-native-modal';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 
+
 const {width, height} = Dimensions.get('screen');
 
 const index = ({navigation}) => {
   const [isReportModalVisible, setReportModalVisible] = useState(false);
-  const [previewImgPath, setpreviewImgPath] = useState('');
+  const [previewImgPath, setpreviewImgPath] = useState(0);
   const [isPreviewImage, setisPreviewImage] = useState(false);
 
-  const previewImage = (image: string) => {
+  const previewImage = (image: number) => {
     setpreviewImgPath(image);
     togglePreviewImgModal();
   };
@@ -228,63 +229,79 @@ const index = ({navigation}) => {
           <View
             style={{
               flexDirection: 'row',
-              marginLeft: -30,
+              marginLeft: -3,
               // position: 'relative',
               // right: 50,
             }}>
-            <View
-              style={{
-                backgroundColor: 'rgba(0,0,0,0.5)',
-                width: 30,
-                height: 30,
-                borderRadius: 20,
-                alignSelf: 'center',
-                position: 'relative',
-                left: 65,
-                zIndex: 1,
-                // marginHorizontal: 'auto'
-              }}>
-              <Image
-                source={require('../../../../Assets/ICONS/zoom.png')}
-                style={{
-                  width: 18,
-                  height: 18,
-                  alignSelf: 'center',
-                  marginTop: 5,
-                }}
-              />
-            </View>
-            <Image
+            <ImageBackground
               source={require('../../../../Assets/IMG_3151.jpg')}
-              style={{width: 100, height: 100}}
-            />
+              style={{
+                width: 100,
+                height: 70,
+                // marginLeft: 10,
+                justifyContent: 'center',
+              }}
+              imageStyle={{}}>
+              <TouchableOpacity onPress={() => previewImage(1)}>
+                <View
+                  style={{
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    width: 30,
+                    height: 30,
+                    borderRadius: 20,
+                    alignSelf: 'center',
+                    alignItems: 'center',
+                    // position: 'relative',
+                    // left: 45,
+                    // zIndex: -1,
+                  }}>
+                  <Image
+                    source={require('../../../../Assets/ICONS/zoom.png')}
+                    style={{
+                      width: 18,
+                      height: 18,
+                      alignSelf: 'center',
+                      marginTop: 5,
+                    }}
+                  />
+                </View>
+              </TouchableOpacity>
+            </ImageBackground>
 
-            <View
-              style={{
-                backgroundColor: 'rgba(0,0,0,0.5)',
-                width: 30,
-                height: 30,
-                borderRadius: 20,
-                alignSelf: 'center',
-                position: 'relative',
-                left: 45,
-                zIndex: 1,
-                // marginHorizontal: 'auto'
-              }}>
-              <Image
-                source={require('../../../../Assets/ICONS/zoom.png')}
-                style={{
-                  width: 18,
-                  height: 18,
-                  alignSelf: 'center',
-                  marginTop: 5,
-                }}
-              />
-            </View>
-            <Image
+            <ImageBackground
               source={require('../../../../Assets/IMG_3151.jpg')}
-              style={{width: 100, height: 100, marginLeft: -20}}
-            />
+              style={{
+                width: 100,
+                height: 70,
+                marginLeft: 10,
+                justifyContent: 'center',
+              }}
+              imageStyle={{}}>
+              <TouchableOpacity onPress={() => previewImage(1)}>
+                <View
+                  style={{
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    width: 30,
+                    height: 30,
+                    borderRadius: 20,
+                    alignSelf: 'center',
+                    alignItems: 'center',
+                    // position: 'relative',
+                    // left: 45,
+                    // zIndex: -1,
+                  }}>
+                  <Image
+                    source={require('../../../../Assets/ICONS/zoom.png')}
+                    style={{
+                      width: 18,
+                      height: 18,
+                      alignSelf: 'center',
+                      marginTop: 5,
+                    }}
+                  />
+                </View>
+              </TouchableOpacity>
+            </ImageBackground>
           </View>
 
           <View style={{paddingBottom: 60}}></View>
@@ -416,8 +433,7 @@ const index = ({navigation}) => {
                     // position: 'relative',
                     // right: 50,
                   }}>
-                
-                <ImageBackground
+                  <ImageBackground
                     source={require('../../../../Assets/IMG_3151.jpg')}
                     style={{
                       width: 100,
@@ -426,7 +442,7 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -461,7 +477,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                    onPress={() => previewImage(0)}
+                    >
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -486,8 +504,6 @@ const index = ({navigation}) => {
                       </View>
                     </TouchableOpacity>
                   </ImageBackground>
-
-                  
                 </View>
               </View>
             </View>

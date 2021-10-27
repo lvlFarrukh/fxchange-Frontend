@@ -11,6 +11,7 @@ import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import SelectDropdown from 'react-native-select-dropdown';
+import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Style from './Style';
 
 const {width, height} = Dimensions.get('screen');
@@ -23,6 +24,18 @@ const index = ({navigation}) => {
     'Card is not activated',
     'Card is not clear',
   ];
+  const [previewImgPath, setpreviewImgPath] = useState(0);
+  const [isPreviewImage, setisPreviewImage] = useState(false);
+
+  const previewImage = (image: number) => {
+    setpreviewImgPath(image);
+    togglePreviewImgModal();
+  };
+
+  const togglePreviewImgModal = () => {
+    setisPreviewImage(!isPreviewImage);
+  };
+
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -116,33 +129,49 @@ const index = ({navigation}) => {
                 </Text>
               </View>
 
-              <View style={{flexDirection: 'row'}}>
-                <View
+              <View
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    width: 22,
-                    height: 22,
-                    borderRadius: 20,
-                    alignSelf: 'center',
-                    position: 'relative',
-                    left: 34,
-                    zIndex: 1,
+                    flexDirection: 'row',
+                    marginLeft: -3,
+                    // position: 'relative',
+                    // right: 50,
                   }}>
-                  <Image
-                    source={require('../../../../Assets/ICONS/zoom.png')}
+                
+                <ImageBackground
+                    source={require('../../../../Assets/IMG_3151.jpg')}
                     style={{
-                      width: 11,
-                      height: 11,
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      width: 48,
+                      height: 40,
+                      // marginLeft: 10,
+                      justifyContent: 'center',
                     }}
-                  />
+                    imageStyle={{}}>
+                    <TouchableOpacity onPress={()=> previewImage(1)}>
+                      <View
+                        style={{
+                          backgroundColor: 'rgba(0,0,0,0.5)',
+                          width: 20,
+                          height: 20,
+                          borderRadius: 20,
+                          alignSelf: 'center',
+                          alignItems: 'center',
+                          // position: 'relative',
+                          // left: 45,
+                          // zIndex: -1,
+                        }}>
+                        <Image
+                          source={require('../../../../Assets/ICONS/zoom.png')}
+                          style={{
+                            width: 12,
+                            height: 12,
+                            alignSelf: 'center',
+                            marginTop: 4
+                          }}
+                        />
+                      </View>
+                    </TouchableOpacity>
+                  </ImageBackground>                  
                 </View>
-                <Image
-                  source={require('../../../../Assets/IMG_3151.jpg')}
-                  style={{width: 48, height: 40}}
-                />
-              </View>
             </View>
             {/* hr */}
             <View style={Style.hr}></View>
@@ -169,7 +198,7 @@ const index = ({navigation}) => {
             {/* hr */}
             <View style={Style.hr}></View>
 
-            <View style={[Style.lowerPortion, {marginBottom: 6}]}>
+            <View style={[{marginBottom: 6, flexDirection: 'row'}]}>
               <View>
                 <Text style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
                   REASON FOR DECLINE
@@ -179,72 +208,77 @@ const index = ({navigation}) => {
                 </Text>
               </View>
 
-              <View style={[{flexDirection: 'row'}]}>
-                <View
+              <View style={[{flexDirection: 'row', marginLeft: 20}]}>
+                <ImageBackground
+                  source={require('../../../../Assets/IMG_3151.jpg')}
                   style={{
-                    flexDirection: 'row',
-                    position: 'relative',
-                    right: 50,
-                  }}>
-                  <View
-                    style={{
-                      backgroundColor: 'rgba(0,0,0,0.5)',
-                      width: 20,
-                      height: 20,
-                      borderRadius: 20,
-                      alignSelf: 'center',
-                      position: 'relative',
-                      left: 30,
-                      zIndex: 1,
-                    }}>
-                    <Image
-                      source={require('../../../../Assets/ICONS/zoom.png')}
+                    width: 43,
+                    height: 37,
+                    // marginLeft: 10,
+                    justifyContent: 'center',
+                  }}
+                  imageStyle={{}}>
+                  <TouchableOpacity  onPress={()=> previewImage(1)}>
+                    <View
                       style={{
-                        width: 11,
-                        height: 11,
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                        width: 20,
+                        height: 20,
+                        borderRadius: 20,
                         alignSelf: 'center',
-                        marginTop: 5,
-                      }}
-                    />
-                  </View>
-                  <Image
-                    source={require('../../../../Assets/IMG_3151.jpg')}
-                    style={{width: 40, height: 32}}
-                  />
-                </View>
+                        alignItems: 'center',
+                        // position: 'relative',
+                        // left: 45,
+                        // zIndex: -1,
+                      }}>
+                      <Image
+                        source={require('../../../../Assets/ICONS/zoom.png')}
+                        style={{
+                          width: 13,
+                          height: 13,
+                          alignSelf: 'center',
+                          marginTop: 4,
+                        }}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </ImageBackground>
 
-                <View
+                <ImageBackground
+                  source={require('../../../../Assets/IMG_3151.jpg')}
                   style={{
-                    flexDirection: 'row',
-                    position: 'relative',
-                    right: 62,
-                  }}>
-                  <View
-                    style={{
-                      backgroundColor: 'rgba(0,0,0,0.5)',
-                      width: 20,
-                      height: 20,
-                      borderRadius: 20,
-                      alignSelf: 'center',
-                      position: 'relative',
-                      left: 30,
-                      zIndex: 1,
-                    }}>
-                    <Image
-                      source={require('../../../../Assets/ICONS/zoom.png')}
+                    width: 43,
+                    height: 37,
+                    marginLeft: 5,
+                    justifyContent: 'center',
+                  }}
+                  imageStyle={{}}>
+                  <TouchableOpacity  onPress={()=> previewImage(1)}>
+                    <View
                       style={{
-                        width: 11,
-                        height: 11,
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                        width: 20,
+                        height: 20,
+                        borderRadius: 20,
                         alignSelf: 'center',
-                        marginTop: 5,
-                      }}
-                    />
-                  </View>
-                  <Image
-                    source={require('../../../../Assets/IMG_3151.jpg')}
-                    style={{width: 40, height: 32}}
-                  />
-                </View>
+                        alignItems: 'center',
+                        // position: 'relative',
+                        // left: 45,
+                        // zIndex: -1,
+                      }}>
+                      <Image
+                        source={require('../../../../Assets/ICONS/zoom.png')}
+                        style={{
+                          width: 13,
+                          height: 13,
+                          alignSelf: 'center',
+                          marginTop: 4,
+                        }}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </ImageBackground>
+
               </View>
             </View>
 
@@ -291,33 +325,49 @@ const index = ({navigation}) => {
                 </Text>
               </View>
 
-              <View style={{flexDirection: 'row'}}>
                 <View
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    width: 22,
-                    height: 22,
-                    borderRadius: 20,
-                    alignSelf: 'center',
-                    position: 'relative',
-                    left: 34,
-                    zIndex: 1,
+                    flexDirection: 'row',
+                    marginLeft: -3,
+                    // position: 'relative',
+                    // right: 50,
                   }}>
-                  <Image
-                    source={require('../../../../Assets/ICONS/zoom.png')}
+                
+                  <ImageBackground
+                    source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                     style={{
-                      width: 11,
-                      height: 11,
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      width: 48,
+                      height: 40,
+                      // marginLeft: 10,
+                      justifyContent: 'center',
                     }}
-                  />
+                    imageStyle={{}}>
+                    <TouchableOpacity onPress={()=> previewImage(0)}>
+                      <View
+                        style={{
+                          backgroundColor: 'rgba(0,0,0,0.5)',
+                          width: 20,
+                          height: 20,
+                          borderRadius: 20,
+                          alignSelf: 'center',
+                          alignItems: 'center',
+                          // position: 'relative',
+                          // left: 45,
+                          // zIndex: -1,
+                        }}>
+                        <Image
+                          source={require('../../../../Assets/ICONS/zoom.png')}
+                          style={{
+                            width: 12,
+                            height: 12,
+                            alignSelf: 'center',
+                            marginTop: 4
+                          }}
+                        />
+                      </View>
+                    </TouchableOpacity>
+                  </ImageBackground>                  
                 </View>
-                <Image
-                  source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-                  style={{width: 48, height: 40}}
-                />
-              </View>
             </View>
 
             {/* hr */}
@@ -455,33 +505,49 @@ const index = ({navigation}) => {
                 </Text>
               </View>
 
-              <View style={{flexDirection: 'row'}}>
-                <View
+              <View
                   style={{
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    width: 22,
-                    height: 22,
-                    borderRadius: 20,
-                    alignSelf: 'center',
-                    position: 'relative',
-                    left: 34,
-                    zIndex: 1,
+                    flexDirection: 'row',
+                    marginLeft: -3,
+                    // position: 'relative',
+                    // right: 50,
                   }}>
-                  <Image
-                    source={require('../../../../Assets/ICONS/zoom.png')}
+                
+                  <ImageBackground
+                    source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                     style={{
-                      width: 11,
-                      height: 11,
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      width: 48,
+                      height: 40,
+                      // marginLeft: 10,
+                      justifyContent: 'center',
                     }}
-                  />
+                    imageStyle={{}}>
+                    <TouchableOpacity  onPress={()=> previewImage(0)}>
+                      <View
+                        style={{
+                          backgroundColor: 'rgba(0,0,0,0.5)',
+                          width: 20,
+                          height: 20,
+                          borderRadius: 20,
+                          alignSelf: 'center',
+                          alignItems: 'center',
+                          // position: 'relative',
+                          // left: 45,
+                          // zIndex: -1,
+                        }}>
+                        <Image
+                          source={require('../../../../Assets/ICONS/zoom.png')}
+                          style={{
+                            width: 12,
+                            height: 12,
+                            alignSelf: 'center',
+                            marginTop: 4
+                          }}
+                        />
+                      </View>
+                    </TouchableOpacity>
+                  </ImageBackground>                  
                 </View>
-                <Image
-                  source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-                  style={{width: 48, height: 40}}
-                />
-              </View>
             </View>
 
             {/* hr */}
@@ -792,6 +858,11 @@ const index = ({navigation}) => {
           </View>
         </Modal>
       </SafeAreaView>
+      <ImagePreviewModal
+        image={previewImgPath}
+        isPreviewImgVisible={isPreviewImage}
+        togglePreviewImgModal={togglePreviewImgModal}
+      />
     </ScrollView>
   );
 };
