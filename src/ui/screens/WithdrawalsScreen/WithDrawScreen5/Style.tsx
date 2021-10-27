@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
     
   },
   headerHeadingContainer:{
-   width:60,
-   height:60,
+    width:'15%',
     position:'absolute',
     left:'44%',
     top:'30%',
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
    backgroundColor:'#062529',
    fontSize:15,
    textAlign:'center',
-   paddingHorizontal:0,
+   paddingHorizontal:15,
    paddingVertical:20,
    borderRadius:80
    

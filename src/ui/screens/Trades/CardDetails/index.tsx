@@ -33,10 +33,6 @@ const index = ({navigation}) => {
           <Text></Text>
         </View>
         <View style={Style.mainBody}>
-          <View style={[Style.headerButtons]}>
-            <Text style={[Style.headerButtom]}>Opened by Thomas</Text>
-          </View>
-
           <View
             style={[
               {
@@ -51,7 +47,7 @@ const index = ({navigation}) => {
               Style.btnShadow,
             ]}>
             <View
-              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              style={{flexDirection: 'row', justifyContent: 'space-between',}}>
               <View style={{flexDirection: 'row', marginTop: 10}}>
                 <View
                   style={[
@@ -159,7 +155,6 @@ const index = ({navigation}) => {
                   style={{
                     flexDirection: 'row',
                     position: 'relative',
-                    right: 50,
                   }}>
                   <View
                     style={{
@@ -192,7 +187,6 @@ const index = ({navigation}) => {
                   style={{
                     flexDirection: 'row',
                     position: 'relative',
-                    right: 62,
                   }}>
                   <View
                     style={{
@@ -220,6 +214,24 @@ const index = ({navigation}) => {
                     style={{width: 40, height: 32}}
                   />
                 </View>
+                <TouchableOpacity
+                activeOpacity={0.5}
+                style={[
+                  {
+                    backgroundColor: '#0a8a40',
+                    borderRadius: 20,
+                    padding: 4,
+                    width: 40,
+                    marginLeft:10,
+                    marginTop:5
+                  },
+                  Style.btnShadow,
+                ]}>
+                <Text
+                  style={[{color: 'white', fontSize: 7, alignSelf: 'center'}]}>
+                  RETRY
+                </Text>
+              </TouchableOpacity>
               </View>
             </View>
 
@@ -316,71 +328,11 @@ const index = ({navigation}) => {
                   {'DEC 10, 2021 1:20pm'}
                 </Text>
                 <Text
-                  style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
-                  {'IN PROGRESS'}
+                  style={[{textAlign: 'right', color: '#16a041', fontSize: 13}]}>
+                  {'COMPLETED'}
                 </Text>
               </View>
             </View>
-
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                marginTop: 25,
-                marginBottom: 22,
-              }}>
-              <TouchableOpacity
-                activeOpacity={0.5}
-                style={[
-                  {
-                    backgroundColor: '#f2f2f2',
-                    borderRadius: 20,
-                    padding: 4,
-                    width: 80,
-                  },
-                  Style.btnShadow,
-                ]}>
-                <Text
-                  style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}>
-                  DECLINE
-                </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                activeOpacity={0.5}
-                style={[
-                  {
-                    backgroundColor: '#d65d0e',
-                    borderRadius: 20,
-                    padding: 4,
-                    width: 80,
-                  },
-                  Style.btnShadow,
-                ]}>
-                <Text
-                  style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}>
-                  SWITCH
-                </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                activeOpacity={0.5}
-                style={[
-                  {
-                    backgroundColor: '#0a8a40',
-                    borderRadius: 20,
-                    padding: 4,
-                    width: 80,
-                  },
-                  Style.btnShadow,
-                ]}>
-                <Text
-                  style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}>
-                  ACCEPT
-                </Text>
-              </TouchableOpacity>
-            </View>
-
             {/* hr */}
             <View style={Style.hr}></View>
 

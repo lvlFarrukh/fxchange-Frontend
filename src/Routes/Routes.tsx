@@ -8,14 +8,15 @@ import Moderator from '../ui/screens/Moderator/Home';
 import CardDetails from '../ui/screens/Moderator/CardDetails';
 import ForgetPasswordScreen from '../ui/screens/ForgetPasswordScreen/ForgetPasswordScreen';
 import TransactionHistoryScreen from '../ui/screens/TransactionHistoryScreen';
-
+import tradeCardDetails from '../ui/screens/Trades/CardDetails';
 import WithdrawalsScreen from '../ui/screens/WithdrawalsScreen/WithDrawScreen1/WIthdrawalScreen';
 import WithdrawalsScreenTwo from '../ui/screens/WithdrawalsScreen/WithDrawScreen2/WithDrwaScreenTwo';
 import WithdrawalsScreenThree from '../ui/screens/WithdrawalsScreen/WithDrawScreen3/WithDrarScreenThree';
 import WithDrawScreenFour from '../ui/screens/WithdrawalsScreen/WithDrawScreen4/WithDrawScreenFour';
 import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScreen5/WithDrawScreenFive';
-
+import Trades from '../ui/screens/Trades/Trades';
 import Test from '../ui/screens/test';
+
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -39,6 +40,8 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
             <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
+            <Stack.Screen name="Trades" component={Trades} />
+            <Stack.Screen name="tradeCardDetails" component={tradeCardDetails} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>

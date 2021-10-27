@@ -12,34 +12,34 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
-import Bitcoin from './Bitcoin';
-import GiftCards from './giftCard';
+import CompletedTrades from './CompletedTrades';
+import OngoingTrades from './OngoingTrades';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
   fontWeight: 'bold',
+  Zindex:1,
   //padding: '3%',
 };
-const WithdrawalsScreenThree = ({navigation}) => {
-  const [giftCards, setGiftCards] = useState(btnSetected);
-  const [bitcoin, setBitcoin] = useState({});
+const Trades = ({navigation}) => {
+  const [ongoingTrades, setOngoingTrades] = useState(btnSetected);
+  const [completedTrades, setCompletedTrades] = useState({});
   const [screen, setScreen] = useState(0);
   const activeButton = (buttonType: string) => {
-    if (buttonType === 'giftCards') {
-      setGiftCards(btnSetected);
+    if (buttonType === 'OngoingTrades') {
+      setOngoingTrades(btnSetected);
       setScreen(0);
-      setBitcoin({});
+      setCompletedTrades({});
     }
-    if (buttonType === 'bitcoin') {
-      setGiftCards({});
-      setBitcoin(btnSetected);
+    if (buttonType === 'CompletedTrades') {
+      setOngoingTrades({});
+      setCompletedTrades(btnSetected);
       setScreen(1);
     }
   };
   return (
-    <ScrollView>
       <SafeAreaView
         style={{
           height: height,
@@ -48,38 +48,31 @@ const WithdrawalsScreenThree = ({navigation}) => {
         }}>
         <View style={styles.header}>
           <View style={styles.headerUpperArea}>
-            <TouchableOpacity>
-              <Image
-                source={require('../../../../Assets/ICONS/arrow=white.png')}
-                style={{width: 30, height: 20, marginTop: 6, marginRight: 40}}
-              />
-            </TouchableOpacity>
             <Text
               style={{
                 fontSize: 23,
                 fontWeight: '400',
                 color: 'white',
-                marginLeft: 40,
+                marginLeft: 120,
               }}>
-              Our Rates
+              Trades
             </Text>
           </View>
         </View>
         {screen === 0 ? (
-          <GiftCards
+          <OngoingTrades
             activeButton={activeButton}
-            giftCards={giftCards}
-            bitcoin={bitcoin}
+            ongoingTrades={ongoingTrades}
+            completedTrades={completedTrades}
           />
         ) : (
-          <Bitcoin
+          <CompletedTrades
             activeButton={activeButton}
-            giftCards={giftCards}
-            bitcoin={bitcoin}
-          />
+            ongoingTrades={ongoingTrades}
+            completedTrades={completedTrades}
+            navigation={navigation}/>
         )}
       </SafeAreaView>
-    </ScrollView>
   );
 };
-export default WithdrawalsScreenThree;
+export default Trades;
