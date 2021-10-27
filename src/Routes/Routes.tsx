@@ -17,6 +17,7 @@ import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScree
 import SwitchGiftCard from '../ui/screens/Moderator/SwitchGiftCard'
 import BitcoinCardDetailPending from '../ui/screens/Moderator/BitcoinCardDetailPending'
 import UploadGiftCard from '../ui/screens/UploadGiftCard'
+import WithDrawScreenSix from '../ui/screens/WithdrawalsScreen/WithDrawScreen6/WIthDrawScreenSix';
 import Test from '../ui/screens/test';
 import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
 import GiftCardScreen from '../ui/screens/GiftCardsScreen/GiftCardScreen';
@@ -48,7 +49,7 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />
             <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
-            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
+            <Stack.Screen name="WithDrawScreenSix" component={WithDrawScreenSix} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
             <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />
             <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />

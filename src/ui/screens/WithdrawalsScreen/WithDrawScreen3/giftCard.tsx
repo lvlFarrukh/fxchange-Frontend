@@ -134,6 +134,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               width: '100%',
               paddingRight: 10,
               paddingVertical: 10,
+              
             }}
           />
         </View>

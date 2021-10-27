@@ -82,6 +82,14 @@ const Test = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => {
+                        navigation.navigate('WithDrawScreenSix')
+                    }}
+                >
+                    <Text style={{ padding: 10 }}>WithDrawScreenSix</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    onPress={() => {
                         navigation.navigate('ModeratorScreen')
                     }}
                 >
@@ -159,31 +167,32 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => {
-                    navigation.navigate('BitcoinCardDetailComplete')
-                }}
-            >
-                <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</Text>
-            </TouchableOpacity>
+                        navigation.navigate('BitcoinCardDetailComplete')
+                    }}
+                >
+                    <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity
-                onPress={() => {
-                    navigation.navigate('UploadGiftCard')
-                }}
-            >
-                <Text style={{ padding: 10 }}>dashboard (UploadGiftCard)</Text>
-            </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('UploadGiftCard')
+                    }}
+                >
+                    <Text style={{ padding: 10 }}>dashboard (UploadGiftCard)</Text>
+                </TouchableOpacity>
 
 
-            <TouchableOpacity
-                onPress={() => {
-                    navigation.navigate('SellBitcoin')
-                }}
-            >
-                <Text style={{ padding: 10 }}>dashboard (SellBitcoin)</Text>
-            </TouchableOpacity>
-        </ScrollView>
-            
-        </View >
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('SellBitcoin')
+                    }}
+                >
+                    <Text style={{ padding: 10 }}>dashboard (SellBitcoin)</Text>
+                </TouchableOpacity>
+            </ScrollView>
+        </View>
+
+
     )
 }
 
