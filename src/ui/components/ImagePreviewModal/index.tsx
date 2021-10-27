@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, Image, Dimensions} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
+import timon from '../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg'
+import IMG from '../../../Assets/IMG_3151.jpg'
 
 const {width, height} = Dimensions.get('screen');
 
 const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
+  const imgs: any = [timon, IMG]
   return (
     <Modal
       //style={{ backgroundColor:'#fafafa' , height:height/2}}
@@ -42,7 +44,7 @@ const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
             
             <Image 
             style={{alignSelf: 'center', height: height/3.1, width: width - 60}}
-                source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
+                source={imgs[image]}
             />
 
       </View>
