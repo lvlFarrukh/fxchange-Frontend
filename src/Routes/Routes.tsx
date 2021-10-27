@@ -16,10 +16,11 @@ import WithDrawScreenFour from '../ui/screens/WithdrawalsScreen/WithDrawScreen4/
 import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScreen5/WithDrawScreenFive';
 import SwitchGiftCard from '../ui/screens/Moderator/SwitchGiftCard'
 import BitcoinCardDetailPending from '../ui/screens/Moderator/BitcoinCardDetailPending'
-
+import UploadGiftCard from '../ui/screens/UploadGiftCard'
 import Test from '../ui/screens/test';
 import BitcoinCardDetailDecline from '../ui/screens/Moderator/BitcoinCardDetailDecline';
 import BitcoinCardDetailComplete from '../ui/screens/Moderator/BitcoinCardDetailComplete';
+import SellBitcoin from '../ui/screens/SellBitcoin';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -47,6 +48,8 @@ const Routes = () => {
             <Stack.Screen name="BitcoinCardDetailPending" component={BitcoinCardDetailPending} />
             <Stack.Screen name="BitcoinCardDetailDecline" component={BitcoinCardDetailDecline} />
             <Stack.Screen name="BitcoinCardDetailComplete" component={BitcoinCardDetailComplete} />
+            <Stack.Screen name="UploadGiftCard" component={UploadGiftCard} />
+            <Stack.Screen name="SellBitcoin" component={SellBitcoin} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>

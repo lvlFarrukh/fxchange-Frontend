@@ -98,20 +98,20 @@ const index = ({navigation}) => {
               </Text>
             </TouchableOpacity>
     
-              <View style={{
-                flexDirection: 'row',
-                marginLeft: 14,
-                marginTop: 15,
-              }}>
-            <Image 
-              source={require('../../../../Assets/ICONS/info_icon.png')}
-              style={{
-                width: 15,
-                height: 15,
-                marginRight:5
-             }}
-            />
-            <Text style={{fontSize: 10}}>Not received</Text>
+            <View style={{
+              flexDirection: 'row',
+              marginLeft: 14,
+              marginTop: 15,
+            }}>
+              <Image 
+                source={require('../../../../Assets/ICONS/info_icon.png')}
+                style={{
+                  width: 15,
+                  height: 15,
+                  marginRight:5
+              }}
+              />
+              <Text style={{fontSize: 10}}>Not received</Text>
             </View>
           </View>
 

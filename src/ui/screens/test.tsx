@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, StatusBar } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -14,6 +15,7 @@ const Test = ({ navigation }) => {
         <View style={{ height: height, width: width, flex: 1,justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
             <StatusBar hidden />
 
+            <ScrollView>
             <TouchableOpacity
                 onPress={() => {
                     navigation.navigate('CreateAccountScreen')
@@ -117,6 +119,23 @@ const Test = ({ navigation }) => {
                 <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('UploadGiftCard')
+                }}
+            >
+                <Text style={{ padding: 10 }}>dashboard (UploadGiftCard)</Text>
+            </TouchableOpacity>
+
+
+            <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('SellBitcoin')
+                }}
+            >
+                <Text style={{ padding: 10 }}>dashboard (SellBitcoin)</Text>
+            </TouchableOpacity>
+            </ScrollView>
             
         </View>
     )
