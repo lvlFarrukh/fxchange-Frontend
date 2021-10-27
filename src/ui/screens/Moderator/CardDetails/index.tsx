@@ -776,7 +776,7 @@ const index = ({navigation}) => {
                 <View style={[Style.hr, {marginTop: 6}]}></View>
                 <TouchableOpacity
                   style={{marginBottom: 8, marginTop: -5}}
-                  onPress={() => toggleModal()}>
+                  onPress={() => toggleDelineModal()}>
                   <Text
                     style={{
                       textAlign: 'center',

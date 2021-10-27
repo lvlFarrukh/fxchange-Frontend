@@ -14,7 +14,9 @@ import WithdrawalsScreenTwo from '../ui/screens/WithdrawalsScreen/WithDrawScreen
 import WithdrawalsScreenThree from '../ui/screens/WithdrawalsScreen/WithDrawScreen3/WithDrarScreenThree';
 import WithDrawScreenFour from '../ui/screens/WithdrawalsScreen/WithDrawScreen4/WithDrawScreenFour';
 import WithdrawalsScreenFive from '../ui/screens/WithdrawalsScreen/WithDrawScreen5/WithDrawScreenFive';
-
+import SwitchGiftCard from '../ui/screens/Moderator/SwitchGiftCard'
+import BitcoinCardDetailPending from '../ui/screens/Moderator/BitcoinCardDetailPending'
+import UploadGiftCard from '../ui/screens/UploadGiftCard'
 import Test from '../ui/screens/test';
 import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
 import GiftCardScreen from '../ui/screens/GiftCardsScreen/GiftCardScreen';
@@ -22,6 +24,9 @@ import ItunesGiftCardScreen from '../ui/screens/ItunesGiftCardScreen/ItunesGiftC
 import TradeSuccessfull from '../ui/screens/TradeSuccessfull/TradeSuccessfull';
 import TradeSuccesfullScreen2 from '../ui/screens/TradeSuccesfullScreen2/TradeSuccesfullScreen2';
 import SellBitcoinScreen1 from '../ui/screens/SellBitcoinScreen/SellBitcoinScreen1';
+import BitcoinCardDetailDecline from '../ui/screens/Moderator/BitcoinCardDetailDecline';
+import BitcoinCardDetailComplete from '../ui/screens/Moderator/BitcoinCardDetailComplete';
+import SellBitcoin from '../ui/screens/SellBitcoin';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -51,9 +56,12 @@ const Routes = () => {
             <Stack.Screen name="TradeSuccessfull" component={TradeSuccessfull} />
             <Stack.Screen name="TradeSuccesfullScreen2" component={TradeSuccesfullScreen2} />
             <Stack.Screen name="SellBitcoinScreen1" component={SellBitcoinScreen1} />
-            
-            
-
+            <Stack.Screen name="SwitchGiftCard" component={SwitchGiftCard} />
+            <Stack.Screen name="BitcoinCardDetailPending" component={BitcoinCardDetailPending} />
+            <Stack.Screen name="BitcoinCardDetailDecline" component={BitcoinCardDetailDecline} />
+            <Stack.Screen name="BitcoinCardDetailComplete" component={BitcoinCardDetailComplete} />
+            <Stack.Screen name="UploadGiftCard" component={UploadGiftCard} />
+            <Stack.Screen name="SellBitcoin" component={SellBitcoin} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>
