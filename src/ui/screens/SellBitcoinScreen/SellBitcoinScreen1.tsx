@@ -40,17 +40,35 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                     </View>
 
                     <View style={{ flexDirection: 'row', justifyContent: "space-between", marginTop: 10 }}>
-                        <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
+                        {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
                             <Text style={{ padding: 12 }}>Amount Sent in USD</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
+                        <TextInput
+                            style={styles.TextInputStyle}
+                            placeholder={'Amount Sent in USD'}
+                            placeholderTextColor={'#949494'}
+                        >
+                        </TextInput>
 
-                        <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
+                        {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
                             <Text style={{ padding: 12 }}>Amount Sent in BTC</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
+                        <TextInput
+                            style={styles.TextInputStyle}
+                            placeholder={'Amount Sent in USD'}
+                            placeholderTextColor={'#949494'}
+                        >
+                        </TextInput>
                     </View>
-                    <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4, marginTop: 10 }}>
+                    {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4, marginTop: 10 }}>
                         <Text style={{ padding: 12 }}>Transaction id (optional)</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
+                    <TextInput
+                        style={[styles.TextInputStyle , {marginTop:10 , width:'100%'}]}
+                        placeholder={'Amount Sent in USD'}
+                        placeholderTextColor={'#949494'}
+                    >
+                    </TextInput>
 
                     <View style={{
                         flexDirection: 'row',
@@ -66,64 +84,24 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                                 <Image style={styles.closeIcon} source={require('../../../Assets/ICONS/close.png')} />
                             </TouchableOpacity>
 
-                            <View
-                                style={{
-                                    backgroundColor: 'rgba(0,0,0,0.8)',
-                                    flexDirection: 'row',
-                                    marginTop: 'auto',
-                                    justifyContent: 'space-between',
-                                    padding: 5
-                                }}
-                            >
-                                <View>
-                                    <Text style={{ color: '#fff', fontWeight: '400', fontSize: 12 }}>Itunes</Text>
-                                    <Text style={{ color: '#fff', fontSize: 8 }}>$800 (264,000)</Text>
-                                </View>
-
-                                <View>
-                                    <Text style={{ color: '#fff', fontWeight: '400', fontSize: 12 }}>Physical</Text>
-                                    <Text style={{ color: '#fff', fontSize: 8, alignSelf: 'flex-end' }}>360/$</Text>
-                                </View>
-                            </View>
-
 
                         </ImageBackground>
 
                         <ImageBackground
-                            source={require('../../../Assets/IMG_3151.jpg')}
+                            source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                             style={styles.cardImage}
                             resizeMode={'contain'}
                         >
                             <TouchableOpacity>
                                 <Image style={styles.closeIcon} source={require('../../../Assets/ICONS/close.png')} />
                             </TouchableOpacity>
-
-                            <View
-                                style={{
-                                    backgroundColor: 'rgba(0,0,0,0.8)',
-                                    flexDirection: 'row',
-                                    marginTop: 'auto',
-                                    justifyContent: 'space-between',
-                                    padding: 5
-                                }}
-                            >
-                                <View>
-                                    <Text style={{ color: '#fff', fontWeight: '400', fontSize: 12 }}>Itunes</Text>
-                                    <Text style={{ color: '#fff', fontSize: 8 }}>$800 (264,000)</Text>
-                                </View>
-
-                                <View>
-                                    <Text style={{ color: '#fff', fontWeight: '400', fontSize: 12 }}>Physical</Text>
-                                    <Text style={{ color: '#fff', fontSize: 8, alignSelf: 'flex-end' }}>360/$</Text>
-                                </View>
-                            </View>
                         </ImageBackground>
                     </View>
                     <TouchableOpacity
                         style={styles.roundButton1}>
                         <Text style={{ fontSize: 40, color: '#0a8a40' }}>+</Text>
                     </TouchableOpacity>
-                    <Text style={{ color: '#0a8a40',alignSelf:"center" }}>Add Attachment</Text>
+                    <Text style={{ color: '#0a8a40', alignSelf: "center",marginTop:5 }}>Add Attachment</Text>
 
                     <TouchableOpacity style={{ marginTop: 'auto', marginBottom: 'auto' }}>
                         <Text style={{
@@ -197,7 +175,8 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 155,
         height: 120,
-        marginTop: 20
+        marginTop: 20,
+        backgroundColor:'#dfe2f5'
     },
     Heading: {
         fontWeight: '700',
@@ -206,43 +185,14 @@ const styles = StyleSheet.create({
         color: '#343434'
     },
     TextInputStyle: {
-        backgroundColor: '#fafafa',
+        backgroundColor: '#fff',
         borderWidth: 1,
         borderRadius: 5,
-        borderColor: '#949494',
+        borderColor: 'rgba(0,0,0,0.2)',
+        width:'48%',
         paddingLeft: 10,
         color: '#000'
 
-    },
-    GreenButton: {
-        // alignSelf:'center',
-        // backgroundColor:'#0a8a40',
-        // width:'100%'
-        borderWidth: 1,
-        borderColor: '#0a8a40',
-        borderRadius: 5,
-        paddingHorizontal: 10,
-        paddingVertical: 15,
-        fontSize: 15,
-        fontWeight: '700',
-        color: '#fafafa',
-        backgroundColor: '#0a8a40',
-        alignSelf: 'center',
-        textAlign: 'center',
-        width: '100%',
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 50, },
-        shadowOpacity: 0.25,
-        shadowRadius: 5,
-        elevation: 5,
-        //marginTop: 20,
-        //marginBottom: 10
-
-    },
-    BottomRowContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 8
     },
 })
 export default SellBitcoinScreen1;

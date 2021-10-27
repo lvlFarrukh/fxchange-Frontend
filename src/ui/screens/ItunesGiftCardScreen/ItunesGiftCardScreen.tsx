@@ -64,7 +64,7 @@ const ItunesGiftCardScreen = ({ navigation }) => {
                         </ImageBackground>
 
                         <ImageBackground
-                            source={require('../../../Assets/IMG_3151.jpg')}
+                            source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                             style={styles.cardImage}
                             resizeMode={'contain'}
                         >
@@ -156,7 +156,8 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 155,
         height: 120,
-        marginTop: 20
+        marginTop: 20,
+        backgroundColor:'#dfe2f5'
     },
     Heading: {
         fontWeight: '700',

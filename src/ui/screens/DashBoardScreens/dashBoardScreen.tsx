@@ -121,6 +121,14 @@ const DashBoardScreen = ({ navigation }) => {
                     fontWeight: '600',
                     fontSize: 15
                 }}>News & Updates</Text>
+
+                <View style={{paddingHorizontal:40}}>
+                    <ImageBackground
+                        source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
+                        style={styles.cardImage}
+                    >
+                    </ImageBackground>
+                </View>
             </View>
 
         </SafeAreaView>
@@ -141,7 +149,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderTopLeftRadius: 50,
         borderTopRightRadius: 50
-
-    }
+    },
+    cardImage: {
+        width: '100%',
+        height: 120,
+        marginTop: 20,
+        backgroundColor: '#dfe2f5',
+        alignSelf: 'center',
+    },
+    closeIcon: {
+        width: 20,
+        height: 20,
+    },
 })
 export default DashBoardScreen;
