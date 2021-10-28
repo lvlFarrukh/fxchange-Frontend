@@ -135,10 +135,10 @@ const styles = StyleSheet.create({
  },
   bodyBottom:{
    marginTop:23,
-    width:"114%",
+    width:"120%",
     height:"42%",
     backgroundColor:"#f2f2f2",
-    marginLeft:-25,
+    marginLeft:-30,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 30,
