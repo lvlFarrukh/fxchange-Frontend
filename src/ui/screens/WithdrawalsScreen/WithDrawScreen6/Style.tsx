@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   headerHeadingContainer: {
     width: '90%',
     position: 'absolute',
-    left: '6%',
+    left: '5.3%',
     top: '27%',
     zIndex: 2,
   },
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
 
     paddingHorizontal: 25,
-    marginLeft:-10,
+    marginLeft:-12,
     height:"24%",
     borderRadius: 6,
     shadowColor: '#000',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
  changePasswordButton:{
   color: 'black',
     width: '108%',
-    marginLeft:-10,
+    marginLeft:-12,
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
