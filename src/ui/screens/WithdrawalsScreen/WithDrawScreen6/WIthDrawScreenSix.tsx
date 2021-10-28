@@ -41,6 +41,7 @@ const WithDrawScreenSix = ({navigation}) => {
   };
 
   return (
+    
     <SafeAreaView
       style={{
         height: height,
@@ -48,6 +49,7 @@ const WithDrawScreenSix = ({navigation}) => {
         flex: 1,
         backgroundColor: '#0a8a40',
       }}>
+        
       <View style={styles.header}>
         <View style={styles.headerUpperArea}>
           <TouchableOpacity
@@ -129,7 +131,7 @@ const WithDrawScreenSix = ({navigation}) => {
               flexDirection: 'row',
               justifyContent: 'flex-start',
               width: '80%',
-              marginBottom: 10,
+              marginBottom: 5,
             }}>
             <Text style={{fontSize: 12}}>Account Name:</Text>
             <Text style={{fontSize: 12, marginLeft: 10}}>
@@ -141,7 +143,7 @@ const WithDrawScreenSix = ({navigation}) => {
               flexDirection: 'row',
               justifyContent: 'flex-start',
               width: '80%',
-              marginBottom: 10,
+              marginBottom: 5,
             }}>
             <Text style={{fontSize: 12}}>Account No:</Text>
             <Text style={{fontSize: 12, marginLeft: 10}}>3789393</Text>
@@ -238,7 +240,9 @@ const WithDrawScreenSix = ({navigation}) => {
           </View>
         </View>
       </View>
+      
     </SafeAreaView>
+    
   );
 };
 
