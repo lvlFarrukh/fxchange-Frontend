@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginBottom: 60,
     flexDirection: 'row',
     backgroundColor: 'transparent', 
-    height: 30,
+    height: 35,
     justifyContent:"space-between"
   },
   mainBodyPartOne: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '11%',
+    top: '10%',
     // alignItems:"center",
     
   },

@@ -48,8 +48,9 @@ const WithdrawalsScreenThree = ({ navigation }) => {
         width: width,
         flex: 1,
       }}>
+        <StatusBar translucent backgroundColor="transparent" />
       <ScrollView contentContainerStyle={{ flex: 1 }}>
-      <StatusBar translucent backgroundColor="transparent" />
+     
         <View style={styles.header}>
         <View style={styles.headerUpperArea}>
             <TouchableOpacity
