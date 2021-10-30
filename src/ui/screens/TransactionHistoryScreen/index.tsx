@@ -56,7 +56,7 @@ const DATA = [
 
 const Item = ({item, onPress, backgroundColor, textColor}) => (
   <View style={[styles.item]}>
-    <StatusBar hidden />
+    {/* <StatusBar hidden /> */}
     <View
       style={{
         display: 'flex',

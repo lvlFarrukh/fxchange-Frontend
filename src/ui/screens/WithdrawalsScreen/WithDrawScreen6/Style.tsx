@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     //height: '30%',
-    flex: 30,
+    flex: 20,
     backgroundColor: '#0a8a40',
   },
   headerUpperArea: {
@@ -31,16 +31,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   headerHeadingContainer: {
-    width: '90%',
-    position: 'absolute',
-    left: '7%',
-    top: '27%',
-    zIndex: 2,
+    width: '85%',
+    alignSelf: 'center',
+    position: 'relative',
+    // left: '7%',
+    top: 25,
+    zIndex: 1,
   },
 
   headerHeading2: {
+    alignSelf:'center',
     color: '#f4f4f4',
-    width: '100%',
+    width: '96%',
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
@@ -60,7 +62,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    paddingHorizontal: 30,
+    paddingHorizontal: 33,
+    // marginLeft: -8
     //paddingBottom:100
     
 
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
   },
 
   mainBodyCards: {
-    width: '105%',
+    width: width-66,
     marginTop: 40,
     backgroundColor: 'white',
 
@@ -119,7 +122,7 @@ const styles = StyleSheet.create({
   },
  changePasswordButton:{
   color: 'black',
-    width: '105%',
+    width: '100%',
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
@@ -133,10 +136,10 @@ const styles = StyleSheet.create({
  },
   bodyBottom:{
    marginTop:23,
-    width:"114%",
-    height:"39%",
+    width: width,
+    height:"41%",
     backgroundColor:"#f2f2f2",
-    marginLeft:-25,
+    marginLeft:-33,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 30,
@@ -215,6 +218,9 @@ smFontSize: {
 },
 mdFontBlackColor: {
   color: 'black'
+},
+header_FontSize: {
+  fontSize: 18
 }
 });
 

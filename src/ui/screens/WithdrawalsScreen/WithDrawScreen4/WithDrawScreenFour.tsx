@@ -47,7 +47,7 @@ const WithDrawScreenFour = ({ navigation }) => {
   return (
 
     <KeyboardAvoidingView style={{ flex: 1 , backgroundColor:'#fff'}}>
-      <StatusBar hidden />
+      <StatusBar backgroundColor="#0a8a40"/>
       <ScrollView contentContainerStyle={{ flex: 1 }}>
         <View style={{flex:1}}> 
           <SafeAreaView

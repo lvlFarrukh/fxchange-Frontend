@@ -8,6 +8,7 @@ import Header from '../../components/ModeratePageCard/Header';
 const { width, height } = Dimensions.get('screen')
 
 const GiftCardScreen = ({ navigation }) => {
+    const [headerText, setheaderText] = useState("Select Giftcard")
 
     const iconNames: any = [
         require('../../../Assets/CARDS/amazon.png'),
@@ -20,12 +21,29 @@ const GiftCardScreen = ({ navigation }) => {
         require('../../../Assets/CARDS/nordstrom.png'),
     ]
 
+    const imageNames: any = [
+        '../../../Assets/CARDS/amazon.png',
+        '../../../Assets/CARDS/itunes.png',
+        '../../../Assets/CARDS/Googleplay.png',
+        '../../../Assets/CARDS/steam.png',
+        '../../../Assets/CARDS/ebay.png',
+        '../../../Assets/CARDS/visa.png',
+        '../../../Assets/CARDS/americanexpress.png',
+        '../../../Assets/CARDS/nordstrom.png',
+     ]
+
+    const changeHeaderText = (ImageIndex: number) => {
+        let name: string = imageNames[ImageIndex].split('/')[imageNames[ImageIndex].split('/').length - 1 ].split('.')[0] 
+        name = name.charAt(0).toUpperCase() + name.substr(1).toLowerCase()
+        setheaderText(`${name} GiftCards`)
+    }
+
     return (
         <View style={{ height: height, width: width, flex: 1 }}>
-            <StatusBar hidden />
+            {/* <StatusBar hidden /> */}
             <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: 'rgb(10, 138, 64)' }}>
                 <View style={{ height: '10%' }}>
-                    <Header navigation={navigation} style={{ marginTop: 5 }} Heading={'Select Giftcard'} />
+                    <Header navigation={navigation} style={{ marginTop: 5 }} Heading={headerText} />
                 </View>
                 <ScrollView style={{
                     backgroundColor: '#ecedf1',
@@ -36,15 +54,11 @@ const GiftCardScreen = ({ navigation }) => {
                         {
 
                             iconNames.map((item: any, index: number) => {
-                                let path = '../../../Assets/CARDS/amazon.png';
-                                if (path === item) {
-                                    console.log('eqaul', path, item)
-                                }
-                                else {
-                                    console.log('UNeqaul', path, item)
-                                }
+                                
                                 return (
                                     <TouchableOpacity
+                                    onPress={() => changeHeaderText(index)}
+                                    key = {index}
                                         style={{
                                             backgroundColor: '#fff',
                                             width: (width - 60) / 2,

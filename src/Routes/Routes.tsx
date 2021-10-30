@@ -51,6 +51,7 @@ const Routes = () => {
             <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
             <Stack.Screen name="WithDrawScreenSix" component={WithDrawScreenSix} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
+            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
             <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />
             <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />
             <Stack.Screen name="ItunesGiftCardScreen" component={ItunesGiftCardScreen} />

@@ -6,12 +6,13 @@ import {
   Image,
   StatusBar,
   ImageBackground,
+  ScrollView, TouchableOpacity
 } from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import SelectDropdown from 'react-native-select-dropdown';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
+import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 
 const {width, height} = Dimensions.get('screen');
@@ -57,8 +58,8 @@ const index = ({navigation}) => {
           width: width,
           flex: 1,
         }}>
-        <StatusBar hidden />
-        <View style={Style.header}>
+        {/* <StatusBar hidden /> */}
+        {/* <View style={Style.header}>
           <TouchableOpacity
             style={{marginLeft: 15}}
             onPress={() => navigateBack()}>
@@ -69,7 +70,14 @@ const index = ({navigation}) => {
           </TouchableOpacity>
           <Text style={Style.headerHeading}>ITUNES - #FGRAC23287843</Text>
           <Text></Text>
-        </View>
+        </View> */}
+        <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
+        <Header
+          style={{marginTop: 10}}
+          navigation={navigation}
+          Heading={'ITUNES - #FGRAC23287843'}
+        />    
+
         <View style={Style.mainBody}>
           <View style={[Style.headerButtons]}>
             <Text style={[Style.headerButtom]}>Opened by Thomas</Text>
@@ -801,15 +809,16 @@ const index = ({navigation}) => {
                           height: width - 328,
                           borderRadius: 50,
                           alignSelf: 'center',
-                          justifyContent: 'center'
+                          // justifyContent: 'center',
+                    
                         },
                       ]}>
                       <Text
                         style={{
                           fontSize: 25,
-                          fontWeight: '500',
+                          fontWeight: '5t00',
                           color: '#0a8a40',
-                          alignSelf: 'center'
+                          alignSelf: 'center',
                         }}>
                         +
                       </Text>
@@ -839,7 +848,7 @@ const index = ({navigation}) => {
                   </Text>
                 </TouchableOpacity>
                 {/* hr */}
-                <View style={[Style.hr, {marginTop: 6}]}></View>
+                <View style={[Style.hr, {marginTop: 6, }]}></View>
                 <TouchableOpacity
                   style={{marginBottom: 8, marginTop: -5}}
                   onPress={() => toggleDelineModal()}>
@@ -857,6 +866,7 @@ const index = ({navigation}) => {
             </View>
           </View>
         </Modal>
+      </View>
       </SafeAreaView>
       <ImagePreviewModal
         image={previewImgPath}

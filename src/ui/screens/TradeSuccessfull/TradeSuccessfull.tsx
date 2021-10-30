@@ -11,7 +11,7 @@ const TradeSuccessfull = ({ navigation }) => {
 
     return (
         <View style={{ height: height, width: width, flex: 1 }}>
-            <StatusBar hidden />
+            {/* <StatusBar hidden /> */}
             <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: 'rgb(10, 138, 64)' }}>
                 <View style={{ height: '8%', justifyContent: 'center' }}>
                     <Text style={{ color: "#fff", alignSelf: 'center' }}>Trade Sucessful</Text>

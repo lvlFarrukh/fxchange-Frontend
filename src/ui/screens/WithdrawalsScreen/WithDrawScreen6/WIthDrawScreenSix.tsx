@@ -51,7 +51,7 @@ const WithDrawScreenSix = ({navigation}) => {
         flex: 1,
         backgroundColor: '#0a8a40',
       }}>
-      <View style={styles.header}>
+      <View style={[styles.header, ]}>
         <View style={styles.headerUpperArea}>
           <TouchableOpacity
             onPress={() => {
@@ -78,6 +78,7 @@ const WithDrawScreenSix = ({navigation}) => {
             flexDirection: 'row',
             justifyContent: 'space-around',
             marginTop: 40,
+            paddingHorizontal: 10
           }}>
           <View style={{marginRight: 84}}>
             <View style={{marginBottom: 10}}>
@@ -241,8 +242,11 @@ const WithDrawScreenSix = ({navigation}) => {
           </View>
         </View>
       </View>
+      
     </SafeAreaView>
+
   </ScrollView>
+
   </KeyboardAvoidingView>
   );
 };

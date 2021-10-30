@@ -27,7 +27,7 @@ const Header : React.FC<Props> = (props) => {
                 <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />
             </TouchableOpacity>
 
-            <Text style={[{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -20,marginTop:-5} , TextColor]}>
+            <Text style={[{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -40,marginTop:-5} , TextColor]}>
             {Heading}
             </Text>
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
     },
     container : {
-        backgroundColor: 'transparent', flexDirection: 'row', height: 50,justifyContent:"space-between"
+        backgroundColor: 'transparent', flexDirection: 'row', height: 35,justifyContent:"space-between"
     }
 })
 export default Header;

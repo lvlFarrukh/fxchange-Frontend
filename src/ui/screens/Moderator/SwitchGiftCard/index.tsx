@@ -208,7 +208,7 @@ const index = ({navigation}) => {
           </View>
         </View>
       </View>
-      <View style={{marginBottom: 15}}></View>
+      {/* <View style={{marginBottom: 15}}></View> */}
 
     </ScrollView>
   );
