@@ -5,12 +5,14 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 600,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
+    // marginTop:35,
+    marginHorizontal:"auto"
   },
   headerUpperArea: {
     display: 'flex',
     width: '85%',
-    marginTop: 20,
+    marginTop: 35,
     marginBottom: 60,
     flexDirection: 'row',
     justifyContent: 'space-evenly',

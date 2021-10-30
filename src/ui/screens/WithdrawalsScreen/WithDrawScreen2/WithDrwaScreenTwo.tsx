@@ -11,6 +11,7 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  StatusBar
 } from 'react-native';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
@@ -25,13 +26,17 @@ const WithdrawalsScreenTwo = ({navigation}) => {
           flex: 1,
         }}>
           <ScrollView contentContainerStyle={{flex:1}}>
+          <StatusBar translucent backgroundColor='black' />
+          
         <View style={styles.header}>
+        
           <View style={styles.headerUpperArea}>
             <Image
+            
               source={require('../../../../Assets/ICONS/arrow=white.png')}
-              style={{width: 35, height: 25, marginRight: 18}}
+              style={{width: 25, height: 15}}
             />
-            <Text style={{fontSize: 25, fontWeight: '600', color: '#3f8b41'}}>
+            <Text style={{fontSize: 18, fontWeight: '600', color: '#3f8b41',marginLeft:-40,marginTop:-5}}>
               Contact Support
             </Text>
           </View>
