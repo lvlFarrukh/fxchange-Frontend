@@ -5,14 +5,15 @@ const styles = StyleSheet.create({
     width: width,
     height: 100,
     backgroundColor: '#3f8b41',
+    paddingHorizontal: 25
   },
   headerUpperArea: {
-    display: 'flex',
-    width: '70%',
-    marginTop: 12,
-
+    marginTop: 18,
+    marginBottom: 60,
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    backgroundColor: 'transparent', 
+    height: 30,
+    justifyContent:"space-between"
   },
   mainBodyPartOne: {
     width: width,
@@ -26,8 +27,9 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   partOneButtons: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    
+    paddingRight:20,
+    paddingLeft:20,
     // height: '30%',
     width: '100%',
     // backgroundColor: 'white',
@@ -43,31 +45,36 @@ const styles = StyleSheet.create({
   },
   partOneButton: {
     fontSize: 13,
-    letterSpacing: 1,
+
+    fontWeight:"500",
     textAlign: 'center',
     width: '50%',
     borderRadius: 30,
     color: '#0a8a40',
-    padding: '3%',
+    padding: '2.7%',
+    paddingHorizontal:"3%",
     alignSelf: 'center',
     backgroundColor: 'white',
   },
   JoinLeft: {
     position: 'relative',
-    left: 25,
+    left: 10,
   },
   JoinRight: {
     position: 'relative',
-    right: 25,
+    right: 10,
   },
   checkrateButtonContainer: {
-    justifyContent: 'center',
-    paddingHorizontal: 20,
+    borderRadius: 4,
+    marginLeft:28,
+
+    height:45,
+    width: '85%',
   },
   checkrateButton: {
     alignItems: 'center',
     backgroundColor: '#3f8b41',
-    padding: 15,
+    paddingVertical:10,
     borderRadius:4
   },
 
@@ -84,23 +91,23 @@ const styles = StyleSheet.create({
   },
   giftCardBodyPatOne:{
     width: width,
-    height: height ,
+    height:"60%",
     backgroundColor: '#f2f2f2',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '9%',
+    top: '11%',
     // alignItems:"center",
     
   },
   giftCardsBodyPartTwo: {
     width: width,
-    height: height -450,
+    height:"30%",
     backgroundColor: '#ffffff',
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
     position: 'absolute',
-    top: "70%",
+    top: "82%",
     alignItems: 'center',
     zIndex: 1,
   },

@@ -11,6 +11,10 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  KeyboardAvoidingView,
+  StatusBar,
+  Keyboard,
+  Platform,
 } from 'react-native';
 import styles from './Style';
 
@@ -19,8 +23,35 @@ const {width, height} = Dimensions.get('screen');
 const WithDrawScreenFive = ({navigation}) => {
   console.log('with drawel screen');
 
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setKeyboardVisible(true); // or some other action
+      }
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setKeyboardVisible(false); // or some other action
+      }
+    );
+
+    return () => {
+      keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
+    };
+  }, []);
+
   return (
-    <ScrollView>
+    <KeyboardAvoidingView style={{ flex: 1 , backgroundColor:'#fff' }}
+    //behavior={Platform.OS === "ios" ? "padding" : "padding"}
+    >
+      
+    <StatusBar hidden/>
+    <ScrollView contentContainerStyle={{flex:isKeyboardVisible? 0 :1}} >
       <SafeAreaView
         style={{
           height: height,
@@ -30,7 +61,11 @@ const WithDrawScreenFive = ({navigation}) => {
         <View>
           <View style={styles.header}>
             <View style={styles.headerUpperArea}>
-              <TouchableOpacity>
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.goBack()
+              }}
+              >
                 <Image
                   source={require('../../../../Assets/ICONS/arrow=white.png')}
                   style={{width: 30, height: 20, marginTop: 6, marginRight: 50}}
@@ -188,6 +223,7 @@ const WithDrawScreenFive = ({navigation}) => {
         </View>
       </SafeAreaView>
     </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 

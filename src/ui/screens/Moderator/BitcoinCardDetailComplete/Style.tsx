@@ -21,7 +21,7 @@ const Style = StyleSheet.create({
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: height,
+    height: height - 100,
     paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',
@@ -74,15 +74,15 @@ const Style = StyleSheet.create({
     height: 32,
   },
   hr: {
-    borderTopWidth: 1,
-    borderColor: 'rgba(0,0,0,0.1)',
+    borderWidth: 0.2,
+    borderColor: 'lightgray',
     marginTop: 10,
     marginBottom: 10,
   },
   lowerPortion: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 2,
+    marginTop: 32,
   },
   smFontSize: {
     fontSize: 11,

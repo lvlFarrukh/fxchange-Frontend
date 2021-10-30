@@ -11,6 +11,7 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  StatusBar,
 } from 'react-native';
 import Bitcoin from './Bitcoin';
 import GiftCards from './giftCard';
@@ -48,25 +49,36 @@ const WithdrawalsScreenThree = ({ navigation }) => {
         flex: 1,
       }}>
       <ScrollView contentContainerStyle={{ flex: 1 }}>
+      <StatusBar translucent backgroundColor="transparent" />
         <View style={styles.header}>
-          <View style={styles.headerUpperArea}>
+        <View style={styles.headerUpperArea}>
             <TouchableOpacity
-            onPress={()=>{navigation.goBack()}}
-            >
+              style={{alignSelf: 'center', marginLeft: 5}}
+              onPress={() => {
+                navigation.goBack();
+              }}>
               <Image
                 source={require('../../../../Assets/ICONS/arrow=white.png')}
-                style={{ width: 30, height: 20, marginTop: 6, marginRight: 40 }}
+                style={{
+                  height: 15,
+                  width: 25,
+                }}
               />
             </TouchableOpacity>
+
             <Text
-              style={{
-                fontSize: 23,
-                fontWeight: '400',
-                color: 'white',
-                marginLeft: 40,
-              }}>
+              style={[
+                {
+                  color: 'white',
+                  fontSize: 18,
+                  alignSelf: 'center',
+                  marginLeft: -40,
+                  marginTop: -5,
+                },
+              ]}>
               Our Rates
             </Text>
+            <View></View>
           </View>
         </View>
         {screen === 0 ? (

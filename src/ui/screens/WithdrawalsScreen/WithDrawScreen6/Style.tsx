@@ -39,8 +39,9 @@ const styles = StyleSheet.create({
   },
 
   headerHeading2: {
+    alignSelf:'center',
     color: '#f4f4f4',
-    width: '100%',
+    width: '96%',
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
@@ -60,7 +61,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    paddingHorizontal: 30,
+    paddingHorizontal: 33,
+    // marginLeft: -8
+    //paddingBottom:100
     
 
     //position: 'absolute',
@@ -220,6 +223,9 @@ smFontSize: {
 },
 mdFontBlackColor: {
   color: 'black'
+},
+header_FontSize: {
+  fontSize: 18
 }
 });
 

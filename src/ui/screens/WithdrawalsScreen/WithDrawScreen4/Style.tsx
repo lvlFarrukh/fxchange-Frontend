@@ -8,7 +8,9 @@ const styles = StyleSheet.create({
   },
   header: {
     width: width,
-    height: 80,
+    // height: 80,
+    //height: '10%',
+    //flex:10,
     backgroundColor: '#0a8a40',
 
 
@@ -35,13 +37,13 @@ const styles = StyleSheet.create({
   headerHeading2: {
 
     color: 'white',
-    width: '20%',
-    backgroundColor: '#062529',
     fontSize: 15,
-    textAlign: 'center',
-    paddingHorizontal: 15,
-    paddingVertical: 20,
-    borderRadius: 80
+    alignSelf:'center',
+    alignItems:'center',
+    //textAlign: 'center',
+    // paddingHorizontal: 15,
+    // paddingVertical: 20,
+   
 
 
 
@@ -51,25 +53,19 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     width: width,
-    height: height - 80,
     backgroundColor: '#ffffff',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    //position: 'absolute',
-    //top: '70%',
   },
   mainBodyContent: {
-    flex:1,
+    flex:90,
     marginTop: 20,
-    marginLeft: "10%",
+    marginHorizontal: 20,
     justifyContent: 'space-between',
-    //backgroundColor: 'green'
-
-
   },
   updatePassword: {
-    justifyContent: 'center',
-    paddingRight: 25,
+    // justifyContent: 'center',
+    // paddingRight: 25,
     //marginTop:350,
   },
   updatePasswordButton: {
