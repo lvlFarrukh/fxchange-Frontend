@@ -11,6 +11,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import Header from '../../../components/ModeratePageCard/Header'
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ModeratePageCard from '../../../components/ModeratePageCard';
 import styles from './Style';
@@ -68,10 +69,16 @@ const index = ({navigation}) => {
         width: width,
         flex: 1,
       }}>
-      <StatusBar translucent backgroundColor='transparent' />
-      <View style={styles.header}>
+      <StatusBar backgroundColor="#0a8a40"/>
+      {/* <View style={styles.header}>
         <Text style={styles.headerHeading}>Trades</Text>
-      </View>
+      </View> */}
+    <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
+        <Header
+          style={{marginTop: 10}}
+          navigation={navigation}
+          Heading={'Trades'}
+        />    
 
       <View style={styles.mainBody}>
         <View style={[styles.headerButtons]}>
@@ -147,8 +154,12 @@ const index = ({navigation}) => {
                 />
               );
             })}
+          
+          <View style={{paddingBottom: 60}}></View>
         </ScrollView>
       </View>
+      </View>
+
     </SafeAreaView>
     </View>
   );

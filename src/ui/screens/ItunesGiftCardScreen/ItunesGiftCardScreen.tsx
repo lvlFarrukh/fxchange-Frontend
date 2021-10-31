@@ -12,6 +12,7 @@ const ItunesGiftCardScreen = ({ navigation }) => {
     return (
         <View style={{ height: height, width: width, flex: 1 }}>
              <StatusBar translucent backgroundColor='transparent' />
+            {/* <StatusBar hidden /> */}
             <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: 'rgb(10, 138, 64)' }}>
                 <View style={{ height: '10%' }}>
                     <Header navigation={navigation} style={{ marginTop: 5 }} Heading={'Itunes Giftcard'} />

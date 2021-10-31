@@ -20,7 +20,7 @@ const index = ({navigation}) => {
         <View
           style={{
             marginTop: 10,
-            height: height,
+            height: height - 60,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,

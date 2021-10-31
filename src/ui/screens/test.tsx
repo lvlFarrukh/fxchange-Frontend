@@ -16,6 +16,7 @@ const Test = ({ navigation }) => {
         <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
              <StatusBar translucent backgroundColor='transparent' />
             <SafeAreaView>
+            {/* <StatusBar hidden /> */}
 
             <ScrollView>
                 <TouchableOpacity

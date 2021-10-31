@@ -4,7 +4,7 @@ const {width, height} = Dimensions.get('screen');
 const styles = StyleSheet.create({
   header: {
     width: width,
-    //height: '30%',
+    height: '30%',
     flex: 30,
     backgroundColor: '#0a8a40',
   },
@@ -33,14 +33,15 @@ const styles = StyleSheet.create({
   headerHeadingContainer: {
     width: '90%',
     position: 'absolute',
-    left: '7%',
+    left: '5.3%',
     top: '27%',
     zIndex: 2,
   },
 
   headerHeading2: {
+    alignSelf:'center',
     color: '#f4f4f4',
-    width: '100%',
+    width: '96%',
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
@@ -55,12 +56,13 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     width: width,
-    //height:'70%',
+    height:'70%',
     flex: 70,
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    paddingHorizontal: 30,
+    paddingHorizontal: 33,
+    // marginLeft: -8
     //paddingBottom:100
     
 
@@ -83,12 +85,14 @@ const styles = StyleSheet.create({
   },
 
   mainBodyCards: {
-    width: '105%',
+    width: '108%',
+   
     marginTop: 40,
     backgroundColor: 'white',
 
-    paddingHorizontal: 20,
-    height:150,
+    paddingHorizontal: 25,
+    marginLeft:-12,
+    height:"24%",
     borderRadius: 6,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 10},
@@ -99,8 +103,8 @@ const styles = StyleSheet.create({
   mainBodyCardContent1: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop:10,
-    marginBottom:20
+    marginTop:7,
+    marginBottom:10
     
   },
   iconStyle: {
@@ -119,11 +123,12 @@ const styles = StyleSheet.create({
   },
  changePasswordButton:{
   color: 'black',
-    width: '105%',
+    width: '108%',
+    marginLeft:-12,
     backgroundColor: 'white',
     fontSize: 15,
     textAlign: 'center',
-   marginTop:20,
+   marginTop:10,
    
    shadowColor: '#000',
    shadowOffset: {width: 0, height: 10},
@@ -133,13 +138,14 @@ const styles = StyleSheet.create({
  },
   bodyBottom:{
    marginTop:23,
-    width:"114%",
-    height:"39%",
+    width:"120%",
+    height:"42%",
     backgroundColor:"#f2f2f2",
-    marginLeft:-25,
+    marginLeft:-30,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 30,
+  
   },
   partOneButtons: {
     marginLeft: 'auto',
@@ -179,10 +185,10 @@ const styles = StyleSheet.create({
   lowerCard: {
     
     width: '90%',
-    height:130,
+    height:"60%",
     marginTop:10,
     backgroundColor: 'white',
-    marginBottom: 20, 
+     
     marginLeft: 'auto', 
     marginRight: 'auto',
     borderRadius: 16,
@@ -191,7 +197,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 1, 
     shadowRadius: 5, 
     elevation: 5, 
+    
     padding:10,
+  
     
 },
 upperCardPortion: {
@@ -215,6 +223,9 @@ smFontSize: {
 },
 mdFontBlackColor: {
   color: 'black'
+},
+header_FontSize: {
+  fontSize: 18
 }
 });
 

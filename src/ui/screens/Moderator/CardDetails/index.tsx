@@ -6,12 +6,13 @@ import {
   Image,
   StatusBar,
   ImageBackground,
+  ScrollView, TouchableOpacity
 } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SelectDropdown from 'react-native-select-dropdown';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
+import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 
 const { width, height } = Dimensions.get('screen');

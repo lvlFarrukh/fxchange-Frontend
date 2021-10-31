@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, Image, TextInput} from 'react-native';
+import {View, Text, Dimensions, Image, TextInput, StatusBar} from 'react-native';
 import Modal from 'react-native-modal';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -23,6 +23,7 @@ const index = ({navigation}) => {
 
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
+      <StatusBar translucent backgroundColor='transparent' />
       <ScrollView>
         <Header
           style={{marginTop: 35}}
@@ -33,7 +34,7 @@ const index = ({navigation}) => {
         <View
           style={{
             marginTop: 10,
-            height: height,
+            height: height-60,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -46,7 +47,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.8,
                 width: '48%',
                 height: 46,
