@@ -56,13 +56,19 @@ const index = ({navigation}) => {
   };
   // eslint-disable-next-line prettier/prettier
   return (
+    <View style={{
+      height: height,
+      width: width,
+      flex: 1,
+      backgroundColor: '#0a8a40'
+    }}>
     <SafeAreaView
       style={{
         height: height,
         width: width,
         flex: 1,
       }}>
-      <StatusBar hidden/>
+      <StatusBar translucent backgroundColor='transparent' />
       <View style={styles.header}>
         <Text style={styles.headerHeading}>Trades</Text>
       </View>
@@ -144,6 +150,7 @@ const index = ({navigation}) => {
         </ScrollView>
       </View>
     </SafeAreaView>
+    </View>
   );
 };
 

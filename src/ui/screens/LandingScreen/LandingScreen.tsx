@@ -12,7 +12,7 @@ const LandingScreen = ({ navigation }) => {
             style={{ height: height, width: width, flex: 1 }}
             imageStyle={{}}
         >
-            <StatusBar hidden/>
+           <StatusBar translucent backgroundColor='transparent' />
             <SafeAreaView style={{ height: height, width: width, flex: 1, backgroundColor: 'rgba(0,0,0,0.1)' }}>
                 <View style={styles.LogoNTextContainer}>
                     <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />

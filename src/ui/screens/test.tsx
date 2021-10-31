@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, StatusBar } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -13,7 +14,8 @@ const Test = ({ navigation }) => {
     //navigation.navigate('WithdrawalsScreenThree') // imran bhaiis
     return (
         <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
-            <StatusBar hidden />
+             <StatusBar translucent backgroundColor='transparent' />
+            <SafeAreaView>
 
             <ScrollView>
                 <TouchableOpacity
@@ -190,6 +192,7 @@ const Test = ({ navigation }) => {
                     <Text style={{ padding: 10 }}>dashboard (SellBitcoin)</Text>
                 </TouchableOpacity>
             </ScrollView>
+            </SafeAreaView>
         </View>
 
 

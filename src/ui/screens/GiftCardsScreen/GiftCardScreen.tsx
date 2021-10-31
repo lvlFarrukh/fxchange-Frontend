@@ -22,7 +22,7 @@ const GiftCardScreen = ({ navigation }) => {
 
     return (
         <View style={{ height: height, width: width, flex: 1 }}>
-            <StatusBar hidden />
+             <StatusBar translucent backgroundColor='transparent' />
             <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: 'rgb(10, 138, 64)' }}>
                 <View style={{ height: '10%' }}>
                     <Header navigation={navigation} style={{ marginTop: 5 }} Heading={'Select Giftcard'} />
@@ -50,7 +50,10 @@ const GiftCardScreen = ({ navigation }) => {
                                             width: (width - 60) / 2,
                                             alignItems: 'center',
                                             borderRadius: 30,
-                                            marginTop: 10
+                                            marginTop: 10,
+                                            height:(width - 60) / 2,
+                                            alignContent:'center',
+                                            justifyContent:'center'
                                         }}
                                     >
                                         {/* {console.log(item)} */}
@@ -96,8 +99,8 @@ const GiftCardScreen = ({ navigation }) => {
 
 const styles = () => StyleSheet.create({
     image: {
-        width: 100,
-        height: 100,
+        width: 75,
+        height: 75,
         marginVertical: 20
     },
     whiteCardBg: {

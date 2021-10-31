@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   hr: {
     borderBottomWidth: 1,
-    borderColor: 'rgba(0,0,0,0.2)',
+    borderColor: '#f1f1f1',
     marginTop: 20,
     //marginBottom: 8,
   },

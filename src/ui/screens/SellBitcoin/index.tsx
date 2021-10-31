@@ -25,10 +25,10 @@ const index = ({navigation}) => {
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
       <ScrollView>
         <Header
-          style={{marginTop: 10}}
+          style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Sell Bitcoin'}
-          style={{marginTop: 0}}
+          //style={{marginTop: 0}}
         />
         <View
           style={{

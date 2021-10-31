@@ -34,7 +34,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
 
     return (
         <KeyboardAvoidingView style={{ flex: 1 }}>
-            <StatusBar hidden/>
+            <StatusBar translucent backgroundColor='transparent' />
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
