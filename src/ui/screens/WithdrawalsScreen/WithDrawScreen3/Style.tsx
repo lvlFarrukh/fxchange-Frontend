@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '9%',
+    top: '10%',
     // alignItems:"center",
     zIndex: 0,
   },

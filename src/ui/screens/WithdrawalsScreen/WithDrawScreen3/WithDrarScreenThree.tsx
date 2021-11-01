@@ -28,16 +28,18 @@ const WithdrawalsScreenThree = ({ navigation }) => {
   const [giftCards, setGiftCards] = useState(btnSetected);
   const [bitcoin, setBitcoin] = useState({});
   const [screen, setScreen] = useState(0);
+
   const activeButton = (buttonType: string) => {
+    console.log(buttonType)
     if (buttonType === 'giftCards') {
       setGiftCards(btnSetected);
-      setScreen(0);
+      setScreen(1);
       setBitcoin({});
     }
     if (buttonType === 'bitcoin') {
       setGiftCards({});
       setBitcoin(btnSetected);
-      setScreen(1);
+      setScreen(0);
     }
   };
   return (
@@ -73,7 +75,7 @@ const WithdrawalsScreenThree = ({ navigation }) => {
                   color: 'white',
                   fontSize: 18,
                   alignSelf: 'center',
-                  marginLeft: -40,
+                  marginLeft: -10,
                   marginTop: -5,
                 },
               ]}>

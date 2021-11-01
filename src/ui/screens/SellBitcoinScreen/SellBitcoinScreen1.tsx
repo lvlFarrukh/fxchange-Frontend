@@ -25,6 +25,8 @@ const SellBitcoinScreen1 = ({navigation}) => {
   return (
       <ScrollView>
     <View style={{height: height, width: width, flex: 1}}>
+    <StatusBar translucent backgroundColor='transparent' />
+
       {/* <StatusBar hidden /> */}
       <SafeAreaView
         style={{
