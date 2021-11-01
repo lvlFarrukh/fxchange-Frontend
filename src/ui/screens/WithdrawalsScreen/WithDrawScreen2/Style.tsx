@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   textAreaContainer: {
     borderColor: '#f0f0f0',
-    borderRadius:2,
+    borderRadius:5,
     borderWidth: 1,
     alignSelf: 'center',
     width: '95%',
@@ -28,8 +28,11 @@ const styles = StyleSheet.create({
   textArea: {
     marginTop:10,
     marginLeft:5,
+    fontSize: 11.5,
+    fontWeight: '500',
     textAlignVertical: 'top',
-    borderColor: '#F1F1F1'
+    borderColor: '#F1F1F1',
+    // borderRadius: 5
   },
   sendButtonContainer:{
     flex: 1,
