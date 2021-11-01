@@ -13,6 +13,8 @@ import {
   Button,
 } from 'react-native';
 import styles from './Style';
+import Icons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -40,17 +42,18 @@ const WithdrawalsScreen = ({ navigation }) => {
           {/* style={styles.mainBodyContent} */}
           <View>
           <View style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 14 }}>PROFILE</Text>
+            <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
             {/* <View style={styles.mainBodyCards}> */}
             <View style={styles.mainBodyCardContent}>
               <Text
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 My Account
               </Text>
-              <Image
-                source={require('../../../../Assets/ICONS/un-arrow.png')}
-                style={styles.iconStyle}
-              />
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
             {/* </View> */}
             {/* <View style={styles.mainBodyCards}> */}
@@ -59,10 +62,11 @@ const WithdrawalsScreen = ({ navigation }) => {
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 Change Password
               </Text>
-              <Image
-                source={require('../../../../Assets/ICONS/un-arrow.png')}
-                style={styles.iconStyle}
-              />
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
             {/* </View> */}
           </View>
@@ -75,17 +79,18 @@ const WithdrawalsScreen = ({ navigation }) => {
               },
             ]}
           >
-            <Text style={{ fontSize: 14 }}>MORE</Text>
+            <Text style={{ fontSize: 14, marginLeft: 10 }}>MORE</Text>
             {/* <View style={styles.mainBodyCards}> */}
             <View style={styles.mainBodyCardContent}>
               <Text
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 Contact Support
               </Text>
-              <Image
-                source={require('../../../../Assets/ICONS/un-arrow.png')}
-                style={styles.iconStyle}
-              />
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
             {/* </View> */}
             {/* <View style={styles.mainBodyCards}> */}
@@ -94,10 +99,11 @@ const WithdrawalsScreen = ({ navigation }) => {
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 Terms Of Service
               </Text>
-              <Image
-                source={require('../../../../Assets/ICONS/un-arrow.png')}
-                style={styles.iconStyle}
-              />
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
             {/* </View> */}
           </View>
@@ -108,12 +114,12 @@ const WithdrawalsScreen = ({ navigation }) => {
               style={{ width: 140, height: 40 }}
             />
             <Text style={{ color: '#4d4d4d' }}>Version 1.0</Text>
-            <View style={{width:"80%",marginVertical:20}}>
+            <View style={{width:"100%",marginVertical:20}}>
             <Button
 
               title="LOGOUT"
               color="#d53b1d"
-              onPress={() => alert('hellot this is button')}
+              // onPress={() => alert('hellot this is button')}
             />
             </View>
           </View>

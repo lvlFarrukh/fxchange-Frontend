@@ -33,7 +33,7 @@ const index = ({navigation}) => {
           width: width,
           flex: 1,
         }}>
-
+ <StatusBar translucent backgroundColor="#0a8a40" />
         <View style={Style.header}>
           
           <TouchableOpacity

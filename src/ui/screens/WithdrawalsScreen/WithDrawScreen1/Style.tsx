@@ -80,7 +80,9 @@ const styles = StyleSheet.create({
     marginTop:10,
     marginHorizontal:10,
     borderBottomWidth:1,
-    paddingVertical:15,
+    // paddingVertical:15
+    paddingTop: 15,
+    paddingBottom: 10,
     borderColor:'rgba(0,0,0,0.2)'
    
   
