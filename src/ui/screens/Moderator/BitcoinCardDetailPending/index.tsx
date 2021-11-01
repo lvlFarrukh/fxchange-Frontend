@@ -1,5 +1,15 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, Image, TextInput, ImageBackground,ScrollView, TouchableOpacity, StatusBar} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  TextInput,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import Modal from 'react-native-modal';
 import SelectDropdown from 'react-native-select-dropdown';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
@@ -33,10 +43,10 @@ const index = ({navigation}) => {
 
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
-       <StatusBar translucent backgroundColor='transparent' />
+      <StatusBar translucent backgroundColor="transparent" />
       <ScrollView>
         <Header
-          style={{marginTop: 10}}
+          style={{marginTop: 35}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
         />
@@ -184,7 +194,7 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={()=> previewImage(1)}>
+              <TouchableOpacity onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -219,7 +229,7 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity  onPress={()=> previewImage(1)}>
+              <TouchableOpacity onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -361,7 +371,12 @@ const index = ({navigation}) => {
             </View>
 
             <View>
-              <TouchableOpacity activeOpacity={0.5}>
+              <TouchableOpacity activeOpacity={0.5}
+                onPress={() => {
+                  toggleDeclineModal();
+                  navigation.navigate('BitcoinCardDetailDecline');
+                }}
+              >
                 <Text
                   style={{
                     textAlign: 'center',
@@ -571,7 +586,12 @@ const index = ({navigation}) => {
             </View>
 
             <View>
-              <TouchableOpacity activeOpacity={0.5}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  toggleProcessModal();
+                  navigation.navigate('BitcoinCardDetailComplete');
+                }}>
                 <Text
                   style={{
                     textAlign: 'center',
@@ -586,7 +606,9 @@ const index = ({navigation}) => {
               <View style={[Style.hr, {marginTop: 6}]}></View>
               <TouchableOpacity
                 style={{marginBottom: 8, marginTop: -5}}
-                onPress={() => toggleProcessModal()}>
+                onPress={() => {
+                  toggleProcessModal();
+                }}>
                 <Text
                   style={{
                     textAlign: 'center',

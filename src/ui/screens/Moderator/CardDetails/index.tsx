@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -6,18 +6,19 @@ import {
   Image,
   StatusBar,
   ImageBackground,
-  ScrollView, TouchableOpacity
+  ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import Modal from 'react-native-modal';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import SelectDropdown from 'react-native-select-dropdown';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 
-const index = ({ navigation }) => {
+const index = ({navigation}) => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [isDelineModalVisible, setdelineModalVisible] = useState(false);
   const declineReason = [
@@ -37,7 +38,6 @@ const index = ({ navigation }) => {
     setisPreviewImage(!isPreviewImage);
   };
 
-
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
@@ -51,12 +51,13 @@ const index = ({ navigation }) => {
     navigation.goBack(null);
   };
   return (
-    <View style={{
-      height: height,
-      width: width,
-      flex: 1,
-      backgroundColor: '#0a8a40'
-    }}>
+    <View
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+        backgroundColor: '#0a8a40',
+      }}>
       <ScrollView>
         <SafeAreaView
           style={{
@@ -64,10 +65,10 @@ const index = ({ navigation }) => {
             width: width,
             flex: 1,
           }}>
-              <StatusBar translucent backgroundColor='transparent' />
+          <StatusBar translucent backgroundColor="transparent" />
           <View style={Style.header}>
             <TouchableOpacity
-              style={{ marginLeft: 15 }}
+              style={{marginLeft: 15}}
               onPress={() => navigateBack()}>
               <Image
                 source={require('../../../../Assets/ICONS/arrow=white.png')}
@@ -96,8 +97,8 @@ const index = ({ navigation }) => {
                 Style.btnShadow,
               ]}>
               <View
-                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <View style={{flexDirection: 'row', marginTop: 10}}>
                   <View
                     style={[
                       {
@@ -143,7 +144,6 @@ const index = ({ navigation }) => {
                     // position: 'relative',
                     // right: 50,
                   }}>
-
                   <ImageBackground
                     source={require('../../../../Assets/IMG_3151.jpg')}
                     style={{
@@ -172,7 +172,7 @@ const index = ({ navigation }) => {
                             width: 12,
                             height: 12,
                             alignSelf: 'center',
-                            marginTop: 4
+                            marginTop: 4,
                           }}
                         />
                       </View>
@@ -185,18 +185,18 @@ const index = ({ navigation }) => {
 
               <View style={Style.lowerPortion}>
                 <View>
-                  <Text style={[Style.smFontSize, , { color: 'gray' }]}>
+                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </Text>
                   <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
                 </View>
 
                 <View>
-                  <Text style={[{ color: 'gray', fontSize: 10 }]}>
+                  <Text style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
                   </Text>
                   <Text
-                    style={[{ textAlign: 'right', color: 'red', fontSize: 13 }]}>
+                    style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
                     {'DECLINED'}
                   </Text>
                 </View>
@@ -205,17 +205,19 @@ const index = ({ navigation }) => {
               {/* hr */}
               <View style={Style.hr}></View>
 
-              <View style={[{ marginBottom: 6, flexDirection: 'row' }]}>
+              <View style={[{marginBottom: 6, flexDirection: 'row'}]}>
                 <View>
-                  <Text style={[{ color: 'gray', fontSize: 10, marginBottom: 2 }]}>
+                  <Text
+                    style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
                     REASON FOR DECLINE
                   </Text>
-                  <Text style={[{ color: 'black', fontSize: 10, marginBottom: 2 }]}>
+                  <Text
+                    style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                     Card is not activated
                   </Text>
                 </View>
 
-                <View style={[{ flexDirection: 'row', marginLeft: 20 }]}>
+                <View style={[{flexDirection: 'row', marginLeft: 20}]}>
                   <ImageBackground
                     source={require('../../../../Assets/IMG_3151.jpg')}
                     style={{
@@ -285,7 +287,6 @@ const index = ({ navigation }) => {
                       </View>
                     </TouchableOpacity>
                   </ImageBackground>
-
                 </View>
               </View>
 
@@ -293,8 +294,8 @@ const index = ({ navigation }) => {
               <View style={Style.hr}></View>
 
               <View
-                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
                       {
@@ -339,7 +340,6 @@ const index = ({ navigation }) => {
                     // position: 'relative',
                     // right: 50,
                   }}>
-
                   <ImageBackground
                     source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                     style={{
@@ -368,7 +368,7 @@ const index = ({ navigation }) => {
                             width: 12,
                             height: 12,
                             alignSelf: 'center',
-                            marginTop: 4
+                            marginTop: 4,
                           }}
                         />
                       </View>
@@ -382,23 +382,27 @@ const index = ({ navigation }) => {
 
               <View style={Style.lowerPortion}>
                 <View>
-                  <Text style={[Style.smFontSize, , { color: 'gray' }]}>
+                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </Text>
                   <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
 
                   <Text
-                    style={[Style.smFontSize, , { color: 'gray', marginTop: 10 }]}>
+                    style={[
+                      Style.smFontSize,
+                      ,
+                      {color: 'gray', marginTop: 10},
+                    ]}>
                     Card code: 12345678946579
                   </Text>
                 </View>
 
                 <View>
-                  <Text style={[{ color: 'gray', fontSize: 10 }]}>
+                  <Text style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
                   </Text>
                   <Text
-                    style={[{ textAlign: 'right', color: 'red', fontSize: 13 }]}>
+                    style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
                     {'IN PROGRESS'}
                   </Text>
                 </View>
@@ -423,7 +427,7 @@ const index = ({ navigation }) => {
                     Style.btnShadow,
                   ]}>
                   <Text
-                    style={[{ color: 'red', fontSize: 11, alignSelf: 'center' }]}
+                    style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}
                     onPress={() => {
                       toggleDelineModal();
                     }}>
@@ -432,6 +436,9 @@ const index = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('SwitchGiftCard');
+                  }}
                   activeOpacity={0.5}
                   style={[
                     {
@@ -443,7 +450,9 @@ const index = ({ navigation }) => {
                     Style.btnShadow,
                   ]}>
                   <Text
-                    style={[{ color: 'white', fontSize: 11, alignSelf: 'center' }]}>
+                    style={[
+                      {color: 'white', fontSize: 11, alignSelf: 'center'},
+                    ]}>
                     SWITCH
                   </Text>
                 </TouchableOpacity>
@@ -463,7 +472,9 @@ const index = ({ navigation }) => {
                     onPress={() => {
                       toggleModal();
                     }}
-                    style={[{ color: 'white', fontSize: 11, alignSelf: 'center' }]}>
+                    style={[
+                      {color: 'white', fontSize: 11, alignSelf: 'center'},
+                    ]}>
                     ACCEPT
                   </Text>
                 </TouchableOpacity>
@@ -473,8 +484,8 @@ const index = ({ navigation }) => {
               <View style={Style.hr}></View>
 
               <View
-                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
                       {
@@ -519,7 +530,6 @@ const index = ({ navigation }) => {
                     // position: 'relative',
                     // right: 50,
                   }}>
-
                   <ImageBackground
                     source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                     style={{
@@ -548,7 +558,7 @@ const index = ({ navigation }) => {
                             width: 12,
                             height: 12,
                             alignSelf: 'center',
-                            marginTop: 4
+                            marginTop: 4,
                           }}
                         />
                       </View>
@@ -562,19 +572,19 @@ const index = ({ navigation }) => {
 
               <View style={Style.lowerPortion}>
                 <View>
-                  <Text style={[Style.smFontSize, , { color: 'gray' }]}>
+                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </Text>
                   <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
                 </View>
 
                 <View>
-                  <Text style={[{ color: 'gray', fontSize: 10 }]}>
+                  <Text style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
                   </Text>
                   <Text
                     style={[
-                      { textAlign: 'right', color: '#0a8a40', fontSize: 13 },
+                      {textAlign: 'right', color: '#0a8a40', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
                   </Text>
@@ -585,10 +595,10 @@ const index = ({ navigation }) => {
           <Modal
             //style={{ backgroundColor:'#fafafa' , height:height/2}}
             isVisible={isModalVisible}
-          //coverScreen={true}
-          // swipeDirection='down'
-          // onSwipeComplete={toggleModal}
-          // swipeThreshold={50}
+            //coverScreen={true}
+            // swipeDirection='down'
+            // onSwipeComplete={toggleModal}
+            // swipeThreshold={50}
           >
             <View
               style={{
@@ -621,7 +631,7 @@ const index = ({ navigation }) => {
                   </Text>
 
                   {/* hr */}
-                  <View style={[Style.hr, { marginTop: 0 }]}></View>
+                  <View style={[Style.hr, {marginTop: 0}]}></View>
                 </View>
 
                 <View>
@@ -646,7 +656,11 @@ const index = ({ navigation }) => {
                 </View>
 
                 <View>
-                  <TouchableOpacity activeOpacity={0.5}>
+                  <TouchableOpacity activeOpacity={0.5}
+                  onPress={() => {
+                    toggleModal()
+                }}
+                  >
                     <Text
                       style={{
                         textAlign: 'center',
@@ -658,9 +672,9 @@ const index = ({ navigation }) => {
                     </Text>
                   </TouchableOpacity>
                   {/* hr */}
-                  <View style={[Style.hr, { marginTop: 6 }]}></View>
+                  <View style={[Style.hr, {marginTop: 6}]}></View>
                   <TouchableOpacity
-                    style={{ marginBottom: 8, marginTop: -4 }}
+                    style={{marginBottom: 8, marginTop: -4}}
                     onPress={() => toggleModal()}>
                     <Text
                       style={{
@@ -680,10 +694,10 @@ const index = ({ navigation }) => {
           <Modal
             //style={{ backgroundColor:'#fafafa' , height:height/2}}
             isVisible={isDelineModalVisible}
-          //coverScreen={true}
-          // swipeDirection='down'
-          // onSwipeComplete={toggleModal}
-          // swipeThreshold={50}
+            //coverScreen={true}
+            // swipeDirection='down'
+            // onSwipeComplete={toggleModal}
+            // swipeThreshold={50}
           >
             <View
               style={{
@@ -719,11 +733,11 @@ const index = ({ navigation }) => {
                   <View
                     style={[
                       Style.hr,
-                      { marginTop: 0, marginLeft: 36, marginRight: 36 },
+                      {marginTop: 0, marginLeft: 36, marginRight: 36},
                     ]}></View>
                 </View>
 
-                <View style={{ flex: 1 }}>
+                <View style={{flex: 1}}>
                   <SelectDropdown
                     data={declineReason}
                     onSelect={(selectedItem, index) => {
@@ -743,14 +757,14 @@ const index = ({ navigation }) => {
                       return (
                         <Image
                           source={require('../../../../Assets/ICONS/dropdwo.png')}
-                          style={{ width: 10, height: 5 }}
+                          style={{width: 10, height: 5}}
                         />
                       );
                     }}
                     defaultButtonText={'Reason'}
-                    buttonTextStyle={{ textAlign: 'left', fontSize: 13 }}
-                    rowStyle={{ backgroundColor: 'white', width: '100%' }}
-                    rowTextStyle={{ fontSize: 15 }}
+                    buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+                    rowStyle={{backgroundColor: 'white', width: '100%'}}
+                    rowTextStyle={{fontSize: 15}}
                     buttonStyle={{
                       backgroundColor: 'white',
                       borderWidth: 0.5,
@@ -794,10 +808,11 @@ const index = ({ navigation }) => {
 
                       <Image
                         source={require('../../../../Assets/IMG_3151.jpg')}
-                        style={{ width: '100%', height: '100%' }}
+                        style={{width: '100%', height: '100%'}}
                       />
                     </View>
-                    <View style={{ margin: 2, width: '32%', height: width - 300 }}>
+                    <View
+                      style={{margin: 2, width: '32%', height: width - 300}}>
                       {/* Upload Button */}
                       <TouchableOpacity
                         style={[
@@ -808,7 +823,7 @@ const index = ({ navigation }) => {
                             height: width - 328,
                             borderRadius: 50,
                             alignSelf: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
                           },
                         ]}>
                         <Text
@@ -816,25 +831,27 @@ const index = ({ navigation }) => {
                             fontSize: 25,
                             fontWeight: '500',
                             color: '#0a8a40',
-                            alignSelf: 'center'
+                            alignSelf: 'center',
                           }}>
                           +
                         </Text>
                       </TouchableOpacity>
-                      <Text style={{
-                        color: "#0a8a40",
-                        fontSize: 10,
-                        fontWeight: '500',
-                        alignSelf: 'center',
-                        marginTop: 5
-
-                      }}>Upload Image</Text>
+                      <Text
+                        style={{
+                          color: '#0a8a40',
+                          fontSize: 10,
+                          fontWeight: '500',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Upload Image
+                      </Text>
                     </View>
                   </View>
                 </View>
 
                 <View>
-                  <TouchableOpacity activeOpacity={0.5}>
+                  <TouchableOpacity activeOpacity={0.5} onPress={()=> toggleDelineModal()}>
                     <Text
                       style={{
                         textAlign: 'center',
@@ -846,9 +863,9 @@ const index = ({ navigation }) => {
                     </Text>
                   </TouchableOpacity>
                   {/* hr */}
-                  <View style={[Style.hr, { marginTop: 6 }]}></View>
+                  <View style={[Style.hr, {marginTop: 6}]}></View>
                   <TouchableOpacity
-                    style={{ marginBottom: 8, marginTop: -5 }}
+                    style={{marginBottom: 8, marginTop: -5}}
                     onPress={() => toggleDelineModal()}>
                     <Text
                       style={{

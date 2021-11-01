@@ -1,25 +1,25 @@
 import React from 'react';
-import {View, Text, Dimensions, Image, TextInput} from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, Dimensions, Image, TextInput, StatusBar, ScrollView, TouchableOpacity} from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from '../CardDetails/Style';
 
-const {width, height} = Dimensions.get('screen');
+// const {width1, height1} = Dimensions.get('screen');
+const { width, height } = Dimensions.get('window');
 
 const index = ({navigation}) => {
   return (
     <ScrollView>
-      <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
+      <View style={{height: height + StatusBar.currentHeight, width: width, backgroundColor: '#d65d0e'}}>
         <Header
-          style={{marginTop: 10}}
+          style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Switch Giftcard'}
         />
         <View
           style={{
             marginTop: 10,
-            height: height - 60,
+            height: height,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -189,7 +189,11 @@ const index = ({navigation}) => {
           </View>
 
           <View style={{marginTop: 110}}>
+            
               <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('CardDetails')
+            }}
                 style={{
                     backgroundColor: '#d65d0e',
                     width: '80%',

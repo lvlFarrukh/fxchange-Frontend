@@ -30,8 +30,23 @@ const index = ({navigation}) => {
   const [ongoingBtn, setOngoing] = useState({});
   const [CompletedBtn, setCompleted] = useState({});
   const [navigateState, setnavigateState] = useState(0);
-  const navigateCardDetails = () => {
-    navigation.navigate('CardDetails');
+  const navigateCardDetails = (route, status) => {
+    console.log(route)
+    if (route === 1) {
+      navigation.navigate('CardDetails');
+    }
+    else if (route === 2) {
+      if (status === "pending") {
+        navigation.navigate('BitcoinCardDetailPending');
+      }
+      if (status === "ongoing") {
+        navigation.navigate('BitcoinCardDetailPending');
+      }
+      if (status === "completed") {
+        navigation.navigate('BitcoinCardDetailComplete');
+      }
+      
+    }
   };
 
   const activeButton = (buttonType: string) => {
@@ -74,11 +89,38 @@ const index = ({navigation}) => {
         <Text style={styles.headerHeading}>Trades</Text>
       </View> */}
     <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
-        <Header
+    <View style={{
+              flexDirection:'row',
+              justifyContent:'space-around',
+              backgroundColor:'#0a8a40',
+              paddingVertical:6
+            }}>
+             
+
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('ModeratorScreen')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'white'}}>Trades</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'white'}}>Logout</Text>
+              </TouchableOpacity>
+
+            </View>
+        {/* <Header
           style={{marginTop: 10}}
           navigation={navigation}
           Heading={'Trades'}
-        />    
+        />     */}
 
       <View style={styles.mainBody}>
         <View style={[styles.headerButtons]}>
@@ -111,6 +153,7 @@ const index = ({navigation}) => {
             trades['pending'].map((pending: any, index: number) => {
               return (
                 <ModeratePageCard
+                  // route={pending?.route}
                   key={index}
                   cardImage={pending?.cardImage}
                   title={pending?.title}
@@ -118,7 +161,7 @@ const index = ({navigation}) => {
                   amount={pending?.amount}
                   date={pending?.date}
                   userName={pending?.userName}
-                  reDirecttoCardDetail={() => navigateCardDetails()}
+                  reDirecttoCardDetail={() => navigateCardDetails(pending?.route, 'pending')}
                 />
               );
             })}
@@ -127,6 +170,7 @@ const index = ({navigation}) => {
             trades['ongoing'].map((ongoing: any, index: number) => {
               return (
                 <ModeratePageCard
+                // route={ongoing?.route}
                   key={index}
                   cardImage={ongoing?.cardImage}
                   title={ongoing?.title}
@@ -134,7 +178,7 @@ const index = ({navigation}) => {
                   amount={ongoing?.amount}
                   date={ongoing?.date}
                   userName={ongoing?.userName}
-                  reDirecttoCardDetail={() => navigateCardDetails()}
+                  reDirecttoCardDetail={() => navigateCardDetails(ongoing?.route, 'ongoing')}
                 />
               );
             })}
@@ -143,6 +187,7 @@ const index = ({navigation}) => {
             trades['completed'].map((completed: any, index: number) => {
               return (
                 <ModeratePageCard
+                // route={completed?.route}
                   key={index}
                   cardImage={completed?.cardImage}
                   title={completed?.title}
@@ -150,7 +195,7 @@ const index = ({navigation}) => {
                   amount={completed?.amount}
                   date={completed?.date}
                   userName={completed?.userName}
-                  reDirecttoCardDetail={() => navigateCardDetails()}
+                  reDirecttoCardDetail={() => navigateCardDetails(completed?.route, 'completed')}
                 />
               );
             })}
