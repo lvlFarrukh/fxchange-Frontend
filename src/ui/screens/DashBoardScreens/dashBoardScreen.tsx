@@ -28,6 +28,49 @@ const DashBoardScreen = ({ navigation }) => {
       <SafeAreaView style={{ flex: 1 ,height:height,width:width}}>
         <ScrollView>
           <View style={[styles.header, {}]}>
+            <View style={{
+              flexDirection:'row',
+              justifyContent:'space-around',
+              backgroundColor:'#fff',
+              paddingVertical:6
+            }}>
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'#85001c'}}>Home</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('Test')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'#85001c'}}>Trades</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'#85001c'}}>Rates</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+              onPress={()=>{
+                navigation.navigate('')
+              }}
+              >
+                <Text></Text>
+              <Text style={{color:'#85001c'}}>More</Text>
+              </TouchableOpacity>
+
+            </View>
             <View
               style={{
                 flexDirection: 'row',
@@ -213,11 +256,11 @@ const styles = StyleSheet.create({
     width: 35,
   },
   header: {
-    height: 200,
+    height: 250,
     backgroundColor: '#0a8a40',
   },
   body: {
-    height: height-200-StatusBar.currentHeight,
+    height: height-250-StatusBar.currentHeight,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,

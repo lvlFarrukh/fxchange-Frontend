@@ -139,6 +139,9 @@ const index = ({navigation}) => {
                     borderRadius: 4,
                     justifyContent: 'center'
                 }}
+                onPress={() => {
+                  navigation.navigate('SellBitcoinScreen1')
+                }}
               >
                   <Text style={{
                       color: 'white',

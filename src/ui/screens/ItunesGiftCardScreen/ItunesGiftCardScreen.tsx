@@ -36,7 +36,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
           width: width,
           backgroundColor: 'rgb(10, 138, 64)',
         }}>
-        <View style={{height: '10%'}}>
+        <View style={{height: 50}}>
           <Header
             navigation={navigation}
             style={{marginTop: 5}}
@@ -44,7 +44,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
           />
         </View>
 
-        <View style={[styles.whiteCardBg, {height: '90%'}]}>
+        <View style={[styles.whiteCardBg, {height: '100%'}]}>
           <View style={styles.bodyHeader}>
             <Image
               source={require('../../../Assets/CARDS/itunes.png')}
@@ -218,7 +218,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
         </View>
       </SafeAreaView>
     </View>
-    <View style={{marginBottom: 60}}></View>
+    {/* <View style={{marginBottom: 60}}></View> */}
     </ScrollView>
   );
 };

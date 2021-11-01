@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25
   },
   headerUpperArea: {
-    marginTop: 30,
+    marginTop: 35,
     marginBottom: 60,
     flexDirection: 'row',
     backgroundColor: 'transparent', 
