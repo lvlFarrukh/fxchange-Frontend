@@ -11,7 +11,7 @@ const SellBitcoinScreen1 = ({ navigation }) => {
 
     return (
         <View style={{ height: height, width: width, flex: 1 }}>
-            {/* <StatusBar hidden /> */}
+             <StatusBar translucent backgroundColor='transparent' />
             <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: '#d65d0e' }}>
                 <View style={{ height: '8%', justifyContent: 'center' }}>
                     <Header navigation={navigation} Heading={'Sell Bitcoin'} />

@@ -15,7 +15,6 @@ const index = ({navigation}) => {
           style={{marginTop: 10}}
           navigation={navigation}
           Heading={'Upload Giftcard'}
-          style={{marginTop: 0}}
         />
         <View
           style={{
