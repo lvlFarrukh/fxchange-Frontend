@@ -44,7 +44,7 @@ const index = ({ navigation }) => {
           <Header
             navigation={navigation}
             Heading={'BITCOIN - #FG4558668900'}
-            style={{ marginTop: 0 }}
+            style={{ marginTop: 35 }}
           />
         </View>
         <View

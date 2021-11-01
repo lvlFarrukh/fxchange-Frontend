@@ -3,6 +3,7 @@ import { View, Text, Image } from 'react-native'
 import Style from './Style'
 
 const index = ({
+    // route,
     id,
     cardImage,
     title,
@@ -39,7 +40,7 @@ const index = ({
 
                 <View style={Style.viewItems}>
 
-                    <Text style={Style.smBlueText}  onPress={()=>reDirecttoCardDetail()}>
+                    <Text style={Style.smBlueText}  onPress={reDirecttoCardDetail}>
                         View
                     </Text>
 

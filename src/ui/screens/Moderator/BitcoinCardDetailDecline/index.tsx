@@ -37,7 +37,7 @@ const index = ({navigation}) => {
        <StatusBar translucent backgroundColor='transparent' />
       <ScrollView>
         <Header
-          style={{marginTop: 10}}
+          style={{marginTop: 35}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
         />
