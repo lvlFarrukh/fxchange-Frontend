@@ -12,14 +12,14 @@ const index = ({navigation}) => {
     <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
       <ScrollView>
         <Header
-          style={{marginTop: 10}}
+          style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Upload Giftcard'}
         />
         <View
           style={{
             marginTop: 10,
-            height: height - 60,
+            height: height,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -299,7 +299,11 @@ const index = ({navigation}) => {
                 height: 36,
                 borderRadius: 4,
                 justifyContent: 'center',
-              }}>
+              }}
+              onPress={() => {
+                navigation.navigate('ItunesGiftCardScreen');
+              }}
+              >
               <Text
                 style={{
                   color: 'white',
@@ -310,6 +314,7 @@ const index = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={{marginBottom: 40}}></View>
       </ScrollView>
     </View>
   );

@@ -35,7 +35,8 @@ const GiftCardScreen = ({ navigation }) => {
     const changeHeaderText = (ImageIndex: number) => {
         let name: string = imageNames[ImageIndex].split('/')[imageNames[ImageIndex].split('/').length - 1 ].split('.')[0] 
         name = name.charAt(0).toUpperCase() + name.substr(1).toLowerCase()
-        setheaderText(`${name} GiftCards`)
+        // setheaderText(`${name} GiftCards`)
+        navigation.navigate('ItunesGiftCardScreen', {headerTitle: `${name} GiftCards`})
     }
 
     return (

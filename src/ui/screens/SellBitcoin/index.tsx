@@ -39,7 +39,7 @@ const index = ({navigation}) => {
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
             borderTopLeftRadius: 35,
-            paddingHorizontal: '10%',
+            paddingHorizontal: '100%',
           }}>
           <View style={{flexDirection: 'row', marginTop: 25, marginBottom: 12}}>
             <TextInput
@@ -138,6 +138,10 @@ const index = ({navigation}) => {
                     height: 30,
                     borderRadius: 4,
                     justifyContent: 'center'
+                }}
+                
+                onPress={() => {
+                  navigation.navigate('SellBitcoinScreen1')
                 }}
               >
                   <Text style={{

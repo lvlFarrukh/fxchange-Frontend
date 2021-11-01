@@ -36,7 +36,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                 navigation.goBack();
               }}>
               <Image
-                source={require('../../../../Assets/ICONS/arrow=white.png')}
+                source={require('../../../../Assets/ICONS/arrow.png')}
                 style={{
                   height: 15,
                   width: 25,
@@ -67,7 +67,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
               underlineColorAndroid="transparent"
               placeholder="Enter Your Message"
               placeholderTextColor="#7c7c7c"
-              numberOfLines={6}
+              numberOfLines={7}
               multiline={true}
             />
           </View>

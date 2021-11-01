@@ -38,7 +38,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
-                        <View style={{ height: (height*25)/100 }}>
+                        <View style={{ height: (height*27)/100 }}>
                             <Header navigation={navigation}/>
                             <View style={{ alignSelf: 'center', }}>
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
@@ -47,12 +47,12 @@ const ForgetPasswordScreen = ({ navigation }) => {
                         <View style={[styles.whiteCardBg, { height: (height*75)/100 }]}>
                             <Text style={[styles.Heading]}>FORGET PASSWORD?</Text>
 
-                            <Text style={{ alignSelf: "center" }}>A link will be sent to your email address</Text>
+                            <Text style={{ alignSelf: "center", marginTop: -15, fontSize: 12, color: '#333333' }}>A link will be sent to your email address</Text>
 
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Email or Phone'}
-                                placeholderTextColor={'#949494'}
+                                placeholderTextColor={'#343434'}
                             >
                             </TextInput>
 
@@ -93,39 +93,44 @@ const styles = StyleSheet.create({
         //flex: 75,
         //height: '75%',
         backgroundColor: '#fafafa',
-        borderTopLeftRadius: 40,
-        borderTopRightRadius: 40,
+        borderTopLeftRadius: 35,
+        borderTopRightRadius: 35,
         width: width,
         alignSelf: "flex-end",
         justifyContent: 'space-evenly',
-        padding: 30
+        paddingHorizontal: 30,
+        paddingTop: 5
     },
     Heading: {
         fontWeight: '700',
         alignSelf: "center",
-        fontSize: 15,
-        color: '#343434'
+        fontSize: 13,
+        color: '#343434',
+        marginTop: -6,
     },
     TextInputStyle: {
+        height: 46,
         backgroundColor: '#fafafa',
         borderWidth: 1,
         borderRadius: 5,
-        borderColor: '#949494',
+        borderColor: '#F1F1F1',
         paddingLeft: 10,
-        color:'#000'
-
+        color:'#000',
+        fontSize: 12,
+        marginTop: -5
     },
     GreenButton: {
         // alignSelf:'center',
         // backgroundColor:'#0a8a40',
         // width:'100%'
+        marginTop: -5,
         borderWidth: 1,
         borderColor: '#0a8a40',
-        borderRadius: 5,
+        borderRadius: 3,
         paddingHorizontal: 10,
-        paddingVertical: 15,
-        fontSize: 15,
-        fontWeight: '700',
+        paddingVertical: 8,
+        fontSize: 13,
+        // fontWeight: '700',
         color: '#fafafa',
         backgroundColor: '#0a8a40',
         alignSelf: 'center',
