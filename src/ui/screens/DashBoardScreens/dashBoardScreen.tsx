@@ -31,7 +31,7 @@ const DashBoardScreen = ({ navigation }) => {
             <View style={{
               flexDirection:'row',
               justifyContent:'space-around',
-              backgroundColor:'#fff',
+              backgroundColor:'#0a8a40',
               paddingVertical:6
             }}>
               <TouchableOpacity
@@ -40,7 +40,7 @@ const DashBoardScreen = ({ navigation }) => {
               }}
               >
                 <Text></Text>
-              <Text style={{color:'#85001c'}}>Home</Text>
+              <Text style={{color:'white'}}>Home</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -49,25 +49,25 @@ const DashBoardScreen = ({ navigation }) => {
               }}
               >
                 <Text></Text>
-              <Text style={{color:'#85001c'}}>Trades</Text>
+              <Text style={{color:'white'}}>Trades</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
               onPress={()=>{
-                navigation.navigate('')
+                navigation.navigate('WithdrawalsScreenThree')
               }}
               >
                 <Text></Text>
-              <Text style={{color:'#85001c'}}>Rates</Text>
+              <Text style={{color:'white'}}>Rates</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
               onPress={()=>{
-                navigation.navigate('')
+                navigation.navigate('Test')
               }}
               >
                 <Text></Text>
-              <Text style={{color:'#85001c'}}>More</Text>
+              <Text style={{color:'white'}}>More</Text>
               </TouchableOpacity>
 
             </View>
@@ -78,7 +78,7 @@ const DashBoardScreen = ({ navigation }) => {
                 marginRight: 10,
                 marginTop: 5,
               }}>
-              <Text style={{ color: '#fff', fontSize: 12.5 }}>Hi, Amanda</Text>
+              <Text style={{ color: '#fff', fontSize: 12.5 , marginRight: 10}}>Hi, Amanda</Text>
             </View>
             <View style={{ marginLeft: 20 }}>
               <Text style={{ fontSize: 10, color: '#fff', marginBottom: 5 }}>
@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0a8a40',
   },
   body: {
-    height: height-250-StatusBar.currentHeight,
+    height: height-250,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,

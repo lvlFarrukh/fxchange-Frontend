@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25
   },
   headerUpperArea: {
-    marginTop: 18,
+    marginTop: 35,
     marginBottom: 60,
     flexDirection: 'row',
     backgroundColor: 'transparent', 
@@ -66,10 +66,10 @@ const styles = StyleSheet.create({
   },
   checkrateButtonContainer: {
     borderRadius: 4,
-    marginLeft:28,
-
+    // marginLeft:28,
+    alignSelf: 'center',
     height:45,
-    width: '85%',
+    width: '83%',
   },
   checkrateButton: {
     alignItems: 'center',

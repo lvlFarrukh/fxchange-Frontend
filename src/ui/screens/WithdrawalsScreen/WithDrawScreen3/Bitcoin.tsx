@@ -20,12 +20,7 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
       <View style={styles.mainBodyPartOne}>
         <View style={[styles.partOneButtons]}>
           <Text
-            style={[
-              styles.partOneButton,
-              styles.JoinLeft,
-              {...giftCards},
-              {marginRight: 20},
-            ]}
+            style={[styles.partOneButton, styles.JoinLeft, {...giftCards}]}
             onPress={() => {
               activeButton('giftCards');
             }}>
@@ -40,18 +35,20 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
             Bitcoin
           </Text>
         </View>
+
         <TextInput
           style={{
             backgroundColor: 'white',
             // textAlignVertical: 'top',
             borderRadius: 4,
-            width: '90%',
+            width: '83%',
             marginRight: 'auto',
             marginLeft: 'auto',
             marginVertical: 20,
-
+            height: 55,
             // paddingTop:20,
             paddingLeft: 25,
+            color: 'black'
           }}
           underlineColorAndroid="transparent"
           placeholder="Enter Account in USD"
