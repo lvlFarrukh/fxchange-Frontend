@@ -66,7 +66,7 @@ const SignInScreen = ({navigation}) => {
             <View
               style={[
                 styles(isKeyboardVisible).whiteCardBg,
-                {height: isKeyboardVisible ? '90%' : '70%'},
+                {height: isKeyboardVisible ? '90%' : '75%'},
               ]}>
               <Text style={[styles(isKeyboardVisible).Heading]}>
                 LOGIN TO YOUR ACCOUNT

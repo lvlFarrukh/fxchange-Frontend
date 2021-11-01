@@ -34,7 +34,7 @@ const TradeSuccessfull = ({navigation}) => {
             backgroundColor: 'rgb(10, 138, 64)',
           }}>
           <View style={{height: '8%', justifyContent: 'center'}}>
-            <Text style={{color: '#fff', alignSelf: 'center'}}>
+            <Text style={{fontSize:18 ,color: '#fff', alignSelf: 'center'}}>
               Trade Sucessful
             </Text>
           </View>
@@ -149,18 +149,18 @@ const TradeSuccessfull = ({navigation}) => {
                 </Text>
                 <Text style={{textAlign: 'center',}}>
                   <Text style={{fontSize: 10, color: '#343434'}}>
-                    if you uploaded a Giftcard on the wrong section it will be
+                    if you uploaded a Giftcard on the wrong section it will be {"\n"}
                   </Text>
                   <Text style={{fontSize: 10, color: '#343434'}}>
-                    transferednand treated at the current rate
+                    transferednand treated at the current rate {"\n"}
                   </Text>
                   <Text style={{fontSize: 10, color: '#343434'}}>
-                    of the appropriate section
+                    of the appropriate section {"\n"}
                   </Text>
                 </Text>
               </View>
 
-              <TouchableOpacity style={{marginTop: 25}}
+              <TouchableOpacity style={{marginTop: 10}}
               >
                 <Text
                   style={{
@@ -179,7 +179,6 @@ const TradeSuccessfull = ({navigation}) => {
           </View>
         </SafeAreaView>
       </View>
-      <View style={{marginBottom: 60}}></View>
     </ScrollView>
   );
 };

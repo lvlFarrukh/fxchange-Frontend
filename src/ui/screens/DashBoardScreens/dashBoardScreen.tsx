@@ -204,7 +204,7 @@ const DashBoardScreen = ({navigation}) => {
           </View>
         </SafeAreaView>
       </View>
-      <View style={{marginBottom: 30}}></View>
+      {/* <View style={{marginBottom: 30}}></View> */}
     </ScrollView>
   );
 };
@@ -215,11 +215,11 @@ const styles = StyleSheet.create({
     width: 35,
   },
   header: {
-    flex: 0.32,
+    flex: 0.25,
     backgroundColor: '0a8a40',
   },
   body: {
-    flex: 0.68,
+    flex: 0.75,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
