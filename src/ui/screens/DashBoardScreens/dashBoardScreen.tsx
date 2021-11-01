@@ -240,7 +240,7 @@ const DashBoardScreen = ({ navigation }) => {
                 borderRadius: 3
               }}>
               <ImageBackground
-                source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
+                source={require('../../../Assets/CARDS/img.png')}
                 style={styles.cardImage}></ImageBackground>
             </View>
           </View>

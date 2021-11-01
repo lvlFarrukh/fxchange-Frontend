@@ -4,7 +4,7 @@ import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Style from './Style';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 
 const index = ({navigation}) => {
   const navigateBack = () => {
@@ -13,13 +13,14 @@ const index = ({navigation}) => {
   };
   return (
     <ScrollView>
+         <StatusBar translucent backgroundColor="transparent" />
       <SafeAreaView
         style={{
           height: height,
           width: width,
           flex: 1,
         }}>
-        <StatusBar hidden />
+      
         <View style={Style.header}>
           <TouchableOpacity
             style={{marginLeft: 15}}
