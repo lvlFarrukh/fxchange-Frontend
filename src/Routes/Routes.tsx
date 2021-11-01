@@ -48,10 +48,11 @@ const Routes = () => {
             <Stack.Screen name="TransactionHistoryScreen" component={TransactionHistoryScreen} />
             <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />
             <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />
-            <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />   
+            <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />
+            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />  
             <Stack.Screen name="WithDrawScreenSix" component={WithDrawScreenSix} />
             <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
-            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />
+
             <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />
             <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />
             <Stack.Screen name="ItunesGiftCardScreen" component={ItunesGiftCardScreen} />

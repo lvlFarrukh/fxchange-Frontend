@@ -34,7 +34,7 @@ const SignInScreen = ({ navigation }) => {
 
     return (
         <KeyboardAvoidingView style={{ flex: 1 }}>
-            <StatusBar hidden/>
+           <StatusBar translucent backgroundColor='transparent' />
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 ,height:height }}>
@@ -44,7 +44,7 @@ const SignInScreen = ({ navigation }) => {
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles(isKeyboardVisible).image} />
                             </View>
                         </View>
-                        <View style={[styles(isKeyboardVisible).whiteCardBg, { height: isKeyboardVisible ? '60%' : '75%' }]}>
+                        <View style={[styles(isKeyboardVisible).whiteCardBg, { height: isKeyboardVisible ? '90%' : '75%' }]}>
                             <Text style={[styles(isKeyboardVisible).Heading]}>LOGIN TO YOUR ACCOUNT</Text>
 
                             <TextInput

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, Image, TextInput, ImageBackground,ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, Dimensions, Image, TextInput, ImageBackground,ScrollView, TouchableOpacity, StatusBar} from 'react-native';
 import Modal from 'react-native-modal';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../../components/ModeratePageCard/Header';
@@ -34,12 +34,12 @@ const index = ({navigation}) => {
 
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
+       <StatusBar translucent backgroundColor='transparent' />
       <ScrollView>
         <Header
           style={{marginTop: 10}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
-          style={{marginTop: 0}}
         />
         <View
           style={{

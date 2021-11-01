@@ -57,6 +57,12 @@ const index = ({navigation}) => {
   };
   // eslint-disable-next-line prettier/prettier
   return (
+    <View style={{
+      height: height,
+      width: width,
+      flex: 1,
+      backgroundColor: '#0a8a40'
+    }}>
     <SafeAreaView
       style={{
         height: height,
@@ -155,6 +161,7 @@ const index = ({navigation}) => {
       </View>
 
     </SafeAreaView>
+    </View>
   );
 };
 

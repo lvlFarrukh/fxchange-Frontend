@@ -6,7 +6,7 @@ import {
   Image,
   TextInput,
   ImageBackground,
-  ScrollView, TouchableOpacity
+  ScrollView, TouchableOpacity, StatusBar
 } from 'react-native';
 import Modal from 'react-native-modal';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -38,6 +38,7 @@ const index = ({ navigation }) => {
 
   return (
     <View style={{ height: height, width: width, backgroundColor: '#d65d0e' }}>
+       <StatusBar translucent backgroundColor='transparent' />
      
         <View style={{ height: '8%', justifyContent: 'center' }}>
           <Header

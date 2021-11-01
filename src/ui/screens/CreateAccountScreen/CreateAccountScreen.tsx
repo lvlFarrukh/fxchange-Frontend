@@ -34,17 +34,17 @@ const CreateAccountScreen = ({ navigation }) => {
 
     return (
         <KeyboardAvoidingView style={{ flex: 1 }}>
-            <StatusBar hidden/>
+            <StatusBar translucent backgroundColor='transparent' />
             <ScrollView contentContainerStyle={{ flex: 1 }}>
                 <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
                     <SafeAreaView style={{ flex: 1 }}>
-                        <View style={{ height: isKeyboardVisible ? '8%' : '25%' }}>
+                        <View style={{ height: isKeyboardVisible ? '10%' : '25%' }}>
                             <Header navigation={navigation} />
                             <View style={{ alignSelf: 'center', }}>
                                 <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
                             </View>
                         </View>
-                        <View style={[styles.whiteCardBg, { height: isKeyboardVisible ? '60%' : '75%' }]}>
+                        <View style={[styles.whiteCardBg, { height: isKeyboardVisible ? '90%' : '75%' }]}>
                             <View>
                                 <Text style={[styles.Heading]}>CREATE AN ACCOUNT</Text>
 

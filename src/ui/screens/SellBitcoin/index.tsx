@@ -29,6 +29,7 @@ const index = ({navigation}) => {
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Sell Bitcoin'}
+          //style={{marginTop: 0}}
         />
         <View
           style={{
