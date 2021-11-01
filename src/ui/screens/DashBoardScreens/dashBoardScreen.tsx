@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import {
   Image,
   StyleSheet,
@@ -10,24 +10,23 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const {width, height} = Dimensions.get('screen');
+const { width, height } = Dimensions.get('window');
 
-const DashBoardScreen = ({navigation}) => {
+const DashBoardScreen = ({ navigation }) => {
   return (
-    <ScrollView>
-      <View
-        style={{
-          height: height,
-          width: width,
-          flex: 1,
-          backgroundColor: '#0a8a40',
-        }}>
-        <StatusBar translucent backgroundColor="transparent" />
-        <SafeAreaView style={{flex: 1}}>
+    <View
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+        backgroundColor: '#0a8a40',
+      }}>
+      <SafeAreaView style={{ flex: 1 ,height:height,width:width}}>
+        <ScrollView>
           <View style={[styles.header, {}]}>
             <View
               style={{
@@ -36,15 +35,15 @@ const DashBoardScreen = ({navigation}) => {
                 marginRight: 10,
                 marginTop: 5,
               }}>
-              <Text style={{color: '#fff', fontSize: 12.5}}>Hi, Amanda</Text>
+              <Text style={{ color: '#fff', fontSize: 12.5 }}>Hi, Amanda</Text>
             </View>
-            <View style={{marginLeft: 20}}>
-              <Text style={{fontSize: 10, color: '#fff', marginBottom: 5}}>
+            <View style={{ marginLeft: 20 }}>
+              <Text style={{ fontSize: 10, color: '#fff', marginBottom: 5 }}>
                 Wallet Balance
               </Text>
-              <Text style={{fontSize: 30, color: '#fff'}}>N50,000</Text>
+              <Text style={{ fontSize: 30, color: '#fff' }}>N50,000</Text>
               <Text></Text>
-              <Text style={{fontSize: 10, color: '#fff'}}>
+              <Text style={{ fontSize: 10, color: '#fff', marginBottom: 3 }}>
                 WITHDRAW FUNDS | TRANSACTION HISTORY
               </Text>
             </View>
@@ -68,12 +67,12 @@ const DashBoardScreen = ({navigation}) => {
               onPress={() => {
                 navigation.navigate('GiftCardScreen');
               }}>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image
                   source={require('../../../Assets/ICONS/giftcard.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
+                <Text style={{ color: '#fff', fontSize: 18, marginLeft: 5 }}>
                   Sell Giftcard
                 </Text>
               </View>
@@ -101,12 +100,12 @@ const DashBoardScreen = ({navigation}) => {
               onPress={() => {
                 navigation.navigate('SellBitcoin');
               }}>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image
                   source={require('../../../Assets/ICONS/Bitcoin.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
+                <Text style={{ color: '#fff', fontSize: 18, marginLeft: 5 }}>
                   Sell Bitcoin
                 </Text>
               </View>
@@ -126,7 +125,7 @@ const DashBoardScreen = ({navigation}) => {
                 borderRadius: 15,
                 paddingHorizontal: 18,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 50},
+                shadowOffset: { width: 0, height: 50 },
                 shadowOpacity: 1,
                 shadowRadius: 5,
                 elevation: 8,
@@ -142,37 +141,37 @@ const DashBoardScreen = ({navigation}) => {
                 Top Rates
               </Text>
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <View>
                   <Text
-                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
+                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
                     Itunes
                   </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
+                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
                     ITunes
                   </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
+                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
                     ITunes
                   </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
+                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
                     ITunes
                   </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
                 </View>
               </View>
             </View>
@@ -202,10 +201,9 @@ const DashBoardScreen = ({navigation}) => {
                 style={styles.cardImage}></ImageBackground>
             </View>
           </View>
-        </SafeAreaView>
-      </View>
-      <View style={{marginBottom: 30}}></View>
-    </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
+    </View>
   );
 };
 
@@ -215,11 +213,11 @@ const styles = StyleSheet.create({
     width: 35,
   },
   header: {
-    flex: 0.32,
-    backgroundColor: '0a8a40',
+    height: 200,
+    backgroundColor: '#0a8a40',
   },
   body: {
-    flex: 0.68,
+    height: height-200-StatusBar.currentHeight,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
