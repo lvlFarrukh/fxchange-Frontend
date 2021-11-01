@@ -19,8 +19,19 @@ import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 
 const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigation}) => {
-  const navigateCardDetails = () => {
-    navigation.navigate('tradeCardDetails');
+  const navigateCardDetails = (route, type) => {
+    if (route === 0) {
+      navigation.navigate('tradeCardDetails');
+    } 
+    else if (route === 1) {
+      if (type === 'OngoingTrades') {
+        navigation.navigate('TeadesBitcoinCardDetailPending');
+      }
+      if (type === 'CompletedTrades') {
+        navigation.navigate('BitcoinCardDetailComplete');
+      }
+      
+    }
   };
   return (
 <>
@@ -30,7 +41,7 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
             style={[
               styles.partOneButton,
               styles.JoinLeft,
-              {...completedTrades},
+              {...ongoingTrades},
               {marginRight: 20},
             ]}
             onPress={() => {
@@ -40,7 +51,7 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
           </Text>
 
           <Text
-            style={[styles.partOneButton, styles.JoinRight, {...ongoingTrades}]}
+            style={[styles.partOneButton, styles.JoinRight, {...completedTrades}]}
             onPress={() => {
               activeButton('CompletedTrades');
             }}>
@@ -57,7 +68,7 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
                   amount={"100(N33,000)"}
                   date={"Dec 10, 2021 1:20PM"}
                   userName={""}
-                  reDirecttoCardDetail={() =>navigateCardDetails()}
+                  reDirecttoCardDetail={() =>navigateCardDetails(0, 'CompletedTrades')}
                 />
                  <ModeratePageCard
                   key={1}
@@ -67,9 +78,20 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
                   amount={"100(N33,000)"}
                   date={"Dec 10, 2021 1:20PM"}
                   userName={""}
-                  reDirecttoCardDetail={() =>navigateCardDetails()}
+                  reDirecttoCardDetail={() =>navigateCardDetails(0, 'CompletedTrades')}
+                />
+                <ModeratePageCard
+                  key={1}
+                  cardImage={require('../../../Assets/ICONS/Bitcoin.png')}
+                  title={"Bitcoin"}
+                  id={"#FG4558668900"}
+                  amount={"100(N33,000)"}
+                  date={"Dec 10, 2021 1:20PM"}
+                  userName={""}
+                  reDirecttoCardDetail={() =>navigateCardDetails(1, 'CompletedTrades')}
                 />
                 </View>
+                
                 </ScrollView>
       </View>
     </>

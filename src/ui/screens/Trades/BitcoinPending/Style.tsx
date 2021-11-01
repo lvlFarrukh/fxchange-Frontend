@@ -74,15 +74,15 @@ const Style = StyleSheet.create({
     height: 32,
   },
   hr: {
-    borderTopWidth: 1,
-    borderColor: '#F1F1F1',
+    borderWidth: 0.2,
+    borderColor: 'lightgray',
     marginTop: 10,
     marginBottom: 10,
   },
   lowerPortion: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 2,
+    marginTop: 32,
   },
   smFontSize: {
     fontSize: 11,

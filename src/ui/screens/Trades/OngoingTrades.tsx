@@ -15,7 +15,22 @@ import {
 import styles from './Style';
 import ModeratePageCard from '../../../ui/components/ModeratePageCard';
 const {width, height} = Dimensions.get('screen');
-const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
+const OngoingTrades = ({activeButton, ongoingTrades, completedTrades, navigation}) => {
+  const navigateCardDetails = (route, type) => {
+    console.log(route, type)
+    if (route === 0) {
+      navigation.navigate('tradeCardDetails');
+    } 
+    else if (route === 1) {
+      if (type === 'OngoingTrades') {
+        navigation.navigate('TeadesBitcoinCardDetailPending');
+      }
+      if (type === 'CompletedTrades') {
+        // navigation.navigate('BitcoinCardDetailPending');
+      }
+      
+    }
+  };
   return (
     <>
       <View style={styles.mainBodyPartOne}>
@@ -24,7 +39,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
             style={[
               styles.partOneButton,
               styles.JoinLeft,
-              {...completedTrades},
+              {...ongoingTrades},
               {marginRight: 20},
             ]}
             onPress={() => {
@@ -34,7 +49,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
           </Text>
 
           <Text
-            style={[styles.partOneButton, styles.JoinRight, {...ongoingTrades}]}
+            style={[styles.partOneButton, styles.JoinRight, {...completedTrades}]}
             onPress={() => {
               activeButton('CompletedTrades');
             }}>
@@ -43,7 +58,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
         </View>
         <ScrollView>
           <View style={{marginTop:30}}>
-        <ModeratePageCard
+                <ModeratePageCard
                   key={1}
                   cardImage={require('../../../Assets/ITunes.png')}
                   title={"Itunes"}
@@ -51,7 +66,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
                   amount={"100(N33,000)"}
                   date={"Dec 10, 2021 1:20PM"}
                   userName={""}
-                  reDirecttoCardDetail={() =>""}
+                  reDirecttoCardDetail={() =>navigateCardDetails(0, 'OngoingTrades')}
                 />
                 
                 </View>
@@ -65,7 +80,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
                   userName={""}
                   reDirecttoCardDetail={() =>""}
                 />
-                   <ModeratePageCard
+                <ModeratePageCard
                   key={1}
                   cardImage={require('../../../Assets/ICONS/Bitcoin.png')}
                   title={"Bitcoin"}
@@ -73,7 +88,7 @@ const OngoingTrades = ({activeButton, ongoingTrades, completedTrades}) => {
                   amount={"100(N33,000)"}
                   date={"Dec 10, 2021 1:20PM"}
                   userName={""}
-                  reDirecttoCardDetail={() =>""}
+                  reDirecttoCardDetail={() =>navigateCardDetails(1, 'OngoingTrades')}
                 />
                 </ScrollView>
       </View>
