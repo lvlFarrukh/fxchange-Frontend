@@ -45,7 +45,7 @@ const DashBoardScreen = ({ navigation }) => {
 
               <TouchableOpacity
               onPress={()=>{
-                navigation.navigate('Test')
+                navigation.navigate('Trades')
               }}
               >
                 <Text></Text>
@@ -54,7 +54,7 @@ const DashBoardScreen = ({ navigation }) => {
 
               <TouchableOpacity
               onPress={()=>{
-                navigation.navigate('')
+                navigation.navigate('WithdrawalsScreenThree')
               }}
               >
                 <Text></Text>
@@ -63,7 +63,7 @@ const DashBoardScreen = ({ navigation }) => {
 
               <TouchableOpacity
               onPress={()=>{
-                navigation.navigate('')
+                navigation.navigate('WithdrawalsScreen')
               }}
               >
                 <Text></Text>
@@ -260,7 +260,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#0a8a40',
   },
   body: {
-    height: height-250-StatusBar.currentHeight,
+    height: height-250,
+    //height: height-250-StatusBar.currentHeight,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,

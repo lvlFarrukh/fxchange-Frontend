@@ -28,6 +28,7 @@ import SellBitcoinScreen1 from '../ui/screens/SellBitcoinScreen/SellBitcoinScree
 import BitcoinCardDetailDecline from '../ui/screens/Moderator/BitcoinCardDetailDecline';
 import BitcoinCardDetailComplete from '../ui/screens/Moderator/BitcoinCardDetailComplete';
 import SellBitcoin from '../ui/screens/SellBitcoin';
+import Trades from '../ui/screens/Trades/Trades';
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -65,6 +66,7 @@ const Routes = () => {
             <Stack.Screen name="BitcoinCardDetailComplete" component={BitcoinCardDetailComplete} />
             <Stack.Screen name="UploadGiftCard" component={UploadGiftCard} />
             <Stack.Screen name="SellBitcoin" component={SellBitcoin} />
+            <Stack.Screen name="Trades" component={Trades} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>
