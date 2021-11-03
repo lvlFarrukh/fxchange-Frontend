@@ -11,30 +11,54 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  StatusBar,
 } from 'react-native';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const WithdrawalsScreenTwo = ({navigation}) => {
   console.log('with drawel screen');
   return (
-    <ScrollView>
-      <SafeAreaView
-        style={{
-          height: height,
-          width: width,
-          flex: 1,
-        }}>
+    <SafeAreaView
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+      }}>
+      <ScrollView contentContainerStyle={{flex: 1}}>
+        <StatusBar translucent backgroundColor="transparent" />
+
         <View style={styles.header}>
+        
           <View style={styles.headerUpperArea}>
-            <Image
-              source={require('../../../../Assets/ICONS/arrow=white.png')}
-              style={{width: 35, height: 25, marginRight: 18}}
-            />
-            <Text style={{fontSize: 25, fontWeight: '600', color: '#3f8b41'}}>
+            <TouchableOpacity
+              style={{alignSelf: 'center', marginLeft: 5}}
+              onPress={() => {
+                navigation.goBack();
+              }}>
+              <Image
+                source={require('../../../../Assets/ICONS/arrow.png')}
+                style={{
+                  height: 15,
+                  width: 25,
+                }}
+              />
+            </TouchableOpacity>
+
+            <Text
+              style={[
+                {
+                  color: '#088b3f',
+                  fontSize: 18,
+                  alignSelf: 'center',
+                  marginLeft: -40,
+                  marginTop: -5,
+                },
+              ]}>
               Contact Support
             </Text>
+            <View></View>
           </View>
-          <Text style={{textAlign: 'center', color: '#adabac'}}>
+          <Text style={{textAlign: 'center', color: '#adabac', fontSize: 10}}>
             Please fill the form below we will be happy to assist you
           </Text>
           <View style={styles.textAreaContainer}>
@@ -43,44 +67,48 @@ const WithdrawalsScreenTwo = ({navigation}) => {
               underlineColorAndroid="transparent"
               placeholder="Enter Your Message"
               placeholderTextColor="#7c7c7c"
-              numberOfLines={10}
+              numberOfLines={7}
               multiline={true}
             />
           </View>
           <View style={styles.sendButtonContainer}>
             <TouchableOpacity style={styles.sendButton}>
-              <Text style={{color: 'white', fontSize: 15}}>SEND</Text>
+              <Text style={{color: 'white', fontSize: 12, }}>SEND</Text>
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.mainBody}>
           <Image
             source={require('../../../../Assets/whiteLogo.png')}
-            style={{width: 250, height: 50, marginTop: 50, marginBottom: 55}}
+            style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
           />
           <View style={styles.mainBodyContent}>
             <TouchableOpacity style={styles.mainBodyButtonStyle}>
-            <View style={{marginBottom:10}}>
+              <View style={{marginBottom: 8}}>
                 <Image
                   source={require('../../../../Assets/ICONS/iggg.png')}
-                  style={{width: 40, height: 40,marginBottom:2}}
+                  style={{width: 29, height: 29}}
                 />
-            </View>
-              <Text style={{color: 'black',fontSize:15,fontWeight:"600"}}>fxChange</Text>
+              </View>
+              <Text style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
+                fxchange
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.mainBodyButtonStyle}>
-                <View>
-              <Image
-                source={require('../../../../Assets/ICONS/website-logo-png.png')}
-                style={{width: 30, height: 25}}
-              />
+              <View>
+                <Image
+                  source={require('../../../../Assets/ICONS/website-logo-png.png')}
+                  style={{width: 18, height: 18, marginLeft: 6}}
+                />
               </View>
-              <Text style={{color: 'black',marginLeft:5}}>www.fxchange.com</Text>
+              <Text style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
+                www.fxchange.com
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
-      </SafeAreaView>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 export default WithdrawalsScreenTwo;

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import {
   Image,
   ScrollView,
@@ -11,22 +11,26 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  StatusBar,
 } from 'react-native';
 import Bitcoin from './Bitcoin';
 import GiftCards from './giftCard';
 import styles from './Style';
-const {width, height} = Dimensions.get('screen');
+const { width, height } = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
   fontWeight: 'bold',
+  zIndex:5,
   //padding: '3%',
 };
-const WithdrawalsScreenThree = ({navigation}) => {
+const WithdrawalsScreenThree = ({ navigation }) => {
   const [giftCards, setGiftCards] = useState(btnSetected);
   const [bitcoin, setBitcoin] = useState({});
   const [screen, setScreen] = useState(0);
+
   const activeButton = (buttonType: string) => {
+    console.log(buttonType)
     if (buttonType === 'giftCards') {
       setGiftCards(btnSetected);
       setScreen(0);
@@ -39,30 +43,45 @@ const WithdrawalsScreenThree = ({navigation}) => {
     }
   };
   return (
-    <ScrollView>
-      <SafeAreaView
-        style={{
-          height: height,
-          width: width,
-          flex: 1,
-        }}>
+
+    <SafeAreaView
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+      }}>
+        <StatusBar translucent backgroundColor="transparent" />
+      <ScrollView contentContainerStyle={{ flex: 1 }}>
+     
         <View style={styles.header}>
-          <View style={styles.headerUpperArea}>
-            <TouchableOpacity>
+        <View style={styles.headerUpperArea}>
+            <TouchableOpacity
+              style={{alignSelf: 'center', marginLeft: 5}}
+              onPress={() => {
+                navigation.goBack();
+              }}>
               <Image
                 source={require('../../../../Assets/ICONS/arrow=white.png')}
-                style={{width: 30, height: 20, marginTop: 6, marginRight: 40}}
+                style={{
+                  height: 15,
+                  width: 25,
+                }}
               />
             </TouchableOpacity>
+
             <Text
-              style={{
-                fontSize: 23,
-                fontWeight: '400',
-                color: 'white',
-                marginLeft: 40,
-              }}>
+              style={[
+                {
+                  color: 'white',
+                  fontSize: 18,
+                  alignSelf: 'center',
+                  marginLeft: -10,
+                  marginTop: -5,
+                },
+              ]}>
               Our Rates
             </Text>
+            <View></View>
           </View>
         </View>
         {screen === 0 ? (
@@ -78,8 +97,9 @@ const WithdrawalsScreenThree = ({navigation}) => {
             bitcoin={bitcoin}
           />
         )}
-      </SafeAreaView>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
+
   );
 };
 export default WithdrawalsScreenThree;

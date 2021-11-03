@@ -30,7 +30,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               styles.partOneButton,
               styles.JoinLeft,
               {...giftCards},
-              {marginRight: 20},
+              
             ]}
             onPress={() => {
               activeButton('giftCards');
@@ -50,12 +50,15 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
           style={{
             backgroundColor: 'white',
             // textAlignVertical: 'top',
+           marginLeft:28,
+
             borderRadius: 4,
-            width: '90%',
-            marginRight: 'auto',
-            marginLeft: 'auto',
+            width: '85%',
+            
+            
             marginTop: 20,
             marginBottom: 15,
+            
 
             // paddingTop:20,
           }}>
@@ -83,13 +86,18 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Select Card'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
+              
               width: '100%',
               paddingRight: 10,
-              paddingVertical: 10,
+              paddingVertical:10,
+              height:45,
+              
+              
+
             }}
           />
         </View>
@@ -97,10 +105,13 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
           style={{
             backgroundColor: 'white',
             // textAlignVertical: 'top',
+            marginLeft:28,
+
             borderRadius: 4,
-            width: '90%',
-            marginRight: 'auto',
-            marginLeft: 'auto',
+            width: '85%',
+            
+            
+            
             marginBottom: 15,
           }}>
           <SelectDropdown
@@ -127,13 +138,15 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Select Country'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
               width: '100%',
               paddingRight: 10,
-              paddingVertical: 10,
+              paddingVertical:10,
+              height:45,
+              
             }}
           />
         </View>
@@ -142,11 +155,14 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             backgroundColor: 'white',
             // textAlignVertical: 'top',
             borderRadius: 4,
-            width: '90%',
-            marginRight: 'auto',
-            marginLeft: 'auto',
-            marginBottom: 15,
+            marginLeft:28,
 
+            
+            width: '85%',
+            
+            
+            
+            marginBottom: 15,
             // paddingTop:20,
           }}>
           <SelectDropdown
@@ -173,13 +189,14 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Card Type'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
               width: '100%',
               paddingRight: 10,
-              paddingVertical: 10,
+              paddingVertical:10,
+              height:45,
             }}
           />
         </View>
@@ -189,10 +206,14 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             backgroundColor: 'white',
             // textAlignVertical: 'top',
             borderRadius: 4,
-            width: '90%',
-            marginRight: 'auto',
-            marginLeft: 'auto',
-            marginBottom: 18,
+            marginLeft:28,
+
+            height:45,
+            width: '85%',
+            
+            
+            
+            marginBottom: 25,
 
             // paddingTop:20,
             paddingLeft: 25,
@@ -206,18 +227,18 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
         />
         <View style={styles.checkrateButtonContainer}>
           <TouchableOpacity style={styles.checkrateButton}>
-            <Text style={{color: 'white', fontSize: 15}}>CHECK RATE</Text>
+            <Text style={{color: 'white', fontSize: 13}}>CHECK RATE</Text>
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.giftCardsBodyPartTwo}>
-        <Text style={{marginTop: 30}}>Estimate rate</Text>
+        <Text style={{marginTop: 23,fontSize:10}}>Estimate rate</Text>
         <Text
           style={{
-            fontSize: 30,
+            fontSize: 20,
             color: 'black',
             marginTop: 10,
-            fontWeight: '400',
+            fontWeight: '600',
           }}>
           N3,303,330
         </Text>

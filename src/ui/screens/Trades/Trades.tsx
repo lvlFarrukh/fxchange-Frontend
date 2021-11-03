@@ -20,7 +20,7 @@ const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
   fontWeight: 'bold',
-  Zindex:1,
+  zIndex:1,
   //padding: '3%',
 };
 const Trades = ({navigation}) => {
@@ -28,10 +28,11 @@ const Trades = ({navigation}) => {
   const [completedTrades, setCompletedTrades] = useState({});
   const [screen, setScreen] = useState(0);
   const activeButton = (buttonType: string) => {
+    console.log('=================>',buttonType)
     if (buttonType === 'OngoingTrades') {
+      setCompletedTrades({});
       setOngoingTrades(btnSetected);
       setScreen(0);
-      setCompletedTrades({});
     }
     if (buttonType === 'CompletedTrades') {
       setOngoingTrades({});
@@ -50,7 +51,7 @@ const Trades = ({navigation}) => {
           <View style={styles.headerUpperArea}>
             <Text
               style={{
-                fontSize: 23,
+                fontSize: 18,
                 fontWeight: '400',
                 color: 'white',
                 marginLeft: 120,
@@ -64,6 +65,7 @@ const Trades = ({navigation}) => {
             activeButton={activeButton}
             ongoingTrades={ongoingTrades}
             completedTrades={completedTrades}
+            navigation={navigation}
           />
         ) : (
           <CompletedTrades

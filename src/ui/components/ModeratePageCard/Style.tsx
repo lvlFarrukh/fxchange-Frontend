@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     hr: {
         borderTopWidth: 1,
-        borderColor:'#f2f2f2',
+        borderColor:'gray',
         marginTop: 10,
         marginBottom: 8,
     },

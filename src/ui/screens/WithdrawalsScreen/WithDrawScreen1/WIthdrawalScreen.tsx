@@ -13,6 +13,8 @@ import {
   Button,
 } from 'react-native';
 import styles from './Style';
+import Icons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -33,68 +35,94 @@ const WithdrawalsScreen = ({navigation}) => {
         </View>
 
         <View style={styles.mainBody}>
-          <View style={styles.mainBodyContent}>
-            <Text style={{fontSize: 14}}>PROFILE</Text>
-            <View style={styles.mainBodyCards}>
+          {/* style={styles.mainBodyContent} */}
+          <View>
+          <View style={{ marginTop: 20 }}>
+              <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
+            <TouchableOpacity 
+              onPress={() => {
+                  navigation.navigate('WithdrawalsScreenFive')
+              }}
+            >
               <View style={styles.mainBodyCardContent}>
                 <Text
-                  style={{color: '#4d4d4d', fontSize: 15, fontWeight: '600'}}>
+                  style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                   My Account
                 </Text>
-                <Image
-                  source={require('../../../../Assets/ICONS/un-arrow.png')}
-                  style={styles.iconStyle}
-                />
+                <Icon
+                name={'arrow-forward-ios'}
+                size={16}
+                color={'#000000'}
+                style={{ marginTop: 10, marginLeft: 10 }}></Icon>
               </View>
-            </View>
-            <View style={styles.mainBodyCards}>
+            </TouchableOpacity>
+            
+            <TouchableOpacity 
+              onPress={() => {
+                navigation.navigate('WithDrawScreenFour')
+              }}  
+            >
               <View style={styles.mainBodyCardContent}>
                 <Text
-                  style={{color: '#4d4d4d', fontSize: 15, fontWeight: '600'}}>
+                  style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                   Change Password
                 </Text>
-                <Image
-                  source={require('../../../../Assets/ICONS/un-arrow.png')}
-                  style={styles.iconStyle}
-                />
+                <Icon
+                name={'arrow-forward-ios'}
+                size={16}
+                color={'#000000'}
+                style={{ marginTop: 10, marginLeft: 10 }}></Icon>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
           <View
             style={[
-              styles.mainBodyContent,
-              {marginTop: '10%', marginBottom: '30%'},
-            ]}>
-            <Text style={{fontSize: 14}}>MORE</Text>
-            <View style={styles.mainBodyCards}>
-              <View style={styles.mainBodyCardContent}>
-                <Text
-                  style={{color: '#4d4d4d', fontSize: 15, fontWeight: '600'}}>
-                  Contact Support
-                </Text>
-                <Image
-                  source={require('../../../../Assets/ICONS/un-arrow.png')}
-                  style={styles.iconStyle}
-                />
-              </View>
+              //styles.mainBodyContent,
+              {
+                marginTop: '10%',
+                //marginBottom: '30%'
+              },
+            ]}
+          >
+            <Text style={{ fontSize: 14, marginLeft: 10 }}>MORE</Text>
+            {/* <View style={styles.mainBodyCards}> */}
+            <View style={styles.mainBodyCardContent}>
+              <Text
+                style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
+                Contact Support
+              </Text>
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
-            <View style={styles.mainBodyCards}>
-              <View style={styles.mainBodyCardContent}>
-                <Text
-                  style={{color: '#4d4d4d', fontSize: 15, fontWeight: '600'}}>
-                  Terms Of Service
-                </Text>
-                <Image
-                  source={require('../../../../Assets/ICONS/un-arrow.png')}
-                  style={styles.iconStyle}
-                />
-              </View>
+            {/* </View> */}
+            {/* <View style={styles.mainBodyCards}> */}
+            <View style={styles.mainBodyCardContent}>
+              <Text
+                style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
+                Terms Of Service
+              </Text>
+              <Icon
+              name={'arrow-forward-ios'}
+              size={16}
+              color={'#000000'}
+              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
           </View>
           <View style={styles.mainBodyBottomItems}>
             <Image
               source={require('../../../../Assets/greenLogo.png')}
-              style={{width: 150, height: 50}}
+              style={{ width: 140, height: 40 }}
+            />
+            <Text style={{ color: '#4d4d4d' }}>Version 1.0</Text>
+            <View style={{width:"100%",marginVertical:20}}>
+            <Button
+
+              title="LOGOUT"
+              color="#d53b1d"
+              // onPress={() => alert('hellot this is button')}
             />
             <Text style={{color: '#4d4d4d'}}>Version 1.0</Text>
             <View style={{width:"80%",marginTop:"5%",height:"40%"}}>

@@ -65,23 +65,26 @@ const styles = StyleSheet.create({
     //backgroundColor:'pink'
   },
   title: {
-    fontSize: 18,
-    fontWeight:"500"
+    fontSize: 15,
+    fontWeight:"500",
+    color: '#343434'
   },
   date: {
     fontSize: 10,
   },
   totalAmount: {
     fontSize: 10,
+    textAlign: 'right'
   },
   amount: {
-    fontSize: 18,
+    fontSize: 16,
     color: 'rgb(10, 138, 64)',
+    textAlign: 'right'
   },
   hr: {
     borderBottomWidth: 1,
-    borderColor: 'rgba(0,0,0,0.2)',
-    marginTop: 20,
+    borderColor: '#f1f1f1',
+    marginTop: 10,
     //marginBottom: 8,
   },
 });

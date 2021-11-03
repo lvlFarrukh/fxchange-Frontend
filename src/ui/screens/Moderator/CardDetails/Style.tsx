@@ -21,7 +21,7 @@ const Style = StyleSheet.create({
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: height - 100,
+    height: height,
     paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',
@@ -74,8 +74,8 @@ const Style = StyleSheet.create({
     height: 32,
   },
   hr: {
-    borderWidth: 0.2,
-    borderColor: 'lightgray',
+    borderTopWidth: 1,
+    borderColor: 'rgba(0,0,0,0.1)',
     marginTop: 10,
     marginBottom: 10,
   },

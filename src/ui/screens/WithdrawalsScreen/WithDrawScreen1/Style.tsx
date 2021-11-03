@@ -4,7 +4,8 @@ const {width, height} = Dimensions.get('screen');
 const styles = StyleSheet.create({
   header: {
     width: width,
-    height: 300,
+    //height: '30%',
+    flex:30,
     backgroundColor: '#0a8a40',
     alignItems:"center",
    
@@ -24,25 +25,24 @@ const styles = StyleSheet.create({
   headerText: {
     color: 'white',
     textAlign: 'center',
-    
-    
-    
-    
-  
+
   },
   mainBody: {
     width: width,
-    height:height-200,
+    //height:'70%',
+    flex:70,
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    position: 'absolute',
-    top:"30%",
+    paddingHorizontal:30,
+    justifyContent:'space-between'
+    //position: 'absolute',
+    //top:"30%",
     
   
   },
   mainBodyContent:{
-    marginTop:"7%",
+    marginTop:20,
     marginLeft:"10%",
     height:'20%'
     
@@ -73,13 +73,21 @@ const styles = StyleSheet.create({
     display:'flex',
     flexDirection:"row",
     justifyContent:"space-between",
+    marginTop:10,
+    marginHorizontal:10,
+    borderBottomWidth:1,
+    // paddingVertical:15
+    paddingTop: 15,
+    paddingBottom: 10,
+    borderColor:'rgba(0,0,0,0.2)'
    
   
     
   },
   mainBodyBottomItems:{
-    width:width,
-    alignItems:"center",
+    alignItems:'center',
+    marginBottom:20,
+    //backgroundColor:"pink"
   },
   headerButtons: {
     marginLeft: 'auto',

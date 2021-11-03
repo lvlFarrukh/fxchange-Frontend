@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   headerUpperArea: {
     display: 'flex',
     width: '70%',
-    marginTop: 12,
+    marginTop: 35,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '9%',
+    top: '10%',
     // alignItems:"center",
     zIndex: 0,
   },
@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
   },
   JoinLeft: {
     position: 'relative',
-    left: 25,
+    left: 20,
   },
   JoinRight: {
     position: 'relative',
-    right: 25,
+    right: 20,
   },
   checkrateButtonContainer: {
     justifyContent: 'center',
