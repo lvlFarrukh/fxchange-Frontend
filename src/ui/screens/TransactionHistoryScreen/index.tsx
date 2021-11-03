@@ -29,28 +29,32 @@ const DATA = [
     title: 'Itunes',
     date: 'DEC 10, 2021 1:30PM',
     total: 'N16000',
-    amount: 50,
+    amount: '$50',
+    value: '+'
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
     title: 'Amazon',
     date: 'DEC 10, 2021 1:30PM',
     total: 'N16000',
-    amount: 50,
+    amount: '$50',
+    value: '+'
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Bitcoin',
     date: 'DEC 10, 2021 1:30PM',
     total: 'N16000',
-    amount: 50,
+    amount: '$50',
+    value: '+'
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d12',
     title: 'Withdrawal completed',
     date: 'DEC 10, 2021 1:30PM',
     total: 'N16000',
-    amount: -50,
+    amount: 'N15,000',
+    value: '-'
   },
 ];
 
@@ -71,9 +75,9 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
       <View>
         <View style={{ flexDirection: 'row' }}>
           <View>
-            <Text style={[styles.amount]}>{'$' + item.amount}</Text>
+            <Text style={[styles.amount, item.value === "-" && {color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</Text>
             <Text style={[styles.totalAmount, textColor]}>
-              {'total:' + item.total}
+              {item.value === "+" && 'total: ' + item.total}
             </Text>
           </View>
 
@@ -151,8 +155,9 @@ const index = ({ navigation }) => {
               display: 'flex',
               justifyContent: 'space-between',
               flexDirection: 'row',
-              marginTop: 25,
+              marginTop: 18,
               paddingHorizontal: 40,
+              height: 40,
             }}>
             <TouchableOpacity
               onPress={showDatePicker}
@@ -177,7 +182,7 @@ const index = ({ navigation }) => {
                 Start Date
               </Text>
 
-              <Icons name={'ios-calendar-sharp'} size={20} color={'#fa5100'} />
+              <Icons name={'ios-calendar-sharp'} size={12} color={'#fa5100'} />
             </TouchableOpacity>
             <TouchableOpacity
               onPress={showDatePicker}
@@ -202,7 +207,7 @@ const index = ({ navigation }) => {
                 End Date
               </Text>
 
-              <Icons name={'ios-calendar-sharp'} size={20} color={'#fa5100'}>
+              <Icons name={'ios-calendar-sharp'} size={12} color={'#fa5100'}>
                 {' '}
               </Icons>
             </TouchableOpacity>
@@ -231,7 +236,7 @@ const index = ({ navigation }) => {
           />
           <Text></Text>
           <FlatList
-            style={{ paddingHorizontal: 15 }}
+            style={{ paddingHorizontal: 18 }}
             data={DATA}
             renderItem={renderItem}
             keyExtractor={item => item.id}

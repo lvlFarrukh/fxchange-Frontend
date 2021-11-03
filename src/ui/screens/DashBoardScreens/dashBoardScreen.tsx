@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -10,13 +10,13 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {ScrollView} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-const DashBoardScreen = ({ navigation }) => {
+const DashBoardScreen = ({navigation}) => {
   return (
     <View
       style={{
@@ -25,51 +25,44 @@ const DashBoardScreen = ({ navigation }) => {
         flex: 1,
         backgroundColor: '#0a8a40',
       }}>
-      <SafeAreaView style={{ flex: 1 ,height:height,width:width}}>
+      <SafeAreaView style={{flex: 1, height: height, width: width}}>
         <ScrollView>
           <View style={[styles.header, {}]}>
-            <View style={{
-              flexDirection:'row',
-              justifyContent:'space-around',
-              backgroundColor:'#0a8a40',
-              paddingVertical:6
-            }}>
-              <TouchableOpacity
-              onPress={()=>{
-              
-              }}
-              >
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                backgroundColor: '#0a8a40',
+                paddingVertical: 6,
+              }}>
+              <TouchableOpacity onPress={() => {}}>
                 <Text></Text>
-              <Text style={{color:'white'}}>Home</Text>
+                <Text style={{color: 'white'}}>Home</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
-              onPress={()=>{
-                navigation.navigate('Trades')
-              }}
-              >
+                onPress={() => {
+                  navigation.navigate('Trades');
+                }}>
                 <Text></Text>
-              <Text style={{color:'white'}}>Trades</Text>
+                <Text style={{color: 'white'}}>Trades</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
-              onPress={()=>{
-                navigation.navigate('WithdrawalsScreenThree')
-              }}
-              >
+                onPress={() => {
+                  navigation.navigate('WithdrawalsScreenThree');
+                }}>
                 <Text></Text>
-              <Text style={{color:'white'}}>Rates</Text>
+                <Text style={{color: 'white'}}>Rates</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
-              onPress={()=>{
-                navigation.navigate('WithdrawalsScreen')
-              }}
-              >
+                onPress={() => {
+                  navigation.navigate('WithdrawalsScreen');
+                }}>
                 <Text></Text>
-              <Text style={{color:'white'}}>More</Text>
+                <Text style={{color: 'white'}}>More</Text>
               </TouchableOpacity>
-
             </View>
             <View
               style={{
@@ -78,17 +71,39 @@ const DashBoardScreen = ({ navigation }) => {
                 marginRight: 10,
                 marginTop: 5,
               }}>
-              <Text style={{ color: '#fff', fontSize: 12.5 , marginRight: 10}}>Hi, Amanda</Text>
+              <Text style={{color: '#fff', fontSize: 12.5, marginRight: 10}}>
+                Hi, Amanda
+              </Text>
             </View>
-            <View style={{ marginLeft: 20 }}>
-              <Text style={{ fontSize: 10, color: '#fff', marginBottom: 5 }}>
+            <View style={{marginLeft: 20}}>
+              <Text style={{fontSize: 10, color: '#fff', marginBottom: 5}}>
                 Wallet Balance
               </Text>
-              <Text style={{ fontSize: 30, color: '#fff' }}>N50,000</Text>
+              <Text style={{fontSize: 30, color: '#fff'}}>N50,000</Text>
               <Text></Text>
-              <Text style={{ fontSize: 10, color: '#fff', marginBottom: 3 }}>
-                WITHDRAW FUNDS | TRANSACTION HISTORY
-              </Text>
+              <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity
+                  onPress={() => {
+                      navigation.navigate('WithDrawScreenSix')
+                  }}
+                >
+                  <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                    WITHDRAW FUNDS
+                  </Text>
+                </TouchableOpacity>
+                <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                  {'     '}|{'       '}
+                </Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('TransactionHistoryScreen')
+                  }}
+                >
+                  <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                    TRANSECTION HISTORY
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
 
@@ -111,12 +126,12 @@ const DashBoardScreen = ({ navigation }) => {
               onPress={() => {
                 navigation.navigate('GiftCardScreen');
               }}>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
                 <Image
                   source={require('../../../Assets/ICONS/giftcard.png')}
                   style={styles.image}
                 />
-                <Text style={{ color: '#fff', fontSize: 18, marginLeft: 5 }}>
+                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
                   Sell Giftcard
                 </Text>
               </View>
@@ -144,12 +159,12 @@ const DashBoardScreen = ({ navigation }) => {
               onPress={() => {
                 navigation.navigate('SellBitcoin');
               }}>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
                 <Image
                   source={require('../../../Assets/ICONS/Bitcoin.png')}
                   style={styles.image}
                 />
-                <Text style={{ color: '#fff', fontSize: 18, marginLeft: 5 }}>
+                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
                   Sell Bitcoin
                 </Text>
               </View>
@@ -169,7 +184,7 @@ const DashBoardScreen = ({ navigation }) => {
                 borderRadius: 15,
                 paddingHorizontal: 18,
                 shadowColor: '#000',
-                shadowOffset: { width: 0, height: 50 },
+                shadowOffset: {width: 0, height: 50},
                 shadowOpacity: 1,
                 shadowRadius: 5,
                 elevation: 8,
@@ -185,37 +200,37 @@ const DashBoardScreen = ({ navigation }) => {
                 Top Rates
               </Text>
               <View
-                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <View>
                   <Text
-                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
+                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     Itunes
                   </Text>
-                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
+                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
+                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
                   </Text>
-                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
+                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
+                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
                   </Text>
-                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
+                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
                 </View>
 
                 <View>
                   <Text
-                    style={{ fontWeight: '400', color: '#343434', fontSize: 13 }}>
+                    style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
                   </Text>
-                  <Text style={{ fontSize: 9, color: '#595758' }}>N33,000</Text>
+                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
                 </View>
               </View>
             </View>
@@ -238,7 +253,7 @@ const DashBoardScreen = ({ navigation }) => {
                 padding: 5,
                 backgroundColor: '#ffffff',
                 alignContent: 'center',
-                borderRadius: 3
+                borderRadius: 3,
               }}>
               <ImageBackground
                 source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
@@ -261,7 +276,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0a8a40',
   },
   body: {
-    height: height-250,
+    height: height - 250,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
