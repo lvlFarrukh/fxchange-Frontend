@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '50%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '2.7%',
     paddingHorizontal:"3%",
     alignSelf: 'center',

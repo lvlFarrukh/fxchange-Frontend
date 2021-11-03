@@ -26,7 +26,7 @@ const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
           backgroundColor: '#000000',
         }}>
             <View style={{alignSelf: 'flex-end'}}>
-                <TouchableOpacity onPress={() => togglePreviewImgModal()} style={{marginTop: -10, marginRight: -10}}>
+                <TouchableOpacity activeOpacity={0.9} onPress={() => togglePreviewImgModal()} style={{marginTop: -10, marginRight: -10}}>
                     
                     <Image
                     source={require('../../../Assets/ICONS/close.png')}

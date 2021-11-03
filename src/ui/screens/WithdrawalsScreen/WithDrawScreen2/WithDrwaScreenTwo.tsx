@@ -32,6 +32,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
           <View style={styles.headerUpperArea}>
             <TouchableOpacity
               style={{alignSelf: 'center', marginLeft: 5}}
+              activeOpacity={0.9}
               onPress={() => {
                 navigation.goBack();
               }}>
@@ -83,7 +84,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
             style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
           />
           <View style={styles.mainBodyContent}>
-            <TouchableOpacity style={styles.mainBodyButtonStyle}>
+            <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
               <View style={{marginBottom: 8}}>
                 <Image
                   source={require('../../../../Assets/ICONS/iggg.png')}
@@ -94,7 +95,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                 fxchange
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.mainBodyButtonStyle}>
+            <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
               <View>
                 <Image
                   source={require('../../../../Assets/ICONS/website-logo-png.png')}

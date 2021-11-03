@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   headerUpperArea: {
     display: 'flex',

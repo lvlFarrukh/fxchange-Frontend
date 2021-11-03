@@ -67,7 +67,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               source={require('../../../Assets/IMG_3151.jpg')}
               style={styles.cardImage}
               resizeMode={'contain'}>
-              <TouchableOpacity>
+              <TouchableOpacity activeOpacity={0.9}>
                 <Image
                   style={styles.closeIcon}
                   source={require('../../../Assets/ICONS/close.png')}
@@ -109,7 +109,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
               style={styles.cardImage}
               resizeMode={'contain'}>
-              <TouchableOpacity>
+              <TouchableOpacity activeOpacity={0.9}> 
                 <Image
                   style={styles.closeIcon}
                   source={require('../../../Assets/ICONS/close.png')}
@@ -151,6 +151,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
           {/* <View style={{flexDirection:"row" , backgroundColor:'pink'}}> */}
 
           <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => {
               navigation.navigate('UploadGiftCard');
             }}
@@ -196,6 +197,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
             <Text style={{fontSize: 12, color: "#333"}}>Transaction Value: N330,000</Text>
 
             <TouchableOpacity
+            activeOpacity={0.9}
               style={{marginTop: 10}}
               onPress={() => {
                 navigation.navigate('TradeSuccessfull');

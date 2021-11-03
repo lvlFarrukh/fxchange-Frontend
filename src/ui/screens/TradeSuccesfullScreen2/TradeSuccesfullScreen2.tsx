@@ -145,7 +145,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
               </Text>
             </View>
 
-            <TouchableOpacity style={{marginTop: 10}}>
+            <TouchableOpacity activeOpacity={0.9} style={{marginTop: 10}}>
               <Text
                 style={{
                   alignSelf: 'center',
@@ -222,17 +222,17 @@ const styles = StyleSheet.create({
   },
   GreenButton: {
     // alignSelf:'center',
-    // backgroundColor:'#0a8a40',
+    // backgroundColor:'#1bb76d',
     // width:'100%'
     borderWidth: 1,
-    borderColor: '#0a8a40',
+    borderColor: '#1bb76d',
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 15,
     fontSize: 15,
     fontWeight: '700',
     color: '#fafafa',
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     alignSelf: 'center',
     textAlign: 'center',
     width: '100%',

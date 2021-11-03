@@ -62,6 +62,7 @@ const WithDrawScreenFive = ({navigation}) => {
           <View style={styles.header}>
             <View style={styles.headerUpperArea}>
               <TouchableOpacity
+              activeOpacity={0.9}
               onPress={()=>{
                 navigation.goBack()
               }}
@@ -209,7 +210,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 multiline={true}
               /> */}
               <View style={styles.updatePassword}>
-                <TouchableOpacity style={styles.updatePasswordButton}>
+                <TouchableOpacity activeOpacity={0.9} style={styles.updatePasswordButton}>
                   <Text style={{color: 'white', fontSize: 13}}>UPDATE</Text>
                 </TouchableOpacity>
               </View>

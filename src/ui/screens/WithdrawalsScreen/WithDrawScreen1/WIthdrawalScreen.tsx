@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import {
   Image,
   ScrollView,
@@ -16,19 +16,23 @@ import styles from './Style';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const {width, height} = Dimensions.get('screen');
+const { width, height } = Dimensions.get('screen');
 
-const WithdrawalsScreen = ({navigation}) => {
+const WithdrawalsScreen = ({ navigation }) => {
   console.log('with drawel screen');
 
   return (
-    <ScrollView>
-      <SafeAreaView
-        style={{
-          height: height,
-          width: width,
-          flex: 1,
-        }}>
+
+    <SafeAreaView
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+        backgroundColor: '#1bb76d'
+      }}>
+      <ScrollView
+        contentContainerStyle={{ flex: 1 }}
+      >
         <View style={styles.header}>
           <Text style={styles.headerHeading}>H</Text>
           <Text style={styles.headerText}>Henry</Text>
@@ -40,6 +44,7 @@ const WithdrawalsScreen = ({navigation}) => {
           <View style={{ marginTop: 20 }}>
               <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
             <TouchableOpacity 
+            activeOpacity={0.9}
               onPress={() => {
                   navigation.navigate('WithdrawalsScreenFive')
               }}
@@ -58,6 +63,7 @@ const WithdrawalsScreen = ({navigation}) => {
             </TouchableOpacity>
             
             <TouchableOpacity 
+            activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('WithDrawScreenFour')
               }}  
@@ -110,6 +116,8 @@ const WithdrawalsScreen = ({navigation}) => {
               color={'#000000'}
               style={{ marginTop: 10, marginLeft: 10 }}></Icon>
             </View>
+            {/* </View> */}
+          </View>
           </View>
           <View style={styles.mainBodyBottomItems}>
             <Image
@@ -124,19 +132,12 @@ const WithdrawalsScreen = ({navigation}) => {
               color="#d53b1d"
               // onPress={() => alert('hellot this is button')}
             />
-            <Text style={{color: '#4d4d4d'}}>Version 1.0</Text>
-            <View style={{width:"80%",marginTop:"5%",height:"40%"}}>
-              <Button
-              
-                title="LOGOUT"
-                color="#d53b1d"
-                onPress={() => alert('hellot this is button')}
-              />
             </View>
           </View>
         </View>
-      </SafeAreaView>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
+
   );
 };
 

@@ -13,6 +13,7 @@ import {
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Slider from 'react-native-hook-image-slider';
 
 const {width, height} = Dimensions.get('window');
 
@@ -23,7 +24,7 @@ const DashBoardScreen = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
       <SafeAreaView style={{flex: 1, height: height, width: width}}>
         <ScrollView>
@@ -32,15 +33,17 @@ const DashBoardScreen = ({navigation}) => {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-around',
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 paddingVertical: 6,
               }}>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+              activeOpacity={0.9} onPress={() => {}}>
                 <Text></Text>
                 <Text style={{color: 'white'}}>Home</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
+              activeOpacity={0.9}
                 onPress={() => {
                   navigation.navigate('Trades');
                 }}>
@@ -49,6 +52,7 @@ const DashBoardScreen = ({navigation}) => {
               </TouchableOpacity>
 
               <TouchableOpacity
+              activeOpacity={0.9}
                 onPress={() => {
                   navigation.navigate('WithdrawalsScreenThree');
                 }}>
@@ -57,6 +61,7 @@ const DashBoardScreen = ({navigation}) => {
               </TouchableOpacity>
 
               <TouchableOpacity
+              activeOpacity={0.9}
                 onPress={() => {
                   navigation.navigate('WithdrawalsScreen');
                 }}>
@@ -83,10 +88,10 @@ const DashBoardScreen = ({navigation}) => {
               <Text></Text>
               <View style={{flexDirection: 'row'}}>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
-                      navigation.navigate('WithDrawScreenSix')
-                  }}
-                >
+                    navigation.navigate('WithDrawScreenSix');
+                  }}>
                   <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     WITHDRAW FUNDS
                   </Text>
@@ -95,10 +100,10 @@ const DashBoardScreen = ({navigation}) => {
                   {'     '}|{'       '}
                 </Text>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
-                    navigation.navigate('TransactionHistoryScreen')
-                  }}
-                >
+                    navigation.navigate('TransactionHistoryScreen');
+                  }}>
                   <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     TRANSECTION HISTORY
                   </Text>
@@ -109,7 +114,7 @@ const DashBoardScreen = ({navigation}) => {
 
           <View style={[styles.body, {}]}>
             <TouchableOpacity
-              activeOpacity={0.8}
+              activeOpacity={0.9}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -143,6 +148,7 @@ const DashBoardScreen = ({navigation}) => {
             </TouchableOpacity>
 
             <TouchableOpacity
+            activeOpacity={0.9}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -249,15 +255,25 @@ const DashBoardScreen = ({navigation}) => {
             <View
               style={{
                 marginTop: 20,
-                marginHorizontal: 20,
-                padding: 5,
+                marginHorizontal: 5,
+                padding: 2,
                 backgroundColor: '#ffffff',
                 alignContent: 'center',
                 borderRadius: 3,
               }}>
-              <ImageBackground
+              <Slider
+                imageHeight={160}
+                activeDotColor={'transparent'}
+                emptyDotColor={'transparent'}
+                images={[
+                  'https://i.ibb.co/cFghNhF/timon-klauser-3-MAmj1-ZKSZA-unsplash-c2e88811.jpg',
+                  'https://i.ibb.co/q1kFVRT/img2.png',
+                ]}
+              />
+
+              {/* <ImageBackground
                 source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-                style={styles.cardImage}></ImageBackground>
+                style={styles.cardImage}></ImageBackground> */}
             </View>
           </View>
         </ScrollView>
@@ -273,7 +289,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 250,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   body: {
     height: height - 250,

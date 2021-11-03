@@ -17,7 +17,7 @@ import OngoingTrades from './OngoingTrades';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
-  backgroundColor: '#0a8a40',
+  backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
   zIndex:1,

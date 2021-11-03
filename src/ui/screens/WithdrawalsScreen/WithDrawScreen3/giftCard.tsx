@@ -226,7 +226,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
           multiline={true}
         />
         <View style={styles.checkrateButtonContainer}>
-          <TouchableOpacity style={styles.checkrateButton}>
+          <TouchableOpacity activeOpacity={0.9} style={styles.checkrateButton}>
             <Text style={{color: 'white', fontSize: 13}}>CHECK RATE</Text>
           </TouchableOpacity>
         </View>
