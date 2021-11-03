@@ -291,7 +291,7 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={Style.hr}></View>
+              <View style={[Style.hr, {}]}></View>
 
               <View
                 style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -793,18 +793,28 @@ const index = ({navigation}) => {
                         width: '32%',
                         height: width - 300,
                       }}>
-                      {/* <TouchableOpacity style={{}}> */}
+                    <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
+                      zIndex: 1,
+                      margin: 1,}}>
+
+                    <View
+                      style={{
+                        width: 14,
+                        height: 14,
+                        borderRadius: 20,
+                        backgroundColor: 'black',
+                        justifyContent: 'center',
+                      }}>
                       <Image
-                        source={require('../../../../Assets/ICONS/close.png')}
+                        source={require('../../../../Assets/ICONS/close2.jpeg')}
                         style={{
-                          width: '20%',
-                          height: '20%',
-                          position: 'absolute',
-                          zIndex: 1,
-                          margin: 1,
+                          width: 10,
+                          height: 10,
+                          alignSelf: 'center',
                         }}
                       />
-                      {/* </TouchableOpacity> */}
+                    </View>
+                    </TouchableOpacity>
 
                       <Image
                         source={require('../../../../Assets/IMG_3151.jpg')}

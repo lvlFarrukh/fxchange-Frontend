@@ -139,10 +139,10 @@ const styles = StyleSheet.create({
  },
   bodyBottom:{
    marginTop:23,
-    width:"120%",
+    width: width,
     height:"42%",
     backgroundColor:"#f2f2f2",
-    marginLeft:-30,
+    marginLeft:-32,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 30,

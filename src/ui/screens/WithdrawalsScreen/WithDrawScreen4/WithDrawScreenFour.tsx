@@ -15,6 +15,7 @@ import {
   StatusBar,
   Keyboard,
 } from 'react-native';
+import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
 
 const {width, height} = Dimensions.get('screen');
@@ -99,7 +100,7 @@ const WithDrawScreenFour = ({navigation}) => {
                       borderColor: 'rgba(0,0,0,0.2)',
                       borderWidth: 1,
                       width: '100%',
-                      marginVertical: 13,
+                      marginVertical: 15,
                       paddingLeft: 10,
                       height: 48,
                     }}
@@ -117,7 +118,7 @@ const WithDrawScreenFour = ({navigation}) => {
                       borderColor: 'rgba(0,0,0,0.2)',
                       borderWidth: 1,
                       width: '100%',
-                      marginBottom: 13,
+                      marginBottom: 15,
                       paddingLeft: 10,
                       height: 48
                     }}
@@ -135,7 +136,7 @@ const WithDrawScreenFour = ({navigation}) => {
                       borderColor: 'rgba(0,0,0,0.2)',
                       borderWidth: 1,
                       width: '100%',
-                      marginBottom: 13,
+                      marginBottom: 15,
                       paddingLeft: 10,
                       height: 48
                     }}
@@ -158,6 +159,8 @@ const WithDrawScreenFour = ({navigation}) => {
           </SafeAreaView>
         </View>
       </ScrollView>
+      <Navbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
+
     </KeyboardAvoidingView>
   );
 };

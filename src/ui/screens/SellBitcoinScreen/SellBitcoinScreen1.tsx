@@ -111,29 +111,57 @@ const SellBitcoinScreen1 = ({navigation}) => {
               justifyContent: 'space-between',
               width: '100%',
             }}>
-            <ImageBackground
-              source={require('../../../Assets/IMG_3151.jpg')}
-              style={styles.cardImage}
-              resizeMode={'contain'}>
-              <TouchableOpacity>
-                <Image
-                  style={styles.closeIcon}
-                  source={require('../../../Assets/ICONS/close.png')}
-                />
-              </TouchableOpacity>
-            </ImageBackground>
+              <ImageBackground
+                source={require('../../../Assets/IMG_3151.jpg')}
+                style={styles.cardImage}
+                resizeMode={'contain'}>
+                <TouchableOpacity activeOpacity={0.5}>
 
-            <ImageBackground
-              source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-              style={styles.cardImage}
-              resizeMode={'contain'}>
-              <TouchableOpacity>
-                <Image
-                  style={styles.closeIcon}
-                  source={require('../../../Assets/ICONS/close.png')}
-                />
-              </TouchableOpacity>
-            </ImageBackground>
+                  <View
+                    style={{
+                      width: 16,
+                      height: 16,
+                      borderRadius: 20,
+                      backgroundColor: 'black',
+                      justifyContent: 'center',
+                    }}>
+                    <Image
+                      source={require('../../../Assets/ICONS/close2.jpeg')}
+                      style={{
+                        width: 11,
+                        height: 11,
+                        alignSelf: 'center',
+                      }}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </ImageBackground>
+           
+              <ImageBackground
+                source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
+                style={styles.cardImage}
+                resizeMode={'contain'}>
+                <TouchableOpacity activeOpacity={0.5}>
+
+                  <View
+                    style={{
+                      width: 16,
+                      height: 16,
+                      borderRadius: 20,
+                      backgroundColor: 'black',
+                      justifyContent: 'center',
+                    }}>
+                    <Image
+                      source={require('../../../Assets/ICONS/close2.jpeg')}
+                      style={{
+                        width: 11,
+                        height: 11,
+                        alignSelf: 'center',
+                      }}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </ImageBackground>
           </View>
 
           <TouchableOpacity style={styles.roundButton1}>

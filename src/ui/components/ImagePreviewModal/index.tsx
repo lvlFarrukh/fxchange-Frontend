@@ -26,15 +26,19 @@ const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
           backgroundColor: '#000000',
         }}>
             <View style={{alignSelf: 'flex-end'}}>
-                <TouchableOpacity onPress={() => togglePreviewImgModal()} style={{marginTop: -10, marginRight: -10}}>
-                    
+                <TouchableOpacity onPress={() => togglePreviewImgModal()}>
+                  
+                  <View style={{width: 20,
+                          height: 20, borderRadius: 20, backgroundColor: 'black', justifyContent: 'center'}}>
                     <Image
-                    source={require('../../../Assets/ICONS/close.png')}
-                    style={{
-                        width: 25,
-                        height: 25,
-                    }}
+                      source={require('../../../Assets/ICONS/close2.jpeg')}
+                      style={{
+                          width: 15,
+                          height: 15,
+                          alignSelf: 'center'
+                      }}
                     />
+                  </View>
                 </TouchableOpacity>
             </View>
 

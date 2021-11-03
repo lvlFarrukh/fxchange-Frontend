@@ -25,208 +25,248 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
   const [headerTitle, setheaderTitle] = useState(route?.params?.headerTitle);
 
   return (
-      <ScrollView>
-    <View style={{height: height, width: width, flex: 1}}>
-      <StatusBar translucent backgroundColor="transparent" />
-      {/* <StatusBar hidden /> */}
-      <SafeAreaView
-        style={{
-          flex: 1,
-          height: height,
-          width: width,
-          backgroundColor: 'rgb(10, 138, 64)',
-        }}>
-        <View style={{height: 50}}>
-          <Header
-            navigation={navigation}
-            style={{marginTop: 5}}
-            Heading={headerTitle}
-          />
-        </View>
-
-        <View style={[styles.whiteCardBg, {height: '100%'}]}>
-          <View style={styles.bodyHeader}>
-            <Image
-              source={require('../../../Assets/CARDS/itunes.png')}
-              style={styles.image}
+    <ScrollView>
+      <View style={{height: height, width: width, flex: 1}}>
+        <StatusBar translucent backgroundColor="transparent" />
+        {/* <StatusBar hidden /> */}
+        <SafeAreaView
+          style={{
+            flex: 1,
+            height: height,
+            width: width,
+            backgroundColor: 'rgb(10, 138, 64)',
+          }}>
+          <View style={{height: 50}}>
+            <Header
+              navigation={navigation}
+              style={{marginTop: 5}}
+              Heading={headerTitle}
             />
-            <Text style={{marginTop: 8, fontSize: 12}}>
-              You can upload multiple cards and combine
-            </Text>
-            <Text style={{fontSize: 12}}>them into one trade</Text>
           </View>
 
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              width: '100%',
-              paddingTop: 10
-            }}>
-            <ImageBackground
-              source={require('../../../Assets/IMG_3151.jpg')}
-              style={styles.cardImage}
-              resizeMode={'contain'}>
-              <TouchableOpacity>
-                <Image
-                  style={styles.closeIcon}
-                  source={require('../../../Assets/ICONS/close.png')}
-                />
-              </TouchableOpacity>
+          <View style={[styles.whiteCardBg, {height: '100%'}]}>
+            <View style={styles.bodyHeader}>
+              <Image
+                source={require('../../../Assets/CARDS/itunes.png')}
+                style={styles.image}
+              />
+              <Text style={{marginTop: 8, fontSize: 12}}>
+                You can upload multiple cards and combine
+              </Text>
+              <Text style={{fontSize: 12}}>them into one trade</Text>
+            </View>
 
-              <View
-                style={{
-                  backgroundColor: 'rgba(0,0,0,0.8)',
-                  flexDirection: 'row',
-                  marginTop: 'auto',
-                  justifyContent: 'space-between',
-                  padding: 5,
-                }}>
-                <View>
-                  <Text
-                    style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
-                    Itunes
-                  </Text>
-                  <Text style={{color: '#fff', fontSize: 8}}>
-                    $800 (264,000)
-                  </Text>
-                </View>
-
-                <View>
-                  <Text
-                    style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
-                    Physical
-                  </Text>
-                  <Text
-                    style={{color: '#fff', fontSize: 8, alignSelf: 'flex-end'}}>
-                    360/$
-                  </Text>
-                </View>
-              </View>
-            </ImageBackground>
-
-            <ImageBackground
-              source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-              style={styles.cardImage}
-              resizeMode={'contain'}>
-              <TouchableOpacity>
-                <Image
-                  style={styles.closeIcon}
-                  source={require('../../../Assets/ICONS/close.png')}
-                />
-              </TouchableOpacity>
-
-              <View
-                style={{
-                  backgroundColor: 'rgba(0,0,0,0.8)',
-                  flexDirection: 'row',
-                  marginTop: 'auto',
-                  justifyContent: 'space-between',
-                  padding: 5,
-                }}>
-                <View>
-                  <Text
-                    style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
-                    Itunes
-                  </Text>
-                  <Text style={{color: '#fff', fontSize: 8}}>
-                    $800 (264,000)
-                  </Text>
-                </View>
-
-                <View>
-                  <Text
-                    style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
-                    Physical
-                  </Text>
-                  <Text
-                    style={{color: '#fff', fontSize: 8, alignSelf: 'flex-end'}}>
-                    360/$
-                  </Text>
-                </View>
-              </View>
-            </ImageBackground>
-          </View>
-
-          {/* <View style={{flexDirection:"row" , backgroundColor:'pink'}}> */}
-
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('UploadGiftCard');
-            }}
-            style={[
-              styles.cardImage,
-              {
-                backgroundColor: '#0a8a40',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 5,
-              },
-            ]}>
             <View
               style={{
-                backgroundColor: '#fff',
-                borderRadius: 50,
-                width: 50,
-                height: 50,
-                alignItems: 'center',
-                justifyContent: 'center',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                width: '100%',
+                paddingTop: 10,
               }}>
-              <Text
-                style={{
-                  color: '#0a8a40',
-                  marginTop: -6,
-                  fontSize: 45,
-                  fontWeight: '400',
-                }}>
-                +
-              </Text>
+              <ImageBackground
+                source={require('../../../Assets/IMG_3151.jpg')}
+                style={styles.cardImage}
+                resizeMode={'contain'}>
+                <TouchableOpacity activeOpacity={0.5}>
+
+                  <View
+                    style={{
+                      width: 16,
+                      height: 16,
+                      borderRadius: 20,
+                      backgroundColor: 'black',
+                      justifyContent: 'center',
+                    }}>
+                    <Image
+                      source={require('../../../Assets/ICONS/close2.jpeg')}
+                      style={{
+                        width: 11,
+                        height: 11,
+                        alignSelf: 'center',
+                      }}
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <View
+                  style={{
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    flexDirection: 'row',
+                    marginTop: 'auto',
+                    justifyContent: 'space-between',
+                    padding: 5,
+                  }}>
+                  <View>
+                    <Text
+                      style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
+                      Itunes
+                    </Text>
+                    <Text style={{color: '#fff', fontSize: 8}}>
+                      $800 (264,000)
+                    </Text>
+                  </View>
+
+                  <View>
+                    <Text
+                      style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
+                      Physical
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 8,
+                        alignSelf: 'flex-end',
+                      }}>
+                      360/$
+                    </Text>
+                  </View>
+                </View>
+              </ImageBackground>
+
+              <ImageBackground
+                source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
+                style={styles.cardImage}
+                resizeMode={'contain'}>
+                <TouchableOpacity activeOpacity={0.5}>
+                  <View
+                    style={{
+                      width: 16,
+                      height: 16,
+                      borderRadius: 20,
+                      backgroundColor: 'black',
+                      justifyContent: 'center',
+                    }}>
+                    <Image
+                      source={require('../../../Assets/ICONS/close2.jpeg')}
+                      style={{
+                        width: 11,
+                        height: 11,
+                        alignSelf: 'center',
+                      }}
+                    />
+                  </View>
+                </TouchableOpacity>
+
+                <View
+                  style={{
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    flexDirection: 'row',
+                    marginTop: 'auto',
+                    justifyContent: 'space-between',
+                    padding: 5,
+                  }}>
+                  <View>
+                    <Text
+                      style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
+                      Itunes
+                    </Text>
+                    <Text style={{color: '#fff', fontSize: 8}}>
+                      $800 (264,000)
+                    </Text>
+                  </View>
+
+                  <View>
+                    <Text
+                      style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
+                      Physical
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 8,
+                        alignSelf: 'flex-end',
+                      }}>
+                      360/$
+                    </Text>
+                  </View>
+                </View>
+              </ImageBackground>
             </View>
-            <Text style={{color: '#fff', marginTop: 5}}>Upload Card</Text>
-          </TouchableOpacity>
-          {/* </View> */}
-          <View
-            style={{
-              marginTop: 140,
-              paddingTop: 5,
-              borderTopWidth: 1,
-              borderColor: 'rgba(0,0,0,0.2)',
-            }}>
-            <Text style={{fontSize: 12, color: "#333"}}>Total Card Value: $1000</Text>
-            <Text style={{fontSize: 12, color: "#333"}}>Transaction Value: N330,000</Text>
+
+            {/* <View style={{flexDirection:"row" , backgroundColor:'pink'}}> */}
 
             <TouchableOpacity
-              style={{marginTop: 10}}
               onPress={() => {
-                navigation.navigate('TradeSuccessfull');
-              }}>
-              <Text
-                style={{
-                  alignSelf: 'center',
+                navigation.navigate('UploadGiftCard');
+              }}
+              style={[
+                styles.cardImage,
+                {
                   backgroundColor: '#0a8a40',
-                  width: '100%',
-                  textAlign: 'center',
-                  padding: 10,
-                  color: '#fff',
-                  borderRadius: 4,
-                  fontSize: 13
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: 5,
+                },
+              ]}>
+              <View
+                style={{
+                  backgroundColor: '#fff',
+                  borderRadius: 50,
+                  width: 50,
+                  height: 50,
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}>
-                START TRADE
-              </Text>
+                <Text
+                  style={{
+                    color: '#0a8a40',
+                    marginTop: -6,
+                    fontSize: 45,
+                    fontWeight: '400',
+                  }}>
+                  +
+                </Text>
+              </View>
+              <Text style={{color: '#fff', marginTop: 5}}>Upload Card</Text>
             </TouchableOpacity>
+            {/* </View> */}
+            <View
+              style={{
+                marginTop: 140,
+                paddingTop: 5,
+                borderTopWidth: 1,
+                borderColor: 'rgba(0,0,0,0.2)',
+              }}>
+              <Text style={{fontSize: 12, color: '#333'}}>
+                Total Card Value: $1000
+              </Text>
+              <Text style={{fontSize: 12, color: '#333'}}>
+                Transaction Value: N330,000
+              </Text>
+
+              <TouchableOpacity
+                style={{marginTop: 10}}
+                onPress={() => {
+                  navigation.navigate('TradeSuccessfull');
+                }}>
+                <Text
+                  style={{
+                    alignSelf: 'center',
+                    backgroundColor: '#0a8a40',
+                    width: '100%',
+                    textAlign: 'center',
+                    padding: 10,
+                    color: '#fff',
+                    borderRadius: 4,
+                    fontSize: 13,
+                  }}>
+                  START TRADE
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
-      </SafeAreaView>
-    </View>
-    {/* <View style={{marginBottom: 60}}></View> */}
+        </SafeAreaView>
+      </View>
+      {/* <View style={{marginBottom: 60}}></View> */}
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   closeIcon: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 15,
+    alignSelf: 'center',
   },
   image: {
     width: 40,
@@ -239,7 +279,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     width: width,
     paddingHorizontal: 25,
-    paddingVertical: 15
+    paddingVertical: 15,
     // flexWrap: 'wrap',
     // flexDirection: 'row',
     // justifyContent: 'space-between'

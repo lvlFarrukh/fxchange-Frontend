@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {Fragment, useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   ScrollView,
@@ -12,6 +12,7 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
+import Navbar from '../../components/Navbars/Navbar';
 import CompletedTrades from './CompletedTrades';
 import OngoingTrades from './OngoingTrades';
 import styles from './Style';
@@ -20,7 +21,7 @@ const btnSetected: any = {
   backgroundColor: '#0a8a40',
   color: 'white',
   fontWeight: 'bold',
-  zIndex:1,
+  zIndex: 1,
   //padding: '3%',
 };
 const Trades = ({navigation}) => {
@@ -28,7 +29,7 @@ const Trades = ({navigation}) => {
   const [completedTrades, setCompletedTrades] = useState({});
   const [screen, setScreen] = useState(0);
   const activeButton = (buttonType: string) => {
-    console.log('=================>',buttonType)
+    console.log('=================>', buttonType);
     if (buttonType === 'OngoingTrades') {
       setCompletedTrades({});
       setOngoingTrades(btnSetected);
@@ -41,6 +42,7 @@ const Trades = ({navigation}) => {
     }
   };
   return (
+    <Fragment>
       <SafeAreaView
         style={{
           height: height,
@@ -72,9 +74,12 @@ const Trades = ({navigation}) => {
             activeButton={activeButton}
             ongoingTrades={ongoingTrades}
             completedTrades={completedTrades}
-            navigation={navigation}/>
+            navigation={navigation}
+          />
         )}
       </SafeAreaView>
+      <Navbar navigation={navigation} activePage={'trade'} backgroundColor={undefined} />
+    </Fragment>
   );
 };
 export default Trades;

@@ -13,6 +13,7 @@ import {
   Button,
   StatusBar,
 } from 'react-native';
+import Navbar from '../../../components/Navbars/Navbar';
 import Bitcoin from './Bitcoin';
 import GiftCards from './giftCard';
 import styles from './Style';
@@ -98,6 +99,8 @@ const WithdrawalsScreenThree = ({ navigation }) => {
           />
         )}
       </ScrollView>
+      <Navbar navigation={navigation} activePage={'rates'} backgroundColor={'green'}/>
+
     </SafeAreaView>
 
   );

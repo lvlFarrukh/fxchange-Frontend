@@ -13,6 +13,7 @@ import {
   Button,
   StatusBar,
 } from 'react-native';
+import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const WithdrawalsScreenTwo = ({navigation}) => {

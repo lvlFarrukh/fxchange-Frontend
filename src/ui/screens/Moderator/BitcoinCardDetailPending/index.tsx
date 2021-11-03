@@ -161,8 +161,7 @@ const index = ({navigation}) => {
                 Transaction ID
               </Text>
               <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
-                ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd
-                askdakldja alsdkaasd asdhajkd aksjdna asd
+                ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd asd aa alsdkaasd asdhajkd aksjdna asd
               </Text>
             </View>
           </View>
@@ -529,18 +528,28 @@ const index = ({navigation}) => {
                     width: '32%',
                     height: width - 300,
                   }}>
-                  {/* <TouchableOpacity style={{}}> */}
-                  <Image
-                    source={require('../../../../Assets/ICONS/close.png')}
-                    style={{
-                      width: '20%',
-                      height: '20%',
-                      position: 'absolute',
+                    <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
                       zIndex: 1,
-                      margin: 1,
-                    }}
-                  />
-                  {/* </TouchableOpacity> */}
+                      margin: 1,}}>
+
+                    <View
+                      style={{
+                        width: 14,
+                        height: 14,
+                        borderRadius: 20,
+                        backgroundColor: 'black',
+                        justifyContent: 'center',
+                      }}>
+                      <Image
+                        source={require('../../../../Assets/ICONS/close2.jpeg')}
+                        style={{
+                          width: 10,
+                          height: 10,
+                          alignSelf: 'center',
+                        }}
+                      />
+                    </View>
+                    </TouchableOpacity>
 
                   <Image
                     source={require('../../../../Assets/IMG_3151.jpg')}

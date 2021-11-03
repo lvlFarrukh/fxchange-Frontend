@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {View, Text, Dimensions, Image, TextInput} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../components/ModeratePageCard/Header';
+import Navbar from '../../components/Navbars/Navbar';
 // import Style from '../CardDetails/Style';
 
 const {width, height} = Dimensions.get('screen');
 
 const index = ({navigation}) => {
   return (
+    <Fragment>
     <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
       <ScrollView>
         <Header
@@ -202,30 +204,40 @@ const index = ({navigation}) => {
               alignSelf: 'center',
             }}>
             <View
-              style={{
-                backgroundColor: 'white',
-                margin: 2,
-                width: '32%',
-                height: width - 300,
-              }}>
-              {/* <TouchableOpacity style={{}}> */}
-              <Image
-                source={require('../../../Assets/ICONS/close.png')}
-                style={{
-                  width: '18%',
-                  height: '25%',
-                  position: 'absolute',
-                  zIndex: 1,
-                  margin: 1,
-                }}
-              />
-              {/* </TouchableOpacity> */}
+                  style={{
+                    backgroundColor: 'white',
+                    margin: 2,
+                    width: '32%',
+                    height: width - 300,
+                  }}>
+                    <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
+                      zIndex: 1,
+                      margin: 1,}}>
 
-              <Image
-                source={require('../../../Assets/IMG_3151.jpg')}
-                style={{width: '100%', height: '110%'}}
-              />
-            </View>
+                    <View
+                      style={{
+                        width: 14,
+                        height: 14,
+                        borderRadius: 20,
+                        backgroundColor: 'black',
+                        justifyContent: 'center',
+                      }}>
+                      <Image
+                        source={require('../../../Assets/ICONS/close2.jpeg')}
+                        style={{
+                          width: 10,
+                          height: 10,
+                          alignSelf: 'center',
+                        }}
+                      />
+                    </View>
+                    </TouchableOpacity>
+
+                  <Image
+                    source={require('../../../Assets/IMG_3151.jpg')}
+                    style={{width: '100%', height: '100%'}}
+                  />
+                </View>
             <View style={{margin: 2, width: '32%', height: width - 300}}>
               {/* Upload Button */}
               <TouchableOpacity
@@ -314,9 +326,11 @@ const index = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{marginBottom: 40}}></View>
       </ScrollView>
+      <Navbar navigation={navigation} activePage={'trade'} backgroundColor={'green'}/>
+      <View style={{marginBottom: 44}}></View>
     </View>
+      </Fragment>
   );
 };
 

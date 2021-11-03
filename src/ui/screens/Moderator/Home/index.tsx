@@ -16,6 +16,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import ModeratePageCard from '../../../components/ModeratePageCard';
 import styles from './Style';
 import {trades} from '../../../../Assets/dumyData';
+import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -204,7 +205,7 @@ const index = ({navigation}) => {
         </ScrollView>
       </View>
       </View>
-
+            <ModeratorNavbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
     </SafeAreaView>
     </View>
   );

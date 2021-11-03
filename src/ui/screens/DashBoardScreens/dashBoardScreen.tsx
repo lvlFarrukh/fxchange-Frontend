@@ -13,6 +13,7 @@ import {
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Navbar from '../../components/Navbars/Navbar';
 
 const {width, height} = Dimensions.get('window');
 
@@ -28,42 +29,6 @@ const DashBoardScreen = ({navigation}) => {
       <SafeAreaView style={{flex: 1, height: height, width: width}}>
         <ScrollView>
           <View style={[styles.header, {}]}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-                backgroundColor: '#0a8a40',
-                paddingVertical: 6,
-              }}>
-              <TouchableOpacity onPress={() => {}}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Home</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('Trades');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Trades</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('WithdrawalsScreenThree');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Rates</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('WithdrawalsScreen');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>More</Text>
-              </TouchableOpacity>
-            </View>
             <View
               style={{
                 flexDirection: 'row',
@@ -84,9 +49,8 @@ const DashBoardScreen = ({navigation}) => {
               <View style={{flexDirection: 'row'}}>
                 <TouchableOpacity
                   onPress={() => {
-                      navigation.navigate('WithDrawScreenSix')
-                  }}
-                >
+                    navigation.navigate('WithDrawScreenSix');
+                  }}>
                   <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     WITHDRAW FUNDS
                   </Text>
@@ -96,9 +60,8 @@ const DashBoardScreen = ({navigation}) => {
                 </Text>
                 <TouchableOpacity
                   onPress={() => {
-                    navigation.navigate('TransactionHistoryScreen')
-                  }}
-                >
+                    navigation.navigate('TransactionHistoryScreen');
+                  }}>
                   <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     TRANSECTION HISTORY
                   </Text>
@@ -261,6 +224,7 @@ const DashBoardScreen = ({navigation}) => {
             </View>
           </View>
         </ScrollView>
+        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
       </SafeAreaView>
     </View>
   );

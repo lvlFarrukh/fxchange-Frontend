@@ -15,6 +15,7 @@ import {
 import styles from './Style';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Navbar from '../../../components/Navbars/Navbar';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -134,6 +135,8 @@ const WithdrawalsScreen = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
+      <Navbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
+
     </SafeAreaView>
 
   );
