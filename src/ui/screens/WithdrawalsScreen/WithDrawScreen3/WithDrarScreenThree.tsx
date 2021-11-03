@@ -33,13 +33,13 @@ const WithdrawalsScreenThree = ({ navigation }) => {
     console.log(buttonType)
     if (buttonType === 'giftCards') {
       setGiftCards(btnSetected);
-      setScreen(1);
+      setScreen(0);
       setBitcoin({});
     }
     if (buttonType === 'bitcoin') {
       setGiftCards({});
       setBitcoin(btnSetected);
-      setScreen(0);
+      setScreen(1);
     }
   };
   return (
