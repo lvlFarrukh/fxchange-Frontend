@@ -18,7 +18,7 @@ import styles from './Style';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
-  backgroundColor: '#0a8a40',
+  backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
   zIndex: 5,
@@ -49,12 +49,13 @@ const WithDrawScreenSix = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
         
       <View style={styles.header}>
         <View style={styles.headerUpperArea}>
           <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => {
               navigation.goBack();
             }}>
@@ -170,9 +171,10 @@ const WithDrawScreenSix = ({navigation}) => {
           textAlign={'left'}
         />
         <TouchableOpacity
+        activeOpacity={0.9}
           style={[
             styles.changePasswordButton,
-            {backgroundColor: 'green', paddingVertical: 13, borderRadius: 3},
+            {backgroundColor: '#1bb76d', paddingVertical: 13, borderRadius: 3},
           ]}>
           <Text style={[{textAlign: 'center', color: 'white'}]}>
             WithDraw(1500)

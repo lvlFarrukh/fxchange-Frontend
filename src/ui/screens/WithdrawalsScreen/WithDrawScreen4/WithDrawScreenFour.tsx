@@ -47,17 +47,18 @@ const WithDrawScreenFour = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#fff'}}>
-      <StatusBar backgroundColor="#0a8a40" />
+      <StatusBar backgroundColor="#1bb76d" />
       <ScrollView contentContainerStyle={{flex: 1}}>
         <View style={{flex: 1}}>
           <SafeAreaView
             style={{
-              backgroundColor: '#0a8a40',
+              backgroundColor: '#1bb76d',
               flex: isKeyboardVisible ? 0.6 : 0.9,
             }}>
             <View style={[styles.header, {height: '10%'}]}>
               <View style={styles.headerUpperArea}>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
                     navigation.goBack();
                   }}>
@@ -150,7 +151,7 @@ const WithDrawScreenFour = ({navigation}) => {
                 </View>
 
                 <View style={[{}]}>
-                  <TouchableOpacity style={styles.updatePasswordButton}>
+                  <TouchableOpacity activeOpacity={0.9} style={styles.updatePasswordButton}>
                     <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
                   </TouchableOpacity>
                 </View>

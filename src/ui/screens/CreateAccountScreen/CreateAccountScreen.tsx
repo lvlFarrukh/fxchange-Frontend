@@ -108,6 +108,7 @@ const CreateAccountScreen = ({navigation}) => {
 
               <View>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   style={{alignItems: 'center'}}
                   onPress={() => {
                     navigation.navigate('ModeratorScreen');

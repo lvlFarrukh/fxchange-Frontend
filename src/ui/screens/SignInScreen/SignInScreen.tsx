@@ -88,6 +88,7 @@ const SignInScreen = ({navigation}) => {
 
               <View>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   style={{alignItems: 'center'}}
                   onPress={() => {
                     navigation.navigate('DashBoardScreen');
@@ -178,11 +179,11 @@ const styles = isKeyboardVisible =>
     },
     GreenButton: {
       // alignSelf:'center',
-      // backgroundColor:'#0a8a40',
+      // backgroundColor:'#1bb76d',
       // width:'100%'
       height: 36,
       borderWidth: 1,
-      borderColor: '#0a8a40',
+      borderColor: '#1bb76d',
       borderRadius: 3,
       paddingHorizontal: 10,
     //   paddingVertical: 15,
@@ -190,7 +191,7 @@ const styles = isKeyboardVisible =>
       paddingTop: 10,
     //   fontWeight: '700',
       color: '#fafafa',
-      backgroundColor: '#0a8a40',
+      backgroundColor: '#1bb76d',
       alignSelf: 'center',
       textAlign: 'center',
       width: '100%',

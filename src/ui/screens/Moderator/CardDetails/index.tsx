@@ -56,7 +56,7 @@ const index = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
       <ScrollView>
         <SafeAreaView
@@ -68,6 +68,7 @@ const index = ({navigation}) => {
           <StatusBar translucent backgroundColor="transparent" />
           <View style={Style.header}>
             <TouchableOpacity
+            activeOpacity={0.9}
               style={{marginLeft: 15}}
               onPress={() => navigateBack()}>
               <Image
@@ -153,7 +154,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity
+                    activeOpacity={0.9}
+                     onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -227,7 +230,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
+                    onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -262,7 +267,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
+                    onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -349,7 +356,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(0)}>
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
+                    onPress={() => previewImage(0)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -416,8 +425,8 @@ const index = ({navigation}) => {
                   marginBottom: 22,
                 }}>
                 <TouchableOpacity
-                  activeOpacity={0.5}
-                  style={[
+activeOpacity={0.9}  
+                style={[
                     {
                       backgroundColor: '#f2f2f2',
                       borderRadius: 20,
@@ -439,7 +448,7 @@ const index = ({navigation}) => {
                   onPress={() => {
                     navigation.navigate('SwitchGiftCard');
                   }}
-                  activeOpacity={0.5}
+                  activeOpacity={0.9}
                   style={[
                     {
                       backgroundColor: '#d65d0e',
@@ -458,10 +467,10 @@ const index = ({navigation}) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  activeOpacity={0.5}
+                  activeOpacity={0.9}
                   style={[
                     {
-                      backgroundColor: '#0a8a40',
+                      backgroundColor: '#1bb76d',
                       borderRadius: 20,
                       padding: 4,
                       width: 80,
@@ -539,7 +548,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(0)}>
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
+                    onPress={() => previewImage(0)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -584,7 +595,7 @@ const index = ({navigation}) => {
                   </Text>
                   <Text
                     style={[
-                      {textAlign: 'right', color: '#0a8a40', fontSize: 13},
+                      {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
                   </Text>
@@ -606,7 +617,7 @@ const index = ({navigation}) => {
                 height: width - 125,
                 borderRadius: 50,
                 alignSelf: 'center',
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
               }}>
               <View
                 style={{
@@ -625,7 +636,7 @@ const index = ({navigation}) => {
                       fontSize: 18,
                       margin: 5,
                       fontWeight: '500',
-                      color: '#0a8a40',
+                      color: '#1bb76d',
                     }}>
                     ACCEPT
                   </Text>
@@ -656,7 +667,7 @@ const index = ({navigation}) => {
                 </View>
 
                 <View>
-                  <TouchableOpacity activeOpacity={0.5}
+                  <TouchableOpacity activeOpacity={0.9}
                   onPress={() => {
                     toggleModal()
                 }}
@@ -666,7 +677,7 @@ const index = ({navigation}) => {
                         textAlign: 'center',
                         fontSize: 15,
                         fontWeight: '500',
-                        color: '#0a8a40',
+                        color: '#1bb76d',
                       }}>
                       YES ACCEPT
                     </Text>
@@ -674,6 +685,7 @@ const index = ({navigation}) => {
                   {/* hr */}
                   <View style={[Style.hr, {marginTop: 6}]}></View>
                   <TouchableOpacity
+                  activeOpacity={0.9}
                     style={{marginBottom: 8, marginTop: -4}}
                     onPress={() => toggleModal()}>
                     <Text
@@ -825,6 +837,7 @@ const index = ({navigation}) => {
                       style={{margin: 2, width: '32%', height: width - 300}}>
                       {/* Upload Button */}
                       <TouchableOpacity
+                      activeOpacity={0.9}
                         style={[
                           Style.btnShadow,
                           {
@@ -840,7 +853,7 @@ const index = ({navigation}) => {
                           style={{
                             fontSize: 25,
                             fontWeight: '500',
-                            color: '#0a8a40',
+                            color: '#1bb76d',
                             alignSelf: 'center',
                           }}>
                           +
@@ -848,7 +861,7 @@ const index = ({navigation}) => {
                       </TouchableOpacity>
                       <Text
                         style={{
-                          color: '#0a8a40',
+                          color: '#1bb76d',
                           fontSize: 10,
                           fontWeight: '500',
                           alignSelf: 'center',
@@ -861,7 +874,7 @@ const index = ({navigation}) => {
                 </View>
 
                 <View>
-                  <TouchableOpacity activeOpacity={0.5} onPress={()=> toggleDelineModal()}>
+                  <TouchableOpacity activeOpacity={0.9} onPress={()=> toggleDelineModal()}>
                     <Text
                       style={{
                         textAlign: 'center',
@@ -875,6 +888,7 @@ const index = ({navigation}) => {
                   {/* hr */}
                   <View style={[Style.hr, {marginTop: 6}]}></View>
                   <TouchableOpacity
+                  activeOpacity={0.9}
                     style={{marginBottom: 8, marginTop: -5}}
                     onPress={() => toggleDelineModal()}>
                     <Text

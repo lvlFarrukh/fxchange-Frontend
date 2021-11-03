@@ -191,6 +191,7 @@ const index = ({navigation}) => {
           <View style={{marginTop: 110}}>
             
               <TouchableOpacity
+              activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('CardDetails')
             }}

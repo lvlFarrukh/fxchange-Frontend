@@ -96,7 +96,7 @@ const index = ({navigation}) => {
             </View>
           </View>
           <TouchableOpacity
-            activeOpacity={0.5}
+            activeOpacity={0.9}
             style={[
               {
                 backgroundColor: '#f2f2f2',
@@ -194,7 +194,7 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -229,7 +229,7 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -371,7 +371,7 @@ const index = ({navigation}) => {
             </View>
 
             <View>
-              <TouchableOpacity activeOpacity={0.5}
+              <TouchableOpacity activeOpacity={0.9}
                 onPress={() => {
                   toggleDeclineModal();
                   navigation.navigate('BitcoinCardDetailDecline');
@@ -390,6 +390,7 @@ const index = ({navigation}) => {
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={{marginBottom: 8, marginTop: -4}}
                 onPress={() => toggleDeclineModal()}>
                 <Text
@@ -550,6 +551,7 @@ const index = ({navigation}) => {
                 <View style={{margin: 2, width: '32%', height: width - 300}}>
                   {/* Upload Button */}
                   <TouchableOpacity
+                  activeOpacity={0.9}
                     style={[
                       Style.btnShadow,
                       {
@@ -565,7 +567,7 @@ const index = ({navigation}) => {
                       style={{
                         fontSize: 25,
                         fontWeight: '500',
-                        color: '#0a8a40',
+                        color: '#1bb76d',
                         alignSelf: 'center',
                       }}>
                       +
@@ -573,7 +575,7 @@ const index = ({navigation}) => {
                   </TouchableOpacity>
                   <Text
                     style={{
-                      color: '#0a8a40',
+                      color: '#1bb76d',
                       fontSize: 10,
                       fontWeight: '500',
                       alignSelf: 'center',
@@ -587,7 +589,7 @@ const index = ({navigation}) => {
 
             <View>
               <TouchableOpacity
-                activeOpacity={0.5}
+                activeOpacity={0.9}
                 onPress={() => {
                   toggleProcessModal();
                   navigation.navigate('BitcoinCardDetailComplete');
@@ -605,6 +607,7 @@ const index = ({navigation}) => {
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={{marginBottom: 8, marginTop: -5}}
                 onPress={() => {
                   toggleProcessModal();

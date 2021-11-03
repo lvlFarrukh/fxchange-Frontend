@@ -97,12 +97,14 @@ const LandingScreen = ({navigation}) => {
               marginBottom: 10,
             }}>
             <TouchableOpacity
+             activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('SignInScreen');
               }}>
               <Text style={{color: 'green', alignSelf: 'center', fontSize: 12}}>Sign In</Text>
             </TouchableOpacity>
             <TouchableOpacity
+             activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('CreateAccountScreen'); // TestScreenContaing all screens
               }}>

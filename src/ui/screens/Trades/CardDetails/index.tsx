@@ -41,9 +41,10 @@ const index = ({navigation}) => {
           width: width,
           flex: 1,
         }}>
-        <StatusBar translucent backgroundColor="#0a8a40" />
+ <StatusBar translucent backgroundColor="#1bb76d" />
         <View style={Style.header}>
           <TouchableOpacity
+          activeOpacity={0.9}
             style={{marginLeft: 15}}
             onPress={() => navigateBack()}>
             <Image
@@ -125,7 +126,7 @@ const index = ({navigation}) => {
                     justifyContent: 'center',
                   }}
                   imageStyle={{}}>
-                  <TouchableOpacity onPress={() => previewImage(1)}>
+                  <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                     <View
                       style={{
                         backgroundColor: 'rgba(0,0,0,0.5)',
@@ -198,7 +199,7 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -233,7 +234,7 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -261,28 +262,26 @@ const index = ({navigation}) => {
                 </View>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
                     navigation.navigate('UploadGiftCard');
                   }}
-                  activeOpacity={0.5}
-                  style={[
-                    {
-                      backgroundColor: '#0a8a40',
-                      borderRadius: 20,
-                      padding: 4,
-                      width: 40,
-                      marginLeft: 10,
-                      marginTop: 5,
-                    },
-                    Style.btnShadow,
-                  ]}>
-                  <Text
-                    style={[
-                      {color: 'white', fontSize: 7, alignSelf: 'center'},
-                    ]}>
-                    RETRY
-                  </Text>
-                </TouchableOpacity>
+                style={[
+                  {
+                    backgroundColor: '#1bb76d',
+                    borderRadius: 20,
+                    padding: 4,
+                    width: 40,
+                    marginLeft:10,
+                    marginTop:5
+                  },
+                  Style.btnShadow,
+                ]}>
+                <Text
+                  style={[{color: 'white', fontSize: 7, alignSelf: 'center'}]}>
+                  RETRY
+                </Text>
+              </TouchableOpacity>
               </View>
             </View>
 
@@ -345,7 +344,7 @@ const index = ({navigation}) => {
                     justifyContent: 'center',
                   }}
                   imageStyle={{}}>
-                  <TouchableOpacity onPress={() => previewImage(0)}>
+                  <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(0)}>
                     <View
                       style={{
                         backgroundColor: 'rgba(0,0,0,0.5)',
@@ -390,7 +389,7 @@ const index = ({navigation}) => {
                 </Text>
                 <Text
                   style={[
-                    {textAlign: 'right', color: '#0a8a40', fontSize: 13},
+                    {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                   ]}>
                   {'COMPLETED'}
                 </Text>
@@ -456,7 +455,7 @@ const index = ({navigation}) => {
                     justifyContent: 'center',
                   }}
                   imageStyle={{}}>
-                  <TouchableOpacity onPress={() => previewImage(0)}>
+                  <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(0)}>
                     <View
                       style={{
                         backgroundColor: 'rgba(0,0,0,0.5)',

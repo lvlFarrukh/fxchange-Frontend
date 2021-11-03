@@ -19,7 +19,7 @@ import GiftCards from './giftCard';
 import styles from './Style';
 const { width, height } = Dimensions.get('screen');
 const btnSetected: any = {
-  backgroundColor: '#0a8a40',
+  backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
   zIndex:5,
@@ -56,7 +56,7 @@ const WithdrawalsScreenThree = ({ navigation }) => {
      
         <View style={styles.header}>
         <View style={styles.headerUpperArea}>
-            <TouchableOpacity
+            <TouchableOpacity activeOpacity={0.9}
               style={{alignSelf: 'center', marginLeft: 5}}
               onPress={() => {
                 navigation.goBack();

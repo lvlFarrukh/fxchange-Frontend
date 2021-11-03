@@ -59,6 +59,7 @@ const GiftCardScreen = ({ navigation }) => {
                                 
                                 return (
                                     <TouchableOpacity
+                                    activeOpacity={0.9}
                                     onPress={() => changeHeaderText(index)}
                                     key = {index}
                                         style={{

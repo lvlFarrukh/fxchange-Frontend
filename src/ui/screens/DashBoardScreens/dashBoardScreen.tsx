@@ -14,6 +14,7 @@ import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Navbar from '../../components/Navbars/Navbar';
+import Slider from 'react-native-hook-image-slider';
 
 const {width, height} = Dimensions.get('window');
 
@@ -24,7 +25,7 @@ const DashBoardScreen = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
       <SafeAreaView style={{flex: 1, height: height, width: width}}>
         <ScrollView>
@@ -48,6 +49,7 @@ const DashBoardScreen = ({navigation}) => {
               <Text></Text>
               <View style={{flexDirection: 'row'}}>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
                     navigation.navigate('WithDrawScreenSix');
                   }}>
@@ -59,6 +61,7 @@ const DashBoardScreen = ({navigation}) => {
                   {'     '}|{'       '}
                 </Text>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   onPress={() => {
                     navigation.navigate('TransactionHistoryScreen');
                   }}>
@@ -72,7 +75,7 @@ const DashBoardScreen = ({navigation}) => {
 
           <View style={[styles.body, {}]}>
             <TouchableOpacity
-              activeOpacity={0.8}
+              activeOpacity={0.9}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -94,18 +97,19 @@ const DashBoardScreen = ({navigation}) => {
                   source={require('../../../Assets/ICONS/giftcard.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
+                <Text style={{color: '#fff', fontSize: 16, marginLeft: 5}}>
                   Sell Giftcard
                 </Text>
               </View>
               <Icon
                 name={'arrow-forward-outline'}
-                size={30}
+                size={25}
                 color={'#fff'}
                 style={{}}></Icon>
             </TouchableOpacity>
 
             <TouchableOpacity
+            activeOpacity={0.9}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -127,13 +131,13 @@ const DashBoardScreen = ({navigation}) => {
                   source={require('../../../Assets/ICONS/Bitcoin.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 18, marginLeft: 5}}>
+                <Text style={{color: '#fff', fontSize: 16, marginLeft: 5}}>
                   Sell Bitcoin
                 </Text>
               </View>
               <Icon
                 name={'arrow-forward-outline'}
-                size={30}
+                size={25}
                 color={'#fff'}
                 style={{}}></Icon>
             </TouchableOpacity>
@@ -213,14 +217,24 @@ const DashBoardScreen = ({navigation}) => {
               style={{
                 marginTop: 20,
                 marginHorizontal: 20,
-                padding: 5,
+                // padding: 2,
                 backgroundColor: '#ffffff',
                 alignContent: 'center',
                 borderRadius: 3,
               }}>
-              <ImageBackground
+              <Slider
+                imageHeight={140}
+                activeDotColor={'transparent'}
+                emptyDotColor={'transparent'}
+                images={[
+                  'https://i.ibb.co/cFghNhF/timon-klauser-3-MAmj1-ZKSZA-unsplash-c2e88811.jpg',
+                  'https://i.ibb.co/q1kFVRT/img2.png',
+                ]}
+              />
+
+              {/* <ImageBackground
                 source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
-                style={styles.cardImage}></ImageBackground>
+                style={styles.cardImage}></ImageBackground> */}
             </View>
           </View>
         </ScrollView>
@@ -237,7 +251,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 250,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   body: {
     height: height - 250,

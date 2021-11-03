@@ -90,7 +90,7 @@ const index = ({navigation}) => {
             flexDirection: 'row'
           }}>
             <TouchableOpacity
-              activeOpacity={0.5}
+activeOpacity={0.9}
               style={[
                 {
                   backgroundColor: '#f2f2f2',
@@ -206,7 +206,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity
+                    activeOpacity={0.9}
+                     onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -241,7 +243,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
+                    onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',

@@ -115,7 +115,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                 source={require('../../../Assets/IMG_3151.jpg')}
                 style={styles.cardImage}
                 resizeMode={'contain'}>
-                <TouchableOpacity activeOpacity={0.5}>
+                <TouchableOpacity activeOpacity={0.9}>
 
                   <View
                     style={{
@@ -141,7 +141,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                 source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                 style={styles.cardImage}
                 resizeMode={'contain'}>
-                <TouchableOpacity activeOpacity={0.5}>
+                <TouchableOpacity activeOpacity={0.9}>
 
                   <View
                     style={{
@@ -164,14 +164,14 @@ const SellBitcoinScreen1 = ({navigation}) => {
               </ImageBackground>
           </View>
 
-          <TouchableOpacity style={styles.roundButton1}>
-            <Text style={{fontSize: 35, color: '#0a8a40', paddingBottom: 5}}>+</Text>
+          <TouchableOpacity activeOpacity={0.9} style={styles.roundButton1}>
+            <Text style={{fontSize: 35, color: '#1bb76d', paddingBottom: 5}}>+</Text>
           </TouchableOpacity>
-          <Text style={{color: '#0a8a40', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
+          <Text style={{color: '#1bb76d', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
             Add Attachment
           </Text>
 
-          <TouchableOpacity style={{marginTop: 20, marginBottom: 'auto'}}
+          <TouchableOpacity activeOpacity={0.9} style={{marginTop: 20, marginBottom: 'auto'}}
           onPress={() => {
             navigation.navigate('TradeSuccesfullScreen2')
           }}

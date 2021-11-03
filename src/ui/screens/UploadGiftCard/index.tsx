@@ -11,7 +11,7 @@ const {width, height} = Dimensions.get('screen');
 const index = ({navigation}) => {
   return (
     <Fragment>
-    <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
+    <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
       <ScrollView>
         <Header
           style={{marginTop: 35}}
@@ -241,6 +241,7 @@ const index = ({navigation}) => {
             <View style={{margin: 2, width: '32%', height: width - 300}}>
               {/* Upload Button */}
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={[
                   {
                     shadowColor: '#000',
@@ -262,7 +263,7 @@ const index = ({navigation}) => {
                   style={{
                     fontSize: 40,
                     fontWeight: '400',
-                    color: '#0a8a40',
+                    color: '#1bb76d',
                     alignSelf: 'center',
                     marginTop: -7
                   }}>
@@ -271,7 +272,7 @@ const index = ({navigation}) => {
               </TouchableOpacity>
               <Text
                 style={{
-                  color: '#0a8a40',
+                  color: '#1bb76d',
                   fontSize: 10,
                   fontWeight: '500',
                   alignSelf: 'center',
@@ -305,7 +306,7 @@ const index = ({navigation}) => {
           <View style={{marginTop: 30}}>
             <TouchableOpacity
               style={{
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 width: '80%',
                 alignSelf: 'center',
                 height: 36,
