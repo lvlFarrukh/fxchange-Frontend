@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   ScrollView,
@@ -17,9 +17,9 @@ import {
 } from 'react-native';
 import styles from './Style';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 
-const WithDrawScreenFour = ({ navigation }) => {
+const WithDrawScreenFour = ({navigation}) => {
   console.log('with drawel screen');
 
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
@@ -29,13 +29,13 @@ const WithDrawScreenFour = ({ navigation }) => {
       'keyboardDidShow',
       () => {
         setKeyboardVisible(true); // or some other action
-      }
+      },
     );
     const keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       () => {
         setKeyboardVisible(false); // or some other action
-      }
+      },
     );
 
     return () => {
@@ -45,42 +45,53 @@ const WithDrawScreenFour = ({ navigation }) => {
   }, []);
 
   return (
-
-    <KeyboardAvoidingView style={{ flex: 1 , backgroundColor:'#fff'}}>
-      <StatusBar backgroundColor="#0a8a40"/>
-      <ScrollView contentContainerStyle={{ flex: 1 }}>
-        <View style={{flex:1}}> 
+    <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#fff'}}>
+      <StatusBar backgroundColor="#0a8a40" />
+      <ScrollView contentContainerStyle={{flex: 1}}>
+        <View style={{flex: 1}}>
           <SafeAreaView
-            style={{ backgroundColor: '#0a8a40', flex:isKeyboardVisible? 0.6 :0.9 }}
-          >
-            <View style={[styles.header , {height:'10%'}]}>
+            style={{
+              backgroundColor: '#0a8a40',
+              flex: isKeyboardVisible ? 0.6 : 0.9,
+            }}>
+            <View style={[styles.header, {height: '10%'}]}>
               <View style={styles.headerUpperArea}>
                 <TouchableOpacity
-                onPress={()=>{navigation.goBack()}}
-                >
+                  onPress={() => {
+                    navigation.goBack();
+                  }}>
                   <Image
                     source={require('../../../../Assets/ICONS/arrow=white.png')}
-                    style={{ width: 30, height: 20, marginTop: 6, marginRight: 50 }}
+                    style={{
+                      width: 30,
+                      height: 20,
+                      marginTop: 6,
+                      marginRight: 50,
+                    }}
                   />
                 </TouchableOpacity>
               </View>
             </View>
 
-            <View style={[styles.mainBody , {height:'90%'}]}>
+            <View style={[styles.mainBody, {height: '90%'}]}>
               <View style={styles.mainBodyContent}>
-
-                <View style={{ paddingHorizontal: 10 }}>
-                  <View style={{
-                    backgroundColor: '#062529', borderRadius: 100, height: 60, width: 62, alignContent: 'center',
-                    alignSelf: 'center',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    marginTop: -50, //35+20 => 60/2=30 & 20 to cover margin top of mainBody
-                    marginBottom: 10
-                  }}>
+                <View style={{paddingHorizontal: 10}}>
+                  <View
+                    style={{
+                      backgroundColor: '#062529',
+                      borderRadius: 100,
+                      height: 45,
+                      width: 45,
+                      alignContent: 'center',
+                      alignSelf: 'center',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginTop: -45, //35+20 => 60/2=30 & 20 to cover margin top of mainBody
+                      marginBottom: 10,
+                    }}>
                     <Text style={styles.headerHeading2}>H</Text>
                   </View>
-                  <Text style={{ fontSize: 14 }}>CHANGE PASSWORD</Text>
+                  <Text style={{fontSize: 11, color: '#a4a2a3'}}>CHANGE PASSWORD</Text>
                   <TextInput
                     style={{
                       backgroundColor: 'white',
@@ -90,6 +101,7 @@ const WithDrawScreenFour = ({ navigation }) => {
                       width: '100%',
                       marginVertical: 13,
                       paddingLeft: 10,
+                      height: 48,
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Current Passowrd"
@@ -107,6 +119,7 @@ const WithDrawScreenFour = ({ navigation }) => {
                       width: '100%',
                       marginBottom: 13,
                       paddingLeft: 10,
+                      height: 48
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="New Password"
@@ -124,6 +137,7 @@ const WithDrawScreenFour = ({ navigation }) => {
                       width: '100%',
                       marginBottom: 13,
                       paddingLeft: 10,
+                      height: 48
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Repeat New Paswword"
@@ -136,18 +150,15 @@ const WithDrawScreenFour = ({ navigation }) => {
 
                 <View style={[{}]}>
                   <TouchableOpacity style={styles.updatePasswordButton}>
-                    <Text style={{ color: 'white', fontSize: 15 }}>UPDATE</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
                   </TouchableOpacity>
                 </View>
-
               </View>
             </View>
-
           </SafeAreaView>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
-
   );
 };
 

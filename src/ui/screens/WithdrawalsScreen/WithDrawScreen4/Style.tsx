@@ -44,12 +44,6 @@ const styles = StyleSheet.create({
     // paddingHorizontal: 15,
     // paddingVertical: 20,
    
-
-
-
-
-
-
   },
   mainBody: {
     width: width,
@@ -71,7 +65,7 @@ const styles = StyleSheet.create({
   updatePasswordButton: {
     alignItems: 'center',
     backgroundColor: '#3f8b41',
-    padding: 15,
+    padding: 9,
     borderRadius: 4
   },
 });

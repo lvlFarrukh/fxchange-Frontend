@@ -8,11 +8,8 @@ const styles = StyleSheet.create({
     },
   header: {
     width: width,
-    height: 80,
+    height: 100,
     backgroundColor: '#0a8a40',
-    
-    
-    
   },
   headerUpperArea: {
     display: 'flex',
@@ -25,30 +22,23 @@ const styles = StyleSheet.create({
     
   },
   headerHeadingContainer:{
-   width:60,
-   height:60,
-    position:'absolute',
-    left:'44%',
-    top:'30%',
-    zIndex:2
+   width:45,
+   height:45,
+    alignSelf: 'center',
+    marginTop: -22,
+    zIndex:2,
+   backgroundColor:'#062529',
+   borderRadius:80,
+   justifyContent: 'center'
+    
   },
 
   headerHeading2: {
     
    color:'white',
    width:'100%',
-   backgroundColor:'#062529',
    fontSize:15,
    textAlign:'center',
-   paddingHorizontal:0,
-   paddingVertical:20,
-   borderRadius:80
-   
-
-    
-  
-
-  
   },
   mainBody:{
     width: width,
@@ -60,7 +50,7 @@ const styles = StyleSheet.create({
     top: '70%',
   },
   mainBodyContent:{
-    marginTop:"9%",
+    marginTop:"2%",
     marginLeft:"10%",
 
     
@@ -73,7 +63,7 @@ const styles = StyleSheet.create({
   updatePasswordButton: {
     alignItems: 'center',
     backgroundColor: '#3f8b41',
-    padding: 15,
+    padding: 10,
     borderRadius:4
   },
 });

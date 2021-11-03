@@ -25,11 +25,7 @@ const styles = StyleSheet.create({
   headerText: {
     color: 'white',
     textAlign: 'center',
-    
-    
-    
-    
-  
+
   },
   mainBody: {
     width: width,

@@ -94,6 +94,7 @@ const DashBoardScreen = ({ navigation }) => {
 
           <View style={[styles.body, {}]}>
             <TouchableOpacity
+              activeOpacity={0.8}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
