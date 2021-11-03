@@ -85,15 +85,16 @@ const WithDrawScreenFour = ({ navigation }) => {
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
+                      borderColor: '#F1F1F1',
                       borderWidth: 1,
                       width: '100%',
                       marginVertical: 13,
                       paddingLeft: 10,
+                      color:'black'
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Current Passowrd"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}
@@ -102,15 +103,16 @@ const WithDrawScreenFour = ({ navigation }) => {
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
+                      borderColor: '#F1F1F1',
                       borderWidth: 1,
                       width: '100%',
                       marginBottom: 13,
                       paddingLeft: 10,
+                      color:'black'
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="New Password"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}
@@ -119,15 +121,16 @@ const WithDrawScreenFour = ({ navigation }) => {
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
+                      borderColor: '#F1F1F1',
                       borderWidth: 1,
                       width: '100%',
                       marginBottom: 13,
                       paddingLeft: 10,
+                      color:'black'
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Repeat New Paswword"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}

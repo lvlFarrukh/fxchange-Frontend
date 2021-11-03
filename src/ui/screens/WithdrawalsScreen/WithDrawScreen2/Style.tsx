@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     
   },
   textAreaContainer: {
-    borderColor: '#f0f0f0',
+    borderColor: '#F1F1F1',
     borderRadius:2,
     borderWidth: 1,
     alignSelf: 'center',

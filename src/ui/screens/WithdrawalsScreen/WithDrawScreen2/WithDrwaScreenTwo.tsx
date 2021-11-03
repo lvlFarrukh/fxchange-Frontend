@@ -58,7 +58,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
             </Text>
             <View></View>
           </View>
-          <Text style={{textAlign: 'center', color: '#adabac', fontSize: 10}}>
+          <Text style={{textAlign: 'center', color: 'black', fontSize: 10}}>
             Please fill the form below we will be happy to assist you
           </Text>
           <View style={styles.textAreaContainer}>
@@ -66,7 +66,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
               style={styles.textArea}
               underlineColorAndroid="transparent"
               placeholder="Enter Your Message"
-              placeholderTextColor="#7c7c7c"
+              placeholderTextColor="#333333"
               numberOfLines={6}
               multiline={true}
             />

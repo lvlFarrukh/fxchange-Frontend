@@ -58,6 +58,9 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             
             marginTop: 20,
             marginBottom: 15,
+            borderColor:'#F1F1F1',
+            borderWidth:1.3
+          
             
 
             // paddingTop:20,
@@ -109,6 +112,8 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
 
             borderRadius: 4,
             width: '85%',
+            borderColor:'#F1F1F1',
+            borderWidth:1.3,
             
             
             
@@ -159,6 +164,8 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
 
             
             width: '85%',
+            borderColor:'#F1F1F1',
+            borderWidth:1.3,
             
             
             
@@ -210,6 +217,8 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
 
             height:45,
             width: '85%',
+            borderColor:'#F1F1F1',
+            borderWidth:1.3,
             
             
             

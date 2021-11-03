@@ -49,6 +49,8 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
             marginRight: 'auto',
             marginLeft: 'auto',
             marginVertical: 20,
+            borderColor:'#F1F1F1',
+            borderWidth:1.3,
 
             // paddingTop:20,
             paddingLeft: 25,

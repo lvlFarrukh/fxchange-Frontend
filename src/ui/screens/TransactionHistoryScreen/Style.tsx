@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     color: 'rgb(10, 138, 64)',
   },
   hr: {
-    borderBottomWidth: 1,
-    borderColor: 'rgba(0,0,0,0.2)',
+    borderBottomWidth: 1.5,
+    borderColor: '#F1F1F1',
     marginTop: 20,
     //marginBottom: 8,
   },

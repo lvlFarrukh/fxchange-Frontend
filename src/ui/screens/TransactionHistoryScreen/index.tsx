@@ -163,11 +163,12 @@ const index = ({navigation}) => {
               //paddingLeft: 10,
               borderRadius: 3,
               borderWidth: 1,
-              borderColor: 'rgba(0,0,0,0.2)',
+              borderColor: '#F1F1F1',
             }}>
             <Text
               style={{
                 fontSize: 12,
+                color:'black'
               }}>
               Start Date
             </Text>
@@ -188,11 +189,12 @@ const index = ({navigation}) => {
               //paddingLeft: 10,
               borderRadius: 3,
               borderWidth: 1,
-              borderColor: 'rgba(0,0,0,0.2)',
+              borderColor: '#F1F1F1',
             }}>
             <Text
               style={{
                 fontSize: 12,
+                color:'black'
               }}>
               End Date
             </Text>
@@ -208,7 +210,7 @@ const index = ({navigation}) => {
               backgroundColor: '#f2f2f2',
               borderRadius: 5,
               borderWidth: 1,
-              borderColor: 'rgba(0,0,0,0.2)',
+              borderColor: '#F1F1F1',
               alignContent: 'center',
               alignItems: 'center',
               justifyContent: 'center',
@@ -262,10 +264,10 @@ const index = ({navigation}) => {
           </View>
           <View style={styles.hr}></View>
           <View style={{marginTop: 5, marginBottom: -10}}>
-            <Text style={{fontSize: 9}}>Account Name</Text>
-            <Text style={{fontSize: 12, fontWeight: '500', marginBottom: 16}}>JThomas</Text>
-            <Text style={{fontSize: 9}}>Account Name</Text>
-            <Text style={{fontSize: 15, fontWeight: '500'}}>
+            <Text style={{fontSize: 9,color:'black'}}>Account Name</Text>
+            <Text style={{fontSize: 12, fontWeight: '500', marginBottom: 16,color:'black'}}>JThomas</Text>
+            <Text style={{fontSize: 9,color:'black'}}>Account Name</Text>
+            <Text style={{fontSize: 15, fontWeight: '500',color:'black'}}>
               FxChange Marketplace
             </Text>
           </View>
@@ -277,12 +279,12 @@ const index = ({navigation}) => {
               marginTop: 10,
             }}>
             <View>
-              <Text style={{fontSize: 9}}>Account Number</Text>
+              <Text style={{fontSize: 9,color:'black'}}>Account Number</Text>
               <Text style={{fontSize: 15, fontWeight: '500'}}>12451321651</Text>
             </View>
             <View>
-              <Text style={{fontSize: 9}}>Bank Name</Text>
-              <Text style={{fontSize: 15, fontWeight: '500'}}>
+              <Text style={{fontSize: 9,color:'black'}}>Bank Name</Text>
+              <Text style={{fontSize: 15, fontWeight: '500',color:'black'}}>
                 Accesable PLC
               </Text>
             </View>

@@ -65,21 +65,21 @@ const CreateAccountScreen = ({ navigation }) => {
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Username'}
-                                placeholderTextColor={'#949494'}
+                                placeholderTextColor={'#333333'}
                             >
                             </TextInput>
 
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Email Address'}
-                                placeholderTextColor={'#949494'}
+                                placeholderTextColor={'#333333'}
                             >
                             </TextInput>
 
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Phone Number'}
-                                placeholderTextColor={'#949494'}
+                                placeholderTextColor={'#333333'}
                             >
                             </TextInput>
 
@@ -93,7 +93,7 @@ const CreateAccountScreen = ({ navigation }) => {
                             <TextInput
                                 style={styles.TextInputStyle}
                                 placeholder={'Repeat Password'}
-                                placeholderTextColor={'#949494'}
+                                placeholderTextColor={'#333333'}
                             >
                             </TextInput>
 
@@ -157,9 +157,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#fafafa',
         borderWidth: 1,
         borderRadius: 5,
-        borderColor: '#949494',
+        borderColor: '#F1F1F1',
         paddingLeft: 10,
-        color:'#000'
+        color:'black'
 
     },
     GreenButton: {

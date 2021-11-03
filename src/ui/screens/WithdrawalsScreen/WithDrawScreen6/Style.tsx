@@ -48,6 +48,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 12,
     borderRadius: 6,
+    borderColor:'#F1F1F1',
+    borderWidth:1,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 10},
     shadowOpacity: 0.3,
@@ -89,7 +91,8 @@ const styles = StyleSheet.create({
    
     marginTop: 40,
     backgroundColor: 'white',
-
+    borderColor:'#F1F1F1',
+    borderWidth:1,
     paddingHorizontal: 25,
     marginLeft:-12,
     height:"24%",
@@ -129,6 +132,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
    marginTop:10,
+   borderWidth:1,
+   borderColor:'#F1F1F1',
    
    shadowColor: '#000',
    shadowOffset: {width: 0, height: 10},

@@ -84,7 +84,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -95,7 +95,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Full Name"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -105,7 +105,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -116,7 +116,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Phone Number"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -126,7 +126,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -137,7 +137,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Email Address"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -155,7 +155,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -166,7 +166,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Select Bank"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -176,7 +176,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -187,7 +187,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Account Number"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -197,7 +197,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 4,
-                  borderColor: 'black',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.3,
                   width: '92%',
 
@@ -208,7 +208,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Name on Account"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}

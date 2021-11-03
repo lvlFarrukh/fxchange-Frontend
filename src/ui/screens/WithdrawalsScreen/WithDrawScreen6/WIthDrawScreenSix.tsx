@@ -109,7 +109,7 @@ const WithDrawScreenSix = ({navigation}) => {
           style={styles.headerHeading2}
           underlineColorAndroid="transparent"
           placeholder="Amount"
-          placeholderTextColor="black"
+          placeholderTextColor="#333333"
           textAlign={'left'}
         />
       </View>
@@ -165,7 +165,7 @@ const WithDrawScreenSix = ({navigation}) => {
           style={styles.changePasswordButton}
           underlineColorAndroid="transparent"
           placeholder="Current Password"
-          placeholderTextColor="black"
+          placeholderTextColor="#333333"
           textAlign={'left'}
         />
         <TouchableOpacity

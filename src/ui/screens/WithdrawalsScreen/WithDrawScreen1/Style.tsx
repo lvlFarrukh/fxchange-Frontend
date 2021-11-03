@@ -79,9 +79,9 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     marginTop:10,
     marginHorizontal:10,
-    borderBottomWidth:1,
+    borderBottomWidth:1.3,
     paddingVertical:15,
-    borderColor:'rgba(0,0,0,0.2)'
+    borderColor:'#F1F1F1'
    
   
     
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     right: 25,
   },
- 
+  
 });
 
 export default styles;
