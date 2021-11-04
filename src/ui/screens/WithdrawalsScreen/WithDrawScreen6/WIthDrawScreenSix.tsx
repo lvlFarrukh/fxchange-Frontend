@@ -18,7 +18,7 @@ import styles from './Style';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
-  backgroundColor: '#0a8a40',
+  backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
   zIndex: 5,
@@ -49,12 +49,13 @@ const WithDrawScreenSix = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
         
       <View style={styles.header}>
         <View style={styles.headerUpperArea}>
           <TouchableOpacity
+          activeOpacity={0.9}
             onPress={() => {
               navigation.goBack();
             }}>
@@ -110,16 +111,16 @@ const WithDrawScreenSix = ({navigation}) => {
           style={styles.headerHeading2}
           underlineColorAndroid="transparent"
           placeholder="Amount"
-          placeholderTextColor="black"
+          placeholderTextColor="#333333"
           textAlign={'left'}
         />
       </View>
       <View style={styles.mainBody}>
         {/* style={styles.mainBodyContent} */}
 
-        <View style={styles.mainBodyCards}>
-          <View style={styles.mainBodyCardContent1}>
-            <Text style={{fontSize: 13, fontWeight: '400'}}>BankDetails</Text>
+        <View style={[styles.mainBodyCards]}>
+          <View style={[styles.mainBodyCardContent1]}>
+            <Text style={{fontSize: 11.5, fontWeight: '400'}}>Bank Details</Text>
             <View style={styles.viewItems}>
               <Text style={styles.smBlueText}>Edit</Text>
 
@@ -135,10 +136,11 @@ const WithDrawScreenSix = ({navigation}) => {
               justifyContent: 'flex-start',
               width: '80%',
               marginBottom: 5,
+              marginTop: 8
             }}>
-            <Text style={{fontSize: 12}}>Account Name:</Text>
-            <Text style={{fontSize: 12, marginLeft: 10}}>
-              FxChangeMarketPlace
+            <Text style={{fontSize: 10}}>Account Name:</Text>
+            <Text style={{fontSize: 10}}>
+              {'    '}Fxchange Marketplace
             </Text>
           </View>
           <View
@@ -148,8 +150,8 @@ const WithDrawScreenSix = ({navigation}) => {
               width: '80%',
               marginBottom: 5,
             }}>
-            <Text style={{fontSize: 12}}>Account No:</Text>
-            <Text style={{fontSize: 12, marginLeft: 10}}>3789393</Text>
+            <Text style={{fontSize: 10}}>Account No:</Text>
+            <Text style={{fontSize: 10}}>{'          '}3789393</Text>
           </View>
           <View
             style={{
@@ -157,25 +159,26 @@ const WithDrawScreenSix = ({navigation}) => {
               justifyContent: 'flex-start',
               width: '80%',
             }}>
-            <Text style={{fontSize: 12}}>Bank Name:</Text>
-            <Text style={{fontSize: 12, marginLeft: 10}}>Access Bank PLC</Text>
+            <Text style={{fontSize: 10}}>Bank Name:</Text>
+            <Text style={{fontSize: 10}}>{'           '}Accessbank PLC</Text>
           </View>
         </View>
 
         <TextInput
-          style={styles.changePasswordButton}
+          style={styles.changePasswordButton1}
           underlineColorAndroid="transparent"
           placeholder="Current Password"
-          placeholderTextColor="black"
+          placeholderTextColor="#333333"
           textAlign={'left'}
         />
         <TouchableOpacity
+        activeOpacity={0.9}
           style={[
             styles.changePasswordButton,
-            {backgroundColor: 'green', paddingVertical: 13, borderRadius: 3},
+            {backgroundColor: '#1bb76d', paddingVertical: 10, borderRadius: 3},
           ]}>
           <Text style={[{textAlign: 'center', color: 'white'}]}>
-            WithDraw(1500)
+            WITHDRAW (1500)
           </Text>
         </TouchableOpacity>
         <View style={styles.bodyBottom}>

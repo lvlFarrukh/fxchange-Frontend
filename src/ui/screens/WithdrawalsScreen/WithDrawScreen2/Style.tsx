@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     
   },
   textAreaContainer: {
-    borderColor: '#f0f0f0',
     borderRadius:5,
-    borderWidth: 1,
     alignSelf: 'center',
     width: '95%',
     marginTop:12,
+    borderColor: '#F1F1F1',
+    borderWidth: 1.5
   },
   textArea: {
     marginTop:10,
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlignVertical: 'top',
     borderColor: '#F1F1F1',
+    color: 'black'
     // borderRadius: 5
   },
   sendButtonContainer:{
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     height: 35,
     alignItems: "center",
-    backgroundColor: "#3f8b41",
+    backgroundColor: "#1bb76d",
     borderRadius: 3,
     justifyContent: 'center',
     paddingBottom: 2
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: '15%',
     fontSize: 25,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     paddingVertical: '6%',
     paddingHorizontal: '8%',
     borderRadius: 100,
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     width: width,
     height: '100%',
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',

@@ -96,7 +96,7 @@ const index = ({navigation}) => {
             </View>
           </View>
           <TouchableOpacity
-            activeOpacity={0.5}
+            activeOpacity={0.9}
             style={[
               {
                 backgroundColor: '#f2f2f2',
@@ -193,7 +193,9 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity
+              activeOpacity={0.9}
+              onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -228,7 +230,9 @@ const index = ({navigation}) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity 
+              activeOpacity={0.9}
+              onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -263,7 +267,7 @@ const index = ({navigation}) => {
               marginBottom: 22,
             }}>
             <TouchableOpacity
-              activeOpacity={0.5}
+              activeOpacity={0.9}
               style={[
                 {
                   backgroundColor: '#e32b23',
@@ -281,7 +285,7 @@ const index = ({navigation}) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              activeOpacity={0.5}
+              activeOpacity={0.9}
               style={[
                 {
                   backgroundColor: '#d65d0e',
@@ -370,7 +374,7 @@ const index = ({navigation}) => {
             </View>
 
             <View>
-              <TouchableOpacity activeOpacity={0.5}
+              <TouchableOpacity activeOpacity={0.9}
                 onPress={() => {
                   toggleDeclineModal();
                   navigation.navigate('BitcoinCardDetailDecline');
@@ -389,6 +393,7 @@ const index = ({navigation}) => {
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={{marginBottom: 8, marginTop: -4}}
                 onPress={() => toggleDeclineModal()}>
                 <Text
@@ -469,7 +474,7 @@ const index = ({navigation}) => {
                   backgroundColor: 'white',
                   alignSelf: 'center',
                   borderRadius: 4,
-                  borderColor: 'lightgray',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.7,
                   width: '80%',
                   height: 44,
@@ -489,7 +494,7 @@ const index = ({navigation}) => {
                   backgroundColor: 'white',
                   alignSelf: 'center',
                   borderRadius: 4,
-                  borderColor: 'lightgray',
+                  borderColor: '#F1F1F1',
                   borderWidth: 0.5,
                   width: '80%',
                   height: 44,
@@ -559,6 +564,7 @@ const index = ({navigation}) => {
                 <View style={{margin: 2, width: '32%', height: width - 300}}>
                   {/* Upload Button */}
                   <TouchableOpacity
+                  activeOpacity={0.9}
                     style={[
                       Style.btnShadow,
                       {
@@ -596,7 +602,7 @@ const index = ({navigation}) => {
 
             <View>
               <TouchableOpacity
-                activeOpacity={0.5}
+activeOpacity={0.9}
                 onPress={() => {
                   toggleProcessModal();
                   navigation.navigate('BitcoinCardDetailComplete');
@@ -614,6 +620,7 @@ const index = ({navigation}) => {
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={{marginBottom: 8, marginTop: -5}}
                 onPress={() => {
                   toggleProcessModal();

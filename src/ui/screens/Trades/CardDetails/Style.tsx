@@ -5,7 +5,7 @@ const Style = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     flexDirection: 'row',
     justifyContent: 'space-between',
     // alignItems:'center',
@@ -74,8 +74,8 @@ const Style = StyleSheet.create({
     height: 32,
   },
   hr: {
-    borderTopWidth: 1,
-    borderColor: '#F1F1F1',
+    borderTopWidth: 1.5,
+    borderColor:'#F1F1F1',
     marginTop: 10,
     marginBottom: 10,
   },

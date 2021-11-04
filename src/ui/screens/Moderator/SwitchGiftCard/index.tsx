@@ -1,16 +1,62 @@
 import React from 'react';
-import {View, Text, Dimensions, Image, TextInput, StatusBar, ScrollView, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  TextInput,
+  StatusBar,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from '../CardDetails/Style';
 
 // const {width1, height1} = Dimensions.get('screen');
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const index = ({navigation}) => {
+  const countryNames = [
+    "US",
+    "UK",
+    "GERMANY",
+    "CANADA",
+    "NETHERLAND",
+    "AUSTRALIA",
+    "SINGAPORE",
+    "Ireland",
+    "Spain",
+    "Belgium",
+    "Italy",
+    "France",
+    "Greece",
+    "Portugal"
+  ]
+
+  const cardTypes = [
+    "ITUNES",
+    "STEAM",
+    "GOOGLE PLAY",
+    "SEPHORA",
+    "AMERICAN EXPRESS",
+    "VANILLA",
+    "WALMART",
+    "VISA",
+    "EBAY",
+    "AMAZON",
+    "NORDSTROM",
+    "NIKE",
+    "FOOTLOCKER",
+  ]
   return (
     <ScrollView>
-      <View style={{height: height + StatusBar.currentHeight, width: width, backgroundColor: '#d65d0e'}}>
+      <View
+        style={{
+          height: height + StatusBar.currentHeight,
+          width: width,
+          backgroundColor: '#d65d0e',
+        }}>
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
@@ -41,7 +87,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.8,
                 width: '80%',
                 height: 46,
@@ -57,7 +103,7 @@ const index = ({navigation}) => {
             />
 
             <SelectDropdown
-              data={[0, 1]}
+              data={countryNames}
               onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index);
               }}
@@ -90,7 +136,7 @@ const index = ({navigation}) => {
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -102,7 +148,7 @@ const index = ({navigation}) => {
             />
 
             <SelectDropdown
-              data={[0, 1]}
+              data={cardTypes}
               onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index);
               }}
@@ -135,7 +181,7 @@ const index = ({navigation}) => {
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -151,7 +197,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.5,
                 width: '80%',
                 height: 50,
@@ -189,30 +235,31 @@ const index = ({navigation}) => {
           </View>
 
           <View style={{marginTop: 110}}>
-            
-              <TouchableOpacity
+            <TouchableOpacity
+              activeOpacity={0.9}
               onPress={() => {
-                navigation.navigate('CardDetails')
-            }}
+                navigation.navigate('CardDetails');
+              }}
+              style={{
+                backgroundColor: '#d65d0e',
+                width: '80%',
+                alignSelf: 'center',
+                height: 36,
+                borderRadius: 4,
+                justifyContent: 'center',
+              }}>
+              <Text
                 style={{
-                    backgroundColor: '#d65d0e',
-                    width: '80%',
-                    alignSelf: 'center',
-                    height: 36,
-                    borderRadius: 4,
-                    justifyContent: 'center'
-                }}
-              >
-                  <Text style={{
-                      color: 'white',
-                      textAlign: 'center'
-                  }}>SWITCH</Text>
-              </TouchableOpacity>
+                  color: 'white',
+                  textAlign: 'center',
+                }}>
+                SWITCH
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
       {/* <View style={{marginBottom: 15}}></View> */}
-
     </ScrollView>
   );
 };

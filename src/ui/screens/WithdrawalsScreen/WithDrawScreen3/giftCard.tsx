@@ -20,7 +20,38 @@ const {width, height} = Dimensions.get('screen');
 const giftCards = ({activeButton, bitcoin, giftCards}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [item, setItem] = useState('Select');
-  const countries = ['Egypt', 'Canada', 'Australia', 'Ireland'];
+  const countryNames = [
+    "US",
+    "UK",
+    "GERMANY",
+    "CANADA",
+    "NETHERLAND",
+    "AUSTRALIA",
+    "SINGAPORE",
+    "Ireland",
+    "Spain",
+    "Belgium",
+    "Italy",
+    "France",
+    "Greece",
+    "Portugal"
+  ]
+
+  const cardTypes = [
+    "ITUNES",
+    "STEAM",
+    "GOOGLE PLAY",
+    "SEPHORA",
+    "AMERICAN EXPRESS",
+    "VANILLA",
+    "WALMART",
+    "VISA",
+    "EBAY",
+    "AMAZON",
+    "NORDSTROM",
+    "NIKE",
+    "FOOTLOCKER",
+  ]
   return (
     <>
       <View style={styles.giftCardBodyPatOne}>
@@ -90,14 +121,13 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
-              
               width: '100%',
               paddingRight: 10,
               paddingVertical:10,
               height:45,
+              borderWidth: 1.5,
+              borderColor: '#F1F1F1'
               
-              
-
             }}
           />
         </View>
@@ -115,7 +145,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             marginBottom: 15,
           }}>
           <SelectDropdown
-            data={countries}
+            data={countryNames}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
             }}
@@ -166,7 +196,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             // paddingTop:20,
           }}>
           <SelectDropdown
-            data={countries}
+            data={cardTypes}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
             }}
@@ -207,16 +237,16 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             // textAlignVertical: 'top',
             borderRadius: 4,
             marginLeft:28,
-
+            color: 'black',
             height:45,
             width: '85%',
-            
-            
+            fontSize: 12,
+            fontWeight: '600',
             
             marginBottom: 25,
 
             // paddingTop:20,
-            paddingLeft: 25,
+            paddingLeft: 19,
           }}
           underlineColorAndroid="transparent"
           placeholder="Enter Account in USD"
@@ -226,7 +256,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
           multiline={true}
         />
         <View style={styles.checkrateButtonContainer}>
-          <TouchableOpacity style={styles.checkrateButton}>
+          <TouchableOpacity activeOpacity={0.9} style={styles.checkrateButton}>
             <Text style={{color: 'white', fontSize: 13}}>CHECK RATE</Text>
           </TouchableOpacity>
         </View>

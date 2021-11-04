@@ -84,30 +84,31 @@ const CreateAccountScreen = ({navigation}) => {
               <TextInput
                 style={styles.TextInputStyle}
                 placeholder={'Username'}
-                placeholderTextColor={'#343434'}></TextInput>
+                placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput
                 style={styles.TextInputStyle}
                 placeholder={'Email Address'}
-                placeholderTextColor={'#343434'}></TextInput>
+                placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput
                 style={styles.TextInputStyle}
                 placeholder={'Phone Number'}
-                placeholderTextColor={'#343434'}></TextInput>
+                placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput
                 style={styles.TextInputStyle}
                 placeholder={'Password'}
-                placeholderTextColor={'#343434'}></TextInput>
+                placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput
                 style={styles.TextInputStyle}
                 placeholder={'Repeat Password'}
-                placeholderTextColor={'#343434'}></TextInput>
+                placeholderTextColor={'#333333'}></TextInput>
 
               <View>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   style={{alignItems: 'center'}}
                   onPress={() => {
                     navigation.navigate('ModeratorScreen');
@@ -154,15 +155,15 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     alignSelf: 'center',
     fontSize: 13,
-    color: '#343434',
+    color: '#333333',
   },
   TextInputStyle: {
     backgroundColor: '#fafafa',
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderRadius: 4,
     borderColor: '#F1F1F1',
     paddingLeft: 10,
-    color: '#000',
+    color: 'black',
     height: 48,
     marginBottom: 15,
     fontSize: 11,

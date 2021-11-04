@@ -75,19 +75,20 @@ const SignInScreen = ({navigation}) => {
               <TextInput
                 style={styles(isKeyboardVisible).TextInputStyle}
                 placeholder={'Email or Phone'}
-                placeholderTextColor={'black'}> 
+                placeholderTextColor={'#333333'}> 
             </TextInput>
 
               <TextInput
                 style={styles(isKeyboardVisible).TextInputStyle}
                 placeholder={'Password'}
-                placeholderTextColor={'black'}
+                placeholderTextColor={'#333333'}
                 //onChangeText={text => setTitle(text)}
                 //value={Title}
               ></TextInput>
 
               <View>
                 <TouchableOpacity
+                activeOpacity={0.9}
                   style={{alignItems: 'center'}}
                   onPress={() => {
                     navigation.navigate('DashBoardScreen');
@@ -168,21 +169,21 @@ const styles = isKeyboardVisible =>
     TextInputStyle: {
         height: 46,
       backgroundColor: '#Fafafa',
-      borderWidth: 1,
+      borderWidth: 1.5,
       borderRadius: 3,
       paddingLeft: 10,
-      color: '#000',
+      color: 'black',
     //   marginTop: 5,
       borderColor: '#F1F1F1',
       fontSize: 12, 
     },
     GreenButton: {
       // alignSelf:'center',
-      // backgroundColor:'#0a8a40',
+      // backgroundColor:'#1bb76d',
       // width:'100%'
       height: 36,
       borderWidth: 1,
-      borderColor: '#0a8a40',
+      borderColor: '#1bb76d',
       borderRadius: 3,
       paddingHorizontal: 10,
     //   paddingVertical: 15,
@@ -190,7 +191,7 @@ const styles = isKeyboardVisible =>
       paddingTop: 10,
     //   fontWeight: '700',
       color: '#fafafa',
-      backgroundColor: '#0a8a40',
+      backgroundColor: '#1bb76d',
       alignSelf: 'center',
       textAlign: 'center',
       width: '100%',

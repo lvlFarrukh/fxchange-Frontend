@@ -81,7 +81,7 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
             </Text>
           </View>
 
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
             <Icon
               name={'arrow-forward-ios'}
               size={16}
@@ -160,6 +160,7 @@ const index = ({ navigation }) => {
               height: 40,
             }}>
             <TouchableOpacity
+            activeOpacity={0.9}
               onPress={showDatePicker}
               style={{
                 flex: 0.4,
@@ -185,6 +186,7 @@ const index = ({ navigation }) => {
               <Icons name={'ios-calendar-sharp'} size={12} color={'#fa5100'} />
             </TouchableOpacity>
             <TouchableOpacity
+            activeOpacity={0.9}
               onPress={showDatePicker}
               style={{
                 flex: 0.4,
@@ -261,7 +263,7 @@ const index = ({ navigation }) => {
                 alignItems: 'center',
                 marginBottom: -10,
               }}>
-              <TouchableOpacity onPress={toggleModal} style={{ marginLeft: -40 }}>
+              <TouchableOpacity  activeOpacity={0.9} onPress={toggleModal} style={{ marginLeft: -40 }}>
                 <Text style={{ fontSize: 25, fontWeight: '200', color: 'black' }}>x</Text>
               </TouchableOpacity>
 
@@ -320,7 +322,7 @@ const index = ({ navigation }) => {
 
             <View style={{ paddingVertical: 25 }}></View>
             <View style={[styles.hr, { width: width / 2, alignSelf: 'center' }]}></View>
-            <TouchableOpacity style={{ alignSelf: 'center', marginTop: 10 }}>
+            <TouchableOpacity activeOpacity={0.9} style={{ alignSelf: 'center', marginTop: 10 }}>
               <Text style={{ color: 'green', fontSize: 20, fontWeight: '500', paddingBottom: 5 }}>
                 APPROVED
               </Text>

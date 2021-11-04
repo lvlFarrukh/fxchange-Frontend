@@ -29,7 +29,7 @@ const WithdrawalsScreen = ({ navigation }) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40'
+        backgroundColor: '#1bb76d'
       }}>
       <ScrollView
         contentContainerStyle={{ flex: 1 }}
@@ -45,6 +45,7 @@ const WithdrawalsScreen = ({ navigation }) => {
           <View style={{ marginTop: 20 }}>
               <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
             <TouchableOpacity 
+            activeOpacity={0.9}
               onPress={() => {
                   navigation.navigate('WithdrawalsScreenFive')
               }}
@@ -63,6 +64,7 @@ const WithdrawalsScreen = ({ navigation }) => {
             </TouchableOpacity>
             
             <TouchableOpacity 
+            activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('WithDrawScreenFour')
               }}  

@@ -9,9 +9,41 @@ import Navbar from '../../components/Navbars/Navbar';
 const {width, height} = Dimensions.get('screen');
 
 const index = ({navigation}) => {
+  const countryNames = [
+    "US",
+    "UK",
+    "GERMANY",
+    "CANADA",
+    "NETHERLAND",
+    "AUSTRALIA",
+    "SINGAPORE",
+    "Ireland",
+    "Spain",
+    "Belgium",
+    "Italy",
+    "France",
+    "Greece",
+    "Portugal"
+  ]
+
+  const cardTypes = [
+    "ITUNES",
+    "STEAM",
+    "GOOGLE PLAY",
+    "SEPHORA",
+    "AMERICAN EXPRESS",
+    "VANILLA",
+    "WALMART",
+    "VISA",
+    "EBAY",
+    "AMAZON",
+    "NORDSTROM",
+    "NIKE",
+    "FOOTLOCKER",
+  ]
   return (
     <Fragment>
-    <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
+    <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
       <ScrollView>
         <Header
           style={{marginTop: 35}}
@@ -43,7 +75,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.8,
                 width: '80%',
                 height: 46,
@@ -61,7 +93,7 @@ const index = ({navigation}) => {
             />
 
             <SelectDropdown
-              data={[0, 1]}
+              data={countryNames}
               onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index);
               }}
@@ -94,7 +126,7 @@ const index = ({navigation}) => {
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -106,7 +138,7 @@ const index = ({navigation}) => {
             />
 
             <SelectDropdown
-              data={[0, 1]}
+              data={cardTypes}
               onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index);
               }}
@@ -139,7 +171,7 @@ const index = ({navigation}) => {
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -155,7 +187,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.5,
                 width: '80%',
                 height: 50,
@@ -177,7 +209,7 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
+                borderColor: '#F1F1F1',
                 borderWidth: 0.5,
                 width: '80%',
                 height: 50,
@@ -241,6 +273,7 @@ const index = ({navigation}) => {
             <View style={{margin: 2, width: '32%', height: width - 300}}>
               {/* Upload Button */}
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={[
                   {
                     shadowColor: '#000',
@@ -262,7 +295,7 @@ const index = ({navigation}) => {
                   style={{
                     fontSize: 40,
                     fontWeight: '400',
-                    color: '#0a8a40',
+                    color: '#1bb76d',
                     alignSelf: 'center',
                     marginTop: -7
                   }}>
@@ -271,7 +304,7 @@ const index = ({navigation}) => {
               </TouchableOpacity>
               <Text
                 style={{
-                  color: '#0a8a40',
+                  color: '#1bb76d',
                   fontSize: 10,
                   fontWeight: '500',
                   alignSelf: 'center',
@@ -305,7 +338,7 @@ const index = ({navigation}) => {
           <View style={{marginTop: 30}}>
             <TouchableOpacity
               style={{
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 width: '80%',
                 alignSelf: 'center',
                 height: 36,

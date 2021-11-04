@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     width: width,
     //height: '30%',
     flex:30,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     alignItems:"center",
    
     
@@ -75,7 +75,8 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     marginTop:10,
     marginHorizontal:10,
-    borderBottomWidth:1,
+    borderBottomWidth:1.5,
+    borderBottomColor: '#F1F1F1',
     // paddingVertical:15
     paddingTop: 15,
     paddingBottom: 10,
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '39%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '3%',
     alignSelf: 'center',
   },

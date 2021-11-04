@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '50%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '2.7%',
     paddingHorizontal:"3%",
     alignSelf: 'center',
@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
   },
   checkrateButton: {
     alignItems: 'center',
-    backgroundColor: '#3f8b41',
-    paddingVertical:10,
+    backgroundColor: '#1bb76d',
+    paddingVertical:8,
     borderRadius:4
   },
 
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
     position: 'absolute',
-    top: '45%',
+    top: '50%',
     alignItems: 'center',
     zIndex: 1,
   },

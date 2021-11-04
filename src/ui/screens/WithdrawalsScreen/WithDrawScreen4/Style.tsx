@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     // height: 80,
     //height: '10%',
     //flex:10,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
 
 
 
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   updatePasswordButton: {
     alignItems: 'center',
-    backgroundColor: '#3f8b41',
+    backgroundColor: '#1bb76d',
     padding: 9,
     borderRadius: 4
   },

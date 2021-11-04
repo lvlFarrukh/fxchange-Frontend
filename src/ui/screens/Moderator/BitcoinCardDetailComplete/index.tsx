@@ -105,7 +105,7 @@ const index = ({ navigation }) => {
                   flexDirection: 'row',
                 }}>
                 <TouchableOpacity
-                  activeOpacity={0.5}
+                  activeOpacity={0.9}
                   style={[
                     {
                       backgroundColor: '#f2f2f2',
@@ -142,9 +142,9 @@ const index = ({ navigation }) => {
               </Text>
               <Text style={{ fontSize: 13, color: 'white' }}>$2000</Text>
               <TouchableOpacity
+              activeOpacity={0.9}
                 onPress={() => toggleReportModal()}
                 // onPress={()=>previewImage('../../../../Assets/IMG_3151.jpg')}
-                activeOpacity={0.5}
                 style={[
                   {
                     backgroundColor: 'white',
@@ -245,7 +245,7 @@ const index = ({ navigation }) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -280,7 +280,7 @@ const index = ({ navigation }) => {
                 justifyContent: 'center',
               }}
               imageStyle={{}}>
-              <TouchableOpacity onPress={() => previewImage(1)}>
+              <TouchableOpacity activeOpacity={0.9} onPress={() => previewImage(1)}>
                 <View
                   style={{
                     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -445,7 +445,7 @@ const index = ({ navigation }) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity onPress={() => previewImage(1)}>
+                    <TouchableOpacity  activeOpacity={0.9} onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -480,7 +480,8 @@ const index = ({ navigation }) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity
+                    <TouchableOpacity 
+                    activeOpacity={0.9}
                     onPress={() => previewImage(0)}
                     >
                       <View
@@ -515,6 +516,7 @@ const index = ({ navigation }) => {
               {/* hr */}
               <View style={[Style.hr, { marginTop: 6}]}></View>
               <TouchableOpacity
+              activeOpacity={0.9}
                 style={{ marginBottom: 8, marginTop: -5 }}
                 onPress={toggleReportModal}>
                 <Text

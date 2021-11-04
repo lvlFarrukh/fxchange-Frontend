@@ -47,17 +47,18 @@ const WithDrawScreenFour = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView style={{flex: 1, backgroundColor: '#fff'}}>
-      <StatusBar backgroundColor="#0a8a40" />
+      <StatusBar backgroundColor="#1bb76d" />
       <ScrollView contentContainerStyle={{flex: 1}}>
         <View style={{flex: 1}}>
           <SafeAreaView
             style={{
-              backgroundColor: '#0a8a40',
+              backgroundColor: '#1bb76d',
               flex: isKeyboardVisible ? 0.6 : 0.9,
             }}>
             <View style={[styles.header, {height: '10%'}]}>
               <View style={styles.headerUpperArea}>
                 <TouchableOpacity
+                  activeOpacity={0.9}
                   onPress={() => {
                     navigation.goBack();
                   }}>
@@ -92,21 +93,24 @@ const WithDrawScreenFour = ({navigation}) => {
                     }}>
                     <Text style={styles.headerHeading2}>H</Text>
                   </View>
-                  <Text style={{fontSize: 11, color: '#a4a2a3'}}>CHANGE PASSWORD</Text>
+                  <Text style={{fontSize: 11, color: '#a4a2a3'}}>
+                    CHANGE PASSWORD
+                  </Text>
                   <TextInput
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
-                      borderWidth: 1,
+                      borderColor: '#F1F1F1',
+                      borderWidth: 1.5,
                       width: '100%',
+                      color: 'black',
                       marginVertical: 15,
                       paddingLeft: 10,
                       height: 48,
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Current Passowrd"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}
@@ -115,16 +119,17 @@ const WithDrawScreenFour = ({navigation}) => {
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
-                      borderWidth: 1,
+                      borderColor: '#F1F1F1',
+                      borderWidth: 1.5,
                       width: '100%',
+                      color: 'black',
                       marginBottom: 15,
                       paddingLeft: 10,
-                      height: 48
+                      height: 48,
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="New Password"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}
@@ -133,16 +138,17 @@ const WithDrawScreenFour = ({navigation}) => {
                     style={{
                       backgroundColor: 'white',
                       borderRadius: 4,
-                      borderColor: 'rgba(0,0,0,0.2)',
-                      borderWidth: 1,
+                      borderColor: '#F1F1F1',
+                      borderWidth: 1.5,
                       width: '100%',
+                      color: 'black',
                       marginBottom: 15,
                       paddingLeft: 10,
-                      height: 48
+                      height: 48,
                     }}
                     underlineColorAndroid="transparent"
                     placeholder="Repeat New Paswword"
-                    placeholderTextColor="#676767"
+                    placeholderTextColor="#333333"
                     textAlign={'left'}
                     numberOfLines={2}
                     multiline={true}
@@ -150,7 +156,9 @@ const WithDrawScreenFour = ({navigation}) => {
                 </View>
 
                 <View style={[{}]}>
-                  <TouchableOpacity style={styles.updatePasswordButton}>
+                  <TouchableOpacity
+                    activeOpacity={0.9}
+                    style={styles.updatePasswordButton}>
                     <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
                   </TouchableOpacity>
                 </View>
@@ -159,8 +167,11 @@ const WithDrawScreenFour = ({navigation}) => {
           </SafeAreaView>
         </View>
       </ScrollView>
-      <Navbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
-
+      <Navbar
+        navigation={navigation}
+        activePage={'more'}
+        backgroundColor={'green'}
+      />
     </KeyboardAvoidingView>
   );
 };

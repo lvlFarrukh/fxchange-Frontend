@@ -88,19 +88,18 @@ const WithDrawScreenFive = ({navigation}) => {
                 <TextInput
                   style={{
                     backgroundColor: 'white',
-                    // textAlignVertical: 'top',
                     borderRadius: 3,
-                    borderColor: 'black',
-                    borderWidth: 0.3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
                     width: '92%',
                     height: 45,
                     marginVertical: 13,
-
+                    color: 'black',
                     paddingLeft: 10,
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Full Name"
-                  placeholderTextColor="#676767"
+                  placeholderTextColor="#333333"
                   textAlign={'left'}
                   numberOfLines={2}
                   multiline={true}
@@ -110,17 +109,17 @@ const WithDrawScreenFive = ({navigation}) => {
                     backgroundColor: 'white',
                     // textAlignVertical: 'top',
                     borderRadius: 3,
-                    borderColor: 'black',
-                    borderWidth: 0.3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
                     width: '92%',
                     height: 45,
                     marginVertical: 13,
-
+                    color: 'black',
                     paddingLeft: 10,
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Phone Number"
-                  placeholderTextColor="#676767"
+                  placeholderTextColor="#333333"
                   textAlign={'left'}
                   numberOfLines={2}
                   multiline={true}
@@ -130,17 +129,17 @@ const WithDrawScreenFive = ({navigation}) => {
                     backgroundColor: 'white',
                     // textAlignVertical: 'top',
                     borderRadius: 3,
-                    borderColor: 'black',
-                    borderWidth: 0.3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
                     width: '92%',
                     height: 45,
                     marginVertical: 13,
-
+                    color: 'black',
                     paddingLeft: 10,
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Email Address"
-                  placeholderTextColor="#676767"
+                  placeholderTextColor="#333333"
                   textAlign={'left'}
                   numberOfLines={2}
                   multiline={true}
@@ -160,17 +159,17 @@ const WithDrawScreenFive = ({navigation}) => {
                     backgroundColor: 'white',
                     // textAlignVertical: 'top',
                     borderRadius: 3,
-                    borderColor: 'black',
-                    borderWidth: 0.3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
                     width: '92%',
                     height: 45,
                     marginVertical: 13,
-
+                    color: 'black',
                     paddingLeft: 10,
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Select Bank"
-                  placeholderTextColor="#676767"
+                  placeholderTextColor="#333333"
                   textAlign={'left'}
                   numberOfLines={2}
                   multiline={true}
@@ -180,17 +179,17 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 3,
-                  borderColor: 'black',
-                  borderWidth: 0.3,
+                  borderColor: '#F1F1F1',
+                  borderWidth: 1.5,
                   width: '92%',
                   height: 45,
                   marginVertical: 13,
-
+                  color: 'black',
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Account Number"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
@@ -200,17 +199,17 @@ const WithDrawScreenFive = ({navigation}) => {
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
                   borderRadius: 3,
-                  borderColor: 'black',
-                  borderWidth: 0.3,
+                  borderColor: '#F1F1F1',
+                  borderWidth: 1.5,
                   width: '92%',
                   height: 45,
                   marginVertical: 13,
-
+                    color: 'black',
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Name on Account"
-                placeholderTextColor="#676767"
+                placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}

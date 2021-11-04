@@ -20,6 +20,7 @@ const Test = ({ navigation }) => {
 
             <ScrollView>
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('CreateAccountScreen')
                     }}
@@ -28,6 +29,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('TransactionHistoryScreen')
                     }}
@@ -36,6 +38,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('CardDetails')
                     }}
@@ -44,6 +47,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('WithdrawalsScreen')
                     }}
@@ -60,6 +64,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('WithdrawalsScreenThree')
                     }}
@@ -68,6 +73,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('WithDrawScreenFour')
                     }}
@@ -76,6 +82,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('WithdrawalsScreenFive')
                     }}
@@ -84,6 +91,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('WithDrawScreenSix')
                     }}
@@ -92,6 +100,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('ModeratorScreen')
                     }}
@@ -100,6 +109,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('DashBoardScreen')
                     }}
@@ -108,6 +118,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('GiftCardScreen')
                     }}
@@ -115,6 +126,7 @@ const Test = ({ navigation }) => {
                     <Text style={{ padding: 10 }}>GiftCardScreen</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('SwitchGiftCard')
                     }}
@@ -123,6 +135,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('BitcoinCardDetailPending')
                     }}
@@ -131,6 +144,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('ItunesGiftCardScreen')
                     }}
@@ -138,6 +152,7 @@ const Test = ({ navigation }) => {
                     <Text style={{ padding: 10 }}>ItunesGiftCardScreen</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('BitcoinCardDetailDecline')
                     }}
@@ -146,6 +161,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('TradeSuccessfull')
                     }}
@@ -154,6 +170,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('TradeSuccesfullScreen2')
                     }}
@@ -162,6 +179,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('SellBitcoinScreen1')
                     }}
@@ -169,6 +187,7 @@ const Test = ({ navigation }) => {
                     <Text style={{ padding: 10 }}>SellBitcoinScreen1</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('BitcoinCardDetailComplete')
                     }}
@@ -177,6 +196,7 @@ const Test = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('UploadGiftCard')
                     }}
@@ -186,6 +206,7 @@ const Test = ({ navigation }) => {
 
 
                 <TouchableOpacity
+                activeOpacity={0.9}
                     onPress={() => {
                         navigation.navigate('SellBitcoin')
                     }}
