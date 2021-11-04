@@ -93,7 +93,7 @@ const LandingScreen = ({navigation}) => {
               justifyContent: 'space-between',
               flexDirection: 'row',
               marginTop: 'auto',
-              paddingHorizontal: 30,
+              paddingHorizontal: 35,
               marginBottom: 10,
             }}>
             <TouchableOpacity
