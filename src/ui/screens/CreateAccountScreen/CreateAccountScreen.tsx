@@ -28,7 +28,7 @@ const CreateAccountScreen = ({navigation}) => {
     const keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
       () => {
-        setKeyboardVisible(true); // or some other action
+        setKeyboardVisible(true); 
       },
     );
     const keyboardDidHideListener = Keyboard.addListener(
