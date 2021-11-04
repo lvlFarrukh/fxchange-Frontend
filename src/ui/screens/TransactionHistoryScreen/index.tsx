@@ -135,7 +135,7 @@ const index = ({ navigation }) => {
       height: height,
       width: width,
       flex: 1,
-      backgroundColor: 'rgb(10, 138, 64)',
+      backgroundColor: '#1bb76d',
     }}>
       <SafeAreaView
         style={{

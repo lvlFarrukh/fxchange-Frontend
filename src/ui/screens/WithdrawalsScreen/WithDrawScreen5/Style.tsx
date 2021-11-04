@@ -9,12 +9,12 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   headerUpperArea: {
     display: 'flex',
     width: '70%',
-    marginTop: 10,
+    marginTop: 15,
     marginLeft:35,
     
     flexDirection: 'row',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   updatePasswordButton: {
     alignItems: 'center',
-    backgroundColor: '#3f8b41',
+    backgroundColor: '#1bb76d',
     padding: 10,
     borderRadius:4
   },

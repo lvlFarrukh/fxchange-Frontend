@@ -25,7 +25,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
         flex: 1,
       }}>
       <ScrollView contentContainerStyle={{flex: 1}}>
-        <StatusBar translucent backgroundColor="transparent" />
+        <StatusBar translucent backgroundColor="#1bb76d" />
 
         <View style={styles.header}>
         

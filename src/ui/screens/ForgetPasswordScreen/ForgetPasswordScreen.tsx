@@ -36,7 +36,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
         <KeyboardAvoidingView style={{ flex: 1 }}>
             <StatusBar translucent backgroundColor='transparent' />
             <ScrollView contentContainerStyle={{ flex: 1 }}>
-                <View style={{ flex: 1, backgroundColor: 'rgb(10, 138, 64)' }}>
+                <View style={{ flex: 1, backgroundColor: '#1bb76d' }}>
                     <SafeAreaView style={{ flex: 1 }}>
                         <View style={{ height: (height*27)/100 }}>
                             <Header navigation={navigation}/>
@@ -121,18 +121,18 @@ const styles = StyleSheet.create({
     },
     GreenButton: {
         // alignSelf:'center',
-        // backgroundColor:'#0a8a40',
+        // backgroundColor:'#1bb76d',
         // width:'100%'
         marginTop: -5,
         borderWidth: 1,
-        borderColor: '#0a8a40',
+        borderColor: '#1bb76d',
         borderRadius: 3,
         paddingHorizontal: 10,
         paddingVertical: 8,
         fontSize: 13,
         // fontWeight: '700',
         color: '#fafafa',
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
         alignSelf: 'center',
         textAlign: 'center',
         width: '100%',

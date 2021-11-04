@@ -56,7 +56,7 @@ const index = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
       <ScrollView>
         <SafeAreaView
@@ -461,7 +461,7 @@ const index = ({navigation}) => {
                   activeOpacity={0.5}
                   style={[
                     {
-                      backgroundColor: '#0a8a40',
+                      backgroundColor: '#1bb76d',
                       borderRadius: 20,
                       padding: 4,
                       width: 80,
@@ -584,7 +584,7 @@ const index = ({navigation}) => {
                   </Text>
                   <Text
                     style={[
-                      {textAlign: 'right', color: '#0a8a40', fontSize: 13},
+                      {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
                   </Text>
@@ -606,7 +606,7 @@ const index = ({navigation}) => {
                 height: width - 125,
                 borderRadius: 50,
                 alignSelf: 'center',
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
               }}>
               <View
                 style={{
@@ -625,7 +625,7 @@ const index = ({navigation}) => {
                       fontSize: 18,
                       margin: 5,
                       fontWeight: '500',
-                      color: '#0a8a40',
+                      color: '#1bb76d',
                     }}>
                     ACCEPT
                   </Text>
@@ -666,7 +666,7 @@ const index = ({navigation}) => {
                         textAlign: 'center',
                         fontSize: 15,
                         fontWeight: '500',
-                        color: '#0a8a40',
+                        color: '#1bb76d',
                       }}>
                       YES ACCEPT
                     </Text>
@@ -830,7 +830,7 @@ const index = ({navigation}) => {
                           style={{
                             fontSize: 25,
                             fontWeight: '500',
-                            color: '#0a8a40',
+                            color: '#1bb76d',
                             alignSelf: 'center',
                           }}>
                           +
@@ -838,7 +838,7 @@ const index = ({navigation}) => {
                       </TouchableOpacity>
                       <Text
                         style={{
-                          color: '#0a8a40',
+                          color: '#1bb76d',
                           fontSize: 10,
                           fontWeight: '500',
                           alignSelf: 'center',

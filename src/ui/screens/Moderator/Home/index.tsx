@@ -19,7 +19,7 @@ import {trades} from '../../../../Assets/dumyData';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
-  backgroundColor: '#0a8a40',
+  backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
   //padding: '3%',
@@ -76,7 +76,7 @@ const index = ({navigation}) => {
       height: height,
       width: width,
       flex: 1,
-      backgroundColor: '#0a8a40'
+      backgroundColor: '#1bb76d'
     }}>
     <SafeAreaView
       style={{
@@ -84,15 +84,15 @@ const index = ({navigation}) => {
         width: width,
         flex: 1,
       }}>
-      <StatusBar backgroundColor="#0a8a40"/>
+      <StatusBar backgroundColor="#1bb76d"/>
       {/* <View style={styles.header}>
         <Text style={styles.headerHeading}>Trades</Text>
       </View> */}
-    <View style={{height: height, width: width, backgroundColor: '#0a8a40'}}>
+    <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
     <View style={{
               flexDirection:'row',
               justifyContent:'space-around',
-              backgroundColor:'#0a8a40',
+              backgroundColor:'#1bb76d',
               paddingVertical:6
             }}>
              

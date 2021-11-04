@@ -28,7 +28,7 @@ const WithdrawalsScreen = ({ navigation }) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40'
+        backgroundColor: '#1bb76d'
       }}>
       <ScrollView
         contentContainerStyle={{ flex: 1 }}

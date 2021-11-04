@@ -33,7 +33,7 @@ const index = ({navigation}) => {
           width: width,
           flex: 1,
         }}>
- <StatusBar translucent backgroundColor="#0a8a40" />
+ <StatusBar translucent backgroundColor="#1bb76d" />
         <View style={Style.header}>
           
           <TouchableOpacity
@@ -262,7 +262,7 @@ const index = ({navigation}) => {
                 activeOpacity={0.5}
                 style={[
                   {
-                    backgroundColor: '#0a8a40',
+                    backgroundColor: '#1bb76d',
                     borderRadius: 20,
                     padding: 4,
                     width: 40,
@@ -383,7 +383,7 @@ const index = ({navigation}) => {
                 </Text>
                 <Text
                   style={[
-                    {textAlign: 'right', color: '#0a8a40', fontSize: 13},
+                    {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                   ]}>
                   {'COMPLETED'}
                 </Text>

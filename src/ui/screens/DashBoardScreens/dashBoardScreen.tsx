@@ -23,7 +23,7 @@ const DashBoardScreen = ({navigation}) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
       }}>
       <SafeAreaView style={{flex: 1, height: height, width: width}}>
         <ScrollView>
@@ -32,7 +32,7 @@ const DashBoardScreen = ({navigation}) => {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-around',
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 paddingVertical: 6,
               }}>
               <TouchableOpacity onPress={() => {}}>
@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 250,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   body: {
     height: height - 250,

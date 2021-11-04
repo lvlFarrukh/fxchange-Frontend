@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#3f8b41',
+    backgroundColor: '#1bb76d',
     paddingHorizontal: 25
   },
   headerUpperArea: {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '50%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '2.7%',
     paddingHorizontal:"3%",
     alignSelf: 'center',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   checkrateButton: {
     alignItems: 'center',
-    backgroundColor: '#3f8b41',
+    backgroundColor: '#1bb76d',
     paddingVertical:10,
     borderRadius:4
   },
