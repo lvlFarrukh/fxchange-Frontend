@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 const {width, height} = Dimensions.get('screen');
@@ -33,9 +34,9 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
           backgroundColor: '#d65d0e',
         }}>
         <View style={{height: '8%', justifyContent: 'center'}}>
-          <Text style={{fontSize: 18, color: '#fff', alignSelf: 'center'}}>
+          <MyText style={{fontSize: 18, color: '#fff', alignSelf: 'center'}}>
             Trade Sucessful
-          </Text>
+          </MyText>
         </View>
 
         <View style={[styles.whiteCardBg, {height: '92%'}]}>
@@ -49,7 +50,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
           />
           <View style={{justifyContent: 'space-between', flex: 1}}>
             <View>
-              <Text
+              <MyText
                 style={{
                     alignSelf: 'center',
                     fontSize: 15,
@@ -58,8 +59,8 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                     color: '#333',
                 }}>
                 You trade has been submitted
-              </Text>
-              <Text
+              </MyText>
+              <MyText
                 style={{
                     alignSelf: 'center',
                     fontSize: 11,
@@ -68,7 +69,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                     color: '#656565',
                 }}>
                 TRADE ID: #G4558668900
-              </Text>
+              </MyText>
             </View>
             <View style={{paddingHorizontal: 30,}}>
               <View
@@ -81,10 +82,10 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                     paddingBottom: 15,
                 }}>
                 <View>
-                  <Text style={{fontSize: 11}}>WALLET</Text>
-                  <Text style={{fontSize: 12}}>
+                  <MyText style={{fontSize: 11}}>WALLET</MyText>
+                  <MyText style={{fontSize: 12}}>
                     1BnG5fDHDVF6gCDHKFKDBXCg6cfb
-                  </Text>
+                  </MyText>
                 </View>
                 <View></View>
               </View>
@@ -98,14 +99,14 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                   paddingVertical: 20,
                 }}>
                 <View>
-                  <Text style={{fontSize: 11}}>AMOUNT SENT</Text>
-                  <Text style={{fontSize: 15, fontWeight: '500'}}>$1000(0.023)</Text>
+                  <MyText style={{fontSize: 11}}>AMOUNT SENT</MyText>
+                  <MyText style={{fontSize: 15, fontWeight: '500'}}>$1000(0.023)</MyText>
                 </View>
                 <View>
-                  <Text style={{fontSize: 10}}>TRANSACTION VALUE</Text>
-                  <Text style={{fontSize: 16, fontWeight: '500'}}>
+                  <MyText style={{fontSize: 10}}>TRANSACTION VALUE</MyText>
+                  <MyText style={{fontSize: 16, fontWeight: '500'}}>
                     N330,000
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -118,14 +119,14 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                   paddingVertical: 20,
                 }}>
                 <View>
-                  <Text style={{fontSize: 12}}>ESTIMATED TIME</Text>
-                  <Text style={{fontWeight: '500'}}>20-35mins</Text>
+                  <MyText style={{fontSize: 12}}>ESTIMATED TIME</MyText>
+                  <MyText style={{fontWeight: '500'}}>20-35mins</MyText>
                 </View>
                 <View  style={{marginRight: 43}}>
-                  <Text style={{fontSize: 12}}>
+                  <MyText style={{fontSize: 12}}>
                     STATUS
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={{
                       alignSelf: 'flex-end',
                       fontWeight: '500',
@@ -133,20 +134,20 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                       color: '#d65d0e',
                     }}>
                     Pending
-                  </Text>
+                  </MyText>
                 </View>
               </View>
             </View>
             <View>
-              <Text style={{fontSize: 10, color: '#343434',textAlign: 'center'}}>NOTE:</Text>
-              <Text style={{fontSize: 10, color: '#343434', textAlign: 'center'}}>
-                <Text>Your transaction will be treated with the actual{"\n"}</Text>
-                <Text>BITCOIN amount we recieve</Text>
-              </Text>
+              <MyText style={{fontSize: 10, color: '#343434',textAlign: 'center'}}>NOTE:</MyText>
+              <MyText style={{fontSize: 10, color: '#343434', textAlign: 'center'}}>
+                <MyText>Your transaction will be treated with the actual{"\n"}</MyText>
+                <MyText>BITCOIN amount we recieve</MyText>
+              </MyText>
             </View>
 
             <TouchableOpacity activeOpacity={0.9} style={{marginTop: 10}}>
-              <Text
+              <MyText
                 style={{
                   alignSelf: 'center',
                   backgroundColor: '#d65d0e',
@@ -157,7 +158,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                   borderRadius: 5,
                 }}>
                 HOME
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </View>

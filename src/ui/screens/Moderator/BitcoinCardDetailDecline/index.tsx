@@ -6,6 +6,7 @@ import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -52,9 +53,9 @@ const index = ({navigation}) => {
             paddingHorizontal: '10%',
           }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Text style={{fontSize: 9, color: 'black', marginTop: 25}}>
+            <MyText style={{fontSize: 9, color: 'black', marginTop: 25}}>
               Opened By Thomas
-            </Text>
+            </MyText>
           </View>
 
           <View style={{alignSelf: 'center', marginTop: -22}}>
@@ -66,24 +67,24 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
               }}
             />
-            <Text
+            <MyText
               style={{
                 color: 'black',
                 fontSize: 13,
                 marginTop: 5,
               }}>
               Bitcoin Trade
-            </Text>
+            </MyText>
           </View>
 
           <View style={Style.lowerPortion}>
             <View>
-              <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+              <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                 Amount Sent
-              </Text>
-              <Text style={[Style.mdFontBlackColor, {fontSize: 20}]}>
+              </MyText>
+              <MyText style={[Style.mdFontBlackColor, {fontSize: 20}]}>
                 {'0.2356 BTC ($2300)'}
-              </Text>
+              </MyText>
             </View>
           </View>
           <View style={{
@@ -102,11 +103,11 @@ activeOpacity={0.9}
                 },
                 Style.btnShadow,
               ]}>
-              <Text
+              <MyText
                 style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}
                 onPress={() => {}}>
                 DECLINE
-              </Text>
+              </MyText>
             </TouchableOpacity>
     
             <View style={{
@@ -122,7 +123,7 @@ activeOpacity={0.9}
                   marginRight:5
               }}
               />
-              <Text style={{fontSize: 10}}>Not received</Text>
+              <MyText style={{fontSize: 10}}>Not received</MyText>
             </View>
           </View>
 
@@ -131,12 +132,12 @@ activeOpacity={0.9}
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 12}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Wallet Address
-              </Text>
-              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                 23kjhsdfk1kjjkdfskf1kjkhjkkd
-              </Text>
+              </MyText>
             </View>
 
             <Image
@@ -154,12 +155,12 @@ activeOpacity={0.9}
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Transaction Value in Naira (570/5)
-              </Text>
-              <Text style={[{color: 'black', fontSize: 13, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 13, marginBottom: 2}]}>
                 N1,311,000
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -168,13 +169,13 @@ activeOpacity={0.9}
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Transaction ID
-              </Text>
-              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                 ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd
                 askdakldja alsdkaasd asdhajkd aksjdna asd
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -183,9 +184,9 @@ activeOpacity={0.9}
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Attachment
-              </Text>
+              </MyText>
             </View>
           </View>
 

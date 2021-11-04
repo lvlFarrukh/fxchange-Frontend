@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 const {width, height} = Dimensions.get('screen');
@@ -51,8 +52,8 @@ const SellBitcoinScreen1 = ({navigation}) => {
               marginTop: 10,
             }}>
             <View>
-              <Text style={{fontSize: 10}}>Wallet Addresss</Text>
-              <Text style={{fontSize: 10}}>1BnG5DHDVF67gCDHFKFKFGSGXCgCfb</Text>
+              <MyText style={{fontSize: 10}}>Wallet Addresss</MyText>
+              <MyText style={{fontSize: 10}}>1BnG5DHDVF67gCDHFKFKFGSGXCgCfb</MyText>
             </View>
             <Image
               style={{height: 100, width: 100}}
@@ -61,10 +62,10 @@ const SellBitcoinScreen1 = ({navigation}) => {
           </View>
 
           <View style={{marginTop: 20}}>
-            <Text style={{fontSize: 10, alignSelf: 'center', color: '#686667'}}>
+            <MyText style={{fontSize: 10, alignSelf: 'center', color: '#686667'}}>
               Estimated Rate (570/$)
-            </Text>
-            <Text
+            </MyText>
+            <MyText
               style={{
                 fontSize: 20,
                 fontWeight: '600',
@@ -72,7 +73,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                 marginTop: 5,
               }}>
               N3,500,000
-            </Text>
+            </MyText>
           </View>
 
           <View
@@ -82,7 +83,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
               marginTop: 10,
             }}>
             {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
-                            <Text style={{ padding: 12 }}>Amount Sent in USD</Text>
+                            <MyText style={{ padding: 12 }}>Amount Sent in USD</MyText>
                         </TouchableOpacity> */}
             <TextInput
               style={styles.TextInputStyle}
@@ -90,7 +91,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
               placeholderTextColor={'#949494'}></TextInput>
 
             {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4 }}>
-                            <Text style={{ padding: 12 }}>Amount Sent in BTC</Text>
+                            <MyText style={{ padding: 12 }}>Amount Sent in BTC</MyText>
                         </TouchableOpacity> */}
             <TextInput
               style={styles.TextInputStyle}
@@ -98,7 +99,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
               placeholderTextColor={'#949494'}></TextInput>
           </View>
           {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4, marginTop: 10 }}>
-                        <Text style={{ padding: 12 }}>Transaction id (optional)</Text>
+                        <MyText style={{ padding: 12 }}>Transaction id (optional)</MyText>
                     </TouchableOpacity> */}
           <TextInput
             style={[styles.TextInputStyle, {marginTop: 10, width: '100%'}]}
@@ -165,18 +166,18 @@ const SellBitcoinScreen1 = ({navigation}) => {
           </View>
 
           <TouchableOpacity activeOpacity={0.9} style={styles.roundButton1}>
-            <Text style={{fontSize: 35, color: '#1bb76d', paddingBottom: 5}}>+</Text>
+            <MyText style={{fontSize: 35, color: '#1bb76d', paddingBottom: 5}}>+</MyText>
           </TouchableOpacity>
-          <Text style={{color: '#1bb76d', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
+          <MyText style={{color: '#1bb76d', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
             Add Attachment
-          </Text>
+          </MyText>
 
           <TouchableOpacity activeOpacity={0.9} style={{marginTop: 20, marginBottom: 'auto'}}
           onPress={() => {
             navigation.navigate('TradeSuccesfullScreen2')
           }}
           >
-            <Text
+            <MyText
               style={{
                 alignSelf: 'center',
                 backgroundColor: '#d65d0e',
@@ -188,7 +189,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                 fontSize: 12
               }}>
               SUBMIT
-            </Text>
+            </MyText>
           </TouchableOpacity>
         </View>
       </SafeAreaView>

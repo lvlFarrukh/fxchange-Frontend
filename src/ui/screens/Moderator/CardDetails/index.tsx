@@ -12,6 +12,7 @@ import {
 import Modal from 'react-native-modal';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
@@ -76,12 +77,12 @@ const index = ({navigation}) => {
                 style={Style.backArrow}
               />
             </TouchableOpacity>
-            <Text style={Style.headerHeading}>ITUNES - #FGRAC23287843</Text>
-            <Text></Text>
+            <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
+            <MyText></MyText>
           </View>
           <View style={Style.mainBody}>
             <View style={[Style.headerButtons]}>
-              <Text style={[Style.headerButtom]}>Opened by Thomas</Text>
+              <MyText style={[Style.headerButtom]}>Opened by Thomas</MyText>
             </View>
 
             <View
@@ -110,7 +111,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -118,14 +119,14 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       1
-                    </Text>
+                    </MyText>
                   </View>
 
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -134,7 +135,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -188,20 +189,20 @@ const index = ({navigation}) => {
 
               <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
                     {'DECLINED'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -210,14 +211,14 @@ const index = ({navigation}) => {
 
               <View style={[{marginBottom: 6, flexDirection: 'row', paddingLeft: 18, paddingRight: 18,}]}>
                 <View>
-                  <Text
+                  <MyText
                     style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
                     REASON FOR DECLINE
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                     Card is not activated
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View style={[{flexDirection: 'row', marginLeft: 20}]}>
@@ -314,7 +315,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -322,13 +323,13 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       {2}
-                    </Text>
+                    </MyText>
                   </View>
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -337,7 +338,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -391,29 +392,29 @@ const index = ({navigation}) => {
 
               <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
 
-                  <Text
+                  <MyText
                     style={[
                       Style.smFontSize,
                       ,
                       {color: 'gray', marginTop: 10},
                     ]}>
                     Card code: 12345678946579
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
                     {'IN PROGRESS'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -436,13 +437,13 @@ activeOpacity={0.9}
                     },
                     Style.btnShadow,
                   ]}>
-                  <Text
+                  <MyText
                     style={[{color: 'red', fontSize: 11, alignSelf: 'center'}]}
                     onPress={() => {
                       toggleDelineModal();
                     }}>
                     DECLINE
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -459,12 +460,12 @@ activeOpacity={0.9}
                     },
                     Style.btnShadow,
                   ]}>
-                  <Text
+                  <MyText
                     style={[
                       {color: 'white', fontSize: 11, alignSelf: 'center'},
                     ]}>
                     SWITCH
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -478,7 +479,7 @@ activeOpacity={0.9}
                     },
                     Style.btnShadow,
                   ]}>
-                  <Text
+                  <MyText
                     onPress={() => {
                       toggleModal();
                     }}
@@ -486,7 +487,7 @@ activeOpacity={0.9}
                       {color: 'white', fontSize: 11, alignSelf: 'center'},
                     ]}>
                     ACCEPT
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
               </View>
 
@@ -507,7 +508,7 @@ activeOpacity={0.9}
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -515,13 +516,13 @@ activeOpacity={0.9}
                         paddingTop: 2,
                       }}>
                       {3}
-                    </Text>
+                    </MyText>
                   </View>
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -530,7 +531,7 @@ activeOpacity={0.9}
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -584,22 +585,22 @@ activeOpacity={0.9}
 
               <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[
                       {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
             </View>
@@ -631,7 +632,7 @@ activeOpacity={0.9}
                   justifyContent: 'space-between',
                 }}>
                 <View>
-                  <Text
+                  <MyText
                     style={{
                       textAlign: 'center',
                       fontSize: 18,
@@ -640,14 +641,14 @@ activeOpacity={0.9}
                       color: '#1bb76d',
                     }}>
                     ACCEPT
-                  </Text>
+                  </MyText>
 
                   {/* hr */}
                   <View style={[Style.hr, {marginTop: 0}]}></View>
                 </View>
 
                 <View>
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -655,8 +656,8 @@ activeOpacity={0.9}
                       textAlign: 'center',
                     }}>
                     Are you sure you want to
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -664,7 +665,7 @@ activeOpacity={0.9}
                       textAlign: 'center',
                     }}>
                     accept this transaction
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View>
@@ -673,7 +674,7 @@ activeOpacity={0.9}
                     toggleModal()
                 }}
                   >
-                    <Text
+                    <MyText
                       style={{
                         textAlign: 'center',
                         fontSize: 15,
@@ -681,7 +682,7 @@ activeOpacity={0.9}
                         color: '#1bb76d',
                       }}>
                       YES ACCEPT
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
                   {/* hr */}
                   <View style={[Style.hr, {marginTop: 6}]}></View>
@@ -689,7 +690,7 @@ activeOpacity={0.9}
                   activeOpacity={0.9}
                     style={{marginBottom: 8, marginTop: -4}}
                     onPress={() => toggleModal()}>
-                    <Text
+                    <MyText
                       style={{
                         textAlign: 'center',
                         fontSize: 15,
@@ -697,7 +698,7 @@ activeOpacity={0.9}
                         color: 'black',
                       }}>
                       Cancel
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -731,7 +732,7 @@ activeOpacity={0.9}
                   justifyContent: 'space-between',
                 }}>
                 <View>
-                  <Text
+                  <MyText
                     style={{
                       textAlign: 'center',
                       fontSize: 18,
@@ -740,7 +741,7 @@ activeOpacity={0.9}
                       color: '#ef2a22',
                     }}>
                     DECLINE
-                  </Text>
+                  </MyText>
 
                   {/* hr */}
                   <View
@@ -850,7 +851,7 @@ activeOpacity={0.9}
                             justifyContent: 'center',
                           },
                         ]}>
-                        <Text
+                        <MyText
                           style={{
                             fontSize: 25,
                             fontWeight: '500',
@@ -858,9 +859,9 @@ activeOpacity={0.9}
                             alignSelf: 'center',
                           }}>
                           +
-                        </Text>
+                        </MyText>
                       </TouchableOpacity>
-                      <Text
+                      <MyText
                         style={{
                           color: '#1bb76d',
                           fontSize: 10,
@@ -869,14 +870,14 @@ activeOpacity={0.9}
                           marginTop: 5,
                         }}>
                         Upload Image
-                      </Text>
+                      </MyText>
                     </View>
                   </View>
                 </View>
 
                 <View>
                   <TouchableOpacity activeOpacity={0.9} onPress={()=> toggleDelineModal()}>
-                    <Text
+                    <MyText
                       style={{
                         textAlign: 'center',
                         fontSize: 14,
@@ -884,7 +885,7 @@ activeOpacity={0.9}
                         color: '#ef2a22',
                       }}>
                       YES DECLINE
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
                   {/* hr */}
                   <View style={[Style.hr, {marginTop: 6}]}></View>
@@ -892,7 +893,7 @@ activeOpacity={0.9}
                   activeOpacity={0.9}
                     style={{marginBottom: 8, marginTop: -5}}
                     onPress={() => toggleDelineModal()}>
-                    <Text
+                    <MyText
                       style={{
                         textAlign: 'center',
                         fontSize: 14,
@@ -900,7 +901,7 @@ activeOpacity={0.9}
                         color: 'black',
                       }}>
                       CANCEL
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
                 </View>
               </View>

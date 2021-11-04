@@ -15,6 +15,7 @@ import {
   KeyboardAvoidingView,
   StatusBar,
 } from 'react-native';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import styles from './Style';
 
 const { width, height } = Dimensions.get('screen');
@@ -70,7 +71,7 @@ const WithDrawScreenSix = ({ navigation }) => {
                   style={{ width: 25, height: 20, marginTop: 6 }}
                 />
               </TouchableOpacity>
-              <Text
+              <MyText
                 style={{
                   fontSize: 20,
                   fontWeight: '400',
@@ -78,7 +79,7 @@ const WithDrawScreenSix = ({ navigation }) => {
                   marginLeft: 50,
                 }}>
                 Withdrawls
-              </Text>
+              </MyText>
             </View>
             <View
               style={{
@@ -90,24 +91,24 @@ const WithDrawScreenSix = ({ navigation }) => {
               }}>
               <View style={{ marginRight: 84 }}>
                 <View style={{ marginBottom: 10 }}>
-                  <Text style={{ color: 'white', fontSize: 11 }}>Wallet Balance</Text>
+                  <MyText style={{ color: 'white', fontSize: 11 }}>Wallet Balance</MyText>
                 </View>
                 <View>
-                  <Text style={{ color: 'white', fontSize: 35 }}>N50,000</Text>
+                  <MyText style={{ color: 'white', fontSize: 35 }}>N50,000</MyText>
                 </View>
               </View>
               <View
                 style={{ borderLeftWidth: 0.5, borderColor: 'white', height: 65 }}>
                 <View style={{ marginLeft: 10, marginTop: 4 }}>
-                  <Text style={{ color: 'white', fontSize: 11 }}>Min Withdrawls</Text>
-                  <Text style={{ color: 'white', fontSize: 11 }}>N5,000</Text>
+                  <MyText style={{ color: 'white', fontSize: 11 }}>Min Withdrawls</MyText>
+                  <MyText style={{ color: 'white', fontSize: 11 }}>N5,000</MyText>
                   <View
                     style={{
                       borderTopWidth: 0.5,
                       borderColor: 'white',
                       marginVertical: 4,
                     }}></View>
-                  <Text style={{ color: 'white', fontSize: 11 }}>fee:N50</Text>
+                  <MyText style={{ color: 'white', fontSize: 11 }}>fee:N50</MyText>
                 </View>
               </View>
             </View>
@@ -126,9 +127,9 @@ const WithDrawScreenSix = ({ navigation }) => {
 
             <View style={styles.mainBodyCards}>
               <View style={styles.mainBodyCardContent1}>
-                <Text style={{ fontSize: 13, fontWeight: '400' }}>BankDetails</Text>
+                <MyText style={{ fontSize: 13, fontWeight: '400' }}>BankDetails</MyText>
                 <View style={styles.viewItems}>
-                  <Text style={styles.smBlueText}>Edit</Text>
+                  <MyText style={styles.smBlueText}>Edit</MyText>
 
                   <Image
                     source={require('../../../../Assets/ICONS/arrow=right.png')}
@@ -143,10 +144,10 @@ const WithDrawScreenSix = ({ navigation }) => {
                   width: '80%',
                   marginBottom: 5,
                 }}>
-                <Text style={{ fontSize: 12 }}>Account Name:</Text>
-                <Text style={{ fontSize: 12, marginLeft: 10 }}>
+                <MyText style={{ fontSize: 12 }}>Account Name:</MyText>
+                <MyText style={{ fontSize: 12, marginLeft: 10 }}>
                   FxChangeMarketPlace
-                </Text>
+                </MyText>
               </View>
               <View
                 style={{
@@ -155,8 +156,8 @@ const WithDrawScreenSix = ({ navigation }) => {
                   width: '80%',
                   marginBottom: 5,
                 }}>
-                <Text style={{ fontSize: 12 }}>Account No:</Text>
-                <Text style={{ fontSize: 12, marginLeft: 10 }}>3789393</Text>
+                <MyText style={{ fontSize: 12 }}>Account No:</MyText>
+                <MyText style={{ fontSize: 12, marginLeft: 10 }}>3789393</MyText>
               </View>
               <View
                 style={{
@@ -164,8 +165,8 @@ const WithDrawScreenSix = ({ navigation }) => {
                   justifyContent: 'flex-start',
                   width: '80%',
                 }}>
-                <Text style={{ fontSize: 12 }}>Bank Name:</Text>
-                <Text style={{ fontSize: 12, marginLeft: 10 }}>Access Bank PLC</Text>
+                <MyText style={{ fontSize: 12 }}>Bank Name:</MyText>
+                <MyText style={{ fontSize: 12, marginLeft: 10 }}>Access Bank PLC</MyText>
               </View>
             </View>
 
@@ -181,13 +182,13 @@ const WithDrawScreenSix = ({ navigation }) => {
                 styles.changePasswordButton,
                 { backgroundColor: '#1bb76d', paddingVertical: 13, borderRadius: 3 },
               ]}>
-              <Text style={[{ textAlign: 'center', color: 'white' }]}>
+              <MyText style={[{ textAlign: 'center', color: 'white' }]}>
                 WithDraw(1500)
-              </Text>
+              </MyText>
             </TouchableOpacity>
             <View style={styles.bodyBottom}>
               <View style={[styles.partOneButtons]}>
-                <Text
+                <MyText
                   style={[
                     styles.partOneButton,
                     styles.JoinLeft,
@@ -198,28 +199,28 @@ const WithDrawScreenSix = ({ navigation }) => {
                     activeButton('pendingButton');
                   }}>
                   Pending
-                </Text>
+                </MyText>
 
-                <Text
+                <MyText
                   style={[styles.partOneButton, styles.JoinRight, { ...declined }]}
                   onPress={() => {
                     activeButton('declinedButton');
                   }}>
                   Declined
-                </Text>
+                </MyText>
               </View>
               <View style={styles.lowerCard}>
                 <View style={styles.upperCardPortion}>
 
                   <View>
-                    <Text style={{ fontSize: 16, color: "#6683e3" }}>Fxchange Marketplace</Text>
+                    <MyText style={{ fontSize: 16, color: "#6683e3" }}>Fxchange Marketplace</MyText>
                   </View>
 
                   <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>47247829479</Text>
-                    <Text style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>|</Text>
+                    <MyText style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>47247829479</MyText>
+                    <MyText style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>|</MyText>
 
-                    <Text style={{ color: '#9e9e9e', fontSize: 12 }}>Access Bak PLC</Text>
+                    <MyText style={{ color: '#9e9e9e', fontSize: 12 }}>Access Bak PLC</MyText>
                   </View>
 
 
@@ -229,21 +230,21 @@ const WithDrawScreenSix = ({ navigation }) => {
                 <View style={styles.lowerPortion}>
 
                   <View>
-                    <Text style={[styles.smFontSize, , { color: 'gray' }]}>
+                    <MyText style={[styles.smFontSize, , { color: 'gray' }]}>
                       Amount
-                    </Text>
-                    <Text style={styles.mdFontBlackColor}>
+                    </MyText>
+                    <MyText style={styles.mdFontBlackColor}>
                       N33,000
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View>
-                    <Text style={[styles.smFontSize, { color: 'gray' }]}>
+                    <MyText style={[styles.smFontSize, { color: 'gray' }]}>
                       Dec 10 2021,1:30PM
-                    </Text>
-                    <Text style={[styles.smFontSize, { textAlign: 'right', color: 'red' }]}>
+                    </MyText>
+                    <MyText style={[styles.smFontSize, { textAlign: 'right', color: 'red' }]}>
                       PENDING
-                    </Text>
+                    </MyText>
                   </View>
 
                 </View>

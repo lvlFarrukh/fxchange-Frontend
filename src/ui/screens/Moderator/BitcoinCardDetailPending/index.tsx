@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
@@ -61,9 +62,9 @@ const index = ({navigation}) => {
             paddingHorizontal: '10%',
           }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Text style={{fontSize: 9, color: 'black', marginTop: 25}}>
+            <MyText style={{fontSize: 9, color: 'black', marginTop: 25}}>
               Opened By Thomas
-            </Text>
+            </MyText>
           </View>
 
           <View style={{alignSelf: 'center', marginTop: -22}}>
@@ -75,24 +76,24 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
               }}
             />
-            <Text
+            <MyText
               style={{
                 color: 'black',
                 fontSize: 13,
                 marginTop: 5,
               }}>
               Bitcoin Trade
-            </Text>
+            </MyText>
           </View>
 
           <View style={Style.lowerPortion}>
             <View>
-              <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+              <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                 Amount Sent
-              </Text>
-              <Text style={[Style.mdFontBlackColor, {fontSize: 20}]}>
+              </MyText>
+              <MyText style={[Style.mdFontBlackColor, {fontSize: 20}]}>
                 {'0.2356 BTC ($2300)'}
-              </Text>
+              </MyText>
             </View>
           </View>
           <TouchableOpacity
@@ -108,11 +109,11 @@ const index = ({navigation}) => {
               },
               Style.btnShadow,
             ]}>
-            <Text
+            <MyText
               style={[{color: '#d65d0e', fontSize: 11, alignSelf: 'center'}]}
               onPress={() => {}}>
               PENDING
-            </Text>
+            </MyText>
           </TouchableOpacity>
 
           {/* hr */}
@@ -120,12 +121,12 @@ const index = ({navigation}) => {
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 12}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Wallet Address
-              </Text>
-              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                 23kjhsdfk1kjjkdfskf1kjkhjkkd
-              </Text>
+              </MyText>
             </View>
 
             <Image
@@ -143,12 +144,12 @@ const index = ({navigation}) => {
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Transaction Value in Naira (570/5)
-              </Text>
-              <Text style={[{color: 'black', fontSize: 13, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 13, marginBottom: 2}]}>
                 N1,311,000
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -157,12 +158,12 @@ const index = ({navigation}) => {
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Transaction ID
-              </Text>
-              <Text style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                 ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd asd aa alsdkaasd asdhajkd aksjdna asd
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -171,9 +172,9 @@ const index = ({navigation}) => {
 
           <View style={[Style.lowerPortion, {marginBottom: 6, marginTop: 2}]}>
             <View>
-              <Text style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
+              <MyText style={[{color: 'gray', fontSize: 11, marginBottom: 2}]}>
                 Attachment
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -277,11 +278,11 @@ const index = ({navigation}) => {
                 },
                 Style.btnShadow,
               ]}>
-              <Text
+              <MyText
                 style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}
                 onPress={() => toggleDeclineModal()}>
                 DECLINE
-              </Text>
+              </MyText>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -295,13 +296,13 @@ const index = ({navigation}) => {
                 },
                 Style.btnShadow,
               ]}>
-              <Text
+              <MyText
                 style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}
                 onPress={() => {
                   toggleProcessModal();
                 }}>
                 PROCESS
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
 
@@ -337,7 +338,7 @@ const index = ({navigation}) => {
               justifyContent: 'space-between',
             }}>
             <View>
-              <Text
+              <MyText
                 style={{
                   textAlign: 'center',
                   fontSize: 18,
@@ -346,14 +347,14 @@ const index = ({navigation}) => {
                   color: '#e32b23',
                 }}>
                 ACCEPT
-              </Text>
+              </MyText>
 
               {/* hr */}
               <View style={[Style.hr, {marginTop: 0}]}></View>
             </View>
 
             <View>
-              <Text
+              <MyText
                 style={{
                   color: 'black',
                   fontSize: 15,
@@ -361,8 +362,8 @@ const index = ({navigation}) => {
                   textAlign: 'center',
                 }}>
                 Are you sure you want to
-              </Text>
-              <Text
+              </MyText>
+              <MyText
                 style={{
                   color: 'black',
                   fontSize: 15,
@@ -370,7 +371,7 @@ const index = ({navigation}) => {
                   textAlign: 'center',
                 }}>
                 decline this transaction
-              </Text>
+              </MyText>
             </View>
 
             <View>
@@ -380,7 +381,7 @@ const index = ({navigation}) => {
                   navigation.navigate('BitcoinCardDetailDecline');
                 }}
               >
-                <Text
+                <MyText
                   style={{
                     textAlign: 'center',
                     fontSize: 15,
@@ -388,7 +389,7 @@ const index = ({navigation}) => {
                     color: '#e32b23',
                   }}>
                   YES DECLINE
-                </Text>
+                </MyText>
               </TouchableOpacity>
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
@@ -396,7 +397,7 @@ const index = ({navigation}) => {
               activeOpacity={0.9}
                 style={{marginBottom: 8, marginTop: -4}}
                 onPress={() => toggleDeclineModal()}>
-                <Text
+                <MyText
                   style={{
                     textAlign: 'center',
                     fontSize: 15,
@@ -404,7 +405,7 @@ const index = ({navigation}) => {
                     color: 'black',
                   }}>
                   Cancel
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>
@@ -439,7 +440,7 @@ const index = ({navigation}) => {
               justifyContent: 'space-between',
             }}>
             <View>
-              <Text
+              <MyText
                 style={{
                   textAlign: 'center',
                   fontSize: 18,
@@ -448,7 +449,7 @@ const index = ({navigation}) => {
                   color: '#d65d0e',
                 }}>
                 PROCESS
-              </Text>
+              </MyText>
 
               {/* hr */}
               <View
@@ -459,7 +460,7 @@ const index = ({navigation}) => {
             </View>
 
             <View style={{flex: 1}}>
-              <Text
+              <MyText
                 style={{
                   fontSize: 9,
                   textAlign: 'right',
@@ -468,7 +469,7 @@ const index = ({navigation}) => {
                   marginBottom: -5,
                 }}>
                 Rate: 570/$
-              </Text>
+              </MyText>
               <TextInput
                 style={{
                   backgroundColor: 'white',
@@ -508,7 +509,7 @@ const index = ({navigation}) => {
                 numberOfLines={2}
                 multiline={true}
               />
-              <Text
+              <MyText
                 style={{
                   fontSize: 9,
                   textAlign: 'right',
@@ -517,7 +518,7 @@ const index = ({navigation}) => {
                   marginBottom: -5,
                 }}>
                 Naira Value: N30,000,000
-              </Text>
+              </MyText>
               <View
                 style={{
                   flex: 1,
@@ -576,7 +577,7 @@ const index = ({navigation}) => {
                         justifyContent: 'center',
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         fontSize: 25,
                         fontWeight: '500',
@@ -584,9 +585,9 @@ const index = ({navigation}) => {
                         alignSelf: 'center',
                       }}>
                       +
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
-                  <Text
+                  <MyText
                     style={{
                       color: '#1bb76d',
                       fontSize: 10,
@@ -595,7 +596,7 @@ const index = ({navigation}) => {
                       marginTop: 5,
                     }}>
                     Upload Image
-                  </Text>
+                  </MyText>
                 </View>
               </View>
             </View>
@@ -607,7 +608,7 @@ activeOpacity={0.9}
                   toggleProcessModal();
                   navigation.navigate('BitcoinCardDetailComplete');
                 }}>
-                <Text
+                <MyText
                   style={{
                     textAlign: 'center',
                     fontSize: 14,
@@ -615,7 +616,7 @@ activeOpacity={0.9}
                     color: '#d65d0e',
                   }}>
                   ACCEPT
-                </Text>
+                </MyText>
               </TouchableOpacity>
               {/* hr */}
               <View style={[Style.hr, {marginTop: 6}]}></View>
@@ -625,7 +626,7 @@ activeOpacity={0.9}
                 onPress={() => {
                   toggleProcessModal();
                 }}>
-                <Text
+                <MyText
                   style={{
                     textAlign: 'center',
                     fontSize: 14,
@@ -633,7 +634,7 @@ activeOpacity={0.9}
                     color: 'black',
                   }}>
                   CANCEL
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>

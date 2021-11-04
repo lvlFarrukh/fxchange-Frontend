@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from '../CardDetails/Style';
 
@@ -88,7 +89,7 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 width: '80%',
                 height: 46,
                 margin: 7,
@@ -96,7 +97,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="ITunes"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               multiline={true}
@@ -130,12 +131,13 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
@@ -175,12 +177,13 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
@@ -198,7 +201,7 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
-                borderWidth: 0.5,
+                borderWidth: 1.5,
                 width: '80%',
                 height: 50,
                 margin: 7,
@@ -206,7 +209,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="Card Value"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               multiline={true}
@@ -214,15 +217,15 @@ const index = ({navigation}) => {
           </View>
 
           <View style={{alignSelf: 'center', marginTop: 50}}>
-            <Text
+            <MyText
               style={{
                 textAlign: 'center',
                 fontSize: 11,
                 color: 'black',
               }}>
               Naira Value (330/5)
-            </Text>
-            <Text
+            </MyText>
+            <MyText
               style={{
                 color: 'black',
                 fontSize: 16,
@@ -231,7 +234,7 @@ const index = ({navigation}) => {
                 marginTop: 5,
               }}>
               N33,000
-            </Text>
+            </MyText>
           </View>
 
           <View style={{marginTop: 110}}>
@@ -248,13 +251,13 @@ const index = ({navigation}) => {
                 borderRadius: 4,
                 justifyContent: 'center',
               }}>
-              <Text
+              <MyText
                 style={{
                   color: 'white',
                   textAlign: 'center',
                 }}>
                 SWITCH
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </View>

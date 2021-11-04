@@ -17,6 +17,7 @@ import ModeratePageCard from '../../../components/ModeratePageCard';
 import styles from './Style';
 import {trades} from '../../../../Assets/dumyData';
 import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -87,7 +88,7 @@ const index = ({navigation}) => {
       }}>
       <StatusBar backgroundColor="#1bb76d"/>
       {/* <View style={styles.header}>
-        <Text style={styles.headerHeading}>Trades</Text>
+        <MyText style={styles.headerHeading}>Trades</MyText>
       </View> */}
     <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
     <View style={{
@@ -104,8 +105,8 @@ const index = ({navigation}) => {
                 navigation.navigate('ModeratorScreen')
               }}
               >
-                <Text></Text>
-              <Text style={{color:'white'}}>Trades</Text>
+                <MyText></MyText>
+              <MyText style={{color:'white'}}>Trades</MyText>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -114,8 +115,8 @@ const index = ({navigation}) => {
                 navigation.navigate('')
               }}
               >
-                <Text></Text>
-              <Text style={{color:'white'}}>Logout</Text>
+                <MyText></MyText>
+              <MyText style={{color:'white'}}>Logout</MyText>
               </TouchableOpacity>
 
             </View>
@@ -127,29 +128,29 @@ const index = ({navigation}) => {
 
       <View style={styles.mainBody}>
         <View style={[styles.headerButtons]}>
-          <Text
+          <MyText
             style={[styles.headerButtom, styles.JoinLeft, {...pendingBtn}]}
             onPress={() => {
               activeButton('pending');
             }}>
             Pending
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[styles.headerButtom, {...ongoingBtn}]}
             onPress={() => {
               activeButton('ongoing');
             }}>
             Ongoing
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[styles.headerButtom, styles.JoinRight, {...CompletedBtn}]}
             onPress={() => {
               activeButton('completed');
             }}>
             Completed
-          </Text>
+          </MyText>
         </View>
         <ScrollView>
           {navigateState === 0 &&

@@ -13,6 +13,7 @@ import {
   Button,
   StatusBar,
 } from 'react-native';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
@@ -46,7 +47,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
               />
             </TouchableOpacity>
 
-            <Text
+            <MyText
               style={[
                 {
                   color: '#088b3f',
@@ -57,12 +58,12 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                 },
               ]}>
               Contact Support
-            </Text>
+            </MyText>
             <View></View>
           </View>
-          <Text style={{textAlign: 'center', color: '#adabac', fontSize: 10}}>
+          <MyText style={{textAlign: 'center', color: '#adabac', fontSize: 10}}>
             Please fill the form below we will be happy to assist you
-          </Text>
+          </MyText>
           <View style={styles.textAreaContainer}>
             <TextInput
               style={styles.textArea}
@@ -75,7 +76,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
           </View>
           <View style={styles.sendButtonContainer}>
             <TouchableOpacity style={styles.sendButton}>
-              <Text style={{color: 'white', fontSize: 12, }}>SEND</Text>
+              <MyText style={{color: 'white', fontSize: 12, }}>SEND</MyText>
             </TouchableOpacity>
           </View>
         </View>
@@ -92,9 +93,9 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                   style={{width: 29, height: 29}}
                 />
               </View>
-              <Text style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
+              <MyText style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
                 fxchange
-              </Text>
+              </MyText>
             </TouchableOpacity>
             <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
               <View>
@@ -103,9 +104,9 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                   style={{width: 18, height: 18, marginLeft: 6}}
                 />
               </View>
-              <Text style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
+              <MyText style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
                 www.fxchange.com
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </View>

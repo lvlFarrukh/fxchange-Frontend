@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions, StatusBar } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import MyText from '../components/DefaultTextComponent/MyText';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -25,7 +26,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('CreateAccountScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>CreateAccountScreen</Text>
+                    <MyText style={{ padding: 10 }}>CreateAccountScreen</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -34,7 +35,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('TransactionHistoryScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>TransactionHistoryScreen</Text>
+                    <MyText style={{ padding: 10 }}>TransactionHistoryScreen</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -43,7 +44,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('CardDetails')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>CardDetails</Text>
+                    <MyText style={{ padding: 10 }}>CardDetails</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -52,7 +53,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithdrawalsScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithdrawalsScreen</Text>
+                    <MyText style={{ padding: 10 }}>WithdrawalsScreen</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -60,7 +61,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithdrawalsScreenTwo')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithdrawalsScreenTwo</Text>
+                    <MyText style={{ padding: 10 }}>WithdrawalsScreenTwo</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -69,7 +70,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithdrawalsScreenThree')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithdrawalsScreenThree</Text>
+                    <MyText style={{ padding: 10 }}>WithdrawalsScreenThree</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -78,7 +79,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithDrawScreenFour')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithDrawScreenFour</Text>
+                    <MyText style={{ padding: 10 }}>WithDrawScreenFour</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -87,7 +88,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithdrawalsScreenFive')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithdrawalsScreenFive</Text>
+                    <MyText style={{ padding: 10 }}>WithdrawalsScreenFive</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -96,7 +97,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('WithDrawScreenSix')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>WithDrawScreenSix</Text>
+                    <MyText style={{ padding: 10 }}>WithDrawScreenSix</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -105,7 +106,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('ModeratorScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ModeratorScreen</Text>
+                    <MyText style={{ padding: 10 }}>ModeratorScreen</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -114,7 +115,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('DashBoardScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>DashBoardScreen</Text>
+                    <MyText style={{ padding: 10 }}>DashBoardScreen</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -123,7 +124,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('GiftCardScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>GiftCardScreen</Text>
+                    <MyText style={{ padding: 10 }}>GiftCardScreen</MyText>
                 </TouchableOpacity>
                 <TouchableOpacity
                 activeOpacity={0.9}
@@ -131,7 +132,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('SwitchGiftCard')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ModeratorScreen (Switch Giftcard)</Text>
+                    <MyText style={{ padding: 10 }}>ModeratorScreen (Switch Giftcard)</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -140,7 +141,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('BitcoinCardDetailPending')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailPending)</Text>
+                    <MyText style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailPending)</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -149,7 +150,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('ItunesGiftCardScreen')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ItunesGiftCardScreen</Text>
+                    <MyText style={{ padding: 10 }}>ItunesGiftCardScreen</MyText>
                 </TouchableOpacity>
                 <TouchableOpacity
                 activeOpacity={0.9}
@@ -157,7 +158,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('BitcoinCardDetailDecline')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailDecline)</Text>
+                    <MyText style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailDecline)</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -166,7 +167,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('TradeSuccessfull')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>TradeSuccessfull</Text>
+                    <MyText style={{ padding: 10 }}>TradeSuccessfull</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -175,7 +176,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('TradeSuccesfullScreen2')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>TradeSuccesfullScreen2</Text>
+                    <MyText style={{ padding: 10 }}>TradeSuccesfullScreen2</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -184,7 +185,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('SellBitcoinScreen1')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>SellBitcoinScreen1</Text>
+                    <MyText style={{ padding: 10 }}>SellBitcoinScreen1</MyText>
                 </TouchableOpacity>
                 <TouchableOpacity
                 activeOpacity={0.9}
@@ -192,7 +193,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('BitcoinCardDetailComplete')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</Text>
+                    <MyText style={{ padding: 10 }}>ModeratorScreen (BitcoinCardDetailComplete)</MyText>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -201,7 +202,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('UploadGiftCard')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>dashboard (UploadGiftCard)</Text>
+                    <MyText style={{ padding: 10 }}>dashboard (UploadGiftCard)</MyText>
                 </TouchableOpacity>
 
 
@@ -211,7 +212,7 @@ const Test = ({ navigation }) => {
                         navigation.navigate('SellBitcoin')
                     }}
                 >
-                    <Text style={{ padding: 10 }}>dashboard (SellBitcoin)</Text>
+                    <MyText style={{ padding: 10 }}>dashboard (SellBitcoin)</MyText>
                 </TouchableOpacity>
             </ScrollView>
             </SafeAreaView>

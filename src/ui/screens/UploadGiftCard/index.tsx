@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import {View, Text, Dimensions, Image, TextInput} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
 // import Style from '../CardDetails/Style';
@@ -76,7 +77,7 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 width: '80%',
                 height: 46,
                 margin: 7,
@@ -86,7 +87,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="ITUNES"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               // numberOfLines={2}
               // multiline={true}
@@ -120,12 +121,13 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
@@ -165,12 +167,13 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
+                borderWidth: 1.5,
                 borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
@@ -188,7 +191,7 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
-                borderWidth: 0.5,
+                borderWidth: 1.5,
                 width: '80%',
                 height: 50,
                 margin: 7,
@@ -198,7 +201,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="Card Value"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               // multiline={true}
@@ -210,7 +213,7 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
-                borderWidth: 0.5,
+                borderWidth: 1.5,
                 width: '80%',
                 height: 50,
                 margin: 7,
@@ -220,7 +223,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="Card Code (Optional)"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               // multiline={true}
@@ -291,7 +294,7 @@ const index = ({navigation}) => {
                     justifyContent: 'center',
                   },
                 ]}>
-                <Text
+                <MyText
                   style={{
                     fontSize: 40,
                     fontWeight: '400',
@@ -300,9 +303,9 @@ const index = ({navigation}) => {
                     marginTop: -7
                   }}>
                   +
-                </Text>
+                </MyText>
               </TouchableOpacity>
-              <Text
+              <MyText
                 style={{
                   color: '#1bb76d',
                   fontSize: 10,
@@ -311,7 +314,7 @@ const index = ({navigation}) => {
                   marginTop: 5,
                 }}>
                 Upload Image
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -330,9 +333,9 @@ const index = ({navigation}) => {
                 height: 15,
               }}
             />
-            <Text style={{fontSize: 8, paddingTop: 1}}>
+            <MyText style={{fontSize: 8, paddingTop: 1}}>
               Only One card is allowed per upload
-            </Text>
+            </MyText>
           </View>
 
           <View style={{marginTop: 30}}>
@@ -349,13 +352,13 @@ const index = ({navigation}) => {
                 navigation.navigate('ItunesGiftCardScreen');
               }}
               >
-              <Text
+              <MyText
                 style={{
                   color: 'white',
                   textAlign: 'center',
                 }}>
                 SUBMIT
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </View>

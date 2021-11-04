@@ -21,6 +21,7 @@ import Icons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Header from '../../components/ModeratePageCard/Header';
 import Modal from 'react-native-modal';
+import MyText from '../../components/DefaultTextComponent/MyText';
 const { width, height } = Dimensions.get('screen');
 
 const DATA = [
@@ -68,17 +69,17 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
         justifyContent: 'space-between',
       }}>
       <View>
-        <Text style={[styles.title, textColor]}>{item.title}</Text>
-        <Text style={[styles.date, textColor]}>{item.date}</Text>
+        <MyText style={[styles.title, textColor]}>{item.title}</MyText>
+        <MyText style={[styles.date, textColor]}>{item.date}</MyText>
       </View>
 
       <View>
         <View style={{ flexDirection: 'row' }}>
           <View>
-            <Text style={[styles.amount, item.value === "-" && {color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</Text>
-            <Text style={[styles.totalAmount, textColor]}>
+            <MyText style={[styles.amount, item.value === "-" && {color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</MyText>
+            <MyText style={[styles.totalAmount, textColor]}>
               {item.value === "+" && 'total: ' + item.total}
-            </Text>
+            </MyText>
           </View>
 
           <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
@@ -176,12 +177,12 @@ const index = ({ navigation }) => {
                 borderWidth: 1,
                 borderColor: 'rgba(0,0,0,0.2)',
               }}>
-              <Text
+              <MyText
                 style={{
                   fontSize: 12,
                 }}>
                 Start Date
-              </Text>
+              </MyText>
 
               <Icons name={'ios-calendar-sharp'} size={12} color={'#fa5100'} />
             </TouchableOpacity>
@@ -202,12 +203,12 @@ const index = ({ navigation }) => {
                 borderWidth: 1,
                 borderColor: 'rgba(0,0,0,0.2)',
               }}>
-              <Text
+              <MyText
                 style={{
                   fontSize: 12,
                 }}>
                 End Date
-              </Text>
+              </MyText>
 
               <Icons name={'ios-calendar-sharp'} size={12} color={'#fa5100'}>
                 {' '}
@@ -236,7 +237,7 @@ const index = ({ navigation }) => {
             onConfirm={handleConfirm}
             onCancel={hideDatePicker}
           />
-          <Text></Text>
+          <MyText></MyText>
           <FlatList
             style={{ paddingHorizontal: 18 }}
             data={DATA}
@@ -264,22 +265,22 @@ const index = ({ navigation }) => {
                 marginBottom: -10,
               }}>
               <TouchableOpacity  activeOpacity={0.9} onPress={toggleModal} style={{ marginLeft: -40 }}>
-                <Text style={{ fontSize: 25, fontWeight: '200', color: 'black' }}>x</Text>
+                <MyText style={{ fontSize: 25, fontWeight: '200', color: 'black' }}>x</MyText>
               </TouchableOpacity>
 
-              <Text style={{ fontSize: 22, fontWeight: '500', marginLeft: 20, paddingTop: 2 }}>
+              <MyText style={{ fontSize: 22, fontWeight: '500', marginLeft: 20, paddingTop: 2 }}>
                 Withdrawal
-              </Text>
-              <Text></Text>
+              </MyText>
+              <MyText></MyText>
             </View>
             <View style={styles.hr}></View>
             <View style={{ marginTop: 5, marginBottom: -10 }}>
-              <Text style={{ fontSize: 9 }}>Account Name</Text>
-              <Text style={{ fontSize: 12, fontWeight: '500', marginBottom: 16 }}>JThomas</Text>
-              <Text style={{ fontSize: 9 }}>Account Name</Text>
-              <Text style={{ fontSize: 15, fontWeight: '500' }}>
+              <MyText style={{ fontSize: 9 }}>Account Name</MyText>
+              <MyText style={{ fontSize: 12, fontWeight: '500', marginBottom: 16 }}>JThomas</MyText>
+              <MyText style={{ fontSize: 9 }}>Account Name</MyText>
+              <MyText style={{ fontSize: 15, fontWeight: '500' }}>
                 FxChange Marketplace
-              </Text>
+              </MyText>
             </View>
             <View style={styles.hr}></View>
             <View
@@ -289,14 +290,14 @@ const index = ({ navigation }) => {
                 marginTop: 10,
               }}>
               <View>
-                <Text style={{ fontSize: 9 }}>Account Number</Text>
-                <Text style={{ fontSize: 15, fontWeight: '500' }}>12451321651</Text>
+                <MyText style={{ fontSize: 9 }}>Account Number</MyText>
+                <MyText style={{ fontSize: 15, fontWeight: '500' }}>12451321651</MyText>
               </View>
               <View>
-                <Text style={{ fontSize: 9 }}>Bank Name</Text>
-                <Text style={{ fontSize: 15, fontWeight: '500' }}>
+                <MyText style={{ fontSize: 9 }}>Bank Name</MyText>
+                <MyText style={{ fontSize: 15, fontWeight: '500' }}>
                   Accesable PLC
-                </Text>
+                </MyText>
               </View>
             </View>
 
@@ -309,23 +310,23 @@ const index = ({ navigation }) => {
                 marginTop: 10,
               }}>
               <View>
-                <Text style={{ fontSize: 9 }}>Amount</Text>
-                <Text style={{ color: 'green', fontSize: 15, fontWeight: '500' }}>
+                <MyText style={{ fontSize: 9 }}>Amount</MyText>
+                <MyText style={{ color: 'green', fontSize: 15, fontWeight: '500' }}>
                   N300,000
-                </Text>
+                </MyText>
               </View>
               <View>
-                <Text style={{ fontSize: 9 }}>Date</Text>
-                <Text style={{ fontSize: 10 }}>DEC 10,20201 1:30PM</Text>
+                <MyText style={{ fontSize: 9 }}>Date</MyText>
+                <MyText style={{ fontSize: 10 }}>DEC 10,20201 1:30PM</MyText>
               </View>
             </View>
 
             <View style={{ paddingVertical: 25 }}></View>
             <View style={[styles.hr, { width: width / 2, alignSelf: 'center' }]}></View>
             <TouchableOpacity activeOpacity={0.9} style={{ alignSelf: 'center', marginTop: 10 }}>
-              <Text style={{ color: 'green', fontSize: 20, fontWeight: '500', paddingBottom: 5 }}>
+              <MyText style={{ color: 'green', fontSize: 20, fontWeight: '500', paddingBottom: 5 }}>
                 APPROVED
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </Modal>

@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 
@@ -60,9 +61,9 @@ const ForgetPasswordScreen = ({ navigation }) => {
                             </View>
                         </View>
                         <View style={[styles.whiteCardBg, { height: (height*75)/100 }]}>
-                            <Text style={[styles.Heading]}>FORGET PASSWORD?</Text>
+                            <MyText style={[styles.Heading]}>FORGET PASSWORD?</MyText>
 
-                            <Text style={{ alignSelf: "center", marginTop: -15, fontSize: 12, color: '#333333' }}>A link will be sent to your email address</Text>
+                            <MyText style={{ alignSelf: "center", marginTop: -15, fontSize: 12, color: '#333333' }}>A link will be sent to your email address</MyText>
 
                             <TextInput
                                 style={styles.TextInputStyle}
@@ -79,11 +80,11 @@ const ForgetPasswordScreen = ({ navigation }) => {
                                         navigation.navigate('ModeratorScreen')
                                     }}
                                 >
-                                    <Text
+                                    <MyText
                                         style={styles.GreenButton}
                                     >
                                         SEND
-                                    </Text>
+                                    </MyText>
                                 </TouchableOpacity>
 
                             </View>

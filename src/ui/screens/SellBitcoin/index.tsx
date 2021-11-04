@@ -6,6 +6,7 @@ import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../components/ModeratePageCard/Header';
 import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import MyText from '../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -63,12 +64,12 @@ const index = ({navigation}) => {
               // numberOfLines={2}
               // multiline={true}
             />
-            <Text style={{margin: 10}}>=</Text>
+            <MyText style={{margin: 10}}>=</MyText>
             <View style={{marginTop: -4}}>
-              <Text style={{fontSize: 8.2, color: 'gray'}}>
+              <MyText style={{fontSize: 8.2, color: 'gray'}}>
                 Estimated Rate (570/$)
-              </Text>
-              <Text style={{fontSize: 18}}>N3500,000</Text>
+              </MyText>
+              <MyText style={{fontSize: 18}}>N3500,000</MyText>
             </View>
           </View>
 
@@ -86,12 +87,12 @@ const index = ({navigation}) => {
               }}
             />
             <View style={{marginLeft: 10, marginTop: 5}}>
-              <Text style={[{color: 'gray', fontSize: 9, marginBottom: 5}]}>
+              <MyText style={[{color: 'gray', fontSize: 9, marginBottom: 5}]}>
                 Wallet Address
-              </Text>
-              <Text style={[{color: 'black', fontSize: 11, marginBottom: 2}]}>
+              </MyText>
+              <MyText style={[{color: 'black', fontSize: 11, marginBottom: 2}]}>
                 23kjhsdfk1kjjkdfskf1kjkhjkkdkjl
-              </Text>
+              </MyText>
               <TouchableOpacity
                 style={{
                   marginTop: 20,
@@ -100,7 +101,7 @@ const index = ({navigation}) => {
                   borderWidth: 1.5,
                   borderColor: '#e08445',
                 }}>
-                <Text
+                <MyText
                   style={{
                     color: '#e08445',
                     fontSize: 10,
@@ -109,7 +110,7 @@ const index = ({navigation}) => {
                     paddingTop: 1,
                   }}>
                   Copy Address
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>
@@ -126,7 +127,7 @@ const index = ({navigation}) => {
               }}
             />
 
-            <Text style={{fontSize: 10,}}>Send your bitcoin to the above wallet then click the button below to process your transaction </Text>
+            <MyText style={{fontSize: 10,}}>Send your bitcoin to the above wallet then click the button below to process your transaction </MyText>
           </View>
 
           <View style={{marginTop: 85}}>
@@ -143,10 +144,10 @@ const index = ({navigation}) => {
                   navigation.navigate('SellBitcoinScreen1')
                 }}
               >
-                  <Text style={{
+                  <MyText style={{
                       color: 'white',
                       textAlign: 'center'
-                  }}>CONTINUE</Text>
+                  }}>CONTINUE</MyText>
               </TouchableOpacity>
           </View>
         </View>

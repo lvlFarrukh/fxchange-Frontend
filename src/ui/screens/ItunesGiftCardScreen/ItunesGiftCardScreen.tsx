@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 const {width, height} = Dimensions.get('screen');
@@ -50,10 +51,10 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 source={require('../../../Assets/CARDS/itunes.png')}
                 style={styles.image}
               />
-              <Text style={{marginTop: 8, fontSize: 12}}>
+              <MyText style={{marginTop: 8, fontSize: 12}}>
                 You can upload multiple cards and combine
-              </Text>
-              <Text style={{fontSize: 12}}>them into one trade</Text>
+              </MyText>
+              <MyText style={{fontSize: 12}}>them into one trade</MyText>
             </View>
 
             <View
@@ -97,28 +98,28 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                     padding: 5,
                   }}>
                   <View>
-                    <Text
+                    <MyText
                       style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
                       Itunes
-                    </Text>
-                    <Text style={{color: '#fff', fontSize: 8}}>
+                    </MyText>
+                    <MyText style={{color: '#fff', fontSize: 8}}>
                       $800 (264,000)
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View>
-                    <Text
+                    <MyText
                       style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
                       Physical
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#fff',
                         fontSize: 8,
                         alignSelf: 'flex-end',
                       }}>
                       360/$
-                    </Text>
+                    </MyText>
                   </View>
                 </View>
               </ImageBackground>
@@ -156,28 +157,28 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                     padding: 5,
                   }}>
                   <View>
-                    <Text
+                    <MyText
                       style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
                       Itunes
-                    </Text>
-                    <Text style={{color: '#fff', fontSize: 8}}>
+                    </MyText>
+                    <MyText style={{color: '#fff', fontSize: 8}}>
                       $800 (264,000)
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View>
-                    <Text
+                    <MyText
                       style={{color: '#fff', fontWeight: '400', fontSize: 12}}>
                       Physical
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#fff',
                         fontSize: 8,
                         alignSelf: 'flex-end',
                       }}>
                       360/$
-                    </Text>
+                    </MyText>
                   </View>
                 </View>
               </ImageBackground>
@@ -192,7 +193,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               style={[
                 styles.cardImage,
                 {
-                  backgroundColor: '#0a8a40',
+                  backgroundColor: '#1bb76d',
                   alignItems: 'center',
                   justifyContent: 'center',
                   borderRadius: 5,
@@ -207,17 +208,17 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text
+                <MyText
                   style={{
-                    color: '#0a8a40',
+                    color: '#1bb76d',
                     marginTop: -6,
                     fontSize: 45,
                     fontWeight: '400',
                   }}>
                   +
-                </Text>
+                </MyText>
               </View>
-              <Text style={{color: '#fff', marginTop: 5}}>Upload Card</Text>
+              <MyText style={{color: '#fff', marginTop: 5}}>Upload Card</MyText>
             </TouchableOpacity>
             {/* </View> */}
             <View
@@ -227,22 +228,22 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 borderTopWidth: 1,
                 borderColor: 'rgba(0,0,0,0.2)',
               }}>
-              <Text style={{fontSize: 12, color: '#333'}}>
+              <MyText style={{fontSize: 12, color: '#333'}}>
                 Total Card Value: $1000
-              </Text>
-              <Text style={{fontSize: 12, color: '#333'}}>
+              </MyText>
+              <MyText style={{fontSize: 12, color: '#333'}}>
                 Transaction Value: N330,000
-              </Text>
+              </MyText>
 
               <TouchableOpacity
                 style={{marginTop: 10}}
                 onPress={() => {
                   navigation.navigate('TradeSuccessfull');
                 }}>
-                <Text
+                <MyText
                   style={{
                     alignSelf: 'center',
-                    backgroundColor: '#0a8a40',
+                    backgroundColor: '#1bb76d',
                     width: '100%',
                     textAlign: 'center',
                     padding: 10,
@@ -251,7 +252,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                     fontSize: 13,
                   }}>
                   START TRADE
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>

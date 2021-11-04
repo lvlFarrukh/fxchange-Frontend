@@ -3,6 +3,7 @@ import {View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import timon from '../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg'
 import IMG from '../../../Assets/IMG_3151.jpg'
+import MyText from "../DefaultTextComponent/MyText"
 
 const {width, height} = Dimensions.get('screen');
 
@@ -43,7 +44,7 @@ const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
             </View>
 
             <View>
-                <Text style={{color: 'white', fontSize: 13, textAlign:'center', marginBottom: '4%'}}>PREVIEW</Text>
+                <MyText style={{color: 'white', fontSize: 13, textAlign:'center', marginBottom: '4%'}}>PREVIEW</MyText>
             </View>
             
             <Image 

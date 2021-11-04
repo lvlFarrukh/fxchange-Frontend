@@ -14,6 +14,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import ModeratePageCard from '../../components/ModeratePageCard';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
@@ -37,7 +38,7 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
 <>
       <View style={styles.mainBodyPartOne}>
         <View style={[styles.partOneButtons]}>
-          <Text
+          <MyText
             style={[
               styles.partOneButton,
               styles.JoinLeft,
@@ -48,15 +49,15 @@ const CompletedTrades = ({activeButton, ongoingTrades, completedTrades,navigatio
               activeButton('OngoingTrades');
             }}>
             Ongoing Trades
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[styles.partOneButton, styles.JoinRight, {...completedTrades}]}
             onPress={() => {
               activeButton('CompletedTrades');
             }}>
             Completed Trades
-          </Text>
+          </MyText>
         </View>
         <ScrollView>
           <View style={{marginTop:30}}>

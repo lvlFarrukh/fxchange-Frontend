@@ -11,6 +11,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -34,8 +35,8 @@ const LandingScreen = ({navigation}) => {
             source={require('../../../Assets/whiteLogo.png')}
             style={styles.image}
           />
-          <Text style={styles.text}>A better way to Trade </Text>
-          <Text style={styles.text}>GiftCards</Text>
+          <MyText style={styles.text}>A better way to Trade </MyText>
+          <MyText style={styles.text}>GiftCards</MyText>
         </View>
         <View
           style={{
@@ -64,7 +65,7 @@ const LandingScreen = ({navigation}) => {
               <ImageBackground
                 source={require('../../../Assets/ITunes.png')}
                 style={{height: 50, width: 50}}></ImageBackground>
-              <Text>ITunes</Text>
+              <MyText>ITunes</MyText>
             </View>
             <View
               style={{
@@ -84,7 +85,7 @@ const LandingScreen = ({navigation}) => {
               <ImageBackground
                 source={require('../../../Assets/Gplay.png')}
                 style={{height: 50, width: 50}}></ImageBackground>
-              <Text>Google Play</Text>
+              <MyText>Google Play</MyText>
             </View>
           </View>
 
@@ -100,15 +101,15 @@ const LandingScreen = ({navigation}) => {
               onPress={() => {
                 navigation.navigate('SignInScreen');
               }}>
-              <Text style={{color: 'green', alignSelf: 'center', fontSize: 12}}>Sign In</Text>
+              <MyText style={{color: '#1bb76d', alignSelf: 'center', fontSize: 12}}>Sign In</MyText>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate('CreateAccountScreen'); // TestScreenContaing all screens
               }}>
-              <Text style={{color: 'green', alignSelf: 'center', fontSize: 12}}>
+              <MyText style={{color: '#1bb76d', alignSelf: 'center', fontSize: 12}}>
                 Create Account
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
         </View>

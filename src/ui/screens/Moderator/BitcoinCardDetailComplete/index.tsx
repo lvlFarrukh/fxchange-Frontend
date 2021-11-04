@@ -14,6 +14,7 @@ import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 
 const {width, height} = Dimensions.get('screen');
@@ -60,9 +61,9 @@ const index = ({ navigation }) => {
           }}>
             <ScrollView>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            <Text style={{ fontSize: 9, color: 'black', marginTop: 25 }}>
+            <MyText style={{ fontSize: 9, color: 'black', marginTop: 25 }}>
               Opened By Thomas
-            </Text>
+            </MyText>
           </View>
 
           <View style={{ alignSelf: 'center', marginTop: -22 }}>
@@ -74,14 +75,14 @@ const index = ({ navigation }) => {
                 alignSelf: 'center',
               }}
             />
-            <Text
+            <MyText
               style={{
                 color: 'black',
                 fontSize: 13,
                 marginTop: 5,
               }}>
               Bitcoin Trade
-            </Text>
+            </MyText>
           </View>
 
           <View
@@ -92,12 +93,12 @@ const index = ({ navigation }) => {
             <View>
               <View style={Style.lowerPortion}>
                 <View>
-                  <Text style={[Style.smFontSize, , { color: 'gray' }]}>
+                  <MyText style={[Style.smFontSize, , { color: 'gray' }]}>
                     Amount Sent
-                  </Text>
-                  <Text style={[Style.mdFontBlackColor, { fontSize: 18 }]}>
+                  </MyText>
+                  <MyText style={[Style.mdFontBlackColor, { fontSize: 18 }]}>
                     {'0.2356 BTC ($2300)'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
               <View
@@ -117,13 +118,13 @@ const index = ({ navigation }) => {
                     },
                     Style.btnShadow,
                   ]}>
-                  <Text
+                  <MyText
                     style={[
                       { color: '#1bb76d', fontSize: 11, alignSelf: 'center' },
                     ]}
                     onPress={() => { }}>
                     COMPLETED
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
               </View>
             </View>
@@ -137,10 +138,10 @@ const index = ({ navigation }) => {
                 borderRadius: 8,
                 marginTop: 32,
               }}>
-              <Text style={{ fontSize: 10, color: 'white', marginBottom: 2 }}>
+              <MyText style={{ fontSize: 10, color: 'white', marginBottom: 2 }}>
                 Amount Received
-              </Text>
-              <Text style={{ fontSize: 13, color: 'white' }}>$2000</Text>
+              </MyText>
+              <MyText style={{ fontSize: 13, color: 'white' }}>$2000</MyText>
               <TouchableOpacity
               activeOpacity={0.9}
                 onPress={() => toggleReportModal()}
@@ -156,12 +157,12 @@ const index = ({ navigation }) => {
                   },
                   Style.btnShadow,
                 ]}>
-                <Text
+                <MyText
                   style={[
                     { color: '#1bb76d', fontSize: 10, alignSelf: 'center' },
                   ]}>
                   VIEW REPORT
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>
@@ -171,12 +172,12 @@ const index = ({ navigation }) => {
 
           <View style={[Style.lowerPortion, { marginBottom: 6, marginTop: 12 }]}>
             <View>
-              <Text style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
+              <MyText style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
                 Wallet Address
-              </Text>
-              <Text style={[{ color: 'black', fontSize: 10, marginBottom: 2 }]}>
+              </MyText>
+              <MyText style={[{ color: 'black', fontSize: 10, marginBottom: 2 }]}>
                 23kjhsdfk1kjjkdfskf1kjkhjkkd
-              </Text>
+              </MyText>
             </View>
 
             <Image
@@ -194,12 +195,12 @@ const index = ({ navigation }) => {
 
           <View style={[Style.lowerPortion, { marginBottom: 6, marginTop: 2 }]}>
             <View>
-              <Text style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
+              <MyText style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
                 Transaction Value in Naira (570/5)
-              </Text>
-              <Text style={[{ color: 'black', fontSize: 13, marginBottom: 2 }]}>
+              </MyText>
+              <MyText style={[{ color: 'black', fontSize: 13, marginBottom: 2 }]}>
                 N1,311,000
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -208,13 +209,13 @@ const index = ({ navigation }) => {
 
           <View style={[Style.lowerPortion, { marginBottom: 6, marginTop: 2 }]}>
             <View>
-              <Text style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
+              <MyText style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
                 Transaction ID
-              </Text>
-              <Text style={[{ color: 'black', fontSize: 10, marginBottom: 2 }]}>
+              </MyText>
+              <MyText style={[{ color: 'black', fontSize: 10, marginBottom: 2 }]}>
                 ada asdlalskd aslkdma aksdkad aksjda askldal asdkaklsd
                 askdakldja alsdkaasd asdhajkd aksjdna asd
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -223,9 +224,9 @@ const index = ({ navigation }) => {
 
           <View style={[Style.lowerPortion, { marginBottom: 6, marginTop: 2 }]}>
             <View>
-              <Text style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
+              <MyText style={[{ color: 'gray', fontSize: 11, marginBottom: 2 }]}>
                 Attachment
-              </Text>
+              </MyText>
             </View>
           </View>
 
@@ -339,7 +340,7 @@ const index = ({ navigation }) => {
               justifyContent: 'space-between',
             }}>
             <View>
-              <Text
+              <MyText
                 style={{
                   textAlign: 'center',
                   fontSize: 18,
@@ -348,7 +349,7 @@ const index = ({ navigation }) => {
                   color: '#1bb76d',
                 }}>
                 REPORT
-              </Text>
+              </MyText>
 
               {/* hr */}
               <View
@@ -362,17 +363,17 @@ const index = ({ navigation }) => {
               <View style={{ marginLeft: 34 }}>
                 <View style={[Style.lowerPortion, { marginTop: 8 }]}>
                   <View>
-                    <Text
+                    <MyText
                       style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
                       Amount Received
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={[
                         Style.mdFontBlackColor,
                         { fontSize: 15, fontWeight: '500' },
                       ]}>
                       {'$2000 (0.00023 BTC)'}
-                    </Text>
+                    </MyText>
                   </View>
                 </View>
 
@@ -383,31 +384,31 @@ const index = ({ navigation }) => {
                 <View
                   style={[Style.lowerPortion, { marginTop: 8, marginRight: 40 }]}>
                   <View>
-                    <Text
+                    <MyText
                       style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
                       Naira Value
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={[
                         Style.mdFontBlackColor,
                         { fontSize: 15, fontWeight: '400' },
                       ]}>
                       {'N330,000'}
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View>
-                    <Text
+                    <MyText
                       style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
                       Rate
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={[
                         Style.mdFontBlackColor,
                         { fontSize: 15, fontWeight: '400' },
                       ]}>
                       {'570/$'}
-                    </Text>
+                    </MyText>
                   </View>
                 </View>
 
@@ -519,7 +520,7 @@ const index = ({ navigation }) => {
               activeOpacity={0.9}
                 style={{ marginBottom: 8, marginTop: -5 }}
                 onPress={toggleReportModal}>
-                <Text
+                <MyText
                   style={{
                     textAlign: 'center',
                     fontSize: 14,
@@ -527,7 +528,7 @@ const index = ({ navigation }) => {
                     color: 'black',
                   }}>
                   CLOSE
-                </Text>
+                </MyText>
               </TouchableOpacity>
             </View>
           </View>

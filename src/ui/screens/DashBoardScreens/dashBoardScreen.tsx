@@ -15,6 +15,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Navbar from '../../components/Navbars/Navbar';
 import Slider from 'react-native-hook-image-slider';
+import MyText from '../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('window');
 
@@ -33,77 +34,41 @@ const DashBoardScreen = ({navigation}) => {
             <View
               style={{
                 flexDirection: 'row',
-                justifyContent: 'space-around',
-                backgroundColor: '#1bb76d',
-                paddingVertical: 6,
-              }}>
-              <TouchableOpacity onPress={() => {}}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Home</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('Trades');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Trades</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('WithdrawalsScreenThree');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>Rates</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('WithdrawalsScreen');
-                }}>
-                <Text></Text>
-                <Text style={{color: 'white'}}>More</Text>
-              </TouchableOpacity>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
                 justifyContent: 'flex-end',
                 marginRight: 10,
                 marginTop: 5,
               }}>
-              <Text style={{color: '#fff', fontSize: 12.5, marginRight: 10}}>
+              <MyText style={{color: '#fff', fontSize: 12.5, marginRight: 10}}>
                 Hi, Amanda
-              </Text>
+              </MyText>
             </View>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontSize: 10, color: '#fff', marginBottom: 5}}>
+              <MyText style={{fontSize: 10, color: '#fff', marginBottom: 5}}>
                 Wallet Balance
-              </Text>
-              <Text style={{fontSize: 30, color: '#fff'}}>N50,000</Text>
-              <Text></Text>
+              </MyText>
+              <MyText style={{fontSize: 30, color: '#fff'}}>N50,000</MyText>
+              <MyText></MyText>
               <View style={{flexDirection: 'row'}}>
                 <TouchableOpacity
                 activeOpacity={0.9}
                   onPress={() => {
                     navigation.navigate('WithDrawScreenSix');
                   }}>
-                  <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                  <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     WITHDRAW FUNDS
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
-                <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                   {'     '}|{'       '}
-                </Text>
+                </MyText>
                 <TouchableOpacity
                 activeOpacity={0.9}
                   onPress={() => {
                     navigation.navigate('TransactionHistoryScreen');
                   }}>
-                  <Text style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
+                  <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                     TRANSECTION HISTORY
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
               </View>
             </View>
@@ -133,9 +98,9 @@ const DashBoardScreen = ({navigation}) => {
                   source={require('../../../Assets/ICONS/giftcard.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 17, marginLeft: 5}}>
+                <MyText style={{color: '#fff', fontSize: 17, marginLeft: 5}}>
                   Sell Giftcard
-                </Text>
+                </MyText>
               </View>
               <Icon
                 name={'arrow-forward-outline'}
@@ -167,9 +132,9 @@ const DashBoardScreen = ({navigation}) => {
                   source={require('../../../Assets/ICONS/Bitcoin.png')}
                   style={styles.image}
                 />
-                <Text style={{color: '#fff', fontSize: 17, marginLeft: 5}}>
+                <MyText style={{color: '#fff', fontSize: 17, marginLeft: 5}}>
                   Sell Bitcoin
-                </Text>
+                </MyText>
               </View>
               <Icon
                 name={'arrow-forward-outline'}
@@ -193,7 +158,7 @@ const DashBoardScreen = ({navigation}) => {
                 elevation: 8,
                 paddingVertical: 5,
               }}>
-              <Text
+              <MyText
                 style={{
                   marginVertical: 8,
                   fontWeight: '400',
@@ -201,44 +166,44 @@ const DashBoardScreen = ({navigation}) => {
                   color: '#343434',
                 }}>
                 Top Rates
-              </Text>
+              </MyText>
               <View
                 style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <View>
-                  <Text
+                  <MyText
                     style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     Itunes
-                  </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  </MyText>
+                  <MyText style={{fontSize: 9, color: '#595758'}}>N33,000</MyText>
                 </View>
 
                 <View>
-                  <Text
+                  <MyText
                     style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
-                  </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  </MyText>
+                  <MyText style={{fontSize: 9, color: '#595758'}}>N33,000</MyText>
                 </View>
 
                 <View>
-                  <Text
+                  <MyText
                     style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
-                  </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  </MyText>
+                  <MyText style={{fontSize: 9, color: '#595758'}}>N33,000</MyText>
                 </View>
 
                 <View>
-                  <Text
+                  <MyText
                     style={{fontWeight: '400', color: '#343434', fontSize: 13}}>
                     ITunes
-                  </Text>
-                  <Text style={{fontSize: 9, color: '#595758'}}>N33,000</Text>
+                  </MyText>
+                  <MyText style={{fontSize: 9, color: '#595758'}}>N33,000</MyText>
                 </View>
               </View>
             </View>
 
-            <Text
+            <MyText
               style={{
                 marginLeft: 50,
                 marginTop: 30,
@@ -247,7 +212,7 @@ const DashBoardScreen = ({navigation}) => {
                 color: '#343434',
               }}>
               News & Updates
-            </Text>
+            </MyText>
 
             <View
               style={{
@@ -286,11 +251,11 @@ const styles = StyleSheet.create({
     width: 35,
   },
   header: {
-    height: 250,
+    height: 210,
     backgroundColor: '#1bb76d',
   },
   body: {
-    height: height - 250,
+    height: height - 210,
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,

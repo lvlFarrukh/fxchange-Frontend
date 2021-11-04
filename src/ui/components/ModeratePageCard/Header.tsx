@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, View, Text, ImageBackground, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import MyText from '../DefaultTextComponent/MyText';
 
 
 const { width, height } = Dimensions.get('screen')
@@ -27,9 +28,9 @@ const Header : React.FC<Props> = (props) => {
                 <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />
             </TouchableOpacity>
 
-            <Text style={[{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -40,marginTop:-5} , TextColor]}>
+            <MyText style={[{color:"#fafafa",fontSize:18  ,alignSelf:'center', marginLeft: -40,marginTop:-5} , TextColor]}>
             {Heading}
-            </Text>
+            </MyText>
 
             <View>
 
