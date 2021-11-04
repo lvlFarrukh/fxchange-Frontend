@@ -42,8 +42,8 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
-                borderWidth: 0.8,
+                borderColor: '#F1F1F1',
+                borderWidth: 1,
                 width: '80%',
                 height: 46,
                 margin: 7,
@@ -51,7 +51,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="ITunes"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               multiline={true}
@@ -85,13 +85,14 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderWidth: 1,
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -130,13 +131,14 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
+                color:'#333333'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15}}
               buttonStyle={{
                 backgroundColor: 'white',
-                borderWidth: 0.8,
-                borderColor: 'lightgray',
+                borderWidth: 1,
+                borderColor: '#F1F1F1',
                 borderRadius: 4,
                 height: 46,
                 width: '80%',
@@ -152,8 +154,8 @@ const index = ({navigation}) => {
                 backgroundColor: 'white',
                 alignSelf: 'center',
                 borderRadius: 4,
-                borderColor: 'lightgray',
-                borderWidth: 0.5,
+                borderColor: '#F1F1F1',
+                borderWidth: 1,
                 width: '80%',
                 height: 50,
                 margin: 7,
@@ -161,7 +163,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="Card Value"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               numberOfLines={2}
               multiline={true}

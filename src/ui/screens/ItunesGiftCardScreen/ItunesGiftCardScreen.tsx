@@ -106,7 +106,7 @@ const ItunesGiftCardScreen = ({ navigation }) => {
                         <Text style={{ color: '#fff', marginTop: 5 }}>Upload Card</Text>
                     </TouchableOpacity>
                     {/* </View> */}
-                    <View style={{ marginTop: 'auto', paddingTop: 10, borderTopWidth: 1, borderColor: 'rgba(0,0,0,0.2)' }}>
+                    <View style={{ marginTop: 'auto', paddingTop: 10, borderTopWidth: 1, borderColor: '#F1F1F1' }}>
                         <Text>Total Card Value: $1000</Text>
                         <Text>Transaction Value: N330,000</Text>
 
@@ -149,8 +149,8 @@ const styles = StyleSheet.create({
     bodyHeader: {
         alignItems: 'center',
         width: '100%',
-        borderBottomWidth: 1,
-        borderColor: 'rgba(0,0,0,0.2)',
+        borderBottomWidth: 1.2,
+        borderColor: '#F1F1F1',
         paddingBottom: 15
     },
     cardImage: {

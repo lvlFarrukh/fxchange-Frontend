@@ -27,7 +27,7 @@ const TradeSuccessfull = ({ navigation }) => {
                         </View>
                         <View style={{ paddingHorizontal: 30 }}>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12 }}>CARD</Text>
                                     <Text style={{ fontWeight: '500' }}>Itunes</Text>
@@ -38,7 +38,7 @@ const TradeSuccessfull = ({ navigation }) => {
                                 </View>
                             </View>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12 }}>CARD VALUE</Text>
                                     <Text style={{ fontWeight: '500' }}>$1000</Text>
@@ -49,7 +49,7 @@ const TradeSuccessfull = ({ navigation }) => {
                                 </View>
                             </View>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12 }}>ESTIMATED TIME</Text>
                                     <Text style={{ fontWeight: '500' }}>20-35mins</Text>

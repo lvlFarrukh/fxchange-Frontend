@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     hr: {
-        borderTopWidth: 1,
-        borderColor:'gray',
+        borderTopWidth: 1.3,
+        borderColor:'#F1F1F1',
         marginTop: 10,
         marginBottom: 8,
     },

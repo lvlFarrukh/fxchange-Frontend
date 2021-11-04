@@ -57,7 +57,7 @@ const index = ({navigation}) => {
               }}
               underlineColorAndroid="transparent"
               placeholder="Enter amount in USD"
-              placeholderTextColor="#676767"
+              placeholderTextColor="#333333"
               textAlign={'left'}
               // numberOfLines={2}
               // multiline={true}

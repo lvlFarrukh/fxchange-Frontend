@@ -18,7 +18,7 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                 </View>
 
                 <View style={[styles.whiteCardBg, { height: '92%' }]}>
-                    <View style={{ flexDirection: "row", justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingBottom: 20, marginTop: 10 }}>
+                    <View style={{ flexDirection: "row", justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingBottom: 20, marginTop: 10 }}>
                         <View>
                             <Text style={{ fontSize: 10 }}>
                                 Wallet Addresss
@@ -46,7 +46,8 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                         <TextInput
                             style={styles.TextInputStyle}
                             placeholder={'Amount Sent in USD'}
-                            placeholderTextColor={'#949494'}
+                            placeholderTextColor={'#333333'}
+                            
                         >
                         </TextInput>
 
@@ -56,7 +57,7 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                         <TextInput
                             style={styles.TextInputStyle}
                             placeholder={'Amount Sent in USD'}
-                            placeholderTextColor={'#949494'}
+                            placeholderTextColor={'#333333'}
                         >
                         </TextInput>
                     </View>
@@ -66,7 +67,7 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                     <TextInput
                         style={[styles.TextInputStyle , {marginTop:10 , width:'100%'}]}
                         placeholder={'Amount Sent in USD'}
-                        placeholderTextColor={'#949494'}
+                        placeholderTextColor={'#333333'}
                     >
                     </TextInput>
 
@@ -188,10 +189,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderWidth: 1,
         borderRadius: 5,
-        borderColor: 'rgba(0,0,0,0.2)',
+        borderColor: '#F1F1F1',
         width:'48%',
         paddingLeft: 10,
-        color: '#000'
+        color: '#0000'
 
     },
 })

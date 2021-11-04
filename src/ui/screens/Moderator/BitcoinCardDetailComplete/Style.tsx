@@ -74,8 +74,8 @@ const Style = StyleSheet.create({
     height: 32,
   },
   hr: {
-    borderWidth: 0.2,
-    borderColor: 'lightgray',
+    borderWidth: 1,
+    borderColor: '#F1F1F1',
     marginTop: 10,
     marginBottom: 10,
   },

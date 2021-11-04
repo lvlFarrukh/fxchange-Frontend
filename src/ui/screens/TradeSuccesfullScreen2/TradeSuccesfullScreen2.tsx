@@ -27,7 +27,7 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                         </View>
                         <View style={{ paddingHorizontal: 30 }}>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12}}>WALLET</Text>
                                     <Text style={{  fontSize: 12 }}>1BnG5fDHDVF6gCDHKFKDBXCg6cfb</Text>
@@ -36,7 +36,7 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                                 </View>
                             </View>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12 }}>AMOUNT SENT</Text>
                                     <Text style={{ fontWeight: '500' }}>$1000(0.023)</Text>
@@ -47,7 +47,7 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                                 </View>
                             </View>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: 'rgba(0,0,0,0.2)', paddingVertical: 20 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1.2, borderColor: '#F1F1F1', paddingVertical: 20 }}>
                                 <View>
                                     <Text style={{ fontSize: 12 }}>ESTIMATED TIME</Text>
                                     <Text style={{ fontWeight: '500' }}>20-35mins</Text>
