@@ -19,67 +19,43 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../components/ModeratePageCard/Header';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 
 const SignInScreen = ({navigation}) => {
-  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
-
-  useEffect(() => {
-    const keyboardDidShowListener = Keyboard.addListener(
-      'keyboardDidShow',
-      () => {
-        setKeyboardVisible(true); // or some other action
-      },
-    );
-    const keyboardDidHideListener = Keyboard.addListener(
-      'keyboardDidHide',
-      () => {
-        setKeyboardVisible(false); // or some other action
-      },
-    );
-
-    return () => {
-      keyboardDidHideListener.remove();
-      keyboardDidShowListener.remove();
-    };
-  }, []);
 
   return (
-    <KeyboardAvoidingView style={{flex: 1}}>
-      <StatusBar translucent backgroundColor="transparent" />
-      <ScrollView contentContainerStyle={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'rgb(10, 138, 64)'}}>
-          <SafeAreaView style={{flex: 1, height: height}}>
-            <View style={{height: isKeyboardVisible ? '10%' : '25%'}}>
+    <View style={{flex: 1 , height:height,width:width, backgroundColor: '#fafafa',}}>
+      <ScrollView>
+          <SafeAreaView style={{flex: 1, height: height, backgroundColor: '#1bb76d'}}>
+            <View style={{flex: 25}}>
               <Header navigation={navigation} />
               <View
                 style={{
                   alignSelf: 'center',
-                  display: isKeyboardVisible ? 'none' : 'flex',
                 }}>
                 <Image
                   source={require('../../../Assets/whiteLogo.png')}
-                  style={styles(isKeyboardVisible).image}
+                  style={styles().image}
                 />
               </View>
             </View>
             <View
               style={[
-                styles(isKeyboardVisible).whiteCardBg,
-                {height: isKeyboardVisible ? '90%' : '75%'},
+                styles().whiteCardBg,
+                {flex: 75},
               ]}>
-              <Text style={[styles(isKeyboardVisible).Heading]}>
+              <Text style={[styles().Heading]}>
                 LOGIN TO YOUR ACCOUNT
               </Text>
 
               <TextInput
-                style={styles(isKeyboardVisible).TextInputStyle}
+                style={styles().TextInputStyle}
                 placeholder={'Email or Phone'}
                 placeholderTextColor={'black'}> 
             </TextInput>
 
               <TextInput
-                style={styles(isKeyboardVisible).TextInputStyle}
+                style={styles().TextInputStyle}
                 placeholder={'Password'}
                 placeholderTextColor={'black'}
                 //onChangeText={text => setTitle(text)}
@@ -92,12 +68,12 @@ const SignInScreen = ({navigation}) => {
                   onPress={() => {
                     navigation.navigate('DashBoardScreen');
                   }}>
-                  <Text style={styles(isKeyboardVisible).GreenButton}>
+                  <Text style={styles().GreenButton}>
                     LOGIN
                   </Text>
                 </TouchableOpacity>
 
-                <View style={styles(isKeyboardVisible).BottomRowContainer}>
+                <View style={styles().BottomRowContainer}>
                   <View>
                     <Text style={{fontSize: 10}}>
                       Don't have an account?
@@ -120,7 +96,7 @@ const SignInScreen = ({navigation}) => {
                 </View>
               </View>
 
-              <View style={styles(isKeyboardVisible).lastViewStyle}>
+              <View style={styles().lastViewStyle}>
                 <Text style={{fontSize: 12}}>
                   Having any troubles?
                   <TouchableNativeFeedback
@@ -133,13 +109,12 @@ const SignInScreen = ({navigation}) => {
               </View>
             </View>
           </SafeAreaView>
-        </View>
       </ScrollView>
-    </KeyboardAvoidingView>
+    </View>
   );
 };
 
-const styles = isKeyboardVisible =>
+const styles = () =>
   StyleSheet.create({
     image: {
       width: 150,
@@ -167,7 +142,7 @@ const styles = isKeyboardVisible =>
     },
     TextInputStyle: {
         height: 46,
-      backgroundColor: '#Fafafa',
+      backgroundColor: '#fafafa',
       borderWidth: 1,
       borderRadius: 3,
       paddingLeft: 10,
@@ -178,11 +153,11 @@ const styles = isKeyboardVisible =>
     },
     GreenButton: {
       // alignSelf:'center',
-      // backgroundColor:'#0a8a40',
+      // backgroundColor:'#1bb76d',
       // width:'100%'
       height: 36,
       borderWidth: 1,
-      borderColor: '#0a8a40',
+      borderColor: '#1bb76d',
       borderRadius: 3,
       paddingHorizontal: 10,
     //   paddingVertical: 15,
@@ -190,7 +165,7 @@ const styles = isKeyboardVisible =>
       paddingTop: 10,
     //   fontWeight: '700',
       color: '#fafafa',
-      backgroundColor: '#0a8a40',
+      backgroundColor: '#1bb76d',
       alignSelf: 'center',
       textAlign: 'center',
       width: '100%',
@@ -208,8 +183,8 @@ const styles = isKeyboardVisible =>
       marginTop: 8,
     },
     lastViewStyle: {
-      marginTop: isKeyboardVisible ? 20 : 50,
-      marginBottom: isKeyboardVisible ? 0 : 10,
+      marginTop: 50,
+      marginBottom: 10,
       alignSelf: 'center',
     }
   });

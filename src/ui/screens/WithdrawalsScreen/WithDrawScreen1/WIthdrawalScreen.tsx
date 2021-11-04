@@ -28,7 +28,7 @@ const WithdrawalsScreen = ({ navigation }) => {
         height: height,
         width: width,
         flex: 1,
-        backgroundColor: '#0a8a40'
+        backgroundColor: '#1bb76d'
       }}>
       <ScrollView
         contentContainerStyle={{ flex: 1 }}
@@ -42,33 +42,42 @@ const WithdrawalsScreen = ({ navigation }) => {
           {/* style={styles.mainBodyContent} */}
           <View>
           <View style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
-            {/* <View style={styles.mainBodyCards}> */}
-            <View style={styles.mainBodyCardContent}>
-              <Text
-                style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
-                My Account
-              </Text>
-              <Icon
-              name={'arrow-forward-ios'}
-              size={16}
-              color={'#000000'}
-              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
-            </View>
-            {/* </View> */}
-            {/* <View style={styles.mainBodyCards}> */}
-            <View style={styles.mainBodyCardContent}>
-              <Text
-                style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
-                Change Password
-              </Text>
-              <Icon
-              name={'arrow-forward-ios'}
-              size={16}
-              color={'#000000'}
-              style={{ marginTop: 10, marginLeft: 10 }}></Icon>
-            </View>
-            {/* </View> */}
+              <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
+            <TouchableOpacity 
+              onPress={() => {
+                  navigation.navigate('WithdrawalsScreenFive')
+              }}
+            >
+              <View style={styles.mainBodyCardContent}>
+                <Text
+                  style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
+                  My Account
+                </Text>
+                <Icon
+                name={'arrow-forward-ios'}
+                size={16}
+                color={'#000000'}
+                style={{ marginTop: 10, marginLeft: 10 }}></Icon>
+              </View>
+            </TouchableOpacity>
+            
+            <TouchableOpacity 
+              onPress={() => {
+                navigation.navigate('WithDrawScreenFour')
+              }}  
+            >
+              <View style={styles.mainBodyCardContent}>
+                <Text
+                  style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
+                  Change Password
+                </Text>
+                <Icon
+                name={'arrow-forward-ios'}
+                size={16}
+                color={'#000000'}
+                style={{ marginTop: 10, marginLeft: 10 }}></Icon>
+              </View>
+            </TouchableOpacity>
           </View>
           <View
             style={[

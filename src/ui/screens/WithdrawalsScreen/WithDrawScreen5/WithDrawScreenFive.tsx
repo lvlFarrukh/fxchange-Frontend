@@ -73,24 +73,24 @@ const WithDrawScreenFive = ({navigation}) => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={styles.headerHeadingContainer}>
-            <Text style={styles.headerHeading2}>H</Text>
-          </View>
+         
           <View style={styles.mainBody}>
+            <View style={styles.headerHeadingContainer}>
+              <Text style={styles.headerHeading2}>H</Text>
+            </View>
             <View style={styles.mainBodyContent}>
-              <Text style={{fontSize: 14}}>PROFILe</Text>
+              <Text style={{fontSize: 10, color: '#8e8c8d'}}>PROFILE</Text>
               <TextInput
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
-
+                  height: 45,
                   marginVertical: 13,
 
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -104,14 +104,13 @@ const WithDrawScreenFive = ({navigation}) => {
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
+                  height: 45,
+                  marginVertical: 13,
 
-                  marginBottom: 13,
-
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -125,14 +124,13 @@ const WithDrawScreenFive = ({navigation}) => {
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
+                  height: 45,
+                  marginVertical: 13,
 
-                  marginBottom: 13,
-
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -149,19 +147,18 @@ const WithDrawScreenFive = ({navigation}) => {
               </View> */}
             </View>
             <View style={styles.mainBodyContent}>
-              <Text style={{fontSize: 14}}>BANK DETAILS</Text>
+              <Text style={{fontSize: 10, color: '#8e8c8d'}}>BANK DETAILS</Text>
               <TextInput
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
-
+                  height: 45,
                   marginVertical: 13,
 
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -171,18 +168,17 @@ const WithDrawScreenFive = ({navigation}) => {
                 numberOfLines={2}
                 multiline={true}
               />
-              <TextInput
+              {/* <TextInput
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
+                  height: 45,
+                  marginVertical: 13,
 
-                  marginBottom: 13,
-
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -196,14 +192,13 @@ const WithDrawScreenFive = ({navigation}) => {
                 style={{
                   backgroundColor: 'white',
                   // textAlignVertical: 'top',
-                  borderRadius: 4,
+                  borderRadius: 3,
                   borderColor: 'black',
                   borderWidth: 0.3,
                   width: '92%',
+                  height: 45,
+                  marginVertical: 13,
 
-                  marginBottom: 13,
-
-                  // paddingTop:20,
                   paddingLeft: 10,
                 }}
                 underlineColorAndroid="transparent"
@@ -212,10 +207,10 @@ const WithDrawScreenFive = ({navigation}) => {
                 textAlign={'left'}
                 numberOfLines={2}
                 multiline={true}
-              />
+              /> */}
               <View style={styles.updatePassword}>
                 <TouchableOpacity style={styles.updatePasswordButton}>
-                  <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
+                  <Text style={{color: 'white', fontSize: 13}}>UPDATE</Text>
                 </TouchableOpacity>
               </View>
             </View>

@@ -43,7 +43,7 @@ const GiftCardScreen = ({ navigation }) => {
         <View style={{ height: height, width: width, flex: 1 }}>
              <StatusBar translucent backgroundColor='transparent' />
             {/* <StatusBar hidden /> */}
-            <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: 'rgb(10, 138, 64)' }}>
+            <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: '#1bb76d' }}>
                 <View style={{ height: '10%' }}>
                     <Header navigation={navigation} style={{ marginTop: 5 }} Heading={headerText} />
                 </View>
@@ -149,17 +149,17 @@ const styles = () => StyleSheet.create({
     },
     GreenButton: {
         // alignSelf:'center',
-        // backgroundColor:'#0a8a40',
+        // backgroundColor:'#1bb76d',
         // width:'100%'
         borderWidth: 1,
-        borderColor: '#0a8a40',
+        borderColor: '#1bb76d',
         borderRadius: 5,
         paddingHorizontal: 10,
         paddingVertical: 15,
         fontSize: 15,
         fontWeight: '700',
         color: '#fafafa',
-        backgroundColor: '#0a8a40',
+        backgroundColor: '#1bb76d',
         alignSelf: 'center',
         textAlign: 'center',
         width: '100%',

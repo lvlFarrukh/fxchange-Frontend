@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   headerHeading: {
     color: 'white',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '39%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '3%',
     alignSelf: 'center',
   },

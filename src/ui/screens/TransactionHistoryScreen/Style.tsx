@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
   },
   headerHeading: {
     color: 'white',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '39%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '3%',
     alignSelf: 'center',
   },
@@ -65,23 +65,26 @@ const styles = StyleSheet.create({
     //backgroundColor:'pink'
   },
   title: {
-    fontSize: 18,
-    fontWeight:"500"
+    fontSize: 15,
+    fontWeight:"500",
+    color: '#343434'
   },
   date: {
     fontSize: 10,
   },
   totalAmount: {
     fontSize: 10,
+    textAlign: 'right'
   },
   amount: {
-    fontSize: 18,
-    color: 'rgb(10, 138, 64)',
+    fontSize: 16,
+    color: '#1bb76d',
+    textAlign: 'right'
   },
   hr: {
     borderBottomWidth: 1,
     borderColor: '#f1f1f1',
-    marginTop: 20,
+    marginTop: 10,
     //marginBottom: 8,
   },
 });

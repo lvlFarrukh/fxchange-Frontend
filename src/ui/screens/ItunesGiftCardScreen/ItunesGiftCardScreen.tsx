@@ -34,7 +34,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
           flex: 1,
           height: height,
           width: width,
-          backgroundColor: 'rgb(10, 138, 64)',
+          backgroundColor: '#1bb76d',
         }}>
         <View style={{height: 50}}>
           <Header
@@ -157,7 +157,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
             style={[
               styles.cardImage,
               {
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: 5,
@@ -174,7 +174,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               }}>
               <Text
                 style={{
-                  color: '#0a8a40',
+                  color: '#1bb76d',
                   marginTop: -6,
                   fontSize: 45,
                   fontWeight: '400',
@@ -203,7 +203,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               <Text
                 style={{
                   alignSelf: 'center',
-                  backgroundColor: '#0a8a40',
+                  backgroundColor: '#1bb76d',
                   width: '100%',
                   textAlign: 'center',
                   padding: 10,
@@ -273,17 +273,17 @@ const styles = StyleSheet.create({
   },
   GreenButton: {
     // alignSelf:'center',
-    // backgroundColor:'#0a8a40',
+    // backgroundColor:'#1bb76d',
     // width:'100%'
     borderWidth: 1,
-    borderColor: '#0a8a40',
+    borderColor: '#1bb76d',
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 15,
     fontSize: 15,
     fontWeight: '700',
     color: '#fafafa',
-    backgroundColor: '#0a8a40',
+    backgroundColor: '#1bb76d',
     alignSelf: 'center',
     textAlign: 'center',
     width: '100%',

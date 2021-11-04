@@ -1,13 +1,13 @@
 
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions, StatusBar} from 'react-native';
 const {width, height} = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   header: {
     width: width,
-    height: '30%',
-    flex: 30,
-    backgroundColor: '#0a8a40',
+    height: height*0.30,
+    backgroundColor: '#1bb76d',
+    marginTop:StatusBar.currentHeight
   },
   headerUpperArea: {
     display: 'flex',
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     width: '90%',
     position: 'absolute',
     left: '5.3%',
-    top: '27%',
+    top: '29%',
     zIndex: 2,
   },
 
@@ -57,18 +57,11 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     width: width,
-    height:'70%',
-    flex: 70,
+    height:height*0.70,
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 33,
-    // marginLeft: -8
-    //paddingBottom:100
-    
-
-    //position: 'absolute',
-    //top:"30%",
   },
   viewItems: {
     flexDirection: 'row',
@@ -170,7 +163,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '50%',
     borderRadius: 30,
-    color: '#0a8a40',
+    color: '#1bb76d',
     padding: '3%',
     alignSelf: 'center',
     backgroundColor: 'white',

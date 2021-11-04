@@ -137,9 +137,9 @@ const SellBitcoinScreen1 = ({navigation}) => {
           </View>
 
           <TouchableOpacity style={styles.roundButton1}>
-            <Text style={{fontSize: 35, color: '#0a8a40', paddingBottom: 5}}>+</Text>
+            <Text style={{fontSize: 35, color: '#1bb76d', paddingBottom: 5}}>+</Text>
           </TouchableOpacity>
-          <Text style={{color: '#0a8a40', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
+          <Text style={{color: '#1bb76d', alignSelf: 'center', marginTop: 5, fontSize: 10}}>
             Add Attachment
           </Text>
 
