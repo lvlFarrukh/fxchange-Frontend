@@ -16,6 +16,7 @@ import {
   Keyboard,
   Platform,
 } from 'react-native';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
 
@@ -72,7 +73,7 @@ const WithDrawScreenFive = ({navigation}) => {
                       width: 25,
                       height: 15,
                       marginTop: 6,
-                      marginRight: 50,
+                      //marginRight: 50,
                     }}
                   />
                 </TouchableOpacity>
@@ -81,10 +82,10 @@ const WithDrawScreenFive = ({navigation}) => {
 
             <View style={styles.mainBody}>
               <View style={styles.headerHeadingContainer}>
-                <Text style={styles.headerHeading2}>H</Text>
+                <MyText style={styles.headerHeading2}>H</MyText>
               </View>
               <View style={styles.mainBodyContent}>
-                <Text style={{fontSize: 10, color: '#8e8c8d'}}>PROFILE</Text>
+                <MyText style={{fontSize: 10, color: '#8e8c8d'}}>PROFILE</MyText>
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -146,14 +147,14 @@ const WithDrawScreenFive = ({navigation}) => {
                 />
                 {/* <View style={styles.updatePassword}>
                 <TouchableOpacity style={styles.updatePasswordButton}>
-                  <Text style={{color: 'white', fontSize: 15}}>UPDATE</Text>
+                  <MyText style={{color: 'white', fontSize: 15}}>UPDATE</MyText>
                 </TouchableOpacity>
               </View> */}
               </View>
               <View style={styles.mainBodyContent}>
-                <Text style={{fontSize: 10, color: '#8e8c8d'}}>
+                <MyText style={{fontSize: 10, color: '#8e8c8d'}}>
                   BANK DETAILS
-                </Text>
+                </MyText>
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -216,7 +217,7 @@ const WithDrawScreenFive = ({navigation}) => {
               /> */}
                 <View style={styles.updatePassword}>
                   <TouchableOpacity style={styles.updatePasswordButton}>
-                    <Text style={{color: 'white', fontSize: 13}}>UPDATE</Text>
+                    <MyText style={{color: 'white', fontSize: 13}}>UPDATE</MyText>
                   </TouchableOpacity>
                 </View>
               </View>

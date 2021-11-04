@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import MyText from '../DefaultTextComponent/MyText'
 import Style from './Style'
 
 const index = ({
@@ -31,13 +32,13 @@ const index = ({
 
                         <View style={{marginLeft: 6}}>
 
-                            <Text style={{color: 'blue'}}>
+                            <MyText style={{color: 'blue'}}>
                                 {title}
-                            </Text>
+                            </MyText>
 
-                            <Text style={{color: 'gray'}}>
+                            <MyText style={{color: 'gray'}}>
                                 {id}
-                            </Text>
+                            </MyText>
 
                         </View>
 
@@ -45,9 +46,9 @@ const index = ({
 
                     <View style={Style.viewItems}>
 
-                        <Text style={Style.smBlueText}  onPress={reDirecttoCardDetail}>
+                        <MyText style={Style.smBlueText}  onPress={reDirecttoCardDetail}>
                             View
-                        </Text>
+                        </MyText>
 
                         <Image source={require('../../../Assets/ICONS/arrow=right.png')} style={Style.arrowIcon}/>
 
@@ -62,21 +63,21 @@ const index = ({
                 <View style={Style.lowerPortion}>
 
                     <View>
-                        <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                        <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                             Amount
-                        </Text>
-                        <Text style={Style.mdFontBlackColor}>
+                        </MyText>
+                        <MyText style={Style.mdFontBlackColor}>
                             ${amount}
-                        </Text>
+                        </MyText>
                     </View>
 
                     <View>
-                        <Text style={[Style.smFontSize, {color: 'gray'}]}>
+                        <MyText style={[Style.smFontSize, {color: 'gray'}]}>
                             {date}
-                        </Text>
-                        <Text style={[Style.smFontSize, {textAlign: 'right', color: 'gray'}]}>
+                        </MyText>
+                        <MyText style={[Style.smFontSize, {textAlign: 'right', color: 'gray'}]}>
                             {userName}
-                        </Text>
+                        </MyText>
                     </View>
 
                 </View>

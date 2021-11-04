@@ -12,6 +12,7 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
@@ -19,21 +20,21 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
     <>
       <View style={styles.mainBodyPartOne}>
         <View style={[styles.partOneButtons]}>
-          <Text
+          <MyText
             style={[styles.partOneButton, styles.JoinLeft, {...giftCards}]}
             onPress={() => {
               activeButton('giftCards');
             }}>
             Giftcards
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[styles.partOneButton, styles.JoinRight, {...bitcoin}]}
             onPress={() => {
               activeButton('bitcoin');
             }}>
             Bitcoin
-          </Text>
+          </MyText>
         </View>
 
         <TextInput
@@ -59,13 +60,13 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
         />
         <View style={styles.checkrateButtonContainer}>
           <TouchableOpacity activeOpacity={0.9} style={styles.checkrateButton}>
-            <Text style={{color: 'white', fontSize: 15}}>CHECK RATE</Text>
+            <MyText style={{color: 'white', fontSize: 15}}>CHECK RATE</MyText>
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.mainBodyPartTwo}>
-        <Text style={{marginTop: 30}}>Estimate rate</Text>
-        <Text
+        <MyText style={{marginTop: 30}}>Estimate rate</MyText>
+        <MyText
           style={{
             fontSize: 30,
             color: 'black',
@@ -73,7 +74,7 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
             fontWeight: '400',
           }}>
           N3,303,330
-        </Text>
+        </MyText>
       </View>
     </>
   );

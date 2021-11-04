@@ -12,6 +12,7 @@ import {
   SafeAreaView,
   Button,
 } from 'react-native';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Navbar from '../../components/Navbars/Navbar';
 import CompletedTrades from './CompletedTrades';
 import OngoingTrades from './OngoingTrades';
@@ -51,7 +52,7 @@ const Trades = ({navigation}) => {
         }}>
         <View style={styles.header}>
           <View style={styles.headerUpperArea}>
-            <Text
+            <MyText
               style={{
                 fontSize: 18,
                 fontWeight: '400',
@@ -59,7 +60,7 @@ const Trades = ({navigation}) => {
                 marginLeft: 120,
               }}>
               Trades
-            </Text>
+            </MyText>
           </View>
         </View>
         {screen === 0 ? (

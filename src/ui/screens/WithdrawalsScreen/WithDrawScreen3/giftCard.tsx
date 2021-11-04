@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import styles from './Style';
 import SelectDropdown from 'react-native-select-dropdown';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 const {width, height} = Dimensions.get('screen');
 
 const giftCards = ({activeButton, bitcoin, giftCards}) => {
@@ -56,7 +57,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
     <>
       <View style={styles.giftCardBodyPatOne}>
         <View style={[styles.partOneButtons]}>
-          <Text
+          <MyText
             style={[
               styles.partOneButton,
               styles.JoinLeft,
@@ -67,15 +68,15 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               activeButton('giftCards');
             }}>
             Giftcards
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[styles.partOneButton, styles.JoinRight, {...bitcoin}]}
             onPress={() => {
               activeButton('bitcoin');
             }}>
             Bitcoin
-          </Text>
+          </MyText>
         </View>
         <View
           style={{
@@ -257,13 +258,13 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
         />
         <View style={styles.checkrateButtonContainer}>
           <TouchableOpacity activeOpacity={0.9} style={styles.checkrateButton}>
-            <Text style={{color: 'white', fontSize: 13}}>CHECK RATE</Text>
+            <MyText style={{color: 'white', fontSize: 13}}>CHECK RATE</MyText>
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.giftCardsBodyPartTwo}>
-        <Text style={{marginTop: 23,fontSize:10}}>Estimate rate</Text>
-        <Text
+        <MyText style={{marginTop: 23,fontSize:10}}>Estimate rate</MyText>
+        <MyText
           style={{
             fontSize: 20,
             color: 'black',
@@ -271,7 +272,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             fontWeight: '600',
           }}>
           N3,303,330
-        </Text>
+        </MyText>
       </View>
     </>
   );

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Navbar from '../../../components/Navbars/Navbar';
 import Style from './Style';
@@ -52,8 +53,8 @@ const index = ({navigation}) => {
                 style={Style.backArrow}
               />
             </TouchableOpacity>
-            <Text style={Style.headerHeading}>ITUNES - #FGRAC23287843</Text>
-            <Text></Text>
+            <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
+            <MyText></MyText>
           </View>
           <View style={Style.mainBody}>
             <View
@@ -87,7 +88,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -95,14 +96,14 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       1
-                    </Text>
+                    </MyText>
                   </View>
 
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -111,7 +112,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -168,20 +169,20 @@ const index = ({navigation}) => {
                   {paddingLeft: 18, paddingRight: 18},
                 ]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[{textAlign: 'right', color: 'red', fontSize: 13}]}>
                     {'DECLINED'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -195,14 +196,14 @@ const index = ({navigation}) => {
                   {marginBottom: 6, paddingLeft: 18, paddingRight: 18},
                 ]}>
                 <View>
-                  <Text
+                  <MyText
                     style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
                     REASON FOR DECLINE
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[{color: 'black', fontSize: 10, marginBottom: 2}]}>
                     Card is not activated
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View style={[{flexDirection: 'row'}]}>
@@ -298,12 +299,12 @@ const index = ({navigation}) => {
                       },
                       Style.btnShadow,
                     ]}>
-                    <Text
+                    <MyText
                       style={[
                         {color: 'white', fontSize: 7, alignSelf: 'center'},
                       ]}>
                       RETRY
-                    </Text>
+                    </MyText>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -330,7 +331,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -338,13 +339,13 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       {2}
-                    </Text>
+                    </MyText>
                   </View>
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -353,7 +354,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -410,22 +411,22 @@ const index = ({navigation}) => {
                   {paddingLeft: 18, paddingRight: 18},
                 ]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[
                       {textAlign: 'right', color: '#1bb76d', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -451,7 +452,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -459,13 +460,13 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       {3}
-                    </Text>
+                    </MyText>
                   </View>
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -474,7 +475,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -531,31 +532,31 @@ const index = ({navigation}) => {
                   {paddingLeft: 18, paddingRight: 18},
                 ]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
 
-                  <Text
+                  <MyText
                     style={[
                       Style.smFontSize,
                       ,
                       {color: 'gray', marginTop: 10},
                     ]}>
                     Card code: 12345678946579
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[
                       {textAlign: 'right', color: '#16a041', fontSize: 13},
                     ]}>
                     {'COMPLETED'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -581,7 +582,7 @@ const index = ({navigation}) => {
                         marginTop: 7,
                       },
                     ]}>
-                    <Text
+                    <MyText
                       style={{
                         color: 'black',
                         fontSize: 10,
@@ -589,14 +590,14 @@ const index = ({navigation}) => {
                         paddingTop: 2,
                       }}>
                       4
-                    </Text>
+                    </MyText>
                   </View>
 
                   <Image
                     source={require('../../../../Assets/CARDS/itunes.png')}
                     style={Style.titleImage}
                   />
-                  <Text
+                  <MyText
                     style={{
                       color: 'black',
                       fontSize: 15,
@@ -605,7 +606,7 @@ const index = ({navigation}) => {
                       paddingBottom: 6,
                     }}>
                     Itunes
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -662,31 +663,31 @@ const index = ({navigation}) => {
                   {paddingLeft: 18, paddingRight: 18},
                 ]}>
                 <View>
-                  <Text style={[Style.smFontSize, , {color: 'gray'}]}>
+                  <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
-                  </Text>
-                  <Text style={Style.mdFontBlackColor}>${'50 (N16,000)'}</Text>
+                  </MyText>
+                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
 
-                  <Text
+                  <MyText
                     style={[
                       Style.smFontSize,
                       ,
                       {color: 'gray', marginTop: 10},
                     ]}>
                     Card code: 12345678946579
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View>
-                  <Text style={[{color: 'gray', fontSize: 10}]}>
+                  <MyText style={[{color: 'gray', fontSize: 10}]}>
                     {'DEC 10, 2021 1:20pm'}
-                  </Text>
-                  <Text
+                  </MyText>
+                  <MyText
                     style={[
                       {textAlign: 'right', color: '#d65d0e', fontSize: 13},
                     ]}>
                     {'IN PROGRESS'}
-                  </Text>
+                  </MyText>
                 </View>
               </View>
             </View>

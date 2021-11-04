@@ -24,7 +24,7 @@ interface Props {
 
 const MyText : React.FC<Props> = (props) => {
     return (
-         <MyText style={[props.style,{fontFamily:'Nunito-Regular'}]} onPress={props.onPress}>{props.children}</MyText>
+         <Text style={[props.style,{fontFamily:'Nunito-Regular'}]} onPress={props.onPress}>{props.children}</Text>
     )
  }
  export default MyText;

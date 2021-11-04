@@ -15,6 +15,7 @@ import {
 import styles from './Style';
 import ModeratePageCard from '../../../ui/components/ModeratePageCard';
 import Navbar from '../../components/Navbars/Navbar';
+import MyText from '../../components/DefaultTextComponent/MyText';
 const {width, height} = Dimensions.get('screen');
 const OngoingTrades = ({
   activeButton,
@@ -39,7 +40,7 @@ const OngoingTrades = ({
     <>
       <View style={styles.mainBodyPartOne}>
         <View style={[styles.partOneButtons]}>
-          <Text
+          <MyText
             style={[
               styles.partOneButton,
               styles.JoinLeft,
@@ -50,9 +51,9 @@ const OngoingTrades = ({
               activeButton('OngoingTrades');
             }}>
             Ongoing Trades
-          </Text>
+          </MyText>
 
-          <Text
+          <MyText
             style={[
               styles.partOneButton,
               styles.JoinRight,
@@ -62,7 +63,7 @@ const OngoingTrades = ({
               activeButton('CompletedTrades');
             }}>
             Completed Trades
-          </Text>
+          </MyText>
         </View>
         <ScrollView>
           <View style={{marginTop: 30}}>

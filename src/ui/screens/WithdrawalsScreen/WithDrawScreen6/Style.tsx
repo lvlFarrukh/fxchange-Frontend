@@ -5,7 +5,7 @@ const {width, height} = Dimensions.get('screen');
 const styles = StyleSheet.create({
   header: {
     width: width,
-    height: height*0.30,
+    height: height*0.25,
     backgroundColor: '#1bb76d',
     marginTop:StatusBar.currentHeight
   },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     position: 'absolute',
     left: '5.3%',
-    top: '29%',
+    top: '24%',
     zIndex: 2,
   },
 
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     width: width,
-    height:height*0.70,
+    height:height*0.75,
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,

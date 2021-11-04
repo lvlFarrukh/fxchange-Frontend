@@ -16,6 +16,7 @@ import styles from './Style';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Navbar from '../../../components/Navbars/Navbar';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -35,15 +36,15 @@ const WithdrawalsScreen = ({ navigation }) => {
         contentContainerStyle={{ flex: 1 }}
       >
         <View style={styles.header}>
-          <Text style={styles.headerHeading}>H</Text>
-          <Text style={styles.headerText}>Henry</Text>
+          <MyText style={styles.headerHeading}>H</MyText>
+          <MyText style={styles.headerText}>Henry</MyText>
         </View>
 
         <View style={styles.mainBody}>
           {/* style={styles.mainBodyContent} */}
           <View>
           <View style={{ marginTop: 20 }}>
-              <Text style={{ fontSize: 14, marginLeft: 10}}>PROFILE</Text>
+              <MyText style={{ fontSize: 14, marginLeft: 10}}>PROFILE</MyText>
             <TouchableOpacity 
             activeOpacity={0.9}
               onPress={() => {
@@ -51,10 +52,10 @@ const WithdrawalsScreen = ({ navigation }) => {
               }}
             >
               <View style={styles.mainBodyCardContent}>
-                <Text
+                <MyText
                   style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                   My Account
-                </Text>
+                </MyText>
                 <Icon
                 name={'arrow-forward-ios'}
                 size={16}
@@ -70,10 +71,10 @@ const WithdrawalsScreen = ({ navigation }) => {
               }}  
             >
               <View style={styles.mainBodyCardContent}>
-                <Text
+                <MyText
                   style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                   Change Password
-                </Text>
+                </MyText>
                 <Icon
                 name={'arrow-forward-ios'}
                 size={16}
@@ -91,13 +92,13 @@ const WithdrawalsScreen = ({ navigation }) => {
               },
             ]}
           >
-            <Text style={{ fontSize: 14, marginLeft: 10 }}>MORE</Text>
+            <MyText style={{ fontSize: 14, marginLeft: 10 }}>MORE</MyText>
             {/* <View style={styles.mainBodyCards}> */}
             <View style={styles.mainBodyCardContent}>
-              <Text
+              <MyText
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 Contact Support
-              </Text>
+              </MyText>
               <Icon
               name={'arrow-forward-ios'}
               size={16}
@@ -107,10 +108,10 @@ const WithdrawalsScreen = ({ navigation }) => {
             {/* </View> */}
             {/* <View style={styles.mainBodyCards}> */}
             <View style={styles.mainBodyCardContent}>
-              <Text
+              <MyText
                 style={{ color: '#4d4d4d', fontSize: 15, fontWeight: '600' }}>
                 Terms Of Service
-              </Text>
+              </MyText>
               <Icon
               name={'arrow-forward-ios'}
               size={16}
@@ -125,13 +126,13 @@ const WithdrawalsScreen = ({ navigation }) => {
               source={require('../../../../Assets/greenLogo.png')}
               style={{ width: 140, height: 40 }}
             />
-            <Text style={{ color: '#4d4d4d' }}>Version 1.0</Text>
+            <MyText style={{ color: '#4d4d4d' }}>Version 1.0</MyText>
             <View style={{width:"100%",marginVertical:20}}>
             <Button
 
               title="LOGOUT"
               color="#d53b1d"
-              // onPress={() => alert('hellot this is button')}
+              onPress={() => {}}
             />
             </View>
           </View>

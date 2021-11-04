@@ -18,6 +18,7 @@ import {
 import Navbar from '../../../components/Navbars/Navbar';
 import Header from '../../../components/ModeratePageCard/Header';
 import styles from './Style';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const { width, height } = Dimensions.get('window');
 
@@ -31,12 +32,13 @@ const WithDrawScreenFour = ({ navigation }) => {
           backgroundColor: '#1bb76d',
           flex: 1, height: height, width: width,
         }}>
+          <StatusBar translucent backgroundColor='#1bb76d' />
        
           <View style={{ height: 70 }}>
             <Header navigation={navigation} style={{ marginTop: 25 }} Heading={""} />
           </View>
-
-          <View style={[styles.mainBody, { height: height-70 }]}>
+          {/* check this StatusBar.currentHeight bar if it's missing some space in the bottom */}
+          <View style={[styles.mainBody, { height: height-70+StatusBar.currentHeight}]}> 
             <View style={styles.mainBodyContent}>
               <View style={{ paddingHorizontal: 10 }}>
                 <View
@@ -52,9 +54,9 @@ const WithDrawScreenFour = ({ navigation }) => {
                     marginTop: -45, //35+20 => 60/2=30 & 20 to cover margin top of mainBody
                     marginBottom: 10,
                   }}>
-                  <Text style={styles.headerHeading2}>H</Text>
+                  <MyText style={styles.headerHeading2}>H</MyText>
                 </View>
-                <Text style={{ fontSize: 11, color: '#a4a2a3' }}>CHANGE PASSWORD</Text>
+                <MyText style={{ fontSize: 11, color: '#a4a2a3' }}>CHANGE PASSWORD</MyText>
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -114,16 +116,16 @@ const WithDrawScreenFour = ({ navigation }) => {
 
               <View style={[{marginBottom:20}]}>
                 <TouchableOpacity style={styles.updatePasswordButton}>
-                  <Text style={{ color: 'white', fontSize: 15 }}>UPDATE</Text>
+                  <MyText style={{ color: 'white', fontSize: 15 }}>UPDATE</MyText>
                 </TouchableOpacity>
               </View>
             </View>
-          </View>
           <Navbar
             navigation={navigation}
             activePage={'more'}
             backgroundColor={'green'}
           />
+          </View>
       </SafeAreaView>
     </View>
   );

@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 const {width, height} = Dimensions.get('window');
@@ -44,9 +45,9 @@ const SignInScreen = ({navigation}) => {
                 styles().whiteCardBg,
                 {flex: 75},
               ]}>
-              <Text style={[styles().Heading]}>
+              <MyText style={[styles().Heading]}>
                 LOGIN TO YOUR ACCOUNT
-              </Text>
+              </MyText>
 
               <TextInput
                 style={styles().TextInputStyle}
@@ -69,44 +70,44 @@ const SignInScreen = ({navigation}) => {
                   onPress={() => {
                     navigation.navigate('DashBoardScreen');
                   }}>
-                  <Text style={styles().GreenButton}>
+                  <MyText style={styles().GreenButton}>
                     LOGIN
-                  </Text>
+                  </MyText>
                 </TouchableOpacity>
 
                 <View style={styles().BottomRowContainer}>
                   <View>
-                    <Text style={{fontSize: 10}}>
+                    <MyText style={{fontSize: 10}}>
                       Don't have an account?
                       <TouchableNativeFeedback
                         onPress={() => {
                           navigation.navigate('CreateAccountScreen');
                         }}>
-                        <Text style={{color: '#66b486'}}> SIGNUP</Text>
+                        <MyText style={{color: '#66b486'}}> SIGNUP</MyText>
                       </TouchableNativeFeedback>
-                    </Text>
+                    </MyText>
                   </View>
                   <TouchableNativeFeedback
                     onPress={() => {
                       navigation.navigate('ForgetPasswordScreen');
                     }}>
-                    <Text style={{fontSize: 10, color: '#2f568f'}}>
+                    <MyText style={{fontSize: 10, color: '#2f568f'}}>
                       Forget Password?
-                    </Text>
+                    </MyText>
                   </TouchableNativeFeedback>
                 </View>
               </View>
 
               <View style={styles().lastViewStyle}>
-                <Text style={{fontSize: 12}}>
+                <MyText style={{fontSize: 12}}>
                   Having any troubles?
                   <TouchableNativeFeedback
                     onPress={() => {
                       navigation.navigate('WithdrawalsScreenTwo');
                     }}>
-                    <Text style={{color: '#d5431c'}}>contact us</Text>
+                    <MyText style={{color: '#d5431c'}}>contact us</MyText>
                   </TouchableNativeFeedback>
-                </Text>
+                </MyText>
               </View>
             </View>
           </SafeAreaView>

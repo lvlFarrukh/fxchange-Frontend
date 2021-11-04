@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
 const { width, height } = Dimensions.get('window');
@@ -42,19 +43,19 @@ const CreateAccountScreen = ({ navigation }) => {
               { height: height*0.70 },
             ]}>
             <View>
-              <Text style={[styles.Heading]}>CREATE AN ACCOUNT</Text>
+              <MyText style={[styles.Heading]}>CREATE AN ACCOUNT</MyText>
 
               <View style={styles.BottomRowContainer}>
                 <View></View>
-                <Text style={{ fontSize: 10, color: '#000' }}>
+                <MyText style={{ fontSize: 10, color: '#000' }}>
                   Click Here to
                   <TouchableNativeFeedback
                     onPress={() => {
                       navigation.navigate('SignInScreen');
                     }}>
-                    <Text style={{ color: '#66b486' }}> LOGIN</Text>
+                    <MyText style={{ color: '#66b486' }}> LOGIN</MyText>
                   </TouchableNativeFeedback>
-                </Text>
+                </MyText>
               </View>
             </View>
 
@@ -90,16 +91,16 @@ const CreateAccountScreen = ({ navigation }) => {
                   onPress={() => {
                     navigation.navigate('ModeratorScreen');
                   }}>
-                  <Text style={styles.GreenButton}>CREATE ACCOUNT</Text>
+                  <MyText style={styles.GreenButton}>CREATE ACCOUNT</MyText>
                 </TouchableOpacity>
               </View>
 
             {/* <View style={styles.lastViewStyle}>
-                                <Text style={{ fontSize: 12, }}>Having any troubles?
+                                <MyText style={{ fontSize: 12, }}>Having any troubles?
                                     <TouchableNativeFeedback>
-                                        <Text style={{ color: '#d5431c' }}>contact us</Text>
+                                        <MyText style={{ color: '#d5431c' }}>contact us</MyText>
                                     </TouchableNativeFeedback>
-                                </Text>
+                                </MyText>
                             </View> */}
           </View>
         </ScrollView>

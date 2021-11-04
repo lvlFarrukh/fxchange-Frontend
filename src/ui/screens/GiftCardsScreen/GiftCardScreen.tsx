@@ -18,6 +18,7 @@ import {
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../components/ModeratePageCard/Header';
+import Navbar from '../../components/Navbars/Navbar';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -126,6 +127,7 @@ const GiftCardScreen = ({navigation}) => {
                             </TouchableOpacity> */}
           </View>
         </ScrollView>
+        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
       </SafeAreaView>
     </View>
   );
