@@ -19,16 +19,17 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
+import Navbar from '../../components/Navbars/Navbar';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 
 const ItunesGiftCardScreen = ({route, navigation}) => {
   const [headerTitle, setheaderTitle] = useState(route?.params?.headerTitle);
 
   return (
-    <ScrollView>
-      <View style={{height: height, width: width, flex: 1}}>
-        <StatusBar translucent backgroundColor="transparent" />
+    <View style={{height: height, width: width, flex: 1}}>
+        <ScrollView>
+        <StatusBar translucent backgroundColor="#1bb76d" />
         {/* <StatusBar hidden /> */}
         <SafeAreaView
           style={{
@@ -257,9 +258,11 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
             </View>
           </View>
         </SafeAreaView>
-      </View>
-      {/* <View style={{marginBottom: 60}}></View> */}
     </ScrollView>
+    <View style={{position:'absolute' , width:width,bottom:1}}>
+      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+      </View>
+      </View>
   );
 };
 

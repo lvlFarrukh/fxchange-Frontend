@@ -16,6 +16,7 @@ import {
   StatusBar,
 } from 'react-native';
 import MyText from '../../../components/DefaultTextComponent/MyText';
+import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
 
 const { width, height } = Dimensions.get('screen');
@@ -252,6 +253,7 @@ const WithDrawScreenSix = ({ navigation }) => {
             </View>
           </View>
         </ScrollView>
+        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
       </SafeAreaView>
     </View>
 

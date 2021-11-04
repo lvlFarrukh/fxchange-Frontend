@@ -22,6 +22,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Header from '../../components/ModeratePageCard/Header';
 import Modal from 'react-native-modal';
 import MyText from '../../components/DefaultTextComponent/MyText';
+import Navbar from '../../components/Navbars/Navbar';
 const { width, height } = Dimensions.get('screen');
 
 const DATA = [
@@ -331,6 +332,7 @@ const index = ({ navigation }) => {
           </View>
         </Modal>
       </SafeAreaView>
+      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
     </View>
   );
 };

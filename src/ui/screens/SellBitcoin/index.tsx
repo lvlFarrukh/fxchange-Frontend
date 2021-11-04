@@ -7,6 +7,7 @@ import Header from '../../components/ModeratePageCard/Header';
 import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MyText from '../../components/DefaultTextComponent/MyText';
+import Navbar from '../../components/Navbars/Navbar';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -152,6 +153,9 @@ const index = ({navigation}) => {
           </View>
         </View>
       </ScrollView>
+      <View style={{position:'absolute' , width:width,bottom:50}}>
+      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+      </View>
     </View>
   );
 };

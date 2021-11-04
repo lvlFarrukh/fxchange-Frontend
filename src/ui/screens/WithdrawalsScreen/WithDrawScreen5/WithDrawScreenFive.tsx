@@ -73,7 +73,7 @@ const WithDrawScreenFive = ({navigation}) => {
                       width: 25,
                       height: 15,
                       marginTop: 6,
-                      marginRight: 50,
+                      //marginRight: 50,
                     }}
                   />
                 </TouchableOpacity>
