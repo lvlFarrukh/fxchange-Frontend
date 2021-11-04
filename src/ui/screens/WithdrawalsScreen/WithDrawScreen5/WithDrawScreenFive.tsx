@@ -69,8 +69,8 @@ const WithDrawScreenFive = ({navigation}) => {
                   <Image
                     source={require('../../../../Assets/ICONS/arrow=white.png')}
                     style={{
-                      width: 30,
-                      height: 20,
+                      width: 25,
+                      height: 15,
                       marginTop: 6,
                       marginRight: 50,
                     }}

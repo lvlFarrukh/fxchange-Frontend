@@ -13,7 +13,7 @@ const Test = ({ navigation }) => {
     //navigation.navigate('CreateAccountScreen') // hassans
     //navigation.navigate('WithdrawalsScreenThree') // imran bhaiis
     return (
-        <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: 'rgb(10, 138, 64)' }}>
+        <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: '#1bb76d' }}>
              <StatusBar translucent backgroundColor='transparent' />
             <SafeAreaView>
             {/* <StatusBar hidden /> */}

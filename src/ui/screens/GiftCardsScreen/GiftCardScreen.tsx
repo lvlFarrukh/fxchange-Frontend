@@ -60,56 +60,48 @@ const GiftCardScreen = ({navigation}) => {
         }
   
   };
+    return (
+        <View style={{ height: height, width: width, flex: 1 }}>
+             <StatusBar translucent backgroundColor='transparent' />
+            {/* <StatusBar hidden /> */}
+            <SafeAreaView style={{ flex: 1, height: height, width: width, backgroundColor: '#1bb76d' }}>
+                <View style={{ height: '10%' }}>
+                    <Header navigation={navigation} style={{ marginTop: 5 }} Heading={headerText} />
+                </View>
+                <ScrollView style={{
+                    backgroundColor: '#ecedf1',
+                    borderTopLeftRadius: 40,
+                    borderTopRightRadius: 40,
+                }}>
+                    <View style={[styles().whiteCardBg, {}]}>
+                        {
 
-  return (
-    <View style={{height: height, width: width, flex: 1}}>
-      <StatusBar translucent backgroundColor="transparent" />
-      {/* <StatusBar hidden /> */}
-      <SafeAreaView
-        style={{
-          flex: 1,
-          height: height,
-          width: width,
-          backgroundColor: 'rgb(10, 138, 64)',
-        }}>
-        <View style={{height: '10%'}}>
-          <Header
-            navigation={navigation}
-            style={{marginTop: 5}}
-            Heading={headerText}
-          />
-        </View>
-        <ScrollView
-          style={{
-            backgroundColor: '#ecedf1',
-            borderTopLeftRadius: 40,
-            borderTopRightRadius: 40,
-          }}>
-          <View style={[styles().whiteCardBg, {}]}>
-            {iconNames.map((item: any, index: number) => {
-              return (
-                <TouchableOpacity
-                  activeOpacity={0.9}
-                  onPress={() => changeHeaderText(index)}
-                  key={index}
-                  style={{
-                    backgroundColor: '#fff',
-                    width: (width - 60) / 2,
-                    alignItems: 'center',
-                    borderRadius: 30,
-                    marginTop: 10,
-                    height: (width - 60) / 2,
-                    alignContent: 'center',
-                    justifyContent: 'center',
-                  }}>
-                  {/* {console.log(item)} */}
-                  {/* <Image source={require(`../../../Assets/CARDS/${item}.png`)} style={styles().image} /> */}
-                  <Image key={index} source={item} style={styles().image} />
-                </TouchableOpacity>
-              );
-            })}
+                            iconNames.map((item: any, index: number) => {
+                                
+                                return (
+                                    <TouchableOpacity
+                                    onPress={() => changeHeaderText(index)}
+                                    key = {index}
+                                        style={{
+                                            backgroundColor: '#fff',
+                                            width: (width - 60) / 2,
+                                            alignItems: 'center',
+                                            borderRadius: 30,
+                                            marginTop: 10,
+                                            height:(width - 60) / 2,
+                                            alignContent:'center',
+                                            justifyContent:'center'
+                                        }}
+                                    >
+                                        {/* {console.log(item)} */}
+                                        {/* <Image source={require(`../../../Assets/CARDS/${item}.png`)} style={styles().image} /> */}
+                                        <Image key={index} source={item} style={styles().image} />
+                                    </TouchableOpacity>
+                                )
+                            })
+                        }
 
-            {/* <TouchableOpacity
+                        {/* <TouchableOpacity
                                 style={{
                                     backgroundColor: '#fff',
                                     width: (width - 60) / 2,
@@ -174,28 +166,29 @@ const styles = () =>
       color: '#000',
     },
     GreenButton: {
-      // alignSelf:'center',
-      // backgroundColor:'#0a8a40',
-      // width:'100%'
-      borderWidth: 1,
-      borderColor: '#0a8a40',
-      borderRadius: 5,
-      paddingHorizontal: 10,
-      paddingVertical: 15,
-      fontSize: 15,
-      fontWeight: '700',
-      color: '#fafafa',
-      backgroundColor: '#0a8a40',
-      alignSelf: 'center',
-      textAlign: 'center',
-      width: '100%',
-      shadowColor: '#000',
-      shadowOffset: {width: 0, height: 50},
-      shadowOpacity: 0.25,
-      shadowRadius: 5,
-      elevation: 5,
-      //marginTop: 20,
-      //marginBottom: 10
+        // alignSelf:'center',
+        // backgroundColor:'#1bb76d',
+        // width:'100%'
+        borderWidth: 1,
+        borderColor: '#1bb76d',
+        borderRadius: 5,
+        paddingHorizontal: 10,
+        paddingVertical: 15,
+        fontSize: 15,
+        fontWeight: '700',
+        color: '#fafafa',
+        backgroundColor: '#1bb76d',
+        alignSelf: 'center',
+        textAlign: 'center',
+        width: '100%',
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 50, },
+        shadowOpacity: 0.25,
+        shadowRadius: 5,
+        elevation: 5,
+        //marginTop: 20,
+        //marginBottom: 10
+
     },
     BottomRowContainer: {
       flexDirection: 'row',

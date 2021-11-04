@@ -20,7 +20,7 @@ const index = ({image, isPreviewImgVisible, togglePreviewImgModal}) => {
       <View
         style={{
           width: width - 50,
-          height: height / 2.5,
+          height: height / 2.45,
           alignSelf: 'center',
           borderRadius: 6,
           backgroundColor: '#000000',

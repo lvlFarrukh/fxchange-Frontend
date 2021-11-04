@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   amount: {
     fontSize: 16,
-    color: 'rgb(10, 138, 64)',
+    color: '#1bb76d',
     textAlign: 'right'
   },
   hr: {

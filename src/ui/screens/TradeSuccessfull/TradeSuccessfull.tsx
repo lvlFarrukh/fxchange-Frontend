@@ -31,7 +31,7 @@ const TradeSuccessfull = ({navigation}) => {
             flex: 1,
             height: height,
             width: width,
-            backgroundColor: 'rgb(10, 138, 64)',
+            backgroundColor: '#1bb76d',
           }}>
           <View style={{height: '8%', justifyContent: 'center'}}>
             <Text style={{fontSize:18 ,color: '#fff', alignSelf: 'center'}}>

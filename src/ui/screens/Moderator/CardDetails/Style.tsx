@@ -9,13 +9,13 @@ const Style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     // alignItems:'center',
-    paddingTop: 12,
+    // paddingTop: 12,
   },
   headerHeading: {
     color: 'white',
     textAlign: 'center',
     //marginTop: '3.5%',
-    fontSize: 14,
+    fontSize: 16,
     marginLeft: -18,
   },
   mainBody: {
@@ -62,8 +62,8 @@ const Style = StyleSheet.create({
     right: 25,
   },
   backArrow: {
-    height: 12,
-    width: 18,
+    height: 15,
+    width: 25,
     marginLeft: 12,
     marginTop: 5,
     // marginTop: '5%',

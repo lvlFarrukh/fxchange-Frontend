@@ -94,7 +94,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             // paddingTop:20,
           }}>
           <SelectDropdown
-            data={countries}
+            data={cardTypes}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
             }}

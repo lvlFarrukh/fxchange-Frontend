@@ -21,8 +21,7 @@ const Header : React.FC<Props> = (props) => {
         <View style={[styles.container , style]}>
 
             <TouchableOpacity
-            activeOpacity={0.9}
-                style={{ alignSelf: "center", marginLeft: 20, }}
+                style={{ alignSelf: "center", marginLeft: 20,padding:10,paddingLeft:-10 }}
                 onPress={() => { navigation.goBack() }}
             >
                 <Image source={require('../../../Assets/ICONS/arrow=white.png')} style={styles.image} />

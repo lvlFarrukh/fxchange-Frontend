@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   headerUpperArea: {
     display: 'flex',
     width: '70%',
-    marginTop: 10,
+    marginTop:30,
     marginLeft:35,
     
     flexDirection: 'row',

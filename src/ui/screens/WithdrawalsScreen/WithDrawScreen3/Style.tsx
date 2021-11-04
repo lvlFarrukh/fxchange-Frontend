@@ -4,8 +4,8 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     height: 100,
-    backgroundColor: '#3f8b41',
-    paddingHorizontal: 25
+    backgroundColor: '#1bb76d',
+    paddingHorizontal: 15
   },
   headerUpperArea: {
     marginTop: 35,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '10%',
+    top: 70,
     // alignItems:"center",
     zIndex: 0,
   },
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
     position: 'absolute',
-    top: '50%',
+    top: '55%',
     alignItems: 'center',
     zIndex: 1,
   },
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '10%',
+    top: 70,
     // alignItems:"center",
     
   },
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
     position: 'absolute',
-    top: "82%",
+    top: "85%",
     alignItems: 'center',
     zIndex: 1,
   },

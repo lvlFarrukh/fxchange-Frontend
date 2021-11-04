@@ -13,7 +13,7 @@ import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Navbar from '../../../components/Navbars/Navbar';
 import Style from './Style';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 
 const index = ({navigation}) => {
   const [previewImgPath, setpreviewImgPath] = useState(0);
@@ -69,7 +69,12 @@ const index = ({navigation}) => {
                 Style.btnShadow,
               ]}>
               <View
-                style={{paddingLeft: 18, paddingRight: 18,flexDirection: 'row', justifyContent: 'space-between'}}>
+                style={{
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 10}}>
                   <View
                     style={[
@@ -154,9 +159,14 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
@@ -176,9 +186,14 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {marginBottom: 6, paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {marginBottom: 6, paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <Text
                     style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
@@ -297,7 +312,12 @@ const index = ({navigation}) => {
               <View style={Style.hr}></View>
 
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between',paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
@@ -381,9 +401,14 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
@@ -408,7 +433,12 @@ const index = ({navigation}) => {
               <View style={Style.hr}></View>
 
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between',paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
@@ -492,9 +522,14 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
@@ -528,7 +563,12 @@ const index = ({navigation}) => {
               <View style={Style.hr}></View>
 
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 10}}>
                   <View
                     style={[
@@ -613,9 +653,14 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <Text style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)

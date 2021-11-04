@@ -14,15 +14,16 @@ import {
   StatusBar,
 } from 'react-native';
 import Navbar from '../../../components/Navbars/Navbar';
+import Header from '../../../components/ModeratePageCard/Header';
 import Bitcoin from './Bitcoin';
 import GiftCards from './giftCard';
 import styles from './Style';
-const { width, height } = Dimensions.get('screen');
+const { width, height } = Dimensions.get('window');
 const btnSetected: any = {
   backgroundColor: '#1bb76d',
   color: 'white',
   fontWeight: 'bold',
-  zIndex:5,
+  zIndex: 5,
   //padding: '3%',
 };
 const WithdrawalsScreenThree = ({ navigation }) => {
@@ -51,38 +52,12 @@ const WithdrawalsScreenThree = ({ navigation }) => {
         width: width,
         flex: 1,
       }}>
-        <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar translucent backgroundColor="transparent" />
       <ScrollView contentContainerStyle={{ flex: 1 }}>
-     
-        <View style={styles.header}>
-        <View style={styles.headerUpperArea}>
-            <TouchableOpacity activeOpacity={0.9}
-              style={{alignSelf: 'center', marginLeft: 5}}
-              onPress={() => {
-                navigation.goBack();
-              }}>
-              <Image
-                source={require('../../../../Assets/ICONS/arrow=white.png')}
-                style={{
-                  height: 15,
-                  width: 25,
-                }}
-              />
-            </TouchableOpacity>
 
-            <Text
-              style={[
-                {
-                  color: 'white',
-                  fontSize: 18,
-                  alignSelf: 'center',
-                  marginLeft: -10,
-                  marginTop: -5,
-                },
-              ]}>
-              Our Rates
-            </Text>
-            <View></View>
+        <View style={styles.header}>
+          <View style={{ height: height * 0.10, marginTop: 25 }}>
+            <Header navigation={navigation} style={{ marginTop: 5}} Heading={"Our Rates"} />
           </View>
         </View>
         {screen === 0 ? (

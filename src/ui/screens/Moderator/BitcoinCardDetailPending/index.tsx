@@ -580,7 +580,7 @@ const index = ({navigation}) => {
                       style={{
                         fontSize: 25,
                         fontWeight: '500',
-                        color: '#0a8a40',
+                        color: '#1bb76d',
                         alignSelf: 'center',
                       }}>
                       +
@@ -588,7 +588,7 @@ const index = ({navigation}) => {
                   </TouchableOpacity>
                   <Text
                     style={{
-                      color: '#0a8a40',
+                      color: '#1bb76d',
                       fontSize: 10,
                       fontWeight: '500',
                       alignSelf: 'center',

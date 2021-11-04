@@ -33,6 +33,42 @@ const DashBoardScreen = ({navigation}) => {
             <View
               style={{
                 flexDirection: 'row',
+                justifyContent: 'space-around',
+                backgroundColor: '#1bb76d',
+                paddingVertical: 6,
+              }}>
+              <TouchableOpacity onPress={() => {}}>
+                <Text></Text>
+                <Text style={{color: 'white'}}>Home</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Trades');
+                }}>
+                <Text></Text>
+                <Text style={{color: 'white'}}>Trades</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('WithdrawalsScreenThree');
+                }}>
+                <Text></Text>
+                <Text style={{color: 'white'}}>Rates</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('WithdrawalsScreen');
+                }}>
+                <Text></Text>
+                <Text style={{color: 'white'}}>More</Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
                 justifyContent: 'flex-end',
                 marginRight: 10,
                 marginTop: 5,

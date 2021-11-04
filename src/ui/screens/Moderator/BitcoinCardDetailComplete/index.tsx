@@ -119,7 +119,7 @@ const index = ({ navigation }) => {
                   ]}>
                   <Text
                     style={[
-                      { color: '#0a8a40', fontSize: 11, alignSelf: 'center' },
+                      { color: '#1bb76d', fontSize: 11, alignSelf: 'center' },
                     ]}
                     onPress={() => { }}>
                     COMPLETED
@@ -130,7 +130,7 @@ const index = ({ navigation }) => {
 
             <View
               style={{
-                backgroundColor: '#0a8a40',
+                backgroundColor: '#1bb76d',
                 width: 115,
                 height: 85,
                 padding: 12,
@@ -158,7 +158,7 @@ const index = ({ navigation }) => {
                 ]}>
                 <Text
                   style={[
-                    { color: '#0a8a40', fontSize: 10, alignSelf: 'center' },
+                    { color: '#1bb76d', fontSize: 10, alignSelf: 'center' },
                   ]}>
                   VIEW REPORT
                 </Text>
@@ -326,7 +326,7 @@ const index = ({ navigation }) => {
             height: width - 10,
             borderRadius: 50,
             alignSelf: 'center',
-            backgroundColor: '#0a8a40',
+            backgroundColor: '#1bb76d',
           }}>
           <View
             style={{
@@ -345,7 +345,7 @@ const index = ({ navigation }) => {
                   fontSize: 18,
                   margin: 8,
                   fontWeight: '500',
-                  color: '#0a8a40',
+                  color: '#1bb76d',
                 }}>
                 REPORT
               </Text>
