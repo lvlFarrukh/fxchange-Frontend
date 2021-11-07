@@ -45,12 +45,13 @@ const index = ({navigation}) => {
   return (
     <Fragment>
     <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
-      <ScrollView>
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Upload Giftcard'}
         />
+      <ScrollView>
+
         <View
           style={{
             marginTop: 10,
@@ -364,7 +365,7 @@ const index = ({navigation}) => {
         </View>
       </ScrollView>
       <Navbar navigation={navigation} activePage={'trade'} backgroundColor={'green'}/>
-      <View style={{marginBottom: 44}}></View>
+      {/* <View style={{marginBottom: 44}}></View> */}
     </View>
       </Fragment>
   );

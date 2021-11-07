@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, Image, TextInput, StatusBar} from 'react-native';
+import {View, Text, Dimensions, Image, TextInput, StatusBar, ScrollView, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../components/ModeratePageCard/Header';
 import Style from './Style';
@@ -9,7 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Navbar from '../../components/Navbars/Navbar';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 
 const index = ({navigation}) => {
   const [isProcessModalVisible, setProcessModalVisible] = useState(false);
@@ -24,19 +23,20 @@ const index = ({navigation}) => {
   };
 
   return (
-    <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
+    <View style={{height: height + StatusBar.currentHeight, width: width, backgroundColor: '#d65d0e'}}>
       <StatusBar translucent backgroundColor='transparent' />
-      <ScrollView>
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'Sell Bitcoin'}
           //style={{marginTop: 0}}
         />
+      <ScrollView>
+
         <View
           style={{
             marginTop: 10,
-            height: height-60,
+            height: height,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -153,9 +153,9 @@ const index = ({navigation}) => {
           </View>
         </View>
       </ScrollView>
-      <View style={{position:'absolute' , width:width,bottom:50}}>
-      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
-      </View>
+      {/* <View style={{position:'absolute' , width:width,bottom:50}}> */}
+      {/* < Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
+      {/* </View> */}
     </View>
   );
 };

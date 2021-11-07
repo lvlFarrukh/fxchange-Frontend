@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     width: width,
     height: height*0.25,
     backgroundColor: '#1bb76d',
-    marginTop:StatusBar.currentHeight
+    // marginTop:StatusBar.?
   },
   headerUpperArea: {
     display: 'flex',
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     elevation: 1,
     borderWidth: 0.5,
     borderColor: '#F1F1F1',
+    marginTop: -20
   },
   mainBody: {
     width: width,
@@ -143,6 +144,24 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     fontSize: 12,
     borderRadius: 3,
+    textAlign: 'center',
+   marginTop:10,
+  borderWidth: 0.5,
+  borderColor: '#F1F1F1',
+   shadowColor: '#000',
+   shadowOffset: {width: 0, height: 10},
+   shadowOpacity: 0.3,
+   shadowRadius: 2,
+   elevation: 1,
+   paddingLeft: 15
+ },
+ changePasswordButton1:{
+  color: 'black',
+    width: '108%',
+    marginLeft:-12,
+    backgroundColor: 'white',
+    fontSize: 12,
+    borderRadius: 3,
     paddingLeft: 15,
     textAlign: 'center',
    marginTop:10,
@@ -162,7 +181,7 @@ const styles = StyleSheet.create({
     marginLeft:-32,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    paddingHorizontal: 30,
+    paddingHorizontal: 8,
   
   },
   partOneButtons: {

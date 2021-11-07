@@ -31,6 +31,7 @@ import SellBitcoin from '../ui/screens/SellBitcoin';
 import Trades from '../ui/screens/Trades/Trades';
 import tradeCardDetails from '../ui/screens/Trades/CardDetails';
 import TeadesBitcoinCardDetailPending from '../ui/screens/Trades/BitcoinPending'
+import TradeBitcoinComplete from '../ui/screens/Trades/BitcoinComplete'
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -49,13 +50,13 @@ const Routes = () => {
             <Stack.Screen name="CardDetails" component={CardDetails} />
             <Stack.Screen name="ForgetPasswordScreen" component={ForgetPasswordScreen} />
             <Stack.Screen name="TransactionHistoryScreen" component={TransactionHistoryScreen} />
-            <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />
-            <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />
-            <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />
-            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />  
-            <Stack.Screen name="WithDrawScreenSix" component={WithDrawScreenSix} />
-            <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />
-            <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />
+            <Stack.Screen name="WithdrawalsScreen" component={WithdrawalsScreen} />                 
+            <Stack.Screen name="WithdrawalsScreenTwo" component={WithdrawalsScreenTwo} />           
+            <Stack.Screen name="WithdrawalsScreenThree" component={WithdrawalsScreenThree} />       
+            <Stack.Screen name="WithDrawScreenFour" component={WithDrawScreenFour} />               
+            <Stack.Screen name="WithDrawScreenSix" component={WithDrawScreenSix} />                 
+            <Stack.Screen name="WithdrawalsScreenFive" component={WithdrawalsScreenFive} />         
+            <Stack.Screen name="GiftCardScreen" component={GiftCardScreen} />                       
             <Stack.Screen name="DashBoardScreen" component={DashBoardScreen} />
             <Stack.Screen name="ItunesGiftCardScreen" component={ItunesGiftCardScreen} />
             <Stack.Screen name="TradeSuccessfull" component={TradeSuccessfull} />
@@ -64,6 +65,7 @@ const Routes = () => {
             <Stack.Screen name="SwitchGiftCard" component={SwitchGiftCard} />
             <Stack.Screen name="BitcoinCardDetailPending" component={BitcoinCardDetailPending} />
             <Stack.Screen name="TeadesBitcoinCardDetailPending" component={TeadesBitcoinCardDetailPending} />
+            <Stack.Screen name="TradeBitcoinComplete" component={TradeBitcoinComplete} />
             <Stack.Screen name="BitcoinCardDetailDecline" component={BitcoinCardDetailDecline} />
             <Stack.Screen name="BitcoinCardDetailComplete" component={BitcoinCardDetailComplete} />
             <Stack.Screen name="UploadGiftCard" component={UploadGiftCard} />
@@ -76,6 +78,13 @@ const Routes = () => {
     )
 }
 export default Routes
+
+// { /*profile screen*/}
+// { /*contact screen*/}
+// { /*bitcoin and giftcard screen*/}
+// { /*change password screen*/}
+// { /*main withdraw screen*/}
+// { /*My account screen*/}
 
 // onPress={() => {
 //     navigation.navigate('SignInScreen')

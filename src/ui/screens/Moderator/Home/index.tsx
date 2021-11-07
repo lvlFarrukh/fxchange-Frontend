@@ -91,40 +91,12 @@ const index = ({navigation}) => {
         <MyText style={styles.headerHeading}>Trades</MyText>
       </View> */}
     <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
-    <View style={{
-              flexDirection:'row',
-              justifyContent:'space-around',
-              backgroundColor:'#1bb76d',
-              paddingVertical:6
-            }}>
-             
-
-              <TouchableOpacity
-              activeOpacity={0.9}
-              onPress={()=>{
-                navigation.navigate('ModeratorScreen')
-              }}
-              >
-                <MyText></MyText>
-              <MyText style={{color:'white'}}>Trades</MyText>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-              activeOpacity={0.9}
-              onPress={()=>{
-                navigation.navigate('')
-              }}
-              >
-                <MyText></MyText>
-              <MyText style={{color:'white'}}>Logout</MyText>
-              </TouchableOpacity>
-
-            </View>
-        {/* <Header
-          style={{marginTop: 10}}
+    
+        <Header
+          style={{marginTop: 0}}
           navigation={navigation}
           Heading={'Trades'}
-        />     */}
+        />    
 
       <View style={styles.mainBody}>
         <View style={[styles.headerButtons]}>
@@ -204,12 +176,14 @@ const index = ({navigation}) => {
               );
             })}
           
-          <View style={{paddingBottom: 60}}></View>
+          <View style={{paddingBottom: 70}}></View>
         </ScrollView>
       </View>
       </View>
             <ModeratorNavbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
     </SafeAreaView>
+    <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+
     </View>
   );
 };

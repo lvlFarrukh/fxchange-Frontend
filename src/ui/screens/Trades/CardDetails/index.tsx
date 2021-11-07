@@ -35,7 +35,6 @@ const index = ({navigation}) => {
   };
   return (
     <Fragment>
-      <ScrollView>
         <SafeAreaView
           style={{
             height: height,
@@ -46,7 +45,7 @@ const index = ({navigation}) => {
           <View style={Style.header}>
             <TouchableOpacity
               activeOpacity={0.9}
-              style={{marginLeft: 15}}
+              style={{marginLeft: 15, marginTop: 5}}
               onPress={() => navigateBack()}>
               <Image
                 source={require('../../../../Assets/ICONS/arrow=white.png')}
@@ -56,7 +55,10 @@ const index = ({navigation}) => {
             <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
             <MyText></MyText>
           </View>
-          <View style={Style.mainBody}>
+
+
+          <ScrollView style={Style.mainBody}>
+
             <View
               style={[
                 {
@@ -691,14 +693,16 @@ const index = ({navigation}) => {
                 </View>
               </View>
             </View>
-          </View>
+            <View style={{marginBottom: 80}}></View>
+
+          </ScrollView>
+
         </SafeAreaView>
         <ImagePreviewModal
           image={previewImgPath}
           isPreviewImgVisible={isPreviewImage}
           togglePreviewImgModal={togglePreviewImgModal}
         />
-      </ScrollView>
       <Navbar
         navigation={navigation}
         activePage={'trade'}

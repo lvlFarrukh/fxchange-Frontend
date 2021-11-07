@@ -15,6 +15,7 @@ import SelectDropdown from 'react-native-select-dropdown';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
+import Navbar from '../../../components/Navbars/Navbar';
 import Style from './Style';
 
 const {width, height} = Dimensions.get('screen');
@@ -45,12 +46,13 @@ const index = ({navigation}) => {
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
       <StatusBar translucent backgroundColor="transparent" />
-      <ScrollView>
+      
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
         />
+        <ScrollView>
         <View
           style={{
             marginTop: 10,
@@ -62,12 +64,12 @@ const index = ({navigation}) => {
             paddingHorizontal: '10%',
           }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <MyText style={{fontSize: 9, color: 'black', marginTop: 25}}>
+            {/* <MyText style={{fontSize: 9, color: 'black', marginTop: 25}}>
               Opened By Thomas
-            </MyText>
+            </MyText> */}
           </View>
 
-          <View style={{alignSelf: 'center', marginTop: -22}}>
+          <View style={{alignSelf: 'center', marginTop: 13}}>
             <Image
               source={require('../../../../Assets/ICONS/Bitcoin.png')}
               style={{

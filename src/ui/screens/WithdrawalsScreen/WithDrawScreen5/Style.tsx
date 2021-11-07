@@ -51,13 +51,12 @@ const styles = StyleSheet.create({
   },
   mainBodyContent:{
     marginTop:"2%",
-    marginLeft:"10%",
-
-    
+    paddingHorizontal: 30
+    // marginLeft:"10%",
   },
   updatePassword: {
     justifyContent: 'center',
-    paddingRight: 25,
+    // paddingRight: 25,
     marginTop:90,
   },
   updatePasswordButton: {

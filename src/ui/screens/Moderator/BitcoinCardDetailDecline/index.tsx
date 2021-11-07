@@ -36,12 +36,13 @@ const index = ({navigation}) => {
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
        <StatusBar translucent backgroundColor='transparent' />
-      <ScrollView>
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
         />
+      <ScrollView>
+
         <View
           style={{
             marginTop: 10,
@@ -91,7 +92,7 @@ const index = ({navigation}) => {
             flexDirection: 'row'
           }}>
             <TouchableOpacity
-activeOpacity={0.9}
+              activeOpacity={0.9}
               style={[
                 {
                   backgroundColor: '#f2f2f2',

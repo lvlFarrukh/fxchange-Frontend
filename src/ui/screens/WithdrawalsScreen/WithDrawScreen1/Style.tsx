@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
     display:'flex',
     flexDirection:"row",
     justifyContent:"space-between",
-    marginTop:10,
+    // marginTop:10,
     marginHorizontal:10,
     borderBottomWidth:1.5,
     borderBottomColor: '#F1F1F1',
     // paddingVertical:15
-    paddingTop: 15,
-    paddingBottom: 10,
-    borderColor:'rgba(0,0,0,0.2)'
+    paddingTop: 10,
+    // paddingBottom: 10,
+    borderColor:'#F1F1F1'
    
   
     
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
   mainBodyBottomItems:{
     alignItems:'center',
     marginBottom:20,
+    marginTop: 60
     //backgroundColor:"pink"
   },
   headerButtons: {

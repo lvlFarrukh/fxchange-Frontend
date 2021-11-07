@@ -92,7 +92,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     borderRadius: 3,
                     borderColor: '#F1F1F1',
                     borderWidth: 1.5,
-                    width: '92%',
+                    width: '100%',
                     height: 45,
                     marginVertical: 13,
                     color: 'black',
@@ -112,7 +112,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     borderRadius: 3,
                     borderColor: '#F1F1F1',
                     borderWidth: 1.5,
-                    width: '92%',
+                    width: '100%',
                     height: 45,
                     marginVertical: 13,
                     color: 'black',
@@ -132,7 +132,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     borderRadius: 3,
                     borderColor: '#F1F1F1',
                     borderWidth: 1.5,
-                    width: '92%',
+                    width: '100%',
                     height: 45,
                     marginVertical: 13,
                     color: 'black',
@@ -155,6 +155,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 <MyText style={{fontSize: 10, color: '#8e8c8d'}}>
                   BANK DETAILS
                 </MyText>
+
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -162,7 +163,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     borderRadius: 3,
                     borderColor: '#F1F1F1',
                     borderWidth: 1.5,
-                    width: '92%',
+                    width: '100%',
                     height: 45,
                     marginVertical: 13,
                     color: 'black',
@@ -175,6 +176,50 @@ const WithDrawScreenFive = ({navigation}) => {
                   numberOfLines={2}
                   multiline={true}
                 />
+                
+                <TextInput
+                  style={{
+                    backgroundColor: 'white',
+                    // textAlignVertical: 'top',
+                    borderRadius: 3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
+                    width: '100%',
+                    height: 45,
+                    marginVertical: 13,
+                    color: 'black',
+                    paddingLeft: 10,
+                  }}
+                  underlineColorAndroid="transparent"
+                  placeholder="Account Number"
+                  placeholderTextColor="#333333"
+                  textAlign={'left'}
+                  numberOfLines={2}
+                  multiline={true}
+                />
+
+                <TextInput
+                  style={{
+                    backgroundColor: 'white',
+                    // textAlignVertical: 'top',
+                    borderRadius: 3,
+                    borderColor: '#F1F1F1',
+                    borderWidth: 1.5,
+                    width: '100%',
+                    height: 45,
+                    marginVertical: 13,
+                    color: 'black',
+                    paddingLeft: 10,
+                  }}
+                  underlineColorAndroid="transparent"
+                  placeholder="Name on Account"
+                  placeholderTextColor="#333333"
+                  textAlign={'left'}
+                  numberOfLines={2}
+                  multiline={true}
+                />
+
+               
                 {/* <TextInput
                 style={{
                   backgroundColor: 'white',

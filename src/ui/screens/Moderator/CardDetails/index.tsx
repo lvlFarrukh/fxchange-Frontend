@@ -59,27 +59,27 @@ const index = ({navigation}) => {
         flex: 1,
         backgroundColor: '#1bb76d',
       }}>
-      <ScrollView>
-        <SafeAreaView
-          style={{
-            height: height,
-            width: width,
-            flex: 1,
-          }}>
-          <StatusBar translucent backgroundColor="transparent" />
-          <View style={Style.header}>
-            <TouchableOpacity
+      <SafeAreaView
+        style={{
+          height: height,
+          width: width,
+          flex: 1,
+        }}>
+        <StatusBar translucent backgroundColor="transparent" />
+        <View style={Style.header}>
+          <TouchableOpacity
             activeOpacity={0.9}
-              style={{marginLeft: 15}}
-              onPress={() => navigateBack()}>
-              <Image
-                source={require('../../../../Assets/ICONS/arrow=white.png')}
-                style={Style.backArrow}
-              />
-            </TouchableOpacity>
-            <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
-            <MyText></MyText>
-          </View>
+            style={{marginLeft: 15, paddingTop: 5}}
+            onPress={() => navigateBack()}>
+            <Image
+              source={require('../../../../Assets/ICONS/arrow=white.png')}
+              style={Style.backArrow}
+            />
+          </TouchableOpacity>
+          <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
+          <MyText></MyText>
+        </View>
+        <ScrollView>
           <View style={Style.mainBody}>
             <View style={[Style.headerButtons]}>
               <MyText style={[Style.headerButtom]}>Opened by Thomas</MyText>
@@ -98,7 +98,12 @@ const index = ({navigation}) => {
                 Style.btnShadow,
               ]}>
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between',paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 10}}>
                   <View
                     style={[
@@ -155,8 +160,8 @@ const index = ({navigation}) => {
                     }}
                     imageStyle={{}}>
                     <TouchableOpacity
-                    activeOpacity={0.9}
-                     onPress={() => previewImage(1)}>
+                      activeOpacity={0.9}
+                      onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -185,14 +190,21 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </MyText>
-                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
+                  <MyText style={Style.mdFontBlackColor}>
+                    ${'50 (N16,000)'}
+                  </MyText>
                 </View>
 
                 <View>
@@ -207,9 +219,18 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[{marginBottom: 6, flexDirection: 'row', paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  {
+                    marginBottom: 6,
+                    flexDirection: 'row',
+                    paddingLeft: 18,
+                    paddingRight: 18,
+                  },
+                ]}>
                 <View>
                   <MyText
                     style={[{color: 'gray', fontSize: 10, marginBottom: 2}]}>
@@ -231,9 +252,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={() => previewImage(1)}>
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -268,9 +289,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={() => previewImage(1)}>
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      onPress={() => previewImage(1)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -299,10 +320,15 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr,]}></View>
+              <View style={[Style.hr]}></View>
 
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
@@ -357,9 +383,9 @@ const index = ({navigation}) => {
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={() => previewImage(0)}>
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      onPress={() => previewImage(0)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -388,14 +414,21 @@ const index = ({navigation}) => {
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </MyText>
-                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
+                  <MyText style={Style.mdFontBlackColor}>
+                    ${'50 (N16,000)'}
+                  </MyText>
 
                   <MyText
                     style={[
@@ -424,11 +457,12 @@ const index = ({navigation}) => {
                   justifyContent: 'space-between',
                   marginTop: 25,
                   marginBottom: 22,
-                  paddingLeft: 18, paddingRight: 18,
+                  paddingLeft: 18,
+                  paddingRight: 18,
                 }}>
                 <TouchableOpacity
-activeOpacity={0.9}  
-                style={[
+                  activeOpacity={0.9}
+                  style={[
                     {
                       backgroundColor: '#f2f2f2',
                       borderRadius: 20,
@@ -495,7 +529,12 @@ activeOpacity={0.9}
               <View style={[Style.hr]}></View>
 
               <View
-                style={{flexDirection: 'row', justifyContent: 'space-between',paddingLeft: 18, paddingRight: 18,}}>
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingLeft: 18,
+                  paddingRight: 18,
+                }}>
                 <View style={{flexDirection: 'row', marginTop: 5}}>
                   <View
                     style={[
@@ -550,9 +589,9 @@ activeOpacity={0.9}
                       justifyContent: 'center',
                     }}
                     imageStyle={{}}>
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={() => previewImage(0)}>
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      onPress={() => previewImage(0)}>
                       <View
                         style={{
                           backgroundColor: 'rgba(0,0,0,0.5)',
@@ -581,14 +620,21 @@ activeOpacity={0.9}
               </View>
 
               {/* hr */}
-              <View style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
+              <View
+                style={[Style.hr, {marginLeft: 18, marginRight: 18}]}></View>
 
-              <View style={[Style.lowerPortion, {paddingLeft: 18, paddingRight: 18,}]}>
+              <View
+                style={[
+                  Style.lowerPortion,
+                  {paddingLeft: 18, paddingRight: 18},
+                ]}>
                 <View>
                   <MyText style={[Style.smFontSize, , {color: 'gray'}]}>
                     Amount (120/5)
                   </MyText>
-                  <MyText style={Style.mdFontBlackColor}>${'50 (N16,000)'}</MyText>
+                  <MyText style={Style.mdFontBlackColor}>
+                    ${'50 (N16,000)'}
+                  </MyText>
                 </View>
 
                 <View>
@@ -604,316 +650,318 @@ activeOpacity={0.9}
                 </View>
               </View>
             </View>
+            <View style={{height: 50}}></View>
           </View>
-          <Modal
-            //style={{ backgroundColor:'#fafafa' , height:height/2}}
-            isVisible={isModalVisible}
-            //coverScreen={true}
-            // swipeDirection='down'
-            // onSwipeComplete={toggleModal}
-            // swipeThreshold={50}
-          >
+        </ScrollView>
+      </SafeAreaView>
+
+        <Modal
+          //style={{ backgroundColor:'#fafafa' , height:height/2}}
+          isVisible={isModalVisible}
+          //coverScreen={true}
+          // swipeDirection='down'
+          // onSwipeComplete={toggleModal}
+          // swipeThreshold={50}
+        >
+          <View
+            style={{
+              width: width - 100,
+              height: width - 125,
+              borderRadius: 50,
+              alignSelf: 'center',
+              backgroundColor: '#1bb76d',
+            }}>
             <View
               style={{
                 width: width - 100,
-                height: width - 125,
-                borderRadius: 50,
+                height: width - 145,
+                marginTop: 20,
+                borderRadius: 40,
                 alignSelf: 'center',
-                backgroundColor: '#1bb76d',
+                backgroundColor: 'white',
+                justifyContent: 'space-between',
               }}>
-              <View
-                style={{
-                  width: width - 100,
-                  height: width - 145,
-                  marginTop: 20,
-                  borderRadius: 40,
-                  alignSelf: 'center',
-                  backgroundColor: 'white',
-                  justifyContent: 'space-between',
-                }}>
-                <View>
+              <View>
+                <MyText
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 18,
+                    margin: 5,
+                    fontWeight: '500',
+                    color: '#1bb76d',
+                  }}>
+                  ACCEPT
+                </MyText>
+
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 0}]}></View>
+              </View>
+
+              <View>
+                <MyText
+                  style={{
+                    color: 'black',
+                    fontSize: 15,
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                  }}>
+                  Are you sure you want to
+                </MyText>
+                <MyText
+                  style={{
+                    color: 'black',
+                    fontSize: 15,
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                  }}>
+                  accept this transaction
+                </MyText>
+              </View>
+
+              <View>
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  onPress={() => {
+                    toggleModal();
+                  }}>
                   <MyText
                     style={{
                       textAlign: 'center',
-                      fontSize: 18,
-                      margin: 5,
+                      fontSize: 15,
                       fontWeight: '500',
                       color: '#1bb76d',
                     }}>
-                    ACCEPT
+                    YES ACCEPT
                   </MyText>
-
-                  {/* hr */}
-                  <View style={[Style.hr, {marginTop: 0}]}></View>
-                </View>
-
-                <View>
-                  <MyText
-                    style={{
-                      color: 'black',
-                      fontSize: 15,
-                      alignSelf: 'center',
-                      textAlign: 'center',
-                    }}>
-                    Are you sure you want to
-                  </MyText>
-                  <MyText
-                    style={{
-                      color: 'black',
-                      fontSize: 15,
-                      alignSelf: 'center',
-                      textAlign: 'center',
-                    }}>
-                    accept this transaction
-                  </MyText>
-                </View>
-
-                <View>
-                  <TouchableOpacity activeOpacity={0.9}
-                  onPress={() => {
-                    toggleModal()
-                }}
-                  >
-                    <MyText
-                      style={{
-                        textAlign: 'center',
-                        fontSize: 15,
-                        fontWeight: '500',
-                        color: '#1bb76d',
-                      }}>
-                      YES ACCEPT
-                    </MyText>
-                  </TouchableOpacity>
-                  {/* hr */}
-                  <View style={[Style.hr, {marginTop: 6}]}></View>
-                  <TouchableOpacity
+                </TouchableOpacity>
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 6}]}></View>
+                <TouchableOpacity
                   activeOpacity={0.9}
-                    style={{marginBottom: 8, marginTop: -4}}
-                    onPress={() => toggleModal()}>
-                    <MyText
-                      style={{
-                        textAlign: 'center',
-                        fontSize: 15,
-                        fontWeight: '500',
-                        color: 'black',
-                      }}>
-                      Cancel
-                    </MyText>
-                  </TouchableOpacity>
-                </View>
+                  style={{marginBottom: 8, marginTop: -4}}
+                  onPress={() => toggleModal()}>
+                  <MyText
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 15,
+                      fontWeight: '500',
+                      color: 'black',
+                    }}>
+                    Cancel
+                  </MyText>
+                </TouchableOpacity>
               </View>
             </View>
-          </Modal>
+          </View>
+        </Modal>
 
-          <Modal
-            //style={{ backgroundColor:'#fafafa' , height:height/2}}
-            isVisible={isDelineModalVisible}
-            //coverScreen={true}
-            // swipeDirection='down'
-            // onSwipeComplete={toggleModal}
-            // swipeThreshold={50}
-          >
+        <Modal
+          //style={{ backgroundColor:'#fafafa' , height:height/2}}
+          isVisible={isDelineModalVisible}
+          //coverScreen={true}
+          // swipeDirection='down'
+          // onSwipeComplete={toggleModal}
+          // swipeThreshold={50}
+        >
+          <View
+            style={{
+              width: width - 50,
+              height: width - 10,
+              borderRadius: 50,
+              alignSelf: 'center',
+              backgroundColor: '#ef2a22',
+            }}>
             <View
               style={{
                 width: width - 50,
-                height: width - 10,
-                borderRadius: 50,
+                height: width - 30,
+                marginTop: 20,
+                borderRadius: 40,
                 alignSelf: 'center',
-                backgroundColor: '#ef2a22',
+                backgroundColor: 'white',
+                justifyContent: 'space-between',
               }}>
-              <View
-                style={{
-                  width: width - 50,
-                  height: width - 30,
-                  marginTop: 20,
-                  borderRadius: 40,
-                  alignSelf: 'center',
-                  backgroundColor: 'white',
-                  justifyContent: 'space-between',
-                }}>
-                <View>
+              <View>
+                <MyText
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 18,
+                    margin: 8,
+                    fontWeight: '500',
+                    color: '#ef2a22',
+                  }}>
+                  DECLINE
+                </MyText>
+
+                {/* hr */}
+                <View
+                  style={[
+                    Style.hr,
+                    {marginTop: 0, marginLeft: 36, marginRight: 36},
+                  ]}></View>
+              </View>
+
+              <View style={{flex: 1}}>
+                <SelectDropdown
+                  data={declineReason}
+                  onSelect={(selectedItem, index) => {
+                    console.log(selectedItem, index);
+                  }}
+                  buttonTextAfterSelection={(selectedItem, index) => {
+                    // text represented after item is selected
+                    // if data array is an array of objects then return selectedItem.property to render after item is selected
+                    return selectedItem;
+                  }}
+                  rowTextForSelection={(item, index) => {
+                    // text represented for each item in dropdown
+                    // if data array is an array of objects then return item.property to represent item in dropdown
+                    return item;
+                  }}
+                  renderDropdownIcon={() => {
+                    return (
+                      <Image
+                        source={require('../../../../Assets/ICONS/dropdwo.png')}
+                        style={{width: 10, height: 5}}
+                      />
+                    );
+                  }}
+                  defaultButtonText={'Reason'}
+                  buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+                  rowStyle={{backgroundColor: 'white', width: '100%'}}
+                  rowTextStyle={{fontSize: 15}}
+                  buttonStyle={{
+                    backgroundColor: 'white',
+                    borderWidth: 0.5,
+                    borderColor: 'gray',
+                    borderRadius: 4,
+                    height: 42,
+                    width: '80%',
+                    paddingRight: 10,
+                    paddingVertical: 10,
+                    alignSelf: 'center',
+                  }}
+                />
+
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    marginVertical: 10,
+                    width: '80%',
+                    alignSelf: 'center',
+                  }}>
+                  <View
+                    style={{
+                      backgroundColor: 'white',
+                      margin: 2,
+                      width: '32%',
+                      height: width - 300,
+                    }}>
+                    <TouchableOpacity
+                      activeOpacity={0.5}
+                      style={{position: 'absolute', zIndex: 1, margin: 1}}>
+                      <View
+                        style={{
+                          width: 14,
+                          height: 14,
+                          borderRadius: 20,
+                          backgroundColor: 'black',
+                          justifyContent: 'center',
+                        }}>
+                        <Image
+                          source={require('../../../../Assets/ICONS/close2.jpeg')}
+                          style={{
+                            width: 10,
+                            height: 10,
+                            alignSelf: 'center',
+                          }}
+                        />
+                      </View>
+                    </TouchableOpacity>
+
+                    <Image
+                      source={require('../../../../Assets/IMG_3151.jpg')}
+                      style={{width: '100%', height: '100%'}}
+                    />
+                  </View>
+                  <View style={{margin: 2, width: '32%', height: width - 300}}>
+                    {/* Upload Button */}
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      style={[
+                        Style.btnShadow,
+                        {
+                          backgroundColor: '#fefefe',
+                          width: width - 328,
+                          height: width - 328,
+                          borderRadius: 50,
+                          alignSelf: 'center',
+                          justifyContent: 'center',
+                        },
+                      ]}>
+                      <MyText
+                        style={{
+                          fontSize: 25,
+                          fontWeight: '500',
+                          color: '#1bb76d',
+                          alignSelf: 'center',
+                        }}>
+                        +
+                      </MyText>
+                    </TouchableOpacity>
+                    <MyText
+                      style={{
+                        color: '#1bb76d',
+                        fontSize: 10,
+                        fontWeight: '500',
+                        alignSelf: 'center',
+                        marginTop: 5,
+                      }}>
+                      Upload Image
+                    </MyText>
+                  </View>
+                </View>
+              </View>
+
+              <View>
+                <TouchableOpacity
+                  activeOpacity={0.9}
+                  onPress={() => toggleDelineModal()}>
                   <MyText
                     style={{
                       textAlign: 'center',
-                      fontSize: 18,
-                      margin: 8,
+                      fontSize: 14,
                       fontWeight: '500',
                       color: '#ef2a22',
                     }}>
-                    DECLINE
+                    YES DECLINE
                   </MyText>
-
-                  {/* hr */}
-                  <View
-                    style={[
-                      Style.hr,
-                      {marginTop: 0, marginLeft: 36, marginRight: 36},
-                    ]}></View>
-                </View>
-
-                <View style={{flex: 1}}>
-                  <SelectDropdown
-                    data={declineReason}
-                    onSelect={(selectedItem, index) => {
-                      console.log(selectedItem, index);
-                    }}
-                    buttonTextAfterSelection={(selectedItem, index) => {
-                      // text represented after item is selected
-                      // if data array is an array of objects then return selectedItem.property to render after item is selected
-                      return selectedItem;
-                    }}
-                    rowTextForSelection={(item, index) => {
-                      // text represented for each item in dropdown
-                      // if data array is an array of objects then return item.property to represent item in dropdown
-                      return item;
-                    }}
-                    renderDropdownIcon={() => {
-                      return (
-                        <Image
-                          source={require('../../../../Assets/ICONS/dropdwo.png')}
-                          style={{width: 10, height: 5}}
-                        />
-                      );
-                    }}
-                    defaultButtonText={'Reason'}
-                    buttonTextStyle={{textAlign: 'left', fontSize: 13}}
-                    rowStyle={{backgroundColor: 'white', width: '100%'}}
-                    rowTextStyle={{fontSize: 15}}
-                    buttonStyle={{
-                      backgroundColor: 'white',
-                      borderWidth: 0.5,
-                      borderColor: 'gray',
-                      borderRadius: 4,
-                      height: 42,
-                      width: '80%',
-                      paddingRight: 10,
-                      paddingVertical: 10,
-                      alignSelf: 'center',
-                    }}
-                  />
-
-                  <View
-                    style={{
-                      flex: 1,
-                      flexDirection: 'row',
-                      marginVertical: 10,
-                      width: '80%',
-                      alignSelf: 'center',
-                    }}>
-                    <View
-                      style={{
-                        backgroundColor: 'white',
-                        margin: 2,
-                        width: '32%',
-                        height: width - 300,
-                      }}>
-                    <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
-                      zIndex: 1,
-                      margin: 1,}}>
-
-                    <View
-                      style={{
-                        width: 14,
-                        height: 14,
-                        borderRadius: 20,
-                        backgroundColor: 'black',
-                        justifyContent: 'center',
-                      }}>
-                      <Image
-                        source={require('../../../../Assets/ICONS/close2.jpeg')}
-                        style={{
-                          width: 10,
-                          height: 10,
-                          alignSelf: 'center',
-                        }}
-                      />
-                    </View>
-                    </TouchableOpacity>
-
-                      <Image
-                        source={require('../../../../Assets/IMG_3151.jpg')}
-                        style={{width: '100%', height: '100%'}}
-                      />
-                    </View>
-                    <View
-                      style={{margin: 2, width: '32%', height: width - 300}}>
-                      {/* Upload Button */}
-                      <TouchableOpacity
-                      activeOpacity={0.9}
-                        style={[
-                          Style.btnShadow,
-                          {
-                            backgroundColor: '#fefefe',
-                            width: width - 328,
-                            height: width - 328,
-                            borderRadius: 50,
-                            alignSelf: 'center',
-                            justifyContent: 'center',
-                          },
-                        ]}>
-                        <MyText
-                          style={{
-                            fontSize: 25,
-                            fontWeight: '500',
-                            color: '#1bb76d',
-                            alignSelf: 'center',
-                          }}>
-                          +
-                        </MyText>
-                      </TouchableOpacity>
-                      <MyText
-                        style={{
-                          color: '#1bb76d',
-                          fontSize: 10,
-                          fontWeight: '500',
-                          alignSelf: 'center',
-                          marginTop: 5,
-                        }}>
-                        Upload Image
-                      </MyText>
-                    </View>
-                  </View>
-                </View>
-
-                <View>
-                  <TouchableOpacity activeOpacity={0.9} onPress={()=> toggleDelineModal()}>
-                    <MyText
-                      style={{
-                        textAlign: 'center',
-                        fontSize: 14,
-                        fontWeight: '500',
-                        color: '#ef2a22',
-                      }}>
-                      YES DECLINE
-                    </MyText>
-                  </TouchableOpacity>
-                  {/* hr */}
-                  <View style={[Style.hr, {marginTop: 6}]}></View>
-                  <TouchableOpacity
+                </TouchableOpacity>
+                {/* hr */}
+                <View style={[Style.hr, {marginTop: 6}]}></View>
+                <TouchableOpacity
                   activeOpacity={0.9}
-                    style={{marginBottom: 8, marginTop: -5}}
-                    onPress={() => toggleDelineModal()}>
-                    <MyText
-                      style={{
-                        textAlign: 'center',
-                        fontSize: 14,
-                        fontWeight: '500',
-                        color: 'black',
-                      }}>
-                      CANCEL
-                    </MyText>
-                  </TouchableOpacity>
-                </View>
+                  style={{marginBottom: 8, marginTop: -5}}
+                  onPress={() => toggleDelineModal()}>
+                  <MyText
+                    style={{
+                      textAlign: 'center',
+                      fontSize: 14,
+                      fontWeight: '500',
+                      color: 'black',
+                    }}>
+                    CANCEL
+                  </MyText>
+                </TouchableOpacity>
               </View>
             </View>
-          </Modal>
-        </SafeAreaView>
-        <ImagePreviewModal
-          image={previewImgPath}
-          isPreviewImgVisible={isPreviewImage}
-          togglePreviewImgModal={togglePreviewImgModal}
-        />
-      </ScrollView>
+          </View>
+        </Modal>
+      <ImagePreviewModal
+        image={previewImgPath}
+        isPreviewImgVisible={isPreviewImage}
+        togglePreviewImgModal={togglePreviewImgModal}
+      />
     </View>
   );
 };

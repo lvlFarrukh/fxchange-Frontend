@@ -9,8 +9,8 @@ import {
   TextInput,
   Dimensions,
   StatusBar,
+  ScrollView
 } from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Navbar from '../../components/Navbars/Navbar';
@@ -29,7 +29,7 @@ const DashBoardScreen = ({navigation}) => {
         backgroundColor: '#1bb76d',
       }}>
       <SafeAreaView style={{flex: 1, height: height, width: width}}>
-        <ScrollView>
+        <ScrollView >
           <View style={[styles.header, {}]}>
             <View
               style={{
@@ -76,7 +76,7 @@ const DashBoardScreen = ({navigation}) => {
 
           <View style={[styles.body, {}]}>
             <TouchableOpacity
-              activeOpacity={0.9}
+              activeOpacity={1}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -110,7 +110,7 @@ const DashBoardScreen = ({navigation}) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-            activeOpacity={0.9}
+            activeOpacity={1}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -217,14 +217,16 @@ const DashBoardScreen = ({navigation}) => {
             <View
               style={{
                 marginTop: 20,
-                marginHorizontal: 5,
-                padding: 2,
-                backgroundColor: '#ffffff',
+                marginHorizontal: 20,
+                // padding: 2,
+                // backgroundColor: 'pink',
                 alignContent: 'center',
-                borderRadius: 3,
+                borderRadius: 4,
+                overflow: 'hidden'
               }}>
               <Slider
-                imageHeight={160}
+              
+                imageHeight={150}
                 activeDotColor={'transparent'}
                 emptyDotColor={'transparent'}
                 images={[
@@ -237,6 +239,7 @@ const DashBoardScreen = ({navigation}) => {
                 source={require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                 style={styles.cardImage}></ImageBackground> */}
             </View>
+
           </View>
         </ScrollView>
         <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
@@ -255,10 +258,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#1bb76d',
   },
   body: {
-    height: height - 210,
+    height: "100%",
     backgroundColor: '#fff',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
+    paddingBottom: 20
   },
   cardImage: {
     resizeMode: 'contain',

@@ -63,6 +63,10 @@ const DATA = [
 const Item = ({ item, onPress, backgroundColor, textColor }) => (
   <View style={[styles.item]}>
     {/* <StatusBar hidden /> */}
+    <TouchableOpacity activeOpacity={0.9} 
+      onPress={onPress}
+    >
+
     <View
       style={{
         display: 'flex',
@@ -75,24 +79,28 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
       </View>
 
       <View>
+
         <View style={{ flexDirection: 'row' }}>
+
           <View>
-            <MyText style={[styles.amount, item.value === "-" && {color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</MyText>
-            <MyText style={[styles.totalAmount, textColor]}>
+            <Text style={[styles.amount, item.value === "-" && {fontFamily:'Nunito-Regular', color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</Text>
+            <Text style={[styles.totalAmount, textColor, {fontFamily:'Nunito-Regular'}]}>
               {item.value === "+" && 'total: ' + item.total}
-            </MyText>
+            </Text>
           </View>
 
-          <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
             <Icon
               name={'arrow-forward-ios'}
               size={16}
               color={'#000000'}
               style={{ marginTop: 10, marginLeft: 10 }}></Icon>
-          </TouchableOpacity>
         </View>
+
       </View>
     </View>
+
+    </TouchableOpacity>
+
     <View style={styles.hr}></View>
   </View>
 );
@@ -125,7 +133,11 @@ const index = ({ navigation }) => {
     return (
       <Item
         item={item}
-        onPress={toggleModal}
+        onPress={
+          item?.title === "Bitcoin" ? () => navigation.navigate('TradeBitcoinComplete') :
+          item?.title === "Itunes" ? () => navigation.navigate('tradeCardDetails') :
+          item?.title === "Withdrawal completed" && toggleModal
+        }
         backgroundColor={{ backgroundColor }}
         textColor={{ color }}
       />

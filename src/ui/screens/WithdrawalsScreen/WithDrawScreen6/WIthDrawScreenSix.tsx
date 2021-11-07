@@ -60,9 +60,8 @@ const WithDrawScreenSix = ({ navigation }) => {
           flex: 1,
           backgroundColor: '#1bb76d',
         }}>
-        <ScrollView>
-          <View style={styles.header}>
-            <View style={styles.headerUpperArea}>
+          <View style={{marginTop: 25}}>
+          <View style={styles.headerUpperArea}>
               <TouchableOpacity
                 onPress={() => {
                   navigation.goBack();
@@ -82,6 +81,10 @@ const WithDrawScreenSix = ({ navigation }) => {
                 Withdrawls
               </MyText>
             </View>
+          </View>
+        <ScrollView>
+          <View style={styles.header}>
+            
             <View
               style={{
                 display: 'flex',
@@ -172,7 +175,7 @@ const WithDrawScreenSix = ({ navigation }) => {
             </View>
 
             <TextInput
-              style={styles.changePasswordButton}
+              style={styles.changePasswordButton1}
               underlineColorAndroid="transparent"
               placeholder="Current Password"
               placeholderTextColor="black"
@@ -252,6 +255,7 @@ const WithDrawScreenSix = ({ navigation }) => {
               </View>
             </View>
           </View>
+          <View style={{marginBottom: 15}}></View>
         </ScrollView>
         <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
       </SafeAreaView>

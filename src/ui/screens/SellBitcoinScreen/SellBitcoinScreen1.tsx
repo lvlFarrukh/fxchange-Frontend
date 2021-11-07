@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -15,34 +15,36 @@ import {
   Keyboard,
   StatusBar,
 } from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 
-const SellBitcoinScreen1 = ({ navigation }) => {
+const SellBitcoinScreen1 = ({navigation}) => {
   return (
-    <View style={{ height: height, width: width, flex: 1 }}>
-      <ScrollView>
-        <StatusBar translucent backgroundColor='transparent' />
+    <View style={{height: height, width: width, flex: 1}}>
+      <StatusBar translucent backgroundColor="transparent" />
 
-        {/* <StatusBar hidden /> */}
-        <SafeAreaView
-          style={{
-            flex: 1,
-            height: height,
-            width: width,
-            backgroundColor: '#d65d0e',
-          }}>
-          <View style={{ height: '8%', justifyContent: 'center' }}>
-            <Header navigation={navigation} Heading={'Sell Bitcoin'} />
-          </View>
-
+      {/* <StatusBar hidden /> */}
+      <SafeAreaView
+        style={{
+          flex: 1,
+          height: height,
+          width: width,
+          backgroundColor: '#d65d0e',
+        }}>
+        <View style={{height: 50, justifyContent: 'center'}}>
+          <Header navigation={navigation} Heading={'Sell Bitcoin'} />
+        </View>
+        <ScrollView>
           <View
-            style={[styles.whiteCardBg, { height: '100%', paddingHorizontal: 35 }]}>
+            style={[
+              styles.whiteCardBg,
+              {height: '100%', paddingHorizontal: 35},
+            ]}>
             <View
               style={{
                 flexDirection: 'row',
@@ -53,17 +55,20 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                 marginTop: 10,
               }}>
               <View>
-                <MyText style={{ fontSize: 10 }}>Wallet Addresss</MyText>
-                <MyText style={{ fontSize: 10 }}>1BnG5DHDVF67gCDHFKFKFGSGXCgCfb</MyText>
+                <MyText style={{fontSize: 10}}>Wallet Addresss</MyText>
+                <MyText style={{fontSize: 10}}>
+                  1BnG5DHDVF67gCDHFKFKFGSGXCgCfb
+                </MyText>
               </View>
               <Image
-                style={{ height: 100, width: 100 }}
+                style={{height: 100, width: 100}}
                 source={require('../../../Assets/ICONS/barCode.png')}
               />
             </View>
 
-            <View style={{ marginTop: 20 }}>
-              <MyText style={{ fontSize: 10, alignSelf: 'center', color: '#686667' }}>
+            <View style={{marginTop: 20}}>
+              <MyText
+                style={{fontSize: 10, alignSelf: 'center', color: '#686667'}}>
                 Estimated Rate (570/$)
               </MyText>
               <MyText
@@ -103,7 +108,7 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                         <MyText style={{ padding: 12 }}>Transaction id (optional)</MyText>
                     </TouchableOpacity> */}
             <TextInput
-              style={[styles.TextInputStyle, { marginTop: 10, width: '100%' }]}
+              style={[styles.TextInputStyle, {marginTop: 10, width: '100%'}]}
               placeholder={'Amount Sent in USD'}
               placeholderTextColor={'#949494'}></TextInput>
 
@@ -118,7 +123,6 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                 style={styles.cardImage}
                 resizeMode={'contain'}>
                 <TouchableOpacity activeOpacity={0.5}>
-
                   <View
                     style={{
                       width: 16,
@@ -144,7 +148,6 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                 style={styles.cardImage}
                 resizeMode={'contain'}>
                 <TouchableOpacity activeOpacity={0.5}>
-
                   <View
                     style={{
                       width: 16,
@@ -164,20 +167,32 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                   </View>
                 </TouchableOpacity>
               </ImageBackground>
+              
             </View>
+            
 
             <TouchableOpacity activeOpacity={0.9} style={styles.roundButton1}>
-              <MyText style={{ fontSize: 35, color: '#1bb76d', paddingBottom: 5 }}>+</MyText>
+              <MyText
+                style={{fontSize: 35, color: '#1bb76d', paddingBottom: 5}}>
+                +
+              </MyText>
             </TouchableOpacity>
-            <MyText style={{ color: '#1bb76d', alignSelf: 'center', marginTop: 5, fontSize: 10 }}>
+            <MyText
+              style={{
+                color: '#1bb76d',
+                alignSelf: 'center',
+                marginTop: 5,
+                fontSize: 10,
+              }}>
               Add Attachment
             </MyText>
 
-            <TouchableOpacity activeOpacity={0.9} style={{ marginTop: 20, marginBottom: 'auto' }}
+            <TouchableOpacity
+              activeOpacity={0.9}
+              style={{marginTop: 20, marginBottom: 'auto'}}
               onPress={() => {
-                navigation.navigate('TradeSuccesfullScreen2')
-              }}
-            >
+                navigation.navigate('TradeSuccesfullScreen2');
+              }}>
               <MyText
                 style={{
                   alignSelf: 'center',
@@ -187,20 +202,22 @@ const SellBitcoinScreen1 = ({ navigation }) => {
                   padding: 8,
                   color: '#fff',
                   borderRadius: 5,
-                  fontSize: 12
+                  fontSize: 12,
                 }}>
                 SUBMIT
               </MyText>
             </TouchableOpacity>
           </View>
-        </SafeAreaView>
-        <View style={{ padding:15 }}></View>
-      </ScrollView>
-      <View style={{ position: 'absolute', width: width, bottom: 1 }}>
-        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
-      </View>
+        </ScrollView>
+      </SafeAreaView>
+      {/* <View style={{position: 'absolute', width: width, bottom: 1}}>
+        <Navbar
+          navigation={navigation}
+          activePage={'home'}
+          backgroundColor={undefined}
+        />
+      </View> */}
     </View>
-
   );
 };
 
@@ -221,7 +238,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0.2)',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 50 },
+    shadowOffset: {width: 0, height: 50},
     shadowOpacity: 1,
     shadowRadius: 5,
     elevation: 5,
@@ -244,6 +261,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     width: width,
     padding: 20,
+    marginBottom: 50
     // flexWrap: 'wrap',
     // flexDirection: 'row',
     // justifyContent: 'space-between'

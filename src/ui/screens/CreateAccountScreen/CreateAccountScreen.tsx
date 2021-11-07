@@ -20,14 +20,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('screen');
 
 const CreateAccountScreen = ({ navigation }) => {
 
   return (
-    <View style={{ flex: 1, height: height, width: width }}>
+    <View style={{ flex: 1, height: height , width: width }}>
       <SafeAreaView style={{flex: 1, height: height, width: width , backgroundColor: '#1bb76d' }}>
-        <ScrollView >
           <View style={{ height: height*0.30 }}>
             <Header navigation={navigation} />
             <View style={{ alignSelf: 'center' }}>
@@ -37,6 +36,8 @@ const CreateAccountScreen = ({ navigation }) => {
               />
             </View>
           </View>
+        <ScrollView >
+
           <View
             style={[
               styles.whiteCardBg,
@@ -53,7 +54,7 @@ const CreateAccountScreen = ({ navigation }) => {
                     onPress={() => {
                       navigation.navigate('SignInScreen');
                     }}>
-                    <MyText style={{ color: '#66b486' }}> LOGIN</MyText>
+                    <Text style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</Text>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>
@@ -88,9 +89,8 @@ const CreateAccountScreen = ({ navigation }) => {
                 <TouchableOpacity
                 activeOpacity={0.9}
                   style={{alignItems: 'center'}}
-                  onPress={() => {
-                    navigation.navigate('ModeratorScreen');
-                  }}>
+                  
+                >
                   <MyText style={styles.GreenButton}>CREATE ACCOUNT</MyText>
                 </TouchableOpacity>
               </View>
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 5,
     elevation: 5,
-    //marginBottom: 10
+    marginBottom: 50
   },
   BottomRowContainer: {
     flexDirection: 'row',

@@ -127,7 +127,7 @@ const GiftCardScreen = ({navigation}) => {
                             </TouchableOpacity> */}
           </View>
         </ScrollView>
-        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+        {/* <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
       </SafeAreaView>
     </View>
   );

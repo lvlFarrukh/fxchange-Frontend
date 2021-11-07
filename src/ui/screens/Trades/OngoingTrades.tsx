@@ -37,8 +37,8 @@ const OngoingTrades = ({
     }
   };
   return (
-    <>
-      <View style={styles.mainBodyPartOne}>
+  
+    <View style={styles.mainBodyPartOne}>
         <View style={[styles.partOneButtons]}>
           <MyText
             style={[
@@ -65,21 +65,20 @@ const OngoingTrades = ({
             Completed Trades
           </MyText>
         </View>
+
         <ScrollView>
-          <View style={{marginTop: 30}}>
-            <ModeratePageCard
-              key={1}
-              cardImage={require('../../../Assets/ITunes.png')}
-              title={'Itunes'}
-              id={'#FG4558668900'}
-              amount={'100(N33,000)'}
-              date={'Dec 10, 2021 1:20PM'}
-              userName={''}
-              reDirecttoCardDetail={() =>
-                navigateCardDetails(0, 'OngoingTrades')
-              }
-            />
-          </View>
+          <ModeratePageCard
+            key={1}
+            cardImage={require('../../../Assets/ITunes.png')}
+            title={'Itunes'}
+            id={'#FG4558668900'}
+            amount={'100(N33,000)'}
+            date={'Dec 10, 2021 1:20PM'}
+            userName={''}
+            reDirecttoCardDetail={() =>
+              navigateCardDetails(0, 'OngoingTrades')
+            }
+          />
           <ModeratePageCard
             key={1}
             cardImage={require('../../../Assets/CARDS/amazon.png')}
@@ -100,9 +99,10 @@ const OngoingTrades = ({
             userName={''}
             reDirecttoCardDetail={() => navigateCardDetails(1, 'OngoingTrades')}
           />
+          <View style={{height: 60}}></View>
         </ScrollView>
       </View>
-    </>
+
   );
 };
 export default OngoingTrades;

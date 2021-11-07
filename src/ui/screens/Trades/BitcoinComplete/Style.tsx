@@ -4,33 +4,32 @@ const {width, height} = Dimensions.get('screen');
 const Style = StyleSheet.create({
   header: {
     width: width,
-    height: 50,
+    height: 100,
     backgroundColor: '#1bb76d',
     flexDirection: 'row',
     justifyContent: 'space-between',
     // alignItems:'center',
-    // paddingTop: 12,
+    paddingTop: 12,
   },
   headerHeading: {
     color: 'white',
     textAlign: 'center',
     //marginTop: '3.5%',
-    fontSize: 18,
+    fontSize: 14,
     marginLeft: -18,
-    paddingTop: 5
   },
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: '100%',
+    height: height - 100,
     paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    // position: 'absolute',
-    // zIndex: 1,
-    // top: '10%',
+    position: 'absolute',
+    zIndex: 1,
+    top: '10%',
   },
   headerButtons: {
     height: '4.5%',
@@ -63,8 +62,8 @@ const Style = StyleSheet.create({
     right: 25,
   },
   backArrow: {
-    height: 15,
-    width: 25,
+    height: 12,
+    width: 18,
     marginLeft: 12,
     marginTop: 5,
     // marginTop: '5%',
@@ -83,7 +82,7 @@ const Style = StyleSheet.create({
   lowerPortion: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 2,
+    marginTop: 32,
   },
   smFontSize: {
     fontSize: 11,

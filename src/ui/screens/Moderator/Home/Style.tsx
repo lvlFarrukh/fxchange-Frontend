@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginTop: '3.5%',
-    fontSize: 16,
+    fontSize: 18,
   },
   mainBody: {
     alignSelf: 'center',
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     position: 'absolute',
     zIndex: 1,
-    top: '10%',
+    top: 50
   },
   headerButtons: {
     marginLeft: 'auto',

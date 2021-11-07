@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
   return (
@@ -12,7 +13,9 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           paddingVertical: 15,
         //   backgroundColor: '#1bb76d',
         }}>
-        <TouchableOpacity onPress={() => { navigation.navigate('ModeratorScreen');}}>
+        <TouchableOpacity 
+          // onPress={() => { navigation.navigate('ModeratorScreen');}}
+        >
           {activePage === 'home' ? (
             <Image
               style={{height: 25, width: 25}}
@@ -28,19 +31,13 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('Trades');
+            navigation.navigate('SignInScreen');
           }}>
-            {activePage === 'trade' ? (
-            <Image
-              style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/trade-hover.png')}
-            />
-          ) : (
-            <Image
-              style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/trade.png')}
-            />
-          )}
+            <Icon
+                name={'log-out-outline'}
+                size={28}
+                color={activePage === 'logout' ? '#0a8a40' : 'black'}
+                style={{fontWeight: '700'}}></Icon>
         </TouchableOpacity>
       </View>
     </Fragment>

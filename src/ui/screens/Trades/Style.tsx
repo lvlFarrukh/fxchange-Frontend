@@ -15,13 +15,12 @@ const styles = StyleSheet.create({
   },
   mainBodyPartOne: {
     width: width,
-    height: height,
+    height: '100%',
     backgroundColor: '#f2f2f2',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
     top: 70,
-    // alignItems:"center",
     zIndex: 0,
   },
   partOneButtons: {
@@ -34,6 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 30,
     justifyContent: 'center',
+    marginBottom: 30
     // shadowColor: '#000',
     // shadowOffset: {width: 0, height: 50},
     // shadowOpacity: 0.25,

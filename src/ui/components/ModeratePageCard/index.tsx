@@ -16,7 +16,7 @@ const index = ({
 }) => {
     return (
         <TouchableOpacity
-            activeOpacity={0.8}
+            activeOpacity={1}
             onPress={reDirecttoCardDetail}
         >
             <View style={Style.mainBody}>

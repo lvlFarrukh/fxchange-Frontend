@@ -51,7 +51,6 @@ const index = ({navigation}) => {
     "FOOTLOCKER",
   ]
   return (
-    <ScrollView>
       <View
         style={{
           height: height + StatusBar.currentHeight,
@@ -63,6 +62,8 @@ const index = ({navigation}) => {
           navigation={navigation}
           Heading={'Switch Giftcard'}
         />
+    <ScrollView>
+
         <View
           style={{
             marginTop: 10,
@@ -261,9 +262,9 @@ const index = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
-      {/* <View style={{marginBottom: 15}}></View> */}
     </ScrollView>
+
+      </View>
   );
 };
 

@@ -28,7 +28,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
 
   return (
     <View style={{height: height, width: width, flex: 1}}>
-        <ScrollView>
+        
         <StatusBar translucent backgroundColor="#1bb76d" />
         {/* <StatusBar hidden /> */}
         <SafeAreaView
@@ -47,6 +47,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
           </View>
 
           <View style={[styles.whiteCardBg, {height: '100%'}]}>
+          <ScrollView >
             <View style={styles.bodyHeader}>
               <Image
                 source={require('../../../Assets/CARDS/itunes.png')}
@@ -256,11 +257,12 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 </MyText>
               </TouchableOpacity>
             </View>
+            </ScrollView>
           </View>
         </SafeAreaView>
-    </ScrollView>
+   
     <View style={{position:'absolute' , width:width,bottom:1}}>
-      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+      {/* <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
       </View>
       </View>
   );

@@ -118,7 +118,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Select Card'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 14,fontWeight:'400'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
@@ -127,8 +127,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               paddingVertical:10,
               height:45,
               borderWidth: 1.5,
-              borderColor: '#F1F1F1'
-              
+              borderColor: '#F1F1F1',
             }}
           />
         </View>
@@ -169,7 +168,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Select Country'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 14,fontWeight:'400'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
@@ -220,7 +219,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
               );
             }}
             defaultButtonText={'Card Type'}
-            buttonTextStyle={{textAlign: 'left', fontSize: 12,fontWeight:'600'}}
+            buttonTextStyle={{textAlign: 'left', fontSize: 14,fontWeight:'400'}}
             rowStyle={{backgroundColor: 'white', width: '100%'}}
             buttonStyle={{
               backgroundColor: 'white',
@@ -241,8 +240,8 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
             color: 'black',
             height:45,
             width: '85%',
-            fontSize: 12,
-            fontWeight: '600',
+            fontSize: 14,
+            fontWeight: '400',
             
             marginBottom: 25,
 

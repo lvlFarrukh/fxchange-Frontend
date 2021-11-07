@@ -45,13 +45,14 @@ const LandingScreen = ({navigation}) => {
             height: 120,
             borderTopLeftRadius: 40,
             borderTopRightRadius: 40,
+            paddingHorizontal: 25
           }}>
-          <View style={{justifyContent: 'space-around', flexDirection: 'row'}}>
+          <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
             <View
               style={{
                 backgroundColor: '#fff',
                 height: 105,
-                width: 140,
+                width: 143,
                 marginTop: -28,
                 borderRadius: 38,
                 alignItems: 'center',
@@ -65,13 +66,13 @@ const LandingScreen = ({navigation}) => {
               <ImageBackground
                 source={require('../../../Assets/ITunes.png')}
                 style={{height: 50, width: 50}}></ImageBackground>
-              <MyText>ITunes</MyText>
+              <MyText style={{fontSize: 12.5, fontWeight: '400'}}>ITUNES</MyText>
             </View>
             <View
               style={{
                 backgroundColor: '#fff',
                 height: 105,
-                width: 140,
+                width: 143,
                 marginTop: -28,
                 borderRadius: 38,
                 alignItems: 'center',
@@ -85,7 +86,7 @@ const LandingScreen = ({navigation}) => {
               <ImageBackground
                 source={require('../../../Assets/Gplay.png')}
                 style={{height: 50, width: 50}}></ImageBackground>
-              <MyText>Google Play</MyText>
+              <MyText style={{fontSize: 12.5, fontWeight: '400'}}>GOOGLE PLAY</MyText>
             </View>
           </View>
 
@@ -94,20 +95,20 @@ const LandingScreen = ({navigation}) => {
               justifyContent: 'space-between',
               flexDirection: 'row',
               marginTop: 'auto',
-              paddingHorizontal: 35,
+              // paddingHorizontal: 25,
               marginBottom: 10,
             }}>
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate('SignInScreen');
               }}>
-              <MyText style={{color: '#1bb76d', alignSelf: 'center', fontSize: 12}}>Sign In</MyText>
+              <MyText style={{color: '#1bb76d', fontSize: 12}}>Sign In</MyText>
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate('CreateAccountScreen'); // TestScreenContaing all screens
               }}>
-              <MyText style={{color: '#1bb76d', alignSelf: 'center', fontSize: 12}}>
+              <MyText style={{color: '#1bb76d', fontSize: 12}}>
                 Create Account
               </MyText>
             </TouchableOpacity>
@@ -125,7 +126,7 @@ const styles = StyleSheet.create({
   },
   LogoNTextContainer: {
     marginTop: 50,
-    marginLeft: 30,
+    marginLeft: 20,
   },
   text: {
     color: '#fff',

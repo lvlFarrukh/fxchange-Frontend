@@ -45,12 +45,13 @@ const index = ({navigation}) => {
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
       <StatusBar translucent backgroundColor="transparent" />
-      <ScrollView>
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
           Heading={'BITCOIN - #FG4558668900'}
         />
+      <ScrollView>
+
         <View
           style={{
             marginTop: 10,
@@ -346,7 +347,7 @@ const index = ({navigation}) => {
                   fontWeight: '500',
                   color: '#e32b23',
                 }}>
-                ACCEPT
+                DECLINE
               </MyText>
 
               {/* hr */}

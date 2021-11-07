@@ -15,13 +15,14 @@ const Style = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     //marginTop: '3.5%',
-    fontSize: 16,
+    fontSize: 18,
     marginLeft: -18,
+    marginTop: 5
   },
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: height - 100,
+    height: '100%',
     paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',
@@ -29,7 +30,8 @@ const Style = StyleSheet.create({
     borderTopLeftRadius: 30,
     position: 'absolute',
     zIndex: 1,
-    top: '10%',
+    top: 80,
+    overflow: 'scroll'
   },
   headerButtons: {
     height: '4.5%',
