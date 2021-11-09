@@ -22,7 +22,7 @@ const Style = StyleSheet.create({
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: '100%',
+    height: height,
     paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',

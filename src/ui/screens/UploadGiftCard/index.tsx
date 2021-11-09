@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import {View, Text, Dimensions, Image, TextInput} from 'react-native';
+import {View, Text, Dimensions, Image, TextInput, ImageBackground} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import SelectDropdown from 'react-native-select-dropdown';
 import MyText from '../../components/DefaultTextComponent/MyText';
@@ -74,7 +74,7 @@ const index = ({navigation}) => {
           <View style={{marginTop: 16}}>
             <TextInput
               style={{
-                backgroundColor: 'white',
+                backgroundColor: '#F1F1F1',
                 alignSelf: 'center',
                 borderRadius: 4,
                 borderColor: '#F1F1F1',
@@ -90,6 +90,7 @@ const index = ({navigation}) => {
               placeholder="ITUNES"
               placeholderTextColor="#333333"
               textAlign={'left'}
+              editable={false}
               // numberOfLines={2}
               // multiline={true}
             />
@@ -117,7 +118,7 @@ const index = ({navigation}) => {
                   />
                 );
               }}
-              defaultButtonText={'Select Country'}
+              defaultButtonText={'Card Country'}
               buttonTextStyle={{
                 textAlign: 'left',
                 fontSize: 13,
@@ -164,6 +165,52 @@ const index = ({navigation}) => {
                 );
               }}
               defaultButtonText={'Card Type'}
+              buttonTextStyle={{
+                textAlign: 'left',
+                fontSize: 13,
+                paddingLeft: 10,
+                color:'#333333'
+              }}
+              rowStyle={{backgroundColor: 'white', width: '100%'}}
+              rowTextStyle={{fontSize: 15}}
+              buttonStyle={{
+                backgroundColor: 'white',
+                borderWidth: 1.5,
+                borderColor: '#F1F1F1',
+                borderRadius: 4,
+                height: 46,
+                width: '80%',
+                paddingRight: 10,
+                paddingVertical: 10,
+                alignSelf: 'center',
+                margin: 7,
+              }}
+            />
+
+            <SelectDropdown
+              data={[]}
+              onSelect={(selectedItem, index) => {
+                console.log(selectedItem, index);
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                // text represented after item is selected
+                // if data array is an array of objects then return selectedItem.property to render after item is selected
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                // text represented for each item in dropdown
+                // if data array is an array of objects then return item.property to represent item in dropdown
+                return item;
+              }}
+              renderDropdownIcon={() => {
+                return (
+                  <Image
+                    source={require('../../../Assets/ICONS/dropdwo.png')}
+                    style={{width: 10, height: 5}}
+                  />
+                );
+              }}
+              defaultButtonText={'Starting Code'}
               buttonTextStyle={{
                 textAlign: 'left',
                 fontSize: 13,
@@ -246,10 +293,8 @@ const index = ({navigation}) => {
                     width: '32%',
                     height: width - 300,
                   }}>
-                    <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
-                      zIndex: 1,
-                      margin: 1,}}>
 
+                    <ImageBackground style={{width: '100%', height: '100%'}} source={require('../../../Assets/IMG_3151.jpg')}>
                     <View
                       style={{
                         width: 14,
@@ -267,13 +312,10 @@ const index = ({navigation}) => {
                         }}
                       />
                     </View>
-                    </TouchableOpacity>
+                    </ImageBackground>
+                    
+            </View>
 
-                  <Image
-                    source={require('../../../Assets/IMG_3151.jpg')}
-                    style={{width: '100%', height: '100%'}}
-                  />
-                </View>
             <View style={{margin: 2, width: '32%', height: width - 300}}>
               {/* Upload Button */}
               <TouchableOpacity
@@ -288,8 +330,8 @@ const index = ({navigation}) => {
                   },
                   {
                     backgroundColor: '#fefefe',
-                    width: 42,
-                    height: 42,
+                    width: 35,
+                    height: 35,
                     borderRadius: 50,
                     alignSelf: 'center',
                     justifyContent: 'center',
@@ -297,11 +339,11 @@ const index = ({navigation}) => {
                 ]}>
                 <MyText
                   style={{
-                    fontSize: 40,
-                    fontWeight: '400',
+                    fontSize: 25,
+                    fontWeight: '600',
                     color: '#1bb76d',
                     alignSelf: 'center',
-                    marginTop: -7
+                    // marginTop: -7
                   }}>
                   +
                 </MyText>
@@ -317,27 +359,32 @@ const index = ({navigation}) => {
                 Upload Image
               </MyText>
             </View>
+
+            <View
+              style={{
+                // alignContent: 'center',
+                flexDirection: 'row',
+                // alignSelf: 'center',
+              }}>
+              <Image
+                source={require('../../../Assets/ICONS/info_icon.png')}
+                style={{
+                  marginRight: 5,
+                  width: 15,
+                  height: 15,
+                  marginLeft: -10
+                }}
+              />
+              <MyText style={{fontSize: 8}}>
+                Only one <Text style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
+                  ITUNES
+                </Text> card {"\n"}image is allowed in this{"\n"} section
+              </MyText>
+            </View>
+
           </View>
 
-          <View
-            style={{
-              alignContent: 'center',
-              marginTop: 12,
-              flexDirection: 'row',
-              alignSelf: 'center',
-            }}>
-            <Image
-              source={require('../../../Assets/ICONS/info_icon.png')}
-              style={{
-                marginRight: 5,
-                width: 15,
-                height: 15,
-              }}
-            />
-            <MyText style={{fontSize: 8, paddingTop: 1}}>
-              Only One card is allowed per upload
-            </MyText>
-          </View>
+
 
           <View style={{marginTop: 30}}>
             <TouchableOpacity

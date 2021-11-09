@@ -28,35 +28,40 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
 
   return (
     <View style={{height: height, width: width, flex: 1}}>
-        
-        <StatusBar translucent backgroundColor="#1bb76d" />
-        {/* <StatusBar hidden /> */}
-        <SafeAreaView
-          style={{
-            flex: 1,
-            height: height,
-            width: width,
-            backgroundColor: '#1bb76d',
-          }}>
-          <View style={{height: 50}}>
-            <Header
-              navigation={navigation}
-              style={{marginTop: 5}}
-              Heading={headerTitle}
-            />
-          </View>
+      <StatusBar translucent backgroundColor="#1bb76d" />
+      {/* <StatusBar hidden /> */}
+      <SafeAreaView
+        style={{
+          flex: 1,
+          height: height,
+          width: width,
+          backgroundColor: '#1bb76d',
+        }}>
+        <View style={{height: 50}}>
+          <Header
+            navigation={navigation}
+            style={{marginTop: 5}}
+            Heading={headerTitle}
+          />
+        </View>
 
-          <View style={[styles.whiteCardBg, {height: '100%'}]}>
-          <ScrollView >
+        <View style={[styles.whiteCardBg, {height: '100%'}]}>
+          <ScrollView>
             <View style={styles.bodyHeader}>
               <Image
                 source={require('../../../Assets/CARDS/itunes.png')}
                 style={styles.image}
               />
               <MyText style={{marginTop: 8, fontSize: 12}}>
-                You can upload multiple cards and combine
+                Upload all ypur{' '}
+                <Text style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
+                  ITUNES
+                </Text>{' '}
+                cards one by one
               </MyText>
-              <MyText style={{fontSize: 12}}>them into one trade</MyText>
+              <MyText style={{fontSize: 12}}>
+                then click start Trade to process
+              </MyText>
             </View>
 
             <View
@@ -71,7 +76,6 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 style={styles.cardImage}
                 resizeMode={'contain'}>
                 <TouchableOpacity activeOpacity={0.5}>
-
                   <View
                     style={{
                       width: 16,
@@ -257,14 +261,15 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 </MyText>
               </TouchableOpacity>
             </View>
-            </ScrollView>
-          </View>
-        </SafeAreaView>
-   
-    <View style={{position:'absolute' , width:width,bottom:1}}>
-      {/* <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
+            <View style={{height: 50}}></View>
+          </ScrollView>
+        </View>
+      </SafeAreaView>
+
+      <View style={{position: 'absolute', width: width, bottom: 1}}>
+        {/* <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
       </View>
-      </View>
+    </View>
   );
 };
 

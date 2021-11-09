@@ -180,7 +180,6 @@ const index = ({navigation}) => {
         </ScrollView>
       </View>
       </View>
-            <ModeratorNavbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
     </SafeAreaView>
     <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
 

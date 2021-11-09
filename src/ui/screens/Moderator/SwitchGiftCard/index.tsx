@@ -67,7 +67,7 @@ const index = ({navigation}) => {
         <View
           style={{
             marginTop: 10,
-            height: height,
+            height: '100%',
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -84,24 +84,51 @@ const index = ({navigation}) => {
           />
 
           <View style={{marginTop: 16}}>
-            <TextInput
-              style={{
-                backgroundColor: 'white',
-                alignSelf: 'center',
-                borderRadius: 4,
-                borderColor: '#F1F1F1',
-                borderWidth: 1.5,
-                width: '80%',
-                height: 46,
-                margin: 7,
-                paddingLeft: 30,
+          <SelectDropdown
+              disabled={true}
+              data={countryNames}
+              onSelect={(selectedItem, index) => {
+                console.log(selectedItem, index);
               }}
-              underlineColorAndroid="transparent"
-              placeholder="ITunes"
-              placeholderTextColor="#333333"
-              textAlign={'left'}
-              numberOfLines={2}
-              multiline={true}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                // text represented after item is selected
+                // if data array is an array of objects then return selectedItem.property to render after item is selected
+                return selectedItem;
+              }}
+              rowTextForSelection={(item, index) => {
+                // text represented for each item in dropdown
+                // if data array is an array of objects then return item.property to represent item in dropdown
+                return item;
+              }}
+              renderDropdownIcon={() => {
+                return (
+                  <Image
+                    source={require('../../../../Assets/ICONS/dropdwo.png')}
+                    style={{width: 10, height: 5}}
+                  />
+                );
+              }}
+              defaultButtonText={'ITUNES'}
+              buttonTextStyle={{
+                textAlign: 'left',
+                fontSize: 13,
+                paddingLeft: 10,
+                color:'#333333'
+              }}
+              rowStyle={{backgroundColor: 'white', width: '100%'}}
+              rowTextStyle={{fontSize: 15}}
+              buttonStyle={{
+                backgroundColor: '#F1F1F1',
+                borderWidth: 1.5,
+                borderColor: '#F1F1F1',
+                borderRadius: 4,
+                height: 46,
+                width: '80%',
+                paddingRight: 10,
+                paddingVertical: 10,
+                alignSelf: 'center',
+                margin: 7,
+              }}
             />
 
             <SelectDropdown
@@ -127,7 +154,7 @@ const index = ({navigation}) => {
                   />
                 );
               }}
-              defaultButtonText={'Select Country'}
+              defaultButtonText={'Card Country'}
               buttonTextStyle={{
                 textAlign: 'left',
                 fontSize: 13,
@@ -262,6 +289,7 @@ const index = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={{height: 50}}></View>
     </ScrollView>
 
       </View>
