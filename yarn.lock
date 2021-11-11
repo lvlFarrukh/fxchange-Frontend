@@ -6012,6 +6012,18 @@
     "color" "^3.1.2"
     "react-native-iphone-x-helper" "^1.3.1"
 
+"react-native-responsive-fontsize@^0.5.1":
+  "integrity" "sha512-G77iPzrf3BHxMxVm6G3Mw3vPImIdq+jLLXhYoOjWei6i9J3/jzUNUhNdRWvp49Csb5prhbVBLPM+pYZz+b3ESQ=="
+  "resolved" "https://registry.npmjs.org/react-native-responsive-fontsize/-/react-native-responsive-fontsize-0.5.1.tgz"
+  "version" "0.5.1"
+  dependencies:
+    "react-native-iphone-x-helper" "^1.3.1"
+
+"react-native-responsive-screen@^1.4.2":
+  "integrity" "sha512-BLYz0UUpeohrib7jbz6wDmtBD5OmiuMRko4IT8kIF63taXPod/c5iZgmWnr5qOnK8hMuKiGMvsM3sC+eHX/lEQ=="
+  "resolved" "https://registry.npmjs.org/react-native-responsive-screen/-/react-native-responsive-screen-1.4.2.tgz"
+  "version" "1.4.2"
+
 "react-native-safe-area-context@^3.3.2", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-yOwiiPJ1rk+/nfK13eafbpW6sKW0jOnsRem2C1LPJjM3tfTof6hlvV5eWHATye3XOpu2cJ7N+HdkUvUDGwFD2Q=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz"
@@ -6080,7 +6092,7 @@
   "resolved" "https://registry.npmjs.org/react-native-zoom-image/-/react-native-zoom-image-0.1.2.tgz"
   "version" "0.1.2"
 
-"react-native@*", "react-native@^0.41.2", "react-native@>=0.42.0", "react-native@>=0.65.0", "react-native@0.66.0":
+"react-native@*", "react-native@^0.41.2", "react-native@>=0.35", "react-native@>=0.42.0", "react-native@>=0.65.0", "react-native@0.66.0":
   "integrity" "sha512-m26TKwzsfHVdZ1hDG+7mZ4M4ftxFFZrhtiT0OXuwfBzmNtB3xhsJtYszPeizw33c9YNp8rvehKT3c4ldDCW6kA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.66.0.tgz"
   "version" "0.66.0"

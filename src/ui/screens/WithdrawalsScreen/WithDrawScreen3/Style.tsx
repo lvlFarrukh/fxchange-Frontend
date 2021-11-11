@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
-    top: '10%',
+    top: 70,
     // alignItems:"center",
     zIndex: 0,
   },
@@ -85,18 +85,19 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
     position: 'absolute',
-    top: '50%',
+    top: '70%',
     alignItems: 'center',
     zIndex: 1,
   },
   giftCardBodyPatOne:{
     width: width,
-    height:"60%",
+    height:"65%",
     backgroundColor: '#f2f2f2',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     position: 'absolute',
     top: 70,
+    
     // alignItems:"center",
     
   },
@@ -110,6 +111,7 @@ const styles = StyleSheet.create({
     top: "82%",
     alignItems: 'center',
     zIndex: 1,
+    
   },
 });
 export default styles;

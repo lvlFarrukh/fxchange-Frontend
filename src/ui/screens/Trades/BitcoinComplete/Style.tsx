@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 const {width, height} = Dimensions.get('screen');
 
 const Style = StyleSheet.create({
@@ -15,7 +16,7 @@ const Style = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     //marginTop: '3.5%',
-    fontSize: 14,
+    fontSize: RFValue(14),
     marginLeft: -18,
   },
   mainBody: {

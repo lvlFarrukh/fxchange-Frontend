@@ -23,6 +23,7 @@ import Header from '../../components/ModeratePageCard/Header';
 import Modal from 'react-native-modal';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Navbar from '../../components/Navbars/Navbar';
+
 const { width, height } = Dimensions.get('screen');
 
 const DATA = [

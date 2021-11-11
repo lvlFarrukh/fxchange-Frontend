@@ -22,10 +22,11 @@ const Style = StyleSheet.create({
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: height,
-    paddingLeft: '7%',
+    height: 600 < height ? height : '100%',
+        paddingLeft: '7%',
     paddingRight: '7%',
     backgroundColor: '#f2f2f2',
+    // backgroundColor: 'pink',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     // position: 'absolute',

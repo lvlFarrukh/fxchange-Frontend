@@ -15,7 +15,7 @@ import Header from '../../../components/ModeratePageCard/Header';
 import Style from '../CardDetails/Style';
 
 // const {width1, height1} = Dimensions.get('screen');
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
 
 const index = ({navigation}) => {
   const countryNames = [
@@ -53,7 +53,7 @@ const index = ({navigation}) => {
   return (
       <View
         style={{
-          height: height + StatusBar.currentHeight,
+          height: height,
           width: width,
           backgroundColor: '#d65d0e',
         }}>
@@ -67,7 +67,8 @@ const index = ({navigation}) => {
         <View
           style={{
             marginTop: 10,
-            height: '100%',
+            marginBottom: 10,
+            height: height < 600 ? '100%' : height,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,

@@ -15,7 +15,8 @@ import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import MyText from '../../../components/DefaultTextComponent/MyText';
-
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -59,7 +60,7 @@ const index = ({ navigation }) => {
             paddingLeft: '10%',
             paddingRight: '8%',
           }}>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <MyText style={{ fontSize: 9, color: 'black', marginTop: 25 }}>
               Opened By Thomas
@@ -70,15 +71,16 @@ const index = ({ navigation }) => {
             <Image
               source={require('../../../../Assets/ICONS/Bitcoin.png')}
               style={{
-                width: 32,
-                height: 32,
+                
+                width: wp(9),
+                height: wp(9),
                 alignSelf: 'center',
               }}
             />
             <MyText
               style={{
                 color: 'black',
-                fontSize: 13,
+                fontSize: RFValue(13),
                 marginTop: 5,
               }}>
               Bitcoin Trade
@@ -96,7 +98,7 @@ const index = ({ navigation }) => {
                   <MyText style={[Style.smFontSize, , { color: 'gray' }]}>
                     Amount Sent
                   </MyText>
-                  <MyText style={[Style.mdFontBlackColor, { fontSize: 18 }]}>
+                  <MyText style={[Style.mdFontBlackColor, { fontSize: RFValue(18) }]}>
                     {'0.2356 BTC ($2300)'}
                   </MyText>
                 </View>
@@ -132,13 +134,13 @@ const index = ({ navigation }) => {
             <View
               style={{
                 backgroundColor: '#1bb76d',
-                width: 115,
-                height: 85,
+                width: wp(32),
+                height: wp(24),
                 padding: 12,
                 borderRadius: 8,
                 marginTop: 32,
               }}>
-              <MyText style={{ fontSize: 10, color: 'white', marginBottom: 2 }}>
+              <MyText style={{ fontSize: RFValue(10), color: 'white', marginBottom: 2 }}>
                 Amount Received
               </MyText>
               <MyText style={{ fontSize: 13, color: 'white' }}>$2000</MyText>
@@ -159,7 +161,7 @@ const index = ({ navigation }) => {
                 ]}>
                 <MyText
                   style={[
-                    { color: '#1bb76d', fontSize: 10, alignSelf: 'center' },
+                    { color: '#1bb76d', fontSize: RFValue(10), alignSelf: 'center' },
                   ]}>
                   VIEW REPORT
                 </MyText>
@@ -183,8 +185,10 @@ const index = ({ navigation }) => {
             <Image
               source={require('../../../../Assets/ICONS/barCode.png')}
               style={{
-                width: 85,
-                height: 85,
+                // width: 85,
+                // height: 85,
+                width: wp(23),
+                height: wp(23),
                 alignSelf: 'center',
               }}
             />
@@ -308,7 +312,7 @@ const index = ({ navigation }) => {
             </ImageBackground>
           </View>
 
-          <View style={{ paddingBottom: 60 }}></View>
+          <View style={{ paddingBottom: 80 }}></View>
            </ScrollView>
         </View>
      
@@ -343,7 +347,7 @@ const index = ({ navigation }) => {
               <MyText
                 style={{
                   textAlign: 'center',
-                  fontSize: 18,
+                  fontSize: RFValue(18),
                   margin: 8,
                   fontWeight: '500',
                   color: '#1bb76d',
@@ -364,13 +368,13 @@ const index = ({ navigation }) => {
                 <View style={[Style.lowerPortion, { marginTop: 8 }]}>
                   <View>
                     <MyText
-                      style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
+                      style={[{ color: 'black', fontSize: RFValue(11), marginBottom: 2 }]}>
                       Amount Received
                     </MyText>
                     <MyText
                       style={[
                         Style.mdFontBlackColor,
-                        { fontSize: 15, fontWeight: '500' },
+                        { fontSize: RFValue(15), fontWeight: '500' },
                       ]}>
                       {'$2000 (0.00023 BTC)'}
                     </MyText>
@@ -385,13 +389,13 @@ const index = ({ navigation }) => {
                   style={[Style.lowerPortion, { marginTop: 8, marginRight: 40 }]}>
                   <View>
                     <MyText
-                      style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
+                      style={[{ color: 'black', fontSize: RFValue(11), marginBottom: 2 }]}>
                       Naira Value
                     </MyText>
                     <MyText
                       style={[
                         Style.mdFontBlackColor,
-                        { fontSize: 15, fontWeight: '400' },
+                        { fontSize: RFValue(15), fontWeight: '400' },
                       ]}>
                       {'N330,000'}
                     </MyText>
@@ -399,13 +403,13 @@ const index = ({ navigation }) => {
 
                   <View>
                     <MyText
-                      style={[{ color: 'black', fontSize: 11, marginBottom: 2 }]}>
+                      style={[{ color: 'black', fontSize: RFValue(11), marginBottom: 2 }]}>
                       Rate
                     </MyText>
                     <MyText
                       style={[
                         Style.mdFontBlackColor,
-                        { fontSize: 15, fontWeight: '400' },
+                        { fontSize: RFValue(15), fontWeight: '400' },
                       ]}>
                       {'570/$'}
                     </MyText>
@@ -440,8 +444,8 @@ const index = ({ navigation }) => {
                   <ImageBackground
                     source={require('../../../../Assets/IMG_3151.jpg')}
                     style={{
-                      width: 100,
-                      height: 70,
+                      width: wp(30),
+                      height: wp(20),
                       marginLeft: 10,
                       justifyContent: 'center',
                     }}
@@ -475,8 +479,8 @@ const index = ({ navigation }) => {
                   <ImageBackground
                     source={require('../../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg')}
                     style={{
-                      width: 100,
-                      height: 70,
+                      width: wp(30),
+                      height: wp(20),
                       marginLeft: 10,
                       justifyContent: 'center',
                     }}
@@ -515,7 +519,8 @@ const index = ({ navigation }) => {
 
             <View>
               {/* hr */}
-              <View style={[Style.hr, { marginTop: 6}]}></View>
+              <View style={[Style.hr, { margin: 2}]}></View>
+              
               <TouchableOpacity
               activeOpacity={0.9}
                 style={{ marginBottom: 8, marginTop: -5 }}
@@ -523,7 +528,7 @@ const index = ({ navigation }) => {
                 <MyText
                   style={{
                     textAlign: 'center',
-                    fontSize: 14,
+                    fontSize: RFValue(14),
                     fontWeight: '500',
                     color: 'black',
                   }}>

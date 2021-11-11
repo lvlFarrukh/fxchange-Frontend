@@ -22,8 +22,9 @@ const { width, height } = Dimensions.get('window');
 const btnSetected: any = {
   backgroundColor: '#1bb76d',
   color: 'white',
-  fontWeight: 'bold',
+  // fontWeight: 'bold',
   zIndex: 5,
+  fontFamily:'Nunito-Regular'
   //padding: '3%',
 };
 const WithdrawalsScreenThree = ({ navigation }) => {
@@ -53,7 +54,7 @@ const WithdrawalsScreenThree = ({ navigation }) => {
         flex: 1,
       }}>
       <StatusBar translucent backgroundColor="transparent" />
-      <ScrollView contentContainerStyle={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ flex: 1, height: height }}>
 
         <View style={styles.header}>
           <View style={{ height: height * 0.10, marginTop: 25 }}>

@@ -114,17 +114,17 @@ const WithDrawScreenFour = ({ navigation }) => {
                 />
               </View>
 
-              <View style={[{marginBottom:20}]}>
+              <View style={[{marginBottom:30}]}>
                 <TouchableOpacity style={styles.updatePasswordButton}>
                   <MyText style={{ color: 'white', fontSize: 15 }}>UPDATE</MyText>
                 </TouchableOpacity>
               </View>
             </View>
-          <Navbar
+          {/* <Navbar
             navigation={navigation}
             activePage={'more'}
             backgroundColor={'green'}
-          />
+          /> */}
           </View>
       </SafeAreaView>
     </View>

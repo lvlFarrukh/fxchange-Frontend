@@ -1,5 +1,4 @@
-
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   ScrollView,
@@ -18,8 +17,10 @@ import {
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import Navbar from '../../../components/Navbars/Navbar';
 import styles from './Style';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { RFValue } from 'react-native-responsive-fontsize';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#1bb76d',
   color: 'white',
@@ -27,7 +28,7 @@ const btnSetected: any = {
   zIndex: 5,
   //padding: '3%',
 };
-const WithDrawScreenSix = ({ navigation }) => {
+const WithDrawScreenSix = ({navigation}) => {
   const [pending, setPending] = useState(btnSetected);
   const [declined, setDeclined] = useState({});
   const [screen, setScreen] = useState(0);
@@ -44,15 +45,16 @@ const WithDrawScreenSix = ({ navigation }) => {
       setScreen(1);
     }
   };
-
+  console.log(height);
   return (
-    <View style={{
-      height: height,
-      width: width,
-      flex: 1,
-      backgroundColor: '#fafafa',
-    }}>
-       <StatusBar translucent backgroundColor='#1bb76d' />
+    <View
+      style={{
+        height: height,
+        width: width,
+        flex: 1,
+        backgroundColor: '#fafafa',
+      }}>
+      <StatusBar translucent backgroundColor="#1bb76d" />
       <SafeAreaView
         style={{
           height: height,
@@ -60,59 +62,72 @@ const WithDrawScreenSix = ({ navigation }) => {
           flex: 1,
           backgroundColor: '#1bb76d',
         }}>
-          <View style={{marginTop: 25}}>
+        <View style={{marginTop: 25}}>
           <View style={styles.headerUpperArea}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.goBack();
-                }}>
-                <Image
-                  source={require('../../../../Assets/ICONS/arrow=white.png')}
-                  style={{ width: 25, height: 20, marginTop: 6 }}
-                />
-              </TouchableOpacity>
-              <MyText
-                style={{
-                  fontSize: 20,
-                  fontWeight: '400',
-                  color: 'white',
-                  marginLeft: 50,
-                }}>
-                Withdrawls
-              </MyText>
-            </View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.goBack();
+              }}>
+              <Image
+                source={require('../../../../Assets/ICONS/arrow=white.png')}
+                style={{width: 25, height: 20, marginTop: 6, marginLeft: 18 }}
+              />
+            </TouchableOpacity>
+            <MyText
+              style={{
+                fontSize: 20,
+                fontWeight: '400',
+                color: 'white',
+                marginLeft: wp(20),
+              }}>
+              Withdrawls
+            </MyText>
+            <View></View>
           </View>
+        </View>
         <ScrollView>
           <View style={styles.header}>
-            
             <View
               style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-around',
+                justifyContent: 'space-between',
                 marginTop: 40,
-                paddingHorizontal: 10
+                paddingHorizontal: wp(6)
               }}>
-              <View style={{ marginRight: 84 }}>
-                <View style={{ marginBottom: 10 }}>
-                  <MyText style={{ color: 'white', fontSize: 11 }}>Wallet Balance</MyText>
+              <View>
+                <View style={{marginBottom: 10}}>
+                  <MyText style={{color: 'white', fontSize: RFValue(11)}}>
+                    Wallet Balance
+                  </MyText>
                 </View>
                 <View>
-                  <MyText style={{ color: 'white', fontSize: 35 }}>N50,000</MyText>
+                  <MyText style={{color: 'white', fontSize: RFValue(35)}}>
+                    N50,000
+                  </MyText>
                 </View>
               </View>
+              
               <View
-                style={{ borderLeftWidth: 0.5, borderColor: 'white', height: 65 }}>
-                <View style={{ marginLeft: 10, marginTop: 4 }}>
-                  <MyText style={{ color: 'white', fontSize: 11 }}>Min Withdrawls</MyText>
-                  <MyText style={{ color: 'white', fontSize: 11 }}>N5,000</MyText>
+                style={{
+                  borderLeftWidth: 0.5,
+                  borderColor: 'white',
+                  height: hp(10),
+                }}>
+                <View style={{marginLeft: 10, marginTop: 4}}>
+                  <MyText style={{color: 'white', fontSize: RFValue(11)}}>
+                    Min Withdrawls
+                  </MyText>
+                  <MyText style={{color: 'white', fontSize: RFValue(11)}}>N5,000</MyText>
                   <View
                     style={{
                       borderTopWidth: 0.5,
                       borderColor: 'white',
                       marginVertical: 4,
                     }}></View>
-                  <MyText style={{ color: 'white', fontSize: 11 }}>fee:N50</MyText>
+                  <MyText style={{color: 'white', fontSize: RFValue(11)}}>
+                    fee:N50
+                  </MyText>
                 </View>
               </View>
             </View>
@@ -131,7 +146,9 @@ const WithDrawScreenSix = ({ navigation }) => {
 
             <View style={styles.mainBodyCards}>
               <View style={styles.mainBodyCardContent1}>
-                <MyText style={{ fontSize: 13, fontWeight: '400' }}>BankDetails</MyText>
+                <MyText style={{fontSize: 13, fontWeight: '400'}}>
+                  BankDetails
+                </MyText>
                 <View style={styles.viewItems}>
                   <MyText style={styles.smBlueText}>Edit</MyText>
 
@@ -148,8 +165,8 @@ const WithDrawScreenSix = ({ navigation }) => {
                   width: '80%',
                   marginBottom: 5,
                 }}>
-                <MyText style={{ fontSize: 12 }}>Account Name:</MyText>
-                <MyText style={{ fontSize: 12, marginLeft: 10 }}>
+                <MyText style={{fontSize: 12}}>Account Name:</MyText>
+                <MyText style={{fontSize: 12, marginLeft: 10}}>
                   FxChangeMarketPlace
                 </MyText>
               </View>
@@ -160,8 +177,8 @@ const WithDrawScreenSix = ({ navigation }) => {
                   width: '80%',
                   marginBottom: 5,
                 }}>
-                <MyText style={{ fontSize: 12 }}>Account No:</MyText>
-                <MyText style={{ fontSize: 12, marginLeft: 10 }}>3789393</MyText>
+                <MyText style={{fontSize: 12}}>Account No:</MyText>
+                <MyText style={{fontSize: 12, marginLeft: 10}}>3789393</MyText>
               </View>
               <View
                 style={{
@@ -169,8 +186,10 @@ const WithDrawScreenSix = ({ navigation }) => {
                   justifyContent: 'flex-start',
                   width: '80%',
                 }}>
-                <MyText style={{ fontSize: 12 }}>Bank Name:</MyText>
-                <MyText style={{ fontSize: 12, marginLeft: 10 }}>Access Bank PLC</MyText>
+                <MyText style={{fontSize: 12}}>Bank Name:</MyText>
+                <MyText style={{fontSize: 12, marginLeft: 10}}>
+                  Access Bank PLC
+                </MyText>
               </View>
             </View>
 
@@ -184,9 +203,13 @@ const WithDrawScreenSix = ({ navigation }) => {
             <TouchableOpacity
               style={[
                 styles.changePasswordButton,
-                { backgroundColor: '#1bb76d', paddingVertical: 13, borderRadius: 3 },
+                {
+                  backgroundColor: '#1bb76d',
+                  paddingVertical: 13,
+                  borderRadius: 3,
+                },
               ]}>
-              <MyText style={[{ textAlign: 'center', color: 'white' }]}>
+              <MyText style={[{textAlign: 'center', color: 'white'}]}>
                 WithDraw(1500)
               </MyText>
             </TouchableOpacity>
@@ -196,8 +219,8 @@ const WithDrawScreenSix = ({ navigation }) => {
                   style={[
                     styles.partOneButton,
                     styles.JoinLeft,
-                    { ...pending },
-                    { marginRight: 20 },
+                    {...pending},
+                    {marginRight: 20},
                   ]}
                   onPress={() => {
                     activeButton('pendingButton');
@@ -206,7 +229,11 @@ const WithDrawScreenSix = ({ navigation }) => {
                 </MyText>
 
                 <MyText
-                  style={[styles.partOneButton, styles.JoinRight, { ...declined }]}
+                  style={[
+                    styles.partOneButton,
+                    styles.JoinRight,
+                    {...declined},
+                  ]}
                   onPress={() => {
                     activeButton('declinedButton');
                   }}>
@@ -215,52 +242,60 @@ const WithDrawScreenSix = ({ navigation }) => {
               </View>
               <View style={styles.lowerCard}>
                 <View style={styles.upperCardPortion}>
-
                   <View>
-                    <MyText style={{ fontSize: 16, color: "#6683e3" }}>Fxchange Marketplace</MyText>
+                    <MyText style={{fontSize: 16, color: '#6683e3'}}>
+                      Fxchange Marketplace
+                    </MyText>
                   </View>
 
-                  <View style={{ flexDirection: 'row' }}>
-                    <MyText style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>47247829479</MyText>
-                    <MyText style={{ color: '#9e9e9e', marginRight: 5, fontSize: 12 }}>|</MyText>
+                  <View style={{flexDirection: 'row'}}>
+                    <MyText
+                      style={{color: '#9e9e9e', marginRight: 5, fontSize: 12}}>
+                      47247829479
+                    </MyText>
+                    <MyText
+                      style={{color: '#9e9e9e', marginRight: 5, fontSize: 12}}>
+                      |
+                    </MyText>
 
-                    <MyText style={{ color: '#9e9e9e', fontSize: 12 }}>Access Bak PLC</MyText>
+                    <MyText style={{color: '#9e9e9e', fontSize: 12}}>
+                      Access Bak PLC
+                    </MyText>
                   </View>
-
-
-
                 </View>
                 <View style={styles.hr}></View>
                 <View style={styles.lowerPortion}>
-
                   <View>
-                    <MyText style={[styles.smFontSize, , { color: 'gray' }]}>
+                    <MyText style={[styles.smFontSize, , {color: 'gray'}]}>
                       Amount
                     </MyText>
-                    <MyText style={styles.mdFontBlackColor}>
-                      N33,000
-                    </MyText>
+                    <MyText style={styles.mdFontBlackColor}>N33,000</MyText>
                   </View>
 
                   <View>
-                    <MyText style={[styles.smFontSize, { color: 'gray' }]}>
+                    <MyText style={[styles.smFontSize, {color: 'gray'}]}>
                       Dec 10 2021,1:30PM
                     </MyText>
-                    <MyText style={[styles.smFontSize, { textAlign: 'right', color: 'red' }]}>
+                    <MyText
+                      style={[
+                        styles.smFontSize,
+                        {textAlign: 'right', color: 'red'},
+                      ]}>
                       PENDING
                     </MyText>
                   </View>
-
                 </View>
               </View>
             </View>
           </View>
-          <View style={{marginBottom: 15}}></View>
         </ScrollView>
-        <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
+        <Navbar
+          navigation={navigation}
+          activePage={'home'}
+          backgroundColor={undefined}
+        />
       </SafeAreaView>
     </View>
-
   );
 };
 

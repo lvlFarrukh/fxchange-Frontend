@@ -11,14 +11,36 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  Keyboard,
 } from 'react-native';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setKeyboardVisible(true); // or some other action
+      },
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setKeyboardVisible(false); // or some other action
+      },
+    );
+
+    return () => {
+      keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
+    };
+  }, []);
   return (
     <>
-      <View style={styles.mainBodyPartOne}>
+      <View style={[styles.mainBodyPartOne, {paddingTop: 5}]}>
         <View style={[styles.partOneButtons]}>
           <MyText
             style={[styles.partOneButton, styles.JoinLeft, {...giftCards}]}
@@ -49,7 +71,7 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
             height: 55,
             // paddingTop:20,
             paddingLeft: 25,
-            color: 'black'
+            color: 'black',
           }}
           underlineColorAndroid="transparent"
           placeholder="Enter Account in USD"
@@ -64,18 +86,35 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.mainBodyPartTwo}>
-        <MyText style={{marginTop: 30}}>Estimate rate</MyText>
-        <MyText
-          style={{
-            fontSize: 30,
-            color: 'black',
-            marginTop: 10,
-            fontWeight: '400',
-          }}>
-          N3,303,330
-        </MyText>
-      </View>
+      {600 < height ? (
+        <View style={[styles.mainBodyPartTwo,]}>
+          <MyText style={{marginTop: 30}}>Estimate rate</MyText>
+          <MyText
+            style={{
+              fontSize: 30,
+              color: 'black',
+              marginTop: 10,
+              fontWeight: '400',
+            }}>
+            N3,303,330
+          </MyText>
+        </View>
+      ) : (
+        !isKeyboardVisible && (
+          <View style={styles.mainBodyPartTwo}>
+            <MyText style={{marginTop: 30}}>Estimate rate</MyText>
+            <MyText
+              style={{
+                fontSize: 30,
+                color: 'black',
+                marginTop: 10,
+                fontWeight: '400',
+              }}>
+              N3,303,330
+            </MyText>
+          </View>
+        )
+      )}
     </>
   );
 };

@@ -11,11 +11,13 @@ import {
   StatusBar,
 } from 'react-native';
 import Modal from 'react-native-modal';
+import { RFValue } from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -532,8 +534,8 @@ const index = ({navigation}) => {
                   style={{
                     backgroundColor: 'white',
                     margin: 2,
-                    width: '32%',
-                    height: width - 300,
+                    width: wp(20),
+                      height: wp(15),
                   }}>
                     <TouchableOpacity activeOpacity={0.5} style={{ position: 'absolute',
                       zIndex: 1,
@@ -563,42 +565,43 @@ const index = ({navigation}) => {
                     style={{width: '100%', height: '100%'}}
                   />
                 </View>
+                
                 <View style={{margin: 2, width: '32%', height: width - 300}}>
-                  {/* Upload Button */}
-                  <TouchableOpacity
-                  activeOpacity={0.9}
-                    style={[
-                      Style.btnShadow,
-                      {
-                        backgroundColor: '#fefefe',
-                        width: width - 328,
-                        height: width - 328,
-                        borderRadius: 50,
-                        alignSelf: 'center',
-                        justifyContent: 'center',
-                      },
-                    ]}>
+                    {/* Upload Button */}
+                    <TouchableOpacity
+                      activeOpacity={0.9}
+                      style={[
+                        Style.btnShadow,
+                        {
+                          backgroundColor: '#fefefe',
+                          width: wp(9),
+                          height: wp(9),
+                          borderRadius: 50,
+                          alignSelf: 'center',
+                          justifyContent: 'center',
+                        },
+                      ]}>
+                      <MyText
+                        style={{
+                          fontSize: RFValue(25),
+                          fontWeight: '500',
+                          color: '#1bb76d',
+                          alignSelf: 'center',
+                        }}>
+                        +
+                      </MyText>
+                    </TouchableOpacity>
                     <MyText
                       style={{
-                        fontSize: 25,
-                        fontWeight: '500',
                         color: '#1bb76d',
+                        fontSize: 10,
+                        fontWeight: '500',
                         alignSelf: 'center',
+                        marginTop: 5,
                       }}>
-                      +
+                      Upload Image
                     </MyText>
-                  </TouchableOpacity>
-                  <MyText
-                    style={{
-                      color: '#1bb76d',
-                      fontSize: 10,
-                      fontWeight: '500',
-                      alignSelf: 'center',
-                      marginTop: 5,
-                    }}>
-                    Upload Image
-                  </MyText>
-                </View>
+                  </View>
               </View>
             </View>
 

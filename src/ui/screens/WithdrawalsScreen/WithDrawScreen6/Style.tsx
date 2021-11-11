@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
 
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: "space-around",
   },
   headerHeading: {
     color: 'white',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     position: 'absolute',
     left: '5.3%',
-    top: '24%',
+    top: height > 570 ? '24%' : '20%' ,
     zIndex: 2,
   },
 
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     width: width,
-    height:height*0.75,
+    height:height > 570 ? height*0.75: height*0.75 + 130,
     backgroundColor: 'white',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     paddingHorizontal: 8,
-  
+    marginBottom: 50
   },
   partOneButtons: {
     marginLeft: 'auto',
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   lowerCard: {
     
     width: '90%',
-    height:"60%",
+    // height:"60%",
     marginTop:20,
     backgroundColor: 'white',
      

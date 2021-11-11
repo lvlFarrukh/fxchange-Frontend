@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 const {width, height} = Dimensions.get('screen');
 const styles = StyleSheet.create({
   header: {
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     // elevation: 5,
   },
   partOneButton: {
-    fontSize: 12,
+    fontSize: RFValue(12),
     letterSpacing: 1,
     textAlign: 'center',
     width: '50%',

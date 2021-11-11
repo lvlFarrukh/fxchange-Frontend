@@ -16,6 +16,8 @@ import MyText from '../../../components/DefaultTextComponent/MyText';
 import ImagePreviewModal from '../../../components/ImagePreviewModal';
 import Header from '../../../components/ModeratePageCard/Header';
 import Style from './Style';
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -64,6 +66,7 @@ const index = ({navigation}) => {
           height: height,
           width: width,
           flex: 1,
+
         }}>
         <StatusBar translucent backgroundColor="transparent" />
         <View style={Style.header}>
@@ -79,7 +82,7 @@ const index = ({navigation}) => {
           <MyText style={Style.headerHeading}>ITUNES - #FGRAC23287843</MyText>
           <MyText></MyText>
         </View>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={Style.mainBody}>
             <View style={[Style.headerButtons]}>
               <MyText style={[Style.headerButtom]}>Opened by Thomas</MyText>
@@ -93,6 +96,7 @@ const index = ({navigation}) => {
                   borderRadius: 15,
                   paddingTop: 8,
                   paddingBottom: 12,
+                  marginBottom: 40
                   // paddingLeft: 18, paddingRight: 18,
                 },
                 Style.btnShadow,
@@ -853,8 +857,8 @@ const index = ({navigation}) => {
                     style={{
                       backgroundColor: 'white',
                       margin: 2,
-                      width: '32%',
-                      height: width - 300,
+                      width: wp(20),
+                      height: wp(15),
                     }}>
                     <TouchableOpacity
                       activeOpacity={0.5}
@@ -891,8 +895,8 @@ const index = ({navigation}) => {
                         Style.btnShadow,
                         {
                           backgroundColor: '#fefefe',
-                          width: width - 328,
-                          height: width - 328,
+                          width: wp(9),
+                          height: wp(9),
                           borderRadius: 50,
                           alignSelf: 'center',
                           justifyContent: 'center',
@@ -900,7 +904,7 @@ const index = ({navigation}) => {
                       ]}>
                       <MyText
                         style={{
-                          fontSize: 25,
+                          fontSize: RFValue(25),
                           fontWeight: '500',
                           color: '#1bb76d',
                           alignSelf: 'center',

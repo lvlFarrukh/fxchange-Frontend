@@ -7,6 +7,8 @@ import Style from './Style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Navbar from '../../components/Navbars/Navbar';
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('window');
 
@@ -31,7 +33,7 @@ const index = ({navigation}) => {
           Heading={'Sell Bitcoin'}
           //style={{marginTop: 0}}
         />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
 
         <View
           style={{

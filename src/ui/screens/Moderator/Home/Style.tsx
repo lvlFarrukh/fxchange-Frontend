@@ -1,4 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 const {width, height} = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: 20,
-    height: 38,
+    height: wp(10.5),
     width: '86%',
     backgroundColor: 'white',
     borderRadius: 30,
@@ -43,8 +46,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   headerButtom: {
-    height: 38,
-    fontSize: 13,
+    height: wp(10.5),
+    fontSize: RFValue(14),
     textAlign: 'center',
     width: '39%',
     borderRadius: 30,

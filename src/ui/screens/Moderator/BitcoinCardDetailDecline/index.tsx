@@ -1,5 +1,15 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, Image, TextInput, ImageBackground,ScrollView, TouchableOpacity, StatusBar} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  TextInput,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import Modal from 'react-native-modal';
 import SelectDropdown from 'react-native-select-dropdown';
 import Header from '../../../components/ModeratePageCard/Header';
@@ -33,20 +43,20 @@ const index = ({navigation}) => {
     setProcessModalVisible(!isProcessModalVisible);
   };
 
+  console.log(height)
   return (
     <View style={{height: height, width: width, backgroundColor: '#d65d0e'}}>
-       <StatusBar translucent backgroundColor='transparent' />
-        <Header
-          style={{marginTop: 35}}
-          navigation={navigation}
-          Heading={'BITCOIN - #FG4558668900'}
-        />
+      <StatusBar translucent backgroundColor="transparent" />
+      <Header
+        style={{marginTop: 35}}
+        navigation={navigation}
+        Heading={'BITCOIN - #FG4558668900'}
+      />
       <ScrollView>
-
         <View
           style={{
             marginTop: 10,
-            height: height-60,
+            height: height > 568 ? height : height + 40,
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -88,9 +98,10 @@ const index = ({navigation}) => {
               </MyText>
             </View>
           </View>
-          <View style={{
-            flexDirection: 'row'
-          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+            }}>
             <TouchableOpacity
               activeOpacity={0.9}
               style={[
@@ -110,19 +121,20 @@ const index = ({navigation}) => {
                 DECLINE
               </MyText>
             </TouchableOpacity>
-    
-            <View style={{
-              flexDirection: 'row',
-              marginLeft: 14,
-              marginTop: 15,
-            }}>
-              <Image 
+
+            <View
+              style={{
+                flexDirection: 'row',
+                marginLeft: 14,
+                marginTop: 15,
+              }}>
+              <Image
                 source={require('../../../../Assets/ICONS/info_icon.png')}
                 style={{
                   width: 15,
                   height: 15,
-                  marginRight:5
-              }}
+                  marginRight: 5,
+                }}
               />
               <MyText style={{fontSize: 10}}>Not received</MyText>
             </View>
@@ -192,89 +204,86 @@ const index = ({navigation}) => {
           </View>
 
           <View
+            style={{
+              flexDirection: 'row',
+              marginLeft: -3,
+              // position: 'relative',
+              // right: 50,
+            }}>
+            <ImageBackground
+              source={require('../../../../Assets/IMG_3151.jpg')}
+              style={{
+                width: 100,
+                height: 70,
+                // marginLeft: 10,
+                justifyContent: 'center',
+              }}
+              imageStyle={{}}>
+              <TouchableOpacity
+                activeOpacity={0.9}
+                onPress={() => previewImage(1)}>
+                <View
                   style={{
-                    flexDirection: 'row',
-                    marginLeft: -3,
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    width: 30,
+                    height: 30,
+                    borderRadius: 20,
+                    alignSelf: 'center',
+                    alignItems: 'center',
                     // position: 'relative',
-                    // right: 50,
+                    // left: 45,
+                    // zIndex: -1,
                   }}>
-                
-                <ImageBackground
-                    source={require('../../../../Assets/IMG_3151.jpg')}
+                  <Image
+                    source={require('../../../../Assets/ICONS/zoom.png')}
                     style={{
-                      width: 100,
-                      height: 70,
-                      // marginLeft: 10,
-                      justifyContent: 'center',
+                      width: 18,
+                      height: 18,
+                      alignSelf: 'center',
+                      marginTop: 5,
                     }}
-                    imageStyle={{}}>
-                    <TouchableOpacity
-                    activeOpacity={0.9}
-                     onPress={() => previewImage(1)}>
-                      <View
-                        style={{
-                          backgroundColor: 'rgba(0,0,0,0.5)',
-                          width: 30,
-                          height: 30,
-                          borderRadius: 20,
-                          alignSelf: 'center',
-                          alignItems: 'center',
-                          // position: 'relative',
-                          // left: 45,
-                          // zIndex: -1,
-                        }}>
-                        <Image
-                          source={require('../../../../Assets/ICONS/zoom.png')}
-                          style={{
-                            width: 18,
-                            height: 18,
-                            alignSelf: 'center',
-                            marginTop: 5,
-                          }}
-                        />
-                      </View>
-                    </TouchableOpacity>
-                  </ImageBackground>
-
-                  <ImageBackground
-                    source={require('../../../../Assets/IMG_3151.jpg')}
-                    style={{
-                      width: 100,
-                      height: 70,
-                      marginLeft: 10,
-                      justifyContent: 'center',
-                    }}
-                    imageStyle={{}}>
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={() => previewImage(1)}>
-                      <View
-                        style={{
-                          backgroundColor: 'rgba(0,0,0,0.5)',
-                          width: 30,
-                          height: 30,
-                          borderRadius: 20,
-                          alignSelf: 'center',
-                          alignItems: 'center',
-                          // position: 'relative',
-                          // left: 45,
-                          // zIndex: -1,
-                        }}>
-                        <Image
-                          source={require('../../../../Assets/ICONS/zoom.png')}
-                          style={{
-                            width: 18,
-                            height: 18,
-                            alignSelf: 'center',
-                            marginTop: 5,
-                          }}
-                        />
-                      </View>
-                    </TouchableOpacity>
-                  </ImageBackground>
-
-                  
+                  />
                 </View>
+              </TouchableOpacity>
+            </ImageBackground>
+
+            <ImageBackground
+              source={require('../../../../Assets/IMG_3151.jpg')}
+              style={{
+                width: 100,
+                height: 70,
+                marginLeft: 10,
+                justifyContent: 'center',
+              }}
+              imageStyle={{}}>
+              <TouchableOpacity
+                activeOpacity={0.9}
+                onPress={() => previewImage(1)}>
+                <View
+                  style={{
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    width: 30,
+                    height: 30,
+                    borderRadius: 20,
+                    alignSelf: 'center',
+                    alignItems: 'center',
+                    // position: 'relative',
+                    // left: 45,
+                    // zIndex: -1,
+                  }}>
+                  <Image
+                    source={require('../../../../Assets/ICONS/zoom.png')}
+                    style={{
+                      width: 18,
+                      height: 18,
+                      alignSelf: 'center',
+                      marginTop: 5,
+                    }}
+                  />
+                </View>
+              </TouchableOpacity>
+            </ImageBackground>
+          </View>
 
           {/* <View style={{paddingBottom: 60}}></View> */}
         </View>

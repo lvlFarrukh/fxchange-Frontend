@@ -23,7 +23,8 @@ const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#1bb76d',
   color: 'white',
-  fontWeight: 'bold',
+  // fontWeight: 'bold',
+  fontFamily:'Nunito-Regular'
   //padding: '3%',
 };
 
@@ -176,7 +177,7 @@ const index = ({navigation}) => {
               );
             })}
           
-          <View style={{paddingBottom: 70}}></View>
+          <View style={{paddingBottom: 100}}></View>
         </ScrollView>
       </View>
       </View>

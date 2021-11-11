@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {Fragment, useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   ScrollView,
@@ -48,44 +48,43 @@ const WithDrawScreenFive = ({navigation}) => {
   }, []);
 
   return (
-    <KeyboardAvoidingView
-      style={{flex: 1, backgroundColor: '#fff'}}
-      //behavior={Platform.OS === "ios" ? "padding" : "padding"}
-    >
+    <Fragment>
       <StatusBar translucent backgroundColor="transparent" />
-      <ScrollView contentContainerStyle={{flex: isKeyboardVisible ? 0 : 1}}>
-        <SafeAreaView
-          style={{
-            height: height,
-            width: width,
-            flex: 1,
-          }}>
-          <View>
-            <View style={styles.header}>
-              <View style={styles.headerUpperArea}>
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.goBack();
-                  }}>
-                  <Image
-                    source={require('../../../../Assets/ICONS/arrow=white.png')}
-                    style={{
-                      width: 25,
-                      height: 15,
-                      marginTop: 6,
-                      //marginRight: 50,
-                    }}
-                  />
-                </TouchableOpacity>
-              </View>
+      <SafeAreaView
+        style={{
+          height: height,
+          width: width,
+          flex: 1,
+        }}>
+        <View>
+          <View style={styles.header}>
+            <View style={styles.headerUpperArea}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.goBack();
+                }}>
+                <Image
+                  source={require('../../../../Assets/ICONS/arrow=white.png')}
+                  style={{
+                    width: 25,
+                    height: 15,
+                    marginTop: 6,
+                    //marginRight: 50,
+                  }}
+                />
+              </TouchableOpacity>
             </View>
+          </View>
 
-            <View style={styles.mainBody}>
-              <View style={styles.headerHeadingContainer}>
-                <MyText style={styles.headerHeading2}>H</MyText>
-              </View>
+          <View style={styles.mainBody}>
+            <View style={styles.headerHeadingContainer}>
+              <MyText style={styles.headerHeading2}>H</MyText>
+            </View>
+            <ScrollView showsVerticalScrollIndicator={false} style={{height: '100%'}}>
               <View style={styles.mainBodyContent}>
-                <MyText style={{fontSize: 10, color: '#8e8c8d'}}>PROFILE</MyText>
+                <MyText style={{fontSize: 10, color: '#8e8c8d'}}>
+                  PROFILE
+                </MyText>
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -176,7 +175,7 @@ const WithDrawScreenFive = ({navigation}) => {
                   numberOfLines={2}
                   multiline={true}
                 />
-                
+
                 <TextInput
                   style={{
                     backgroundColor: 'white',
@@ -219,7 +218,6 @@ const WithDrawScreenFive = ({navigation}) => {
                   multiline={true}
                 />
 
-               
                 {/* <TextInput
                 style={{
                   backgroundColor: 'white',
@@ -262,17 +260,23 @@ const WithDrawScreenFive = ({navigation}) => {
               /> */}
                 <View style={styles.updatePassword}>
                   <TouchableOpacity style={styles.updatePasswordButton}>
-                    <MyText style={{color: 'white', fontSize: 13}}>UPDATE</MyText>
+                    <MyText style={{color: 'white', fontSize: 13}}>
+                      UPDATE
+                    </MyText>
                   </TouchableOpacity>
                 </View>
               </View>
-            </View>
+              {
+                height < 680 && (
+                  <View style={{height: 150}}></View>
+                )
+              }
+              <View></View>
+            </ScrollView>
           </View>
-        </SafeAreaView>
-      </ScrollView>
-      <Navbar navigation={navigation} activePage={'more'} backgroundColor={'green'}/>
-
-    </KeyboardAvoidingView>
+        </View>
+      </SafeAreaView>
+      </Fragment>
   );
 };
 

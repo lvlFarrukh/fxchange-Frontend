@@ -56,7 +56,7 @@ const index = ({navigation}) => {
         <View
           style={{
             marginTop: 10,
-            height: height,
+            height: 600 < height ? height : "100%",
             width: width,
             backgroundColor: '#ffffff',
             borderTopRightRadius: 35,
@@ -258,53 +258,7 @@ const index = ({navigation}) => {
               </TouchableOpacity>
             </ImageBackground>
           </View>
-
-          {/* <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              marginTop: 40,
-              marginBottom: 22,
-            }}>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              style={[
-                {
-                  backgroundColor: '#e32b23',
-                  borderRadius: 20,
-                  padding: 4,
-                  width: 125,
-                },
-                Style.btnShadow,
-              ]}>
-              <MyText
-                style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}
-                onPress={() => toggleDeclineModal()}>
-                DECLINE
-              </MyText>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              activeOpacity={0.5}
-              style={[
-                {
-                  backgroundColor: '#d65d0e',
-                  borderRadius: 20,
-                  padding: 4,
-                  width: 125,
-                },
-                Style.btnShadow,
-              ]}>
-              <MyText
-                style={[{color: 'white', fontSize: 11, alignSelf: 'center'}]}
-                onPress={() => {
-                  toggleProcessModal();
-                }}>
-                PROCESS
-              </MyText>
-            </TouchableOpacity>
-          </View> */}
-
+          
           <View style={{paddingBottom: 60}}></View>
         </View>
       </ScrollView>

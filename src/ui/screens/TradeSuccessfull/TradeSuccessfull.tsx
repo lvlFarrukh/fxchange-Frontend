@@ -21,7 +21,7 @@ import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
 
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
 
 const TradeSuccessfull = ({navigation}) => {
   return (
@@ -41,7 +41,7 @@ const TradeSuccessfull = ({navigation}) => {
           </MyText>
         </View>
 
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={[styles.whiteCardBg]}>
             <Image
               source={require('../../../Assets/greenLogo.png')}
@@ -170,7 +170,7 @@ const TradeSuccessfull = ({navigation}) => {
               <View
                 style={{
                   marginTop: 20,
-                  marginBottom: 50,
+                  marginBottom: 20,
                   flexDirection: 'column',
                 }}>
                 <MyText
@@ -191,7 +191,7 @@ const TradeSuccessfull = ({navigation}) => {
                 </MyText>
               </View>
 
-              <TouchableOpacity activeOpacity={0.9} style={{marginTop: 10}}>
+              <TouchableOpacity activeOpacity={0.9}>
                 <MyText
                   style={{
                     alignSelf: 'center',
@@ -205,18 +205,12 @@ const TradeSuccessfull = ({navigation}) => {
                   HOME
                 </MyText>
               </TouchableOpacity>
-              <View style={{padding: 13}}></View>
             </View>
+
           </View>
         </ScrollView>
       </SafeAreaView>
-      <View style={{position: 'absolute', width: width, bottom: 0}}>
-        {/* <Navbar
-          navigation={navigation}
-          activePage={'home'}
-          backgroundColor={undefined}
-        /> */}
-      </View>
+      
     </View>
   );
 };
@@ -244,7 +238,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     width: width,
-    height: height,
+    height: height + StatusBar.currentHeight,
     padding: 20,
     // flexWrap: 'wrap',
     // flexDirection: 'row',

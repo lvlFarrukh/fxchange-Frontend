@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     position: 'absolute',
     zIndex: 1,
-    top: '10%',
+    // top: '10%',
+    top: 70,
   },
   headerButtons: {
     marginLeft: 'auto',

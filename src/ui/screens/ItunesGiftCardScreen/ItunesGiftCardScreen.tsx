@@ -20,7 +20,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { RFValue } from 'react-native-responsive-fontsize';
 const {width, height} = Dimensions.get('window');
 
 const ItunesGiftCardScreen = ({route, navigation}) => {
@@ -28,12 +29,12 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
 
   return (
     <View style={{height: height, width: width, flex: 1}}>
-      <StatusBar translucent backgroundColor="#1bb76d" />
+      <StatusBar style={{height: '100%'}} translucent backgroundColor="#1bb76d" />
       {/* <StatusBar hidden /> */}
       <SafeAreaView
         style={{
           flex: 1,
-          height: height,
+          height: '100%',
           width: width,
           backgroundColor: '#1bb76d',
         }}>
@@ -46,7 +47,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
         </View>
 
         <View style={[styles.whiteCardBg, {height: '100%'}]}>
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.bodyHeader}>
               <Image
                 source={require('../../../Assets/CARDS/itunes.png')}
@@ -209,17 +210,18 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 style={{
                   backgroundColor: '#fff',
                   borderRadius: 50,
-                  width: 50,
-                  height: 50,
+                  width: wp(15),
+                  height: wp(15),
                   alignItems: 'center',
                   justifyContent: 'center',
+                  alignContent: 'center'
                 }}>
                 <MyText
                   style={{
                     color: '#1bb76d',
-                    marginTop: -6,
-                    fontSize: 45,
+                    fontSize: RFValue(40),
                     fontWeight: '400',
+                    // backgroundColor: 'pink',
                   }}>
                   +
                 </MyText>
@@ -303,8 +305,8 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   cardImage: {
-    width: 150,
-    height: 110,
+    width: wp(41),
+    height: wp(30),
     marginTop: 10,
     backgroundColor: '#dfe2f5',
   },

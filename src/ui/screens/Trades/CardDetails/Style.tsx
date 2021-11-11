@@ -1,7 +1,15 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const {width, height} = Dimensions.get('screen');
 
 const Style = StyleSheet.create({
+  msFontSize: {
+
+  },
+  smFontSize: {
+
+  },
   header: {
     width: width,
     height: 100,
@@ -15,7 +23,7 @@ const Style = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     //marginTop: '3.5%',
-    fontSize: 18,
+    fontSize: RFValue(18),
     marginLeft: -18,
     marginTop: 5
   },
@@ -48,7 +56,7 @@ const Style = StyleSheet.create({
     paddingBottom: 1.5,
   },
   headerButtom: {
-    fontSize: 9,
+    fontSize: RFValue(9),
     textAlign: 'center',
     width: '100%',
     borderRadius: 30,
@@ -72,8 +80,8 @@ const Style = StyleSheet.create({
     // marginLeft: '5%',
   },
   titleImage: {
-    width: 32,
-    height: 32,
+    width: wp(10),
+    height: hp(5),
   },
   hr: {
     borderTopWidth: 1.5,
@@ -87,7 +95,7 @@ const Style = StyleSheet.create({
     marginTop: 2,
   },
   smFontSize: {
-    fontSize: 11,
+    fontSize: RFValue(11),
     marginBottom: 2,
   },
   mdFontBlackColor: {
