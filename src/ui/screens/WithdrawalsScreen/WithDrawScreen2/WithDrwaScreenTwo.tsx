@@ -12,6 +12,7 @@ import {
   SafeAreaView,
   Button,
   StatusBar,
+  Keyboard,
 } from 'react-native';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import Navbar from '../../../components/Navbars/Navbar';
@@ -19,6 +20,29 @@ import styles from './Style';
 const {width, height} = Dimensions.get('screen');
 const WithdrawalsScreenTwo = ({navigation}) => {
   console.log('with drawel screen');
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+    useEffect(() => {
+        const keyboardDidShowListener = Keyboard.addListener(
+            'keyboardDidShow',
+            () => {
+                setKeyboardVisible(true); // or some other action
+            }
+        );
+        const keyboardDidHideListener = Keyboard.addListener(
+            'keyboardDidHide',
+            () => {
+                setKeyboardVisible(false); // or some other action
+            }
+        );
+
+        return () => {
+            keyboardDidHideListener.remove();
+            keyboardDidShowListener.remove();
+        };
+    }, []);
+
+    
   return (
     <SafeAreaView
       style={{
@@ -80,36 +104,42 @@ const WithdrawalsScreenTwo = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.mainBody}>
-          <Image
-            source={require('../../../../Assets/whiteLogo.png')}
-            style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
-          />
-          <View style={styles.mainBodyContent}>
-            <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
-              <View style={{marginBottom: 8}}>
-                <Image
-                  source={require('../../../../Assets/ICONS/iggg.png')}
-                  style={{width: 29, height: 29}}
-                />
-              </View>
-              <MyText style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
-                fxchange
-              </MyText>
-            </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
-              <View>
-                <Image
-                  source={require('../../../../Assets/ICONS/website-logo-png.png')}
-                  style={{width: 18, height: 18, marginLeft: 6}}
-                />
-              </View>
-              <MyText style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
-                www.fxchange.com
-              </MyText>
-            </TouchableOpacity>
+
+      {
+          !isKeyboardVisible && (
+            <View style={styles.mainBody}>
+            <Image
+              source={require('../../../../Assets/whiteLogo.png')}
+              style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
+            />
+            <View style={styles.mainBodyContent}>
+              <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
+                <View style={{marginBottom: 8}}>
+                  <Image
+                    source={require('../../../../Assets/ICONS/iggg.png')}
+                    style={{width: 29, height: 29}}
+                  />
+                </View>
+                <MyText style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
+                  fxchange
+                </MyText>
+              </TouchableOpacity>
+              <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
+                <View>
+                  <Image
+                    source={require('../../../../Assets/ICONS/website-logo-png.png')}
+                    style={{width: 18, height: 18, marginLeft: 6}}
+                  />
+                </View>
+                <MyText style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
+                  www.fxchange.com
+                </MyText>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
+          ) 
+        }
+        
       </ScrollView>
     </SafeAreaView>
   );

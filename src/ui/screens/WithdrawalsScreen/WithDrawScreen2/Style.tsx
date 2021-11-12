@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   headerUpperArea: {
     marginTop: 40,
-    marginBottom: 60,
+    marginBottom: 45,
     flexDirection: 'row',
     backgroundColor: 'transparent', 
     height: 35,

@@ -345,7 +345,7 @@ const index = ({ navigation }) => {
           </View>
         </Modal>
       </SafeAreaView>
-      <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} />
+      {/* <Navbar navigation={navigation} activePage={'home'} backgroundColor={undefined} /> */}
     </View>
   );
 };

@@ -21,8 +21,8 @@ const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
   backgroundColor: '#1bb76d',
   color: 'white',
-  fontWeight: 'bold',
   zIndex: 1,
+  fontFamily:'Nunito-Regular'
   //padding: '3%',
 };
 const Trades = ({navigation}) => {

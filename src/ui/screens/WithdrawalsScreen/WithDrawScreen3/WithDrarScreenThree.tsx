@@ -75,7 +75,7 @@ const WithdrawalsScreenThree = ({ navigation }) => {
           />
         )}
       </ScrollView>
-      <Navbar navigation={navigation} activePage={'rates'} backgroundColor={'green'}/>
+      {/* <Navbar navigation={navigation} activePage={'rates'} backgroundColor={'green'}/> */}
 
     </SafeAreaView>
 

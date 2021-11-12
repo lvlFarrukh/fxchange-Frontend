@@ -19,6 +19,8 @@ import { TouchableHighlight } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -27,7 +29,7 @@ const CreateAccountScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, height: height , width: width }}>
       <SafeAreaView style={{flex: 1, height: height, width: width , backgroundColor: '#1bb76d' }}>
-          <View style={{ height: height*0.30 }}>
+          <View style={{ height: height*0.25 }}>
             <Header navigation={navigation} />
             <View style={{ alignSelf: 'center' }}>
               <Image
@@ -36,19 +38,19 @@ const CreateAccountScreen = ({ navigation }) => {
               />
             </View>
           </View>
-        <ScrollView >
+        {/* <ScrollView > */}
 
           <View
             style={[
               styles.whiteCardBg,
-              { height: height*0.70 },
+              { height: height*0.75 },
             ]}>
             <View>
               <MyText style={[styles.Heading]}>CREATE AN ACCOUNT</MyText>
 
               <View style={styles.BottomRowContainer}>
                 <View></View>
-                <MyText style={{ fontSize: 10, color: '#000' }}>
+                <MyText style={{ fontSize: RFValue(10), color: '#000' }}>
                   Click Here to
                   <TouchableNativeFeedback
                     onPress={() => {
@@ -103,7 +105,7 @@ const CreateAccountScreen = ({ navigation }) => {
                                 </MyText>
                             </View> */}
           </View>
-        </ScrollView>
+        {/* </ScrollView> */}
       </SafeAreaView>
     </View>
   );
@@ -125,12 +127,12 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     justifyContent: 'space-evenly',
     paddingHorizontal: 30,
-    paddingTop: 30,
+    paddingVertical: 30
   },
   Heading: {
     fontWeight: '700',
     alignSelf: 'center',
-    fontSize: 13,
+    fontSize: RFValue(13),
     color: '#333333',
   },
   TextInputStyle: {
@@ -140,9 +142,9 @@ const styles = StyleSheet.create({
     borderColor: '#F1F1F1',
     paddingLeft: 10,
     color: 'black',
-    height: 48,
-    marginBottom: 15,
-    fontSize: 11,
+    height: hp(7),
+    marginBottom: 10,
+    fontSize: RFValue(11),
   },
   GreenButton: {
     // alignSelf:'center',
@@ -153,7 +155,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     paddingHorizontal: 10,
     paddingVertical: 9,
-    fontSize: 12,
+    fontSize: RFValue(12),
     // fontWeight: '700',
     color: '#fafafa',
     backgroundColor: '#1bb76d',

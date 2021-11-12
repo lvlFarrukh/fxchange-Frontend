@@ -26,7 +26,7 @@ const {width, height} = Dimensions.get('screen');
 const TradeSuccessfull = ({navigation}) => {
   return (
     <View
-      style={{height: height + StatusBar.currentHeight, width: width, flex: 1}}>
+      style={{height: height, width: width, flex: 1}}>
       {/* <StatusBar hidden /> */}
       <SafeAreaView
         style={{
@@ -51,7 +51,7 @@ const TradeSuccessfull = ({navigation}) => {
               source={require('../../../Assets/ICONS/green-check.png')}
               style={styles.tickImage}
             />
-            <View style={{justifyContent: 'space-between', flex: 1}}>
+            <View style={{justifyContent: 'space-between'}}>
               <View>
                 <MyText
                   style={{
@@ -74,7 +74,7 @@ const TradeSuccessfull = ({navigation}) => {
                   TRADE ID: #G4558668900
                 </MyText>
               </View>
-              <View style={{marginTop: 20}}>
+              <View style={height > 600 && {marginTop: 30}}>
                 <View
                   style={{
                     flexDirection: 'row',
@@ -168,11 +168,11 @@ const TradeSuccessfull = ({navigation}) => {
               </View>
 
               <View
-                style={{
+                style={[{
                   marginTop: 20,
                   marginBottom: 20,
                   flexDirection: 'column',
-                }}>
+                }, height > 600 && {marginTop: 40}]}>
                 <MyText
                   style={{textAlign: 'center', fontSize: 10, color: '#343434'}}>
                   NOTE:
@@ -191,7 +191,7 @@ const TradeSuccessfull = ({navigation}) => {
                 </MyText>
               </View>
 
-              <TouchableOpacity activeOpacity={0.9}>
+              <TouchableOpacity activeOpacity={0.9} style={height > 600 && {marginTop: 20}}>
                 <MyText
                   style={{
                     alignSelf: 'center',
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     width: width,
-    height: height + StatusBar.currentHeight,
+    height: height,
     padding: 20,
     // flexWrap: 'wrap',
     // flexDirection: 'row',
