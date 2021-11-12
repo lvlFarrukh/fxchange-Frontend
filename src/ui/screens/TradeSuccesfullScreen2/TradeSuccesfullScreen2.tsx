@@ -229,6 +229,7 @@ const styles = StyleSheet.create({
     borderColor: '#949494',
     paddingLeft: 10,
     color: '#000',
+    fontFamily:'Nunito-Regular'
   },
   GreenButton: {
     // alignSelf:'center',

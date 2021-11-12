@@ -829,9 +829,9 @@ const index = ({navigation}) => {
                     );
                   }}
                   defaultButtonText={'Reason'}
-                  buttonTextStyle={{textAlign: 'left', fontSize: 13}}
+                  buttonTextStyle={{textAlign: 'left', fontSize: 13, fontFamily:'Nunito-Regular'}}
                   rowStyle={{backgroundColor: 'white', width: '100%'}}
-                  rowTextStyle={{fontSize: 15}}
+                  rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
                   buttonStyle={{
                     backgroundColor: 'white',
                     borderWidth: 0.5,
@@ -842,6 +842,7 @@ const index = ({navigation}) => {
                     paddingRight: 10,
                     paddingVertical: 10,
                     alignSelf: 'center',
+                    
                   }}
                 />
 

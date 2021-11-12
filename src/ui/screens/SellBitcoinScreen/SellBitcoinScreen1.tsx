@@ -297,7 +297,8 @@ const styles = StyleSheet.create({
     width: wp(38),
     paddingLeft: 10,
     color: '#000',
-    fontSize: RFValue(13)
+    fontSize: RFValue(13),
+    fontFamily:'Nunito-Regular'
   },
 });
 export default SellBitcoinScreen1;

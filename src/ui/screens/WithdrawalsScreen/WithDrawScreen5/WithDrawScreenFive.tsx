@@ -96,6 +96,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Full Name"
@@ -116,6 +117,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Phone Number"
@@ -136,6 +138,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Email Address"
@@ -167,6 +170,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Select Bank"
@@ -188,6 +192,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Account Number"
@@ -209,6 +214,7 @@ const WithDrawScreenFive = ({navigation}) => {
                     marginVertical: 13,
                     color: 'black',
                     paddingLeft: 10,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Name on Account"

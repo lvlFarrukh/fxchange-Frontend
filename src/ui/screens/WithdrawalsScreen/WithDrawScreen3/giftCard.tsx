@@ -141,8 +141,10 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 textAlign: 'left',
                 fontSize: 14,
                 fontWeight: '400',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: 'white',
                 width: '100%',
@@ -193,8 +195,10 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 textAlign: 'left',
                 fontSize: 14,
                 fontWeight: '400',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: 'white',
                 width: '100%',
@@ -244,8 +248,10 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 textAlign: 'left',
                 fontSize: 14,
                 fontWeight: '400',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: 'white',
                 width: '100%',
@@ -272,6 +278,7 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
 
               // paddingTop:20,
               paddingLeft: 19,
+              fontFamily:'Nunito-Regular'
             }}
             underlineColorAndroid="transparent"
             placeholder="Enter Account in USD"

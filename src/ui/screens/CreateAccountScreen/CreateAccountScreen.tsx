@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     height: hp(7),
     marginBottom: 10,
     fontSize: RFValue(11),
+    fontFamily:'Nunito-Regular'
   },
   GreenButton: {
     // alignSelf:'center',

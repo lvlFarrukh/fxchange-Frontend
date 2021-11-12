@@ -101,6 +101,7 @@ const index = ({navigation}) => {
                   paddingLeft: 30,
                   color: 'black',
                   fontSize: 12,
+                  fontFamily:'Nunito-Regular'
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="ITUNES"
@@ -140,8 +141,9 @@ const index = ({navigation}) => {
                   fontSize: 13,
                   paddingLeft: 10,
                   color: '#333333',
+                  fontFamily:'Nunito-Regular'
                 }}
-                rowStyle={{backgroundColor: 'white', width: '100%'}}
+                rowStyle={{backgroundColor: 'white', width: '100%', fontFamily:'Nunito-Regular'}}
                 rowTextStyle={{fontSize: 15}}
                 buttonStyle={{
                   backgroundColor: 'white',
@@ -186,9 +188,10 @@ const index = ({navigation}) => {
                   fontSize: 13,
                   paddingLeft: 10,
                   color: '#333333',
+                  fontFamily:'Nunito-Regular'
                 }}
                 rowStyle={{backgroundColor: 'white', width: '100%'}}
-                rowTextStyle={{fontSize: 15}}
+                rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
                 buttonStyle={{
                   backgroundColor: 'white',
                   borderWidth: 1.5,
@@ -232,9 +235,10 @@ const index = ({navigation}) => {
                   fontSize: 13,
                   paddingLeft: 10,
                   color: '#333333',
+                  fontFamily:'Nunito-Regular'
                 }}
                 rowStyle={{backgroundColor: 'white', width: '100%'}}
-                rowTextStyle={{fontSize: 15}}
+                rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
                 buttonStyle={{
                   backgroundColor: 'white',
                   borderWidth: 1.5,
@@ -262,6 +266,7 @@ const index = ({navigation}) => {
                   paddingLeft: 30,
                   color: 'black',
                   fontSize: 12,
+                  fontFamily:'Nunito-Regular'
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Card Value"
@@ -284,6 +289,7 @@ const index = ({navigation}) => {
                   paddingLeft: 30,
                   color: 'black',
                   fontSize: 12,
+                  fontFamily:'Nunito-Regular'
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Card Code (Optional)"

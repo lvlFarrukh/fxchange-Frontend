@@ -114,10 +114,11 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
-                color:'#333333'
+                color:'#333333',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
-              rowTextStyle={{fontSize: 15}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: '#F1F1F1',
                 borderWidth: 1.5,
@@ -160,10 +161,11 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
-                color:'#333333'
+                color:'#333333',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
-              rowTextStyle={{fontSize: 15}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 1.5,
@@ -206,10 +208,11 @@ const index = ({navigation}) => {
                 textAlign: 'left',
                 fontSize: 13,
                 paddingLeft: 10,
-                color:'#333333'
+                color:'#333333',
+                fontFamily:'Nunito-Regular'
               }}
               rowStyle={{backgroundColor: 'white', width: '100%'}}
-              rowTextStyle={{fontSize: 15}}
+              rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
                 backgroundColor: 'white',
                 borderWidth: 1.5,
@@ -235,6 +238,7 @@ const index = ({navigation}) => {
                 height: 50,
                 margin: 7,
                 paddingLeft: 30,
+                fontFamily:'Nunito-Regular'
               }}
               underlineColorAndroid="transparent"
               placeholder="Card Value"

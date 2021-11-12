@@ -72,6 +72,7 @@ const Bitcoin = ({activeButton, bitcoin, giftCards}) => {
             // paddingTop:20,
             paddingLeft: 25,
             color: 'black',
+            fontFamily:'Nunito-Regular'
           }}
           underlineColorAndroid="transparent"
           placeholder="Enter Account in USD"

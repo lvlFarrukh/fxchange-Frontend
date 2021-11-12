@@ -59,6 +59,7 @@ const index = ({navigation}) => {
                 paddingLeft: 15,
                 color: 'black',
                 fontSize: 12,
+                fontFamily:'Nunito-Regular'
               }}
               underlineColorAndroid="transparent"
               placeholder="Enter amount in USD"

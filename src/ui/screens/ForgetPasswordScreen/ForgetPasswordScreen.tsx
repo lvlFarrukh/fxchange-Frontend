@@ -133,7 +133,8 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         color:'#000',
         fontSize: 12,
-        marginTop: -5
+        marginTop: -5,
+        fontFamily:'Nunito-Regular'
     },
     GreenButton: {
         // alignSelf:'center',

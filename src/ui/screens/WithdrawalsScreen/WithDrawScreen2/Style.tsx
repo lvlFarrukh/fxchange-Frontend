@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlignVertical: 'top',
     borderColor: '#F1F1F1',
-    color: 'black'
+    color: 'black',
+    fontFamily:'Nunito-Regular'
     // borderRadius: 5
   },
   sendButtonContainer:{

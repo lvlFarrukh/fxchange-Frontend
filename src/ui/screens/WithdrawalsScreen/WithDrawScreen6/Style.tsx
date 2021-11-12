@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
     elevation: 1,
     borderWidth: 0.5,
     borderColor: '#F1F1F1',
-    marginTop: -20
+    marginTop: -20,
+    fontFamily:'Nunito-Regular'
   },
   mainBody: {
     width: width,
@@ -172,6 +173,7 @@ const styles = StyleSheet.create({
    shadowOpacity: 0.3,
    shadowRadius: 2,
    elevation: 1,
+   fontFamily:'Nunito-Regular'
  },
   bodyBottom:{
    marginTop:23,

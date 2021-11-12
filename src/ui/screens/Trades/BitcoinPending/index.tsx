@@ -434,6 +434,7 @@ const index = ({navigation}) => {
                   height: 44,
                   margin: 7,
                   paddingLeft: 15,
+                  fontFamily:'Nunito-Regular'
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Amount Received in USD"
@@ -454,6 +455,7 @@ const index = ({navigation}) => {
                   height: 44,
                   margin: 7,
                   paddingLeft: 15,
+                  fontFamily:'Nunito-Regular'
                 }}
                 underlineColorAndroid="transparent"
                 placeholder="Amount Received in BTC"

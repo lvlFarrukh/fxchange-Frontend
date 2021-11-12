@@ -67,7 +67,8 @@ const WithDrawScreenFour = ({ navigation }) => {
                     marginVertical: 13,
                     paddingLeft: 10,
                     height: 48,
-                    color: 'black'
+                    color: 'black',
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Current Password"
@@ -85,7 +86,8 @@ const WithDrawScreenFour = ({ navigation }) => {
                     width: '100%',
                     marginBottom: 13,
                     paddingLeft: 10,
-                    height: 48
+                    height: 48,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="New Password"
@@ -103,7 +105,8 @@ const WithDrawScreenFour = ({ navigation }) => {
                     width: '100%',
                     marginBottom: 13,
                     paddingLeft: 10,
-                    height: 48
+                    height: 48,
+                    fontFamily:'Nunito-Regular'
                   }}
                   underlineColorAndroid="transparent"
                   placeholder="Repeat New Paswword"

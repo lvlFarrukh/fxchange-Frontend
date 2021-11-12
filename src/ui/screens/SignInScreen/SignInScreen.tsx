@@ -152,6 +152,7 @@ const styles = () =>
     //   marginTop: 5,
       borderColor: '#F1F1F1',
       fontSize: 12, 
+      fontFamily:'Nunito-Regular'
     },
     GreenButton: {
       // alignSelf:'center',
