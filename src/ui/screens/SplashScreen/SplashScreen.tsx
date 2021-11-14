@@ -8,7 +8,8 @@ const SplashScreen = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('LandingScreen')
+            // navigation.replace('LandingScreen')
+            navigation.replace('AdminWithdrawalHome')
         }, 1500);
     }, [])
 
