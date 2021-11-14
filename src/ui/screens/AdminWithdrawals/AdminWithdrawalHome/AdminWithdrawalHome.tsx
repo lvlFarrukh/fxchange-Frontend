@@ -19,7 +19,7 @@ import {trades} from '../../../../Assets/dumyData';
 import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import AdminWithdrawalCard from '../AdminWithdrawalCard/AdminWithdrawalCard';
-import MarkAsPaidModal from '../Modals/MarkAsPaidModal/MarkAsPaidModal';
+import MarkAsPaidModal from '../Modals/WithdrawalModals/MarkAsPaidModal';
 import AcceptModal from '../Modals/WarningModal/WarningModal';
 import WarningModal from '../Modals/WarningModal/WarningModal';
 
