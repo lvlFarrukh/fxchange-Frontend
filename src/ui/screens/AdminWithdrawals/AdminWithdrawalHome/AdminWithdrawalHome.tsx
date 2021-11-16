@@ -19,9 +19,11 @@ import {trades} from '../../../../Assets/dumyData';
 import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
 import MyText from '../../../components/DefaultTextComponent/MyText';
 import AdminWithdrawalCard from '../AdminWithdrawalCard/AdminWithdrawalCard';
-import MarkAsPaidModal from '../Modals/WithdrawalModals/MarkAsPaidModal';
+import MarkAsPaidModal from '../Modals/MarkAsPaidModal/MarkAsPaidModal';
 import AcceptModal from '../Modals/WarningModal/WarningModal';
 import WarningModal from '../Modals/WarningModal/WarningModal';
+import DeclineModal from '../Modals/DeclineModal/DeclineModal';
+import ApprovedModal from '../Modals/ApprovedModal/ApprovedModal';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -38,6 +40,8 @@ const AdminWithdrawalHome = ({navigation}) => {
   const [CompletedBtn, setCompleted] = useState({});
   const [navigateState, setnavigateState] = useState(0);
   const [openApprovedModal, setopenApprovedModal] = useState(false);
+  const [openMarkAsPaidModal, setopenMarkAsPaidModal] = useState(false);
+  const [openDeclineModal, setopenDeclineModal] = useState(false);
   const [isAcceptModal, setisAcceptModal] = useState(false);
   const [isDeclineModal, setisDeclineModal] = useState(false);
 
@@ -66,9 +70,17 @@ const AdminWithdrawalHome = ({navigation}) => {
     setisDeclineModal(!isDeclineModal);
   };
 
-  const handleChange = () => {
+  const handleChangeMarkAsPaidModal = () => {
+    setopenMarkAsPaidModal(!openMarkAsPaidModal)
+  }
+
+  const handleChangeDeclineModal = () => {
+    setopenDeclineModal(!openDeclineModal)
+  }
+
+  const handleChangeApprovedModal = () => {
     setopenApprovedModal(!openApprovedModal);
-  };
+  }
 
   const activeButton = (buttonType: string) => {
     console.log(buttonType);
@@ -156,14 +168,14 @@ const AdminWithdrawalHome = ({navigation}) => {
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeMarkAsPaidModal}
                     type={'pending'}
                   />
                   <AdminWithdrawalCard
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeMarkAsPaidModal}
                     type={'pending'}
                   />
                 </Fragment>
@@ -175,14 +187,14 @@ const AdminWithdrawalHome = ({navigation}) => {
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeDeclineModal}
                     type={'declined'}
                   />
                   <AdminWithdrawalCard
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeDeclineModal}
                     type={'declined'}
                   />
                 </Fragment>
@@ -194,14 +206,14 @@ const AdminWithdrawalHome = ({navigation}) => {
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeApprovedModal}
                     type={'completed'}
                   />
                   <AdminWithdrawalCard
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChange}
+                    handleChange={handleChangeApprovedModal}
                     type={'completed'}
                   />
                 </Fragment>
@@ -214,11 +226,26 @@ const AdminWithdrawalHome = ({navigation}) => {
       </SafeAreaView>
 
       <MarkAsPaidModal
-        isOpen={openApprovedModal}
-        handleChange={handleChange}
+        isOpen={openMarkAsPaidModal}
+        handleChange={handleChangeMarkAsPaidModal}
         acceptModalHandleChange={acceptModalHandleChange}
         declineModalHandleChange={declineModalHandleChange}
       />
+
+      <DeclineModal
+        isOpen={openDeclineModal}
+        handleChange={handleChangeDeclineModal}
+        acceptModalHandleChange={acceptModalHandleChange}
+        declineModalHandleChange={declineModalHandleChange}
+      />
+
+      <ApprovedModal
+        isOpen={openApprovedModal}
+        handleChange={handleChangeApprovedModal}
+        acceptModalHandleChange={acceptModalHandleChange}
+        declineModalHandleChange={declineModalHandleChange}
+      />
+
       <WarningModal
         isOpen={isAcceptModal}
         type={'ACCEPT'}
@@ -226,6 +253,7 @@ const AdminWithdrawalHome = ({navigation}) => {
         onPressAction={acceptModalHandleChange}
         handleChange={acceptModalHandleChange}
       />
+      
       <WarningModal
         isOpen={isDeclineModal}
         type={'DECLINE'}

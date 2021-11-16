@@ -11,7 +11,7 @@ interface Props {
   declineModalHandleChange: ()=> void;
 }
 
-const MarkAsPaidModal: React.FC<Props> = props => {
+const ApprovedModal: React.FC<Props> = props => {
   return (
     <Modal isVisible={props.isOpen}>
       <View
@@ -26,13 +26,12 @@ const MarkAsPaidModal: React.FC<Props> = props => {
             flexDirection: 'row',
             justifyContent: 'space-evenly',
             alignItems: 'center',
-            marginBottom: -10,
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={props.handleChange}
-            style={{marginLeft: -40}}>
-            <MyText style={{fontSize: 25, fontWeight: '200', color: 'black'}}>
+            style={{marginLeft: -30}}>
+            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
             </MyText>
           </TouchableOpacity>
@@ -114,14 +113,14 @@ const MarkAsPaidModal: React.FC<Props> = props => {
               N300,000
             </MyText>
           </View>
-          <View>
+          <View style={{marginRight: 7}}>
             <MyText style={{fontSize: 9}}>Date</MyText>
             <MyText style={{fontSize: 10}}>DEC 10,20201 1:30PM</MyText>
           </View>
         </View>
 
         <View style={{paddingVertical: 25}}></View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           activeOpacity={0.9}
           style={{alignSelf: 'center'}}
           onPress={props.acceptModalHandleChange}
@@ -135,7 +134,7 @@ const MarkAsPaidModal: React.FC<Props> = props => {
             }}>
             MARK AS PAID
           </MyText>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <View
           style={[
@@ -144,16 +143,16 @@ const MarkAsPaidModal: React.FC<Props> = props => {
           ]}></View>
         <TouchableOpacity
           activeOpacity={0.9}
-          onPress={props.declineModalHandleChange}
+          // onPress={props.declineModalHandleChange}
           style={{alignSelf: 'center', marginTop: 5}}>
           <MyText
             style={{
-              color: '#424242',
-              fontSize: 12,
+              color: '#0a8942',
+              fontSize: 14,
               fontWeight: '600',
               paddingBottom: 5,
             }}>
-            DECLINE
+            APPROVED
           </MyText>
         </TouchableOpacity>
       </View>
@@ -161,4 +160,4 @@ const MarkAsPaidModal: React.FC<Props> = props => {
   );
 };
 
-export default MarkAsPaidModal;
+export default ApprovedModal;
