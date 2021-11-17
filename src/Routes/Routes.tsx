@@ -33,6 +33,7 @@ import tradeCardDetails from '../ui/screens/Trades/CardDetails';
 import TeadesBitcoinCardDetailPending from '../ui/screens/Trades/BitcoinPending'
 import TradeBitcoinComplete from '../ui/screens/Trades/BitcoinComplete'
 import AdminWithdrawalHome from '../ui/screens/AdminWithdrawals/AdminWithdrawalHome/AdminWithdrawalHome'
+import AdminUserHome from '../ui/screens/AdminUser/AdminUserHome/AdminUserHome'
 
 const Stack = createStackNavigator();
 
@@ -75,6 +76,7 @@ const Routes = () => {
             <Stack.Screen name="Trades" component={Trades} />
             <Stack.Screen name="tradeCardDetails" component={tradeCardDetails} />
             <Stack.Screen name="AdminWithdrawalHome" component={AdminWithdrawalHome} />
+            <Stack.Screen name="AdminUserHome" component={AdminUserHome} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>
