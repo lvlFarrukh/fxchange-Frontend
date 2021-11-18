@@ -16,12 +16,11 @@ interface Props {
   isEditRole: () => void;
   isBanUser: () => void;
   isDelete: () => void;
-  updateBalance: () => void;
-  isStatistics: () => void;
-  navigation: any;
+  navigation: any,
+  isStatistics: any,
 }
 
-const Active: React.FC<Props> = props => {
+const Banned: React.FC<Props> = props => {
  
   return (
       <View style={Style.mainBody}>
@@ -72,7 +71,7 @@ const Active: React.FC<Props> = props => {
           </View>
         </View>
 
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             marginTop: hp(1),
@@ -95,8 +94,7 @@ const Active: React.FC<Props> = props => {
               </MyText>
             </View>
 
-            <TouchableOpacity
-            activeOpacity={0.8}
+            <View
               style={{
                 backgroundColor: '#d25d10',
                 width: wp(22),
@@ -108,9 +106,7 @@ const Active: React.FC<Props> = props => {
                 justifyContent: 'center',
                 marginTop: 'auto',
                 marginBottom: 'auto',
-              }}
-              onPress={props.updateBalance}
-            >
+              }}>
               <MyText
                 style={{
                   fontSize: RFValue(12),
@@ -120,7 +116,7 @@ const Active: React.FC<Props> = props => {
                 }}>
                 Update
               </MyText>
-            </TouchableOpacity>
+            </View>
           </View>
 
           <View
@@ -146,7 +142,7 @@ const Active: React.FC<Props> = props => {
               Active Now
             </MyText>
           </View>
-        </View>
+        </View> */}
 
         <View
           style={{
@@ -156,25 +152,9 @@ const Active: React.FC<Props> = props => {
             marginHorizontal: hp(1),
           }}></View>
 
-        <View style={{paddingHorizontal: 6, flexDirection: 'row', justifyContent: 'space-between', marginLeft: -wp(0.5)}}>
-          <TouchableOpacity
-          onPress={()=> props.navigation.navigate('TransactionHistoryScreen')}
-            activeOpacity={0.8}
-            style={{
-              backgroundColor: '#ffffff',
-              borderColor: '#f1f1f1',
-              width: wp(17),
-              paddingVertical: 3,
-              borderRadius: 15,
-              justifyContent: 'center',
-              borderWidth: 1,
-              height: hp(3.2),
+          <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
 
-            }}>
-            <MyText style={{fontSize: RFValue(9), textAlign: 'center',}}>
-              View Trans.
-            </MyText>
-          </TouchableOpacity>
+        <View style={{paddingHorizontal: 6, flexDirection: 'row', marginLeft: -wp(0.5)}}>
 
           <TouchableOpacity
           onPress={props.isStatistics}
@@ -188,7 +168,7 @@ const Active: React.FC<Props> = props => {
               justifyContent: 'center',
               borderWidth: 1,
               height: hp(3.2),
-
+              marginRight: 5 
             }}>
             <MyText style={{fontSize: RFValue(9), textAlign: 'center'}}>
               View Stats
@@ -200,16 +180,17 @@ const Active: React.FC<Props> = props => {
             style={{
               backgroundColor: '#ffffff',
               borderColor: '#f1f1f1',
-              width: wp(15),
+              width: wp(17),
               paddingVertical: 3,
               borderRadius: 15,
               justifyContent: 'center',
               borderWidth: 1,
               height: hp(3.2),
+              marginRight: 5 
             }}
             onPress={props.isEditRole}
           >
-            <MyText style={{fontSize: RFValue(9), textAlign: 'center'}}>
+            <MyText style={{fontSize: RFValue(9), textAlign: 'center',}}>
               Edit Role
             </MyText>
           </TouchableOpacity>
@@ -219,7 +200,7 @@ const Active: React.FC<Props> = props => {
             style={{
               backgroundColor: '#ffffff',
               borderColor: '#f1f1f1',
-              width: wp(10),
+              width: wp(17),
               paddingVertical: 3,
               borderRadius: 15,
               justifyContent: 'center',
@@ -233,12 +214,12 @@ const Active: React.FC<Props> = props => {
             </MyText>
           </TouchableOpacity>
 
-
-          <TouchableOpacity
+        </View>
+        <TouchableOpacity
             activeOpacity={0.8}
             style={{
               borderColor: '#f1f1f1',
-              width: wp(15),
+              width: wp(18),
               paddingVertical: 3,
               borderRadius: 15,
               justifyContent: 'center',
@@ -252,9 +233,9 @@ const Active: React.FC<Props> = props => {
               Delete
             </MyText>
           </TouchableOpacity>
-        </View>
+          </View>
       </View>
   );
 };
 
-export default Active;
+export default Banned;

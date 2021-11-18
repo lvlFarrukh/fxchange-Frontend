@@ -18,7 +18,15 @@ import styles from './Style';
 import {trades} from '../../../../Assets/dumyData';
 import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
 import MyText from '../../../components/DefaultTextComponent/MyText';
-import AdminWithdrawalCard from '../AdminUserCard/Active/Active';
+import Active from '../AdminUserCard/Active/Active';
+import EditRole from '../Modals/EditRole';
+import BanUser from '../Modals/BanUser';
+import DeleteModal from '../Modals/WarningModal'
+import Banned from '../AdminUserCard/Banned/Banned';
+import Unban from '../Modals/Unban';
+import UpdateBalance from '../Modals/UpdateBalance';
+import Moderator from '../AdminUserCard/Moderator/Moderator';
+import Statistics from '../Modals/Statistics';
 // import MarkAsPaidModal from '../Modals/MarkAsPaidModal/MarkAsPaidModal';
 // import AcceptModal from '../Modals/WarningModal/WarningModal';
 // import WarningModal from '../Modals/WarningModal/WarningModal';
@@ -44,6 +52,42 @@ const AdminWithdrawalHome = ({navigation}) => {
   const [openDeclineModal, setopenDeclineModal] = useState(false);
   const [isAcceptModal, setisAcceptModal] = useState(false);
   const [isDeclineModal, setisDeclineModal] = useState(false);
+  const [isEditRoleModal, setisEditRoleModal] = useState(false)
+  const [isBanUserModal, setisBanUserModal] = useState(false)
+  const [isUnbanUserModal, setisUnbanUserModal] = useState(false)
+  const [isUpdateBalanceModal, setisUpdateBalanceModal] = useState(false)
+  const [isStatisticsModal, setisStatisticsModal] = useState(false)
+
+  const handleChangeEditModal = () => {
+    setisEditRoleModal(!isEditRoleModal)
+  }
+
+  const handleChangeStatisticsModal = () => {
+    setisStatisticsModal(!isStatisticsModal)
+  }
+
+
+  const handleChangeBanUserModal = () => {
+    setisBanUserModal(!isBanUserModal)
+  }
+  
+  const handleChangeUpdateBalanceModal = () => {
+    setisUpdateBalanceModal(!isUpdateBalanceModal)
+  }
+  
+  const handleChangeUnbanUserModal = () => {
+    setisUnbanUserModal(!isUnbanUserModal)
+  }
+
+  const banUser = () => {
+    activeButton('banned')
+    handleChangeBanUserModal()
+  }
+
+  const unbanUser = () => {
+    activeButton('active')
+    handleChangeUnbanUserModal()
+  }
 
   const navigateCardDetails = (route, status) => {
     console.log(route);
@@ -84,19 +128,19 @@ const AdminWithdrawalHome = ({navigation}) => {
 
   const activeButton = (buttonType: string) => {
     console.log(buttonType);
-    if (buttonType === 'pending') {
+    if (buttonType === 'active') {
       setpendingBtn(btnSetected);
       setOngoing({});
       setCompleted({});
       setnavigateState(0);
     }
-    if (buttonType === 'ongoing') {
+    if (buttonType === 'banned') {
       setpendingBtn({});
       setOngoing(btnSetected);
       setCompleted({});
       setnavigateState(1);
     }
-    if (buttonType === 'completed') {
+    if (buttonType === 'moderator') {
       setpendingBtn({});
       setOngoing({});
       setCompleted(btnSetected);
@@ -136,7 +180,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <MyText
                 style={[styles.headerButtom, styles.JoinLeft, {...pendingBtn}]}
                 onPress={() => {
-                  activeButton('pending');
+                  activeButton('active');
                 }}>
                 Active
               </MyText>
@@ -144,7 +188,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <MyText
                 style={[styles.headerButtom, {...ongoingBtn}]}
                 onPress={() => {
-                  activeButton('ongoing');
+                  activeButton('banned');
                 }}>
                 Banned
               </MyText>
@@ -156,7 +200,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                   {...CompletedBtn},
                 ]}
                 onPress={() => {
-                  activeButton('completed');
+                  activeButton('moderator');
                 }}>
                 Moderates
               </MyText>
@@ -164,57 +208,81 @@ const AdminWithdrawalHome = ({navigation}) => {
             <ScrollView>
               {navigateState === 0 && (
                 <Fragment>
-                  <AdminWithdrawalCard
+                  <Active
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeMarkAsPaidModal}
-                    type={'pending'}
+                    isEditRole={handleChangeEditModal}
+                    isBanUser={handleChangeBanUserModal}
+                    isDelete={declineModalHandleChange}
+                    updateBalance={handleChangeUpdateBalanceModal}
+                    isStatistics={handleChangeStatisticsModal}
+                    navigation={navigation}
+                    type={'active'}
                   />
-                  <AdminWithdrawalCard
+                  <Active
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeMarkAsPaidModal}
-                    type={'pending'}
+                    isEditRole={handleChangeEditModal}
+                    isBanUser={handleChangeBanUserModal}
+                    isDelete={declineModalHandleChange}
+                    updateBalance={handleChangeUpdateBalanceModal}
+                    isStatistics={handleChangeStatisticsModal}
+                    navigation={navigation}
+                    type={'active'}
                   />
                 </Fragment>
               )}
 
               {navigateState === 1 && (
                 <Fragment>
-                  <AdminWithdrawalCard
+                  <Banned
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeDeclineModal}
-                    type={'declined'}
+                    isEditRole={handleChangeEditModal}
+                    isUnbanUser={handleChangeUnbanUserModal}
+                    isDelete={declineModalHandleChange}
+                    type={'active'}
+                    navigation={navigation}
                   />
-                  <AdminWithdrawalCard
+                 <Banned
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeDeclineModal}
-                    type={'declined'}
+                    isEditRole={handleChangeEditModal}
+                    isUnbanUser={handleChangeUnbanUserModal}
+                    isDelete={declineModalHandleChange}
+                    type={'active'}
+                    navigation={navigation}
                   />
                 </Fragment>
               )}
 
               {navigateState === 2 && (
                 <Fragment>
-                  <AdminWithdrawalCard
+                 <Moderator
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeApprovedModal}
-                    type={'completed'}
+                    isEditRole={handleChangeEditModal}
+                    isBanUser={handleChangeBanUserModal}
+                    isDelete={declineModalHandleChange}
+                    isStatistics={handleChangeStatisticsModal}
+                    type={'active'}
+                    navigation={navigation}
                   />
-                  <AdminWithdrawalCard
+                 <Moderator
                     title={'Fxchange Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
-                    handleChange={handleChangeApprovedModal}
-                    type={'completed'}
+                    isEditRole={handleChangeEditModal}
+                    isBanUser={handleChangeBanUserModal}
+                    isDelete={declineModalHandleChange}
+                    isStatistics={handleChangeStatisticsModal}
+                    type={'active'}
+                    navigation={navigation}
                   />
                 </Fragment>
               )}
@@ -224,6 +292,20 @@ const AdminWithdrawalHome = ({navigation}) => {
           </View>
         </View>
       </SafeAreaView>
+
+      <EditRole isOpen={isEditRoleModal} handleChange={handleChangeEditModal}/>
+      <BanUser isOpen={isBanUserModal} handleChange={handleChangeBanUserModal} action={banUser}/>
+      <Unban isOpen={isUnbanUserModal} handleChange={handleChangeUnbanUserModal} action={unbanUser}/>
+      <UpdateBalance isOpen={isUpdateBalanceModal} handleChange={handleChangeUpdateBalanceModal} action={unbanUser}/>
+      <Statistics isOpen={isStatisticsModal} handleChange={handleChangeStatisticsModal} action={unbanUser}/>
+
+      <DeleteModal
+        isOpen={isDeclineModal}
+        type={'DECLINE'}
+        text={'Are you sure you want to \nDECLINE this transaction'}
+        onPressAction={declineModalHandleChange}
+        handleChange={declineModalHandleChange}
+      />
 
       {/* <MarkAsPaidModal
         isOpen={openMarkAsPaidModal}
@@ -253,14 +335,8 @@ const AdminWithdrawalHome = ({navigation}) => {
         onPressAction={acceptModalHandleChange}
         handleChange={acceptModalHandleChange}
       />
+       */}
       
-      <WarningModal
-        isOpen={isDeclineModal}
-        type={'DECLINE'}
-        text={'Are you sure you want to \nDECLINE this transaction'}
-        onPressAction={declineModalHandleChange}
-        handleChange={declineModalHandleChange}
-      /> */}
       {/* <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
     </View>
   );

@@ -19,10 +19,11 @@ const {width, height} = Dimensions.get('screen');
 
 interface Props {
     isOpen: boolean,
-    handleChange: () => void
+    handleChange: () => void;
+    action: ()=> void;
 }
 
-const EditRole: React.FC<Props> = props => {
+const BanUser: React.FC<Props> = props => {
   return (
     <Modal isVisible={props.isOpen}>
       <View
@@ -54,7 +55,7 @@ const EditRole: React.FC<Props> = props => {
               marginLeft: 20,
               paddingTop: 2,
             }}>
-            Edit Role
+            Ban User
           </MyText>
           <MyText></MyText>
         </View>
@@ -83,10 +84,10 @@ const EditRole: React.FC<Props> = props => {
             editable={false}
             placeholder={'Jthomas'}
             placeholderTextColor={'#343434'}>
-        </TextInput>
+          </TextInput>    
 
           <SelectDropdown
-            data={["Moderator", "User", "Admin"]}
+            data={["Spamming", "Trade too many bad cards", "Sending fake trade screenshots"]}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
             }}
@@ -108,7 +109,7 @@ const EditRole: React.FC<Props> = props => {
                 />
               );
             }}
-            defaultButtonText={'Moderator'}
+            defaultButtonText={'Reason'}
             buttonTextStyle={{
               textAlign: 'left',
               fontSize: 13,
@@ -128,7 +129,53 @@ const EditRole: React.FC<Props> = props => {
               paddingVertical: 10,
               alignSelf: 'center',
               margin: 7,
-              marginBottom: hp(15)
+            }}
+          />
+
+          <SelectDropdown
+            data={["Permanent", "1 day", "2 days", "1 week", "2 weeks", "1 month", "Pick date"]}
+            onSelect={(selectedItem, index) => {
+              console.log(selectedItem, index);
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              // text represented after item is selected
+              // if data array is an array of objects then return selectedItem.property to render after item is selected
+              return selectedItem;
+            }}
+            rowTextForSelection={(item, index) => {
+              // text represented for each item in dropdown
+              // if data array is an array of objects then return item.property to represent item in dropdown
+              return item;
+            }}
+            renderDropdownIcon={() => {
+              return (
+                <Image
+                  source={require('../../../../Assets/ICONS/dropdwo.png')}
+                  style={{width: 10, height: 5}}
+                />
+              );
+            }}
+            defaultButtonText={'Unban Date'}
+            buttonTextStyle={{
+              textAlign: 'left',
+              fontSize: 13,
+              color: '#333333',
+              fontFamily: 'Nunito-Regular',
+            }}
+            rowStyle={{backgroundColor: 'white', width: '100%'}}
+            rowTextStyle={{fontSize: 15, fontFamily: 'Nunito-Regular'}}
+            buttonStyle={{
+              backgroundColor: '#ffffff',
+              borderWidth: 1.5,
+              borderColor: '#F1F1F1',
+              borderRadius: 4,
+              height: 46,
+              width: '100%',
+              paddingRight: 10,
+              paddingVertical: 10,
+              alignSelf: 'center',
+              margin: 7,
+              marginBottom: hp(10)
             }}
           />
         </View>
@@ -136,7 +183,7 @@ const EditRole: React.FC<Props> = props => {
         <TouchableOpacity
           activeOpacity={0.9}
           onPress={props.handleChange}
-          style={{alignSelf: 'center', marginTop: 0}}>
+          style={{alignSelf: 'center', marginTop: 5}}>
           <MyText
             style={{
               color: '#0c883f',
@@ -144,7 +191,7 @@ const EditRole: React.FC<Props> = props => {
               fontWeight: '600',
               paddingBottom: 5,
             }}>
-            UPDATE
+            BAN
           </MyText>
         </TouchableOpacity>
         <View
@@ -157,4 +204,4 @@ const EditRole: React.FC<Props> = props => {
   );
 };
 
-export default EditRole;
+export default BanUser;
