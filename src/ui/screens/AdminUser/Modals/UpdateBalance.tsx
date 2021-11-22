@@ -136,9 +136,25 @@ const UpdateBalance: React.FC<Props> = props => {
                 borderColor: '#f1f1f1',
                 borderRadius: 5,
                 marginRight: 8,
+                justifyContent: 'center'
+
               },
-              isIncrease ? {backgroundColor: 'gray'} : {backgroundColor: "#ffffff"}
-              ]}></TouchableOpacity>
+              ]}>
+                <View
+                  style={[{
+                    width: "90%",
+                    height: "90%",
+                    backgroundColor: 'lightgray',
+                    borderRadius: 4,
+                    alignSelf: 'center'
+                  },
+                  isIncrease ? {backgroundColor: 'lightgray'} : {backgroundColor: "#ffffff"}
+                
+                ]}
+                >
+                  
+                </View>
+              </TouchableOpacity>
             <MyText>Increase</MyText>
           </View>
 
@@ -152,9 +168,24 @@ const UpdateBalance: React.FC<Props> = props => {
                 borderColor: '#f1f1f1',
                 borderRadius: 5,
                 marginRight: 8,
+                justifyContent: 'center'
               }, 
-              isDecrease ? {backgroundColor: 'gray'} : {backgroundColor: "#ffffff"}
-              ]}></TouchableOpacity>
+              ]}>
+                <View
+                  style={
+                    [{
+                      width: "90%",
+                      height: "90%",
+                      backgroundColor: 'lightgray',
+                      borderRadius: 4,
+                      alignSelf: 'center',
+                    },
+                    isDecrease ? {backgroundColor: 'lightgray'} : {backgroundColor: "#ffffff"}
+                  ]}
+                >
+                  
+                </View>
+              </TouchableOpacity>
             <MyText>Decrease</MyText>
           </View>
         </View>
