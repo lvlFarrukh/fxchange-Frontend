@@ -35,7 +35,8 @@ import TradeBitcoinComplete from '../ui/screens/Trades/BitcoinComplete'
 import AdminWithdrawalHome from '../ui/screens/AdminWithdrawals/AdminWithdrawalHome/AdminWithdrawalHome'
 import AdminUserHome from '../ui/screens/AdminUser/AdminUserHome/AdminUserHome'
 import Setting from '../ui/screens/AdminSetting/Setting/Setting'
-
+import CardSetting from '../ui/screens/AdminSetting/CardSetting/CardSetting'
+import AddCard from '../ui/screens/AdminSetting/AddCard/AddCard'
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -79,6 +80,8 @@ const Routes = () => {
             <Stack.Screen name="AdminWithdrawalHome" component={AdminWithdrawalHome} />
             <Stack.Screen name="AdminUserHome" component={AdminUserHome} />
             <Stack.Screen name="Setting" component={Setting} />
+            <Stack.Screen name="CardSetting" component={CardSetting} />
+            <Stack.Screen name="AddCard" component={AddCard} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>
@@ -99,3 +102,97 @@ export default Routes
 
 // import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 // import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+
+
+
+// ----------------------------------------------
+// import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+// import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+// import React, {Fragment, useContext, useEffect, useMemo, useState} from 'react';
+// import {
+//   Image,
+//   StyleSheet,
+//   View,
+//   Text,
+//   ImageBackground,
+//   TouchableOpacity,
+//   TextInput,
+//   Dimensions,
+//   ScrollView,
+//   StatusBar,
+// } from 'react-native';
+// import Header from '../../../components/ModeratePageCard/Header';
+// import {SafeAreaView} from 'react-native-safe-area-context';
+
+// const {width, height} = Dimensions.get('screen');
+// const btnSetected: any = {
+//   backgroundColor: '#343434',
+//   color: 'white',
+//   // fontWeight: 'bold',
+//   fontFamily: 'Nunito-Regular',
+//   //padding: '3%',
+// };
+
+// const AdminWithdrawalHome = ({navigation}) => {
+
+//   return (
+//     <View
+//       style={{
+//         height: height,
+//         width: width,
+//         flex: 1,
+//         backgroundColor: '#1bb76d',
+//       }}>
+//       <SafeAreaView
+//         style={{
+//           height: height,
+//           width: width,
+//           flex: 1,
+//         }}>
+//         <StatusBar backgroundColor="#343434" />
+//         {/* <View style={styles.header}>
+//         <MyText style={styles.headerHeading}>Trades</MyText>
+//       </View> */}
+//         <View
+//           style={{height: height, width: width, backgroundColor: '#343434'}}>
+//           <Header
+//             arrowIconStyle={{display: 'none'}}
+//             style={{marginTop: 0, marginLeft: 10, backgroundColor: '#343434'}}
+//             navigation={navigation}
+//             Heading={'User'}
+//           />
+
+//           <View style={{
+//     alignSelf: 'center',
+//     marginBottom: 20,
+//     width: width,
+//     height: height - 100,
+//     backgroundColor: '#f2f2f2',
+//     borderTopRightRadius: 30,
+//     borderTopLeftRadius: 30,
+//     position: 'absolute',
+//     zIndex: 1,
+//     top: 50
+// }}>
+            
+//             <ScrollView
+// style={{
+//     paddingTop: hp(3),
+//     paddingHorizontal: wp(7),
+//     height: '100%',
+//     }}
+// >
+             
+
+//             </ScrollView>
+//           </View>
+//         </View>
+//       </SafeAreaView>
+
+//     </View>
+//   );
+// };
+
+// export default AdminWithdrawalHome;

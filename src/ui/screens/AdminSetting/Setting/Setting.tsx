@@ -35,6 +35,11 @@ const btnSetected: any = {
 };
 
 const AdminWithdrawalHome = ({navigation}) => {
+    const [isSettingModal, setisSettingModal] = useState(false)
+
+    const handleChangeSetting = () => {
+        setisSettingModal(!isSettingModal)
+    }
   return (
     <View
       style={{
@@ -115,7 +120,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.9}
                 onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
+                  navigation.navigate('CardSetting');
                 }}>
                 <View
                   style={{
@@ -147,7 +152,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.9}
                 onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
+                    handleChangeSetting()
                 }}>
                 <View
                   style={{
@@ -401,7 +406,7 @@ const AdminWithdrawalHome = ({navigation}) => {
             </ScrollView>
           </View>
         </View>
-        <SettingModal isOpen={true} handleChange={() => {}}/>
+        <SettingModal isOpen={isSettingModal} handleChange={handleChangeSetting}/>
       </SafeAreaView>
     </View>
   );
