@@ -20,6 +20,9 @@ import {
 } from 'react-native-responsive-screen';
 import SelectDropdown from 'react-native-select-dropdown';
 import AddRate from '../Modals/AddRate';
+import EditRate from '../Modals/EditRate';
+import WarningModal from '../Modals/WarningModal';
+import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -31,11 +34,23 @@ const btnSetected: any = {
 };
 
 const AddCard = ({navigation}) => {
-    const [isAddRate, setisAddRate] = useState(false)
+  const [isAddRate, setisAddRate] = useState(false);
+  const [isEditRate, setisEditRate] = useState(false);
+  const [rateData, setrateData] = useState([]);
+  const [isDeclineModal, setisDeclineModal] = useState(false);
 
-    const handleChangeAddRate = () => {
-        setisAddRate(!isAddRate)
-    }
+  const declineModalHandleChange = () => {
+    setisDeclineModal(!isDeclineModal);
+  };
+
+  const handleChangeAddRate = () => {
+    setisAddRate(!isAddRate);
+  };
+
+  const handleChangeEditRate = data => {
+    setrateData(data);
+    setisEditRate(!isEditRate);
+  };
   const cardNameDropDown: any = [
     'ITUNES',
     'STEAM',
@@ -89,7 +104,7 @@ const AddCard = ({navigation}) => {
               position: 'absolute',
               zIndex: 1,
               top: 50,
-              paddingTop: 5
+              paddingTop: 5,
             }}>
             <ScrollView
               style={{
@@ -145,7 +160,7 @@ const AddCard = ({navigation}) => {
                 }}
               />
 
-              <Text
+              <MyText
                 style={{
                   margin: 10,
                   fontSize: RFValue(17),
@@ -153,7 +168,7 @@ const AddCard = ({navigation}) => {
                   paddingTop: hp(1),
                 }}>
                 Rate
-              </Text>
+              </MyText>
 
               <View
                 style={{
@@ -163,143 +178,179 @@ const AddCard = ({navigation}) => {
                   marginTop: -5,
                 }}>
                 <TouchableOpacity
+                  onPress={() =>
+                    handleChangeEditRate({
+                      country: 'US',
+                      cardType: 'Physical',
+                      cardValue: '50',
+                      startingCode: '',
+                      rate: '330',
+                    })
+                  }
                   style={{
                     paddingHorizontal: wp(5.5),
                     paddingVertical: hp(1),
                     borderBottomWidth: 1.5,
                     borderColor: '#f1f1f1',
                   }}>
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(15),
                       fontWeight: '500',
                     }}>
                     50
-                  </Text>
+                  </MyText>
                   <View
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
                     }}>
-                    <Text
+                    <MyText
                       style={{
                         fontSize: RFValue(13),
                         color: '#676767',
                       }}>
                       US | Physical | 330/$
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#353535',
                         fontSize: RFValue(13),
                         marginTop: -6,
                       }}>
                       Edit
-                    </Text>
+                    </MyText>
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                  onPress={() =>
+                    handleChangeEditRate({
+                      country: 'US',
+                      cardType: 'Physical',
+                      cardValue: '50',
+                      startingCode: '3779',
+                      rate: '330',
+                    })
+                  }
                   style={{
                     paddingHorizontal: wp(5.5),
                     paddingVertical: hp(1),
                     borderBottomWidth: 1.5,
                     borderColor: '#f1f1f1',
                   }}>
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(15),
                       fontWeight: '500',
                     }}>
                     100
-                  </Text>
+                  </MyText>
                   <View
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
                     }}>
-                    <Text
+                    <MyText
                       style={{
                         fontSize: RFValue(13),
                         color: '#676767',
                       }}>
                       US | Physical | 3779 | 330/$
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#353535',
                         fontSize: RFValue(13),
                         marginTop: -6,
                       }}>
                       Edit
-                    </Text>
+                    </MyText>
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                  onPress={() =>
+                    handleChangeEditRate({
+                      country: 'US',
+                      cardType: 'Physical',
+                      cardValue: '100-199',
+                      startingCode: '',
+                      rate: '330',
+                    })
+                  }
                   style={{
                     paddingHorizontal: wp(5.5),
                     paddingVertical: hp(1),
                     borderBottomWidth: 1.5,
                     borderColor: '#f1f1f1',
                   }}>
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(15),
                       fontWeight: '500',
                     }}>
                     100 - 199
-                  </Text>
+                  </MyText>
                   <View
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
                     }}>
-                    <Text
+                    <MyText
                       style={{
                         fontSize: RFValue(13),
                         color: '#676767',
                       }}>
                       US | Physical | 300/$
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#353535',
                         fontSize: RFValue(13),
                         marginTop: -6,
                       }}>
                       Edit
-                    </Text>
+                    </MyText>
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                  onPress={() =>
+                    handleChangeEditRate({
+                      country: 'US',
+                      cardType: 'Physical',
+                      cardValue: '100-199',
+                      startingCode: '',
+                      rate: '300',
+                    })
+                  }
                   style={{
                     paddingHorizontal: wp(5.5),
                     paddingVertical: hp(1),
                     borderBottomWidth: 1.5,
                     borderColor: '#f1f1f1',
                   }}>
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(15),
                       fontWeight: '500',
                     }}>
                     100 - 199
-                  </Text>
+                  </MyText>
                   <View
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
                     }}>
-                    <Text
+                    <MyText
                       style={{
                         fontSize: RFValue(13),
                         color: '#676767',
                       }}>
-                      US | Physical | 330/$
-                    </Text>
-                    <Text
+                      US | Physical | 300/$
+                    </MyText>
+                    <MyText
                       style={{
                         fontSize: RFValue(13),
                         marginLeft: wp(8),
@@ -307,21 +358,21 @@ const AddCard = ({navigation}) => {
                         color: '#d22b18',
                       }}>
                       DISABLED
-                    </Text>
-                    <Text
+                    </MyText>
+                    <MyText
                       style={{
                         color: '#353535',
                         fontSize: RFValue(13),
                         marginTop: -6,
                       }}>
                       Edit
-                    </Text>
+                    </MyText>
                   </View>
                 </TouchableOpacity>
               </View>
 
               <TouchableOpacity
-              onPress={handleChangeAddRate}
+                onPress={handleChangeAddRate}
                 style={{
                   flexDirection: 'row',
                   marginTop: 10,
@@ -332,122 +383,151 @@ const AddCard = ({navigation}) => {
                     height: wp(6),
                     width: wp(6),
                   }}
-                  source={require('../../../../Assets/ICONS/uploadIconGray.png')}
+                  source={require('../../../../Assets/ICONS/greenPlusIcon.png')}
                 />
 
-                <Text
+                <MyText
                   style={{
                     fontSize: RFValue(15),
                     marginLeft: wp(3),
-                    color: "#1cb86e"
+                    color: '#1cb86e',
                   }}>
                   Add a Rate
-                </Text>
+                </MyText>
               </TouchableOpacity>
 
-              <View style={{
-                  marginTop: hp(5)
-              }}>
-                <Text
+              <View
+                style={{
+                  marginTop: hp(5),
+                }}>
+                <MyText
                   style={{
                     fontSize: RFValue(18),
                     marginLeft: wp(5.5),
-                    
                   }}>
                   Card Icon
-                </Text>
+                </MyText>
 
-                <View style={{
+                <View
+                  style={{
                     borderWidth: 1.5,
                     borderColor: '#f1f1f1',
                     marginTop: hp(2.5),
                     paddingVertical: wp(3),
                     paddingHorizontal: wp(5.5),
                     borderRadius: 4,
-                    flexDirection: 'row'
-                }}>
-                    <View style={{
-                        borderWidth: 1.5,
-                        borderColor: '#f1f1f1',
-                        width: wp(22),
-                        height: wp(20),
-                        borderRadius: 5,
-                        padding: wp(4),
-                        
+                    flexDirection: 'row',
+                  }}>
+                  <View
+                    style={{
+                      borderWidth: 1.5,
+                      borderColor: '#f1f1f1',
+                      width: wp(22),
+                      height: wp(20),
+                      borderRadius: 5,
+                      padding: wp(4),
                     }}>
-                        <Image 
-                            style={{
-                                width: "100%",
-                                height: "100%"
-                            }}
-                            source={require('../../../../Assets/CARDS/amazon.png')}
-                        />
+                    <Image
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                      }}
+                      source={require('../../../../Assets/CARDS/amazon.png')}
+                    />
+                  </View>
 
-                    </View>
-
-                    <TouchableOpacity style={{
-                        width: wp(22),
-                        height: wp(7),
-                        borderWidth: 1.5,
-                        borderColor: '#f1f1f1',
-                        borderRadius: 4,
-                        marginLeft: 10,
-                        justifyContent: 'center'
+                  <TouchableOpacity
+                    style={{
+                      width: wp(22),
+                      height: wp(7),
+                      borderWidth: 1.5,
+                      borderColor: '#f1f1f1',
+                      borderRadius: 4,
+                      marginLeft: 10,
+                      justifyContent: 'center',
                     }}>
-                        <Text style={{
-                            alignSelf: 'center',
-                            fontSize: RFValue(12),
-                            color: "#1ab86e"
-                        }}>+ Upload</Text>
-                    </TouchableOpacity>
+                    <MyText
+                      style={{
+                        alignSelf: 'center',
+                        fontSize: RFValue(12),
+                        color: '#1ab86e',
+                      }}>
+                      + Upload
+                    </MyText>
+                  </TouchableOpacity>
                 </View>
               </View>
 
-              <TouchableOpacity style={{
+              <TouchableOpacity
+                style={{
                   backgroundColor: '#1bb76d',
                   borderRadius: 4,
                   justifyContent: 'center',
                   height: hp(6),
-                  marginTop: hp(10)
-              }}>
-                  <Text style={{
-                      color: '#ffffff',
-                      alignSelf: 'center'
-                  }}>SAVE</Text>
+                  marginTop: hp(10),
+                }}>
+                <MyText
+                  style={{
+                    color: '#ffffff',
+                    alignSelf: 'center',
+                  }}>
+                  SAVE
+                </MyText>
               </TouchableOpacity>
 
-              <TouchableOpacity style={{
+              <TouchableOpacity
+                style={{
                   backgroundColor: '#f1f1f1',
                   borderRadius: 4,
                   justifyContent: 'center',
                   height: hp(6),
-                  marginTop: hp(1)
-              }}>
-                  <Text style={{
-                      color: 'black',
-                      alignSelf: 'center'
-                  }}>DISABLE</Text>
+                  marginTop: hp(1),
+                }}>
+                <MyText
+                  style={{
+                    color: 'black',
+                    alignSelf: 'center',
+                  }}>
+                  DISABLE
+                </MyText>
               </TouchableOpacity>
 
-              <TouchableOpacity style={{
+              <TouchableOpacity
+              onPress={declineModalHandleChange}
+                style={{
                   backgroundColor: '#d52a18',
                   borderRadius: 4,
                   justifyContent: 'center',
                   height: hp(6),
-                  marginTop: hp(1)
-              }}>
-                  <Text style={{
-                      color: '#ffffff',
-                      alignSelf: 'center'
-                  }}>DELETE</Text>
+                  marginTop: hp(1),
+                }}>
+                <MyText
+                  style={{
+                    color: '#ffffff',
+                    alignSelf: 'center',
+                  }}>
+                  DELETE
+                </MyText>
               </TouchableOpacity>
 
-                  <View style={{height: 60}}></View>
+              <View style={{height: 60}}></View>
             </ScrollView>
           </View>
         </View>
       </SafeAreaView>
-      <AddRate isOpen={isAddRate} handleChange={handleChangeAddRate}/>
+      <AddRate isOpen={isAddRate} handleChange={handleChangeAddRate} />
+      <EditRate
+        isOpen={isEditRate}
+        handleChange={handleChangeEditRate}
+        data={rateData}
+      />
+      <WarningModal
+        type={'DELETE'}
+        text={'Are you sure you want to\ndelete this card?'}
+        isOpen={isDeclineModal}
+        onPressAction={declineModalHandleChange}
+        handleChange={declineModalHandleChange}
+      />
     </View>
   );
 };

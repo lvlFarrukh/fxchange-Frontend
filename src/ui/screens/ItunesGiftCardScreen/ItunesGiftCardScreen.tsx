@@ -55,9 +55,9 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               />
               <MyText style={{marginTop: 8, fontSize: 12}}>
                 Upload all ypur{' '}
-                <Text style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
+                <MyText style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
                   ITUNES
-                </Text>{' '}
+                </MyText>{' '}
                 cards one by one
               </MyText>
               <MyText style={{fontSize: 12}}>

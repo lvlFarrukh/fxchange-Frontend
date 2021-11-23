@@ -19,12 +19,13 @@ const {width, height} = Dimensions.get('screen');
 
 interface Props {
   isOpen: boolean;
-  handleChange: () => void;
+  handleChange: any;
+  data: any
   // action: () => void;
 }
 
-const AddRate: React.FC<Props> = props => {
-  const [showOnTop, setshowOnTop] = useState(true);
+const EditRate: React.FC<Props> = props => {
+  const [showOnTop, setshowOnTop] = useState(false);
 
   const countryNames = [
     'US',
@@ -43,7 +44,7 @@ const AddRate: React.FC<Props> = props => {
     'Portugal',
   ];
 
-  const cardType = ['Phyical', 'Encode', 'Cash Recipt'];
+  const cardType = ['Physical', 'Encode', 'Cash Recipt'];
 
   const cardValue = [
     '10-99',
@@ -116,7 +117,7 @@ const AddRate: React.FC<Props> = props => {
               marginLeft: 20,
               paddingTop: 2,
             }}>
-            Add Rate
+            Edit Rate
           </MyText>
           <MyText></MyText>
         </View>
@@ -129,6 +130,7 @@ const AddRate: React.FC<Props> = props => {
 
         <View>
           <SelectDropdown
+            defaultValue={props.data['country']}
             data={countryNames}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
@@ -177,6 +179,7 @@ const AddRate: React.FC<Props> = props => {
           />
 
           <SelectDropdown
+            defaultValue={props.data['cardType']}
             data={cardType}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
@@ -225,6 +228,7 @@ const AddRate: React.FC<Props> = props => {
           />
 
           <SelectDropdown
+            defaultValue={props.data['cardValue']}
             data={cardValue}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
@@ -273,6 +277,7 @@ const AddRate: React.FC<Props> = props => {
           />
 
           <SelectDropdown
+            defaultValue={props.data['startingCode']}
             data={startingCode}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index);
@@ -334,6 +339,7 @@ const AddRate: React.FC<Props> = props => {
               marginTop: 10,
               height: hp(7),
             }}
+            value={props.data['rate']}
             placeholder={'Rate e.g 330'}
             placeholderTextColor={'#343434'}></TextInput>
         </View>
@@ -384,4 +390,4 @@ const AddRate: React.FC<Props> = props => {
   );
 };
 
-export default AddRate;
+export default EditRate;

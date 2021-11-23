@@ -24,6 +24,10 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import SettingModal from '../Modals/SettingModal';
+import Statistics from '../Modals/Statistics';
+import GenerateStatement from '../Modals/GenerateStatement';
+import PushNotification from '../Modals/PushNotification';
+import CardModal from '../Modals/CardModal';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -36,9 +40,24 @@ const btnSetected: any = {
 
 const AdminWithdrawalHome = ({navigation}) => {
     const [isSettingModal, setisSettingModal] = useState(false)
+    const [isStatisticsModal, setisStatisticsModal] = useState(false)
+    const [isGenerateStatement, setisGenerateStatement] = useState(false)
+    const [isPushNotification, setisPushNotification] = useState(false)
+
+  const handleChangePushNotification = () => {
+    setisPushNotification(!isPushNotification)
+  }
+
+    const handleChangeGenerateStatement = () => {
+      setisGenerateStatement(!isGenerateStatement)
+    }
 
     const handleChangeSetting = () => {
         setisSettingModal(!isSettingModal)
+    }
+    
+    const handleChangeStatistics = () => {
+      setisStatisticsModal(!isStatisticsModal)
     }
   return (
     <View
@@ -85,7 +104,7 @@ const AdminWithdrawalHome = ({navigation}) => {
             </View>
 
             <View style={{justifyContent: 'center'}}>
-              <Text
+              <MyText
                 style={{
                   color: '#ffffff',
                   fontSize: RFValue(18),
@@ -93,7 +112,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                   marginBottom: 5,
                 }}>
                 Fxchange Admin
-              </Text>
+              </MyText>
             </View>
           </View>
           <View
@@ -184,7 +203,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.9}
                 onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
+                  navigation.navigate('NewsAndUpdates');
                 }}>
                 <View
                   style={{
@@ -215,9 +234,7 @@ const AdminWithdrawalHome = ({navigation}) => {
 
               <TouchableOpacity         
                 activeOpacity={0.9}
-                onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
-                }}>
+                onPress={handleChangePushNotification}>
                 <View
                   style={{
                     display: 'flex',
@@ -249,9 +266,7 @@ const AdminWithdrawalHome = ({navigation}) => {
 
               <TouchableOpacity
                 activeOpacity={0.9}
-                onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
-                }}>
+                onPress={handleChangeGenerateStatement}>
                 <View
                   style={{
                     display: 'flex',
@@ -281,9 +296,7 @@ const AdminWithdrawalHome = ({navigation}) => {
 
               <TouchableOpacity
                 activeOpacity={0.9}
-                onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
-                }}>
+                onPress={handleChangeStatistics}>
                 <View
                   style={{
                     display: 'flex',
@@ -407,6 +420,10 @@ const AdminWithdrawalHome = ({navigation}) => {
           </View>
         </View>
         <SettingModal isOpen={isSettingModal} handleChange={handleChangeSetting}/>
+        <Statistics isOpen={isStatisticsModal} handleChange={handleChangeStatistics} action={handleChangeStatistics}/>
+        <GenerateStatement isOpen={isGenerateStatement} handleChange={handleChangeGenerateStatement} />
+        <PushNotification isOpen={isPushNotification} handleChange={handleChangePushNotification} />
+        <CardModal isOpen={false} handleChange={undefined} data={undefined}  />
       </SafeAreaView>
     </View>
   );

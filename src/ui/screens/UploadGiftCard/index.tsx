@@ -401,10 +401,10 @@ const index = ({navigation}) => {
                 />
                 <MyText style={{fontSize: 8}}>
                   Only one{' '}
-                  <Text
+                  <MyText
                     style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
                     ITUNES
-                  </Text>{' '}
+                  </MyText>{' '}
                   card {'\n'}image is allowed in this{'\n'}section
                 </MyText>
               </View>

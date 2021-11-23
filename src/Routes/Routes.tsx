@@ -19,7 +19,8 @@ import BitcoinCardDetailPending from '../ui/screens/Moderator/BitcoinCardDetailP
 import UploadGiftCard from '../ui/screens/UploadGiftCard'
 import WithDrawScreenSix from '../ui/screens/WithdrawalsScreen/WithDrawScreen6/WIthDrawScreenSix';
 import Test from '../ui/screens/test';
-import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
+// import DashBoardScreen from '../ui/screens/DashBoardScreens/dashBoardScreen';
+import DashBoardScreen from '../ui/screens/DashBoardScreens/NewDashboardScreen'
 import GiftCardScreen from '../ui/screens/GiftCardsScreen/GiftCardScreen';
 import ItunesGiftCardScreen from '../ui/screens/ItunesGiftCardScreen/ItunesGiftCardScreen';
 import TradeSuccessfull from '../ui/screens/TradeSuccessfull/TradeSuccessfull';
@@ -37,6 +38,8 @@ import AdminUserHome from '../ui/screens/AdminUser/AdminUserHome/AdminUserHome'
 import Setting from '../ui/screens/AdminSetting/Setting/Setting'
 import CardSetting from '../ui/screens/AdminSetting/CardSetting/CardSetting'
 import AddCard from '../ui/screens/AdminSetting/AddCard/AddCard'
+import NewsAndUpdates from '../ui/screens/AdminSetting/NewAndUpdate/NewsAndUpdates'
+
 const Stack = createStackNavigator();
 
 const Routes = () => {
@@ -82,6 +85,7 @@ const Routes = () => {
             <Stack.Screen name="Setting" component={Setting} />
             <Stack.Screen name="CardSetting" component={CardSetting} />
             <Stack.Screen name="AddCard" component={AddCard} />
+            <Stack.Screen name="NewsAndUpdates" component={NewsAndUpdates} />
             <Stack.Screen name="Test" component={Test} />
 
         </Stack.Navigator>

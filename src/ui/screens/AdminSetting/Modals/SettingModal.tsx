@@ -107,23 +107,23 @@ const SettingModal: React.FC<Props> = props => {
         </View>
 
         <View style={{flexDirection: 'row'}}>
-          <Text
+          <MyText
             style={{
               color: '#343434',
               fontSize: RFValue(15),
-              marginTop: 20,
+              marginTop: 30,
             }}>
             Wallet Address
-          </Text>
+          </MyText>
           <TouchableOpacity
             style={{
               flexDirection: 'column',
               justifyContent: 'center',
-              marginLeft: 20,
+              marginLeft: 40,
             }}>
             <Image
-              style={{height: wp(6), width: wp(6), alignSelf: 'center'}}
-              source={require('../../../../Assets/ICONS/Bitcoin.png')}
+              style={{height: wp(6), width: wp(6), alignSelf: 'center', marginTop: 10}}
+              source={require('../../../../Assets/ICONS/uploadIconGray.png')}
             />
             <MyText style={{fontSize: RFValue(10)}}>Upload Image</MyText>
           </TouchableOpacity>
@@ -227,9 +227,9 @@ const SettingModal: React.FC<Props> = props => {
               }
             />
           </TouchableOpacity>
-          <Text style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
+          <MyText style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
             Registration
-          </Text>
+          </MyText>
         </View>
 
         <View style={{flexDirection: 'row', marginTop: hp(1)}}>
@@ -249,9 +249,9 @@ const SettingModal: React.FC<Props> = props => {
               }
             />
           </TouchableOpacity>
-          <Text style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
+          <MyText style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
             Withdrawals
-          </Text>
+          </MyText>
         </View>
 
         <View style={{flexDirection: 'row', marginTop: hp(1)}}>
@@ -271,9 +271,9 @@ const SettingModal: React.FC<Props> = props => {
               }
             />
           </TouchableOpacity>
-          <Text style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
+          <MyText style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
             Bitcoin Trade
-          </Text>
+          </MyText>
         </View>
 
         <View style={{flexDirection: 'row', marginTop: hp(1), marginBottom: hp(4)}}>
@@ -293,9 +293,9 @@ const SettingModal: React.FC<Props> = props => {
               }
             />
           </TouchableOpacity>
-          <Text style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
+          <MyText style={{fontSize: RFValue(15), marginLeft: 15, marginTop: 2}}>
             Giftcard Trade
-          </Text>
+          </MyText>
         </View>
 
         <TouchableOpacity

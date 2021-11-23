@@ -56,7 +56,7 @@ const CreateAccountScreen = ({ navigation }) => {
                     onPress={() => {
                       navigation.navigate('SignInScreen');
                     }}>
-                    <Text style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</Text>
+                    <MyText style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</MyText>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>

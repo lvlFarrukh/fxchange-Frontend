@@ -84,10 +84,10 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
         <View style={{ flexDirection: 'row' }}>
 
           <View>
-            <Text style={[styles.amount, item.value === "-" && {fontFamily:'Nunito-Regular', color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</Text>
-            <Text style={[styles.totalAmount, textColor, {fontFamily:'Nunito-Regular'}]}>
+            <MyText style={[styles.amount, item.value === "-" && {fontFamily:'Nunito-Regular', color: '#dc2f05', fontSize: 13}]}>{item.value + ' ' + item.amount}</MyText>
+            <MyText style={[styles.totalAmount, textColor, {fontFamily:'Nunito-Regular'}]}>
               {item.value === "+" && 'total: ' + item.total}
-            </Text>
+            </MyText>
           </View>
 
             <Icon
