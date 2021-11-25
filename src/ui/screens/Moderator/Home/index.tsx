@@ -182,7 +182,7 @@ const index = ({navigation}) => {
       </View>
       </View>
     </SafeAreaView>
-    <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/>
+    <ModeratorNavbar navigation={navigation} activePage={'trade'} backgroundColor={undefined}/>
 
     </View>
   );

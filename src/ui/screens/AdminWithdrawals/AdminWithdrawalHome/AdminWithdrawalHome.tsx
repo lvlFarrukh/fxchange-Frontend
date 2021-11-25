@@ -261,7 +261,7 @@ const AdminWithdrawalHome = ({navigation}) => {
         onPressAction={declineModalHandleChange}
         handleChange={declineModalHandleChange}
       />
-      {/* <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
+      <ModeratorNavbar navigation={navigation} activePage={'withdrawals'} backgroundColor={undefined}/>
     </View>
   );
 };

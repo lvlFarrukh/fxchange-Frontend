@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
@@ -13,10 +14,8 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           paddingVertical: 15,
         //   backgroundColor: '#1bb76d',
         }}>
-        <TouchableOpacity 
-          // onPress={() => { navigation.navigate('ModeratorScreen');}}
-        >
-          {activePage === 'home' ? (
+        <TouchableOpacity onPress={() => { navigation.navigate('AdminWithdrawalHome');}}>
+          {/* {activePage === 'home' ? (
             <Image
               style={{height: 25, width: 25}}
               source={require('../../../Assets/ICONS/home-hover.png')}
@@ -26,18 +25,79 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
               style={{height: 25, width: 25}}
               source={require('../../../Assets/ICONS/home.png')}
             />
+          )} */}
+
+          {activePage === 'withdrawals' ? (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Withdrawals</Text>
+          ) : (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Withdrawals</Text>
           )}
+
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('SignInScreen');
+            navigation.navigate('ModeratorScreen');
           }}>
-            <Icon
-                name={'log-out-outline'}
-                size={28}
-                color={activePage === 'logout' ? '#0a8a40' : 'black'}
-                style={{fontWeight: '700'}}></Icon>
+            {/* {activePage === 'trade' ? (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/trade-hover.png')}
+            />
+          ) : (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/trade.png')}
+            />
+          )} */}
+
+          {activePage === 'trade' ? (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Trade</Text>
+          ) : (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Trade</Text>
+          )}
+
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AdminUserHome');
+          }}>
+           {/* {activePage === 'rates' ? (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/rate-hover.png')}
+            />
+          ) : (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/rate.png')}
+            />
+          )} */}
+
+          {activePage === 'user' ? (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>User</Text>
+          ) : (
+            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>User</Text>
+          )}
+
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          onPress={() => {
+            navigation.navigate('Setting');
+          }}>
+          {activePage === 'more' ? (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/more-hover.png')}
+            />
+          ) : (
+            <Image
+              style={{height: 25, width: 25}}
+              source={require('../../../Assets/ICONS/more.png')}
+            />
+          )}
         </TouchableOpacity>
       </View>
     </Fragment>

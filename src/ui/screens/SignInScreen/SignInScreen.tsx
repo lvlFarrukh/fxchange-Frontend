@@ -83,7 +83,7 @@ const SignInScreen = ({navigation}) => {
                         onPress={() => {
                           navigation.navigate('CreateAccountScreen');
                         }}>
-                        <MyText style={{color: '#66b486', fontFamily:'Nunito-Regular'}}> SIGNUP</MyText>
+                        <Text style={{color: '#66b486', fontFamily:'Nunito-Regular'}}> SIGNUP</Text>
                       </TouchableNativeFeedback>
                     </MyText>
                   </View>
@@ -91,9 +91,9 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {
                       navigation.navigate('ForgetPasswordScreen');
                     }}>
-                    <MyText style={{fontSize: 10, color: '#2f568f', fontFamily:'Nunito-Regular'}}>
+                    <Text style={{fontSize: 10, color: '#2f568f', fontFamily:'Nunito-Regular'}}>
                       Forget Password?
-                    </MyText>
+                    </Text>
                   </TouchableNativeFeedback>
                 </View>
               </View>
@@ -105,7 +105,7 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {
                       navigation.navigate('ModeratorScreen');
                     }}>
-                    <MyText style={{color: '#d5431c', fontFamily:'Nunito-Regular'}}>contact us</MyText>
+                    <Text style={{color: '#d5431c', fontFamily:'Nunito-Regular'}}> contact us</Text>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>

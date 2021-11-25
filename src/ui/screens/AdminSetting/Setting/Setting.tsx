@@ -415,7 +415,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                   
                 </View>
               </TouchableOpacity>
-              <View style={{height: 80}}></View>
+              <View style={{height: 150}}></View>
             </ScrollView>
           </View>
         </View>
@@ -425,6 +425,7 @@ const AdminWithdrawalHome = ({navigation}) => {
         <PushNotification isOpen={isPushNotification} handleChange={handleChangePushNotification} />
         <CardModal isOpen={false} handleChange={undefined} data={undefined}  />
       </SafeAreaView>
+    <ModeratorNavbar navigation={navigation} activePage={'more'} backgroundColor={undefined}/>
     </View>
   );
 };

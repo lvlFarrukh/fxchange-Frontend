@@ -337,7 +337,7 @@ const AdminWithdrawalHome = ({navigation}) => {
       />
        */}
       
-      {/* <ModeratorNavbar navigation={navigation} activePage={'home'} backgroundColor={undefined}/> */}
+      <ModeratorNavbar navigation={navigation} activePage={'user'} backgroundColor={undefined}/>
     </View>
   );
 };
