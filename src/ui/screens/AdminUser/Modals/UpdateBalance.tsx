@@ -52,14 +52,18 @@ const UpdateBalance: React.FC<Props> = props => {
             flexDirection: 'row',
             justifyContent: 'space-evenly',
             alignItems: 'center',
+            marginTop: hp(1)
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={props.handleChange}
             style={{marginLeft: -20}}>
-            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
+            {/* <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
-            </MyText>
+            </MyText> */}
+
+<Image style={{height: wp(5), width: wp(5)}} source={require('../../../../Assets/ICONS/cross.png')} />
+
           </TouchableOpacity>
 
           <MyText

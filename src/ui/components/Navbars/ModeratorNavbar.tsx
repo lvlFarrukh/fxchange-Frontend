@@ -2,6 +2,8 @@ import React, {Fragment} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Icons from 'react-native-vector-icons/Ionicons';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
   return (
@@ -39,7 +41,7 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           onPress={() => {
             navigation.navigate('ModeratorScreen');
           }}>
-            {/* {activePage === 'trade' ? (
+            {activePage === 'trade' ? (
             <Image
               style={{height: 25, width: 25}}
               source={require('../../../Assets/ICONS/trade-hover.png')}
@@ -49,13 +51,13 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
               style={{height: 25, width: 25}}
               source={require('../../../Assets/ICONS/trade.png')}
             />
-          )} */}
+          )}
 
-          {activePage === 'trade' ? (
+          {/* {activePage === 'trade' ? (
             <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Trade</Text>
           ) : (
             <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Trade</Text>
-          )}
+          )} */}
 
         </TouchableOpacity>
 

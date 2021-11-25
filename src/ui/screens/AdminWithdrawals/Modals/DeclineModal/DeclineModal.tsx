@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Dimensions} from 'react-native';
+import {View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
 import Modal from 'react-native-modal';
 import MyText from '../../../../components/DefaultTextComponent/MyText';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 const {width, height} = Dimensions.get('screen');
 
 interface Props {
@@ -26,14 +28,17 @@ const DeclineModal: React.FC<Props> = props => {
             flexDirection: 'row',
             justifyContent: 'space-evenly',
             alignItems: 'center',
+            marginTop: hp(1)
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={props.handleChange}
             style={{marginLeft: -30}}>
-            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
+            {/* <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
-            </MyText>
+            </MyText> */}
+                        <Image style={{height: wp(5), width: wp(5)}} source={require('../../../../../Assets/ICONS/cross.png')} />
+
           </TouchableOpacity>
 
           <MyText

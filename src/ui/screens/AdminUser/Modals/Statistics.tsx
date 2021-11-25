@@ -38,14 +38,21 @@ const Statistics: React.FC<Props> = props => {
             flexDirection: 'row',
             justifyContent: 'space-evenly',
             alignItems: 'center',
+            marginTop: hp(1),
+            marginBottom: hp(1.5),
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={props.handleChange}
-            style={{marginLeft: -30}}>
-            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
+            style={{marginLeft: -40}}>
+            {/* <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
-            </MyText>
+            </MyText> */}
+
+            <Image
+              style={{height: wp(5), width: wp(5)}}
+              source={require('../../../../Assets/ICONS/cross.png')}
+            />
           </TouchableOpacity>
 
           <MyText
@@ -106,7 +113,7 @@ const Statistics: React.FC<Props> = props => {
               style={{
                 borderTopWidth: 1.5,
                 borderColor: '#F1F1F1',
-                marginTop: 30,
+                marginTop: hp(3),
               }}></View>
 
             <View
@@ -189,7 +196,7 @@ const Statistics: React.FC<Props> = props => {
               shadowRadius: 2.62,
 
               elevation: 4,
-              marginBottom: hp(6)
+              marginBottom: hp(6),
             }}>
             <MyText
               style={{

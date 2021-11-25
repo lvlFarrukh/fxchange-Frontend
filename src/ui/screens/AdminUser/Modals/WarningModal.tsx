@@ -14,6 +14,7 @@ interface Props {
   type: string;
   text: string;
   isOpen: boolean;
+  boldText: string;
   onPressAction: () => void;
   handleChange: () => void;
 }
@@ -79,7 +80,7 @@ const AcceptModal: React.FC<Props> = props => {
                 alignSelf: 'center',
                 textAlign: 'center',
               }}>
-              {props.text}
+              {props.text}<MyText style={{fontWeight: 'bold'}}>{props.boldText}</MyText>
             </MyText>
           </View>
 

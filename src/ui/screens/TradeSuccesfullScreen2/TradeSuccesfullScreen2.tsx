@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -15,17 +15,17 @@ import {
   Keyboard,
   StatusBar,
 } from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-const TradeSuccesfullScreen2 = ({ navigation }) => {
+const TradeSuccesfullScreen2 = ({navigation}) => {
   return (
-    <View style={{ height: height, width: width, flex: 1 }}>
+    <View style={{height: height, width: width, flex: 1}}>
       {/* <StatusBar hidden /> */}
       <SafeAreaView
         style={{
@@ -34,14 +34,14 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
           width: width,
           backgroundColor: '#d65d0e',
         }}>
-        <View style={{ height: 50, justifyContent: 'center' }}>
-          <MyText style={{ fontSize: 18, color: '#fff', alignSelf: 'center' }}>
+        <View style={{height: 50, justifyContent: 'center'}}>
+          <MyText style={{fontSize: 18, color: '#fff', alignSelf: 'center'}}>
             Trade Sucessful
           </MyText>
         </View>
 
         <ScrollView>
-          <View style={[styles.whiteCardBg, {height: height-50}]}>
+          <View style={[styles.whiteCardBg, {height: height - 50}]}>
             <Image
               source={require('../../../Assets/greenLogo.png')}
               style={styles.image}
@@ -50,7 +50,7 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
               source={require('../../../Assets/ICONS/green-check.png')}
               style={styles.tickImage}
             />
-            <View style={{ justifyContent: 'space-between', flex: 1 }}>
+            <View style={{justifyContent: 'space-between', flex: 1}}>
               <View>
                 <MyText
                   style={{
@@ -83,15 +83,20 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                     paddingHorizontal: 30,
                   }}>
                   <View>
-                    <MyText style={{ fontSize: 11 }}>WALLET</MyText>
-                    <MyText style={{ fontSize: 12 }}>
+                    <MyText style={{fontSize: 11}}>WALLET</MyText>
+                    <MyText style={{fontSize: 12}}>
                       1BnG5fDHDVF6gCDHKFKDBXCg6cfb
                     </MyText>
                   </View>
                   <View></View>
                 </View>
 
-                <View style={{ borderBottomWidth: 1.5, borderColor: "#F1F1F1", marginHorizontal: 5 }}></View>
+                <View
+                  style={{
+                    borderBottomWidth: 1.5,
+                    borderColor: '#F1F1F1',
+                    marginHorizontal: 5,
+                  }}></View>
 
                 <View
                   style={{
@@ -101,18 +106,25 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                     paddingHorizontal: 30,
                   }}>
                   <View>
-                    <MyText style={{ fontSize: 11 }}>AMOUNT SENT</MyText>
-                    <MyText style={{ fontSize: 15, fontWeight: '500' }}>$1000(0.023)</MyText>
+                    <MyText style={{fontSize: 11}}>AMOUNT SENT</MyText>
+                    <MyText style={{fontSize: 15, fontWeight: '500'}}>
+                      $1000(0.023)
+                    </MyText>
                   </View>
                   <View>
-                    <MyText style={{ fontSize: 10 }}>TRANSACTION VALUE</MyText>
-                    <MyText style={{ fontSize: 16, fontWeight: '500' }}>
+                    <MyText style={{fontSize: 10}}>TRANSACTION VALUE</MyText>
+                    <MyText style={{fontSize: 16, fontWeight: '500'}}>
                       N330,000
                     </MyText>
                   </View>
                 </View>
 
-                <View style={{ borderBottomWidth: 1.5, borderColor: "#F1F1F1", marginHorizontal: 5 }}></View>
+                <View
+                  style={{
+                    borderBottomWidth: 1.5,
+                    borderColor: '#F1F1F1',
+                    marginHorizontal: 5,
+                  }}></View>
 
                 <View
                   style={{
@@ -122,13 +134,11 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                     paddingHorizontal: 30,
                   }}>
                   <View>
-                    <MyText style={{ fontSize: 12 }}>ESTIMATED TIME</MyText>
-                    <MyText style={{ fontWeight: '500' }}>20-35mins</MyText>
+                    <MyText style={{fontSize: 12}}>ESTIMATED TIME</MyText>
+                    <MyText style={{fontWeight: '500'}}>20-35mins</MyText>
                   </View>
-                  <View style={{ marginRight: 43 }}>
-                    <MyText style={{ fontSize: 12 }}>
-                      STATUS
-                    </MyText>
+                  <View style={{marginRight: 43}}>
+                    <MyText style={{fontSize: 12}}>STATUS</MyText>
                     <MyText
                       style={{
                         alignSelf: 'flex-end',
@@ -141,18 +151,33 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                   </View>
                 </View>
 
-                <View style={{ borderBottomWidth: 1.5, borderColor: "#F1F1F1", marginHorizontal: 5 }}></View>
-
+                <View
+                  style={{
+                    borderBottomWidth: 1.5,
+                    borderColor: '#F1F1F1',
+                    marginHorizontal: 5,
+                  }}></View>
               </View>
               <View>
-                <MyText style={{ fontSize: 10, color: '#343434', textAlign: 'center' }}>NOTE:</MyText>
-                <MyText style={{ fontSize: 10, color: '#343434', textAlign: 'center' }}>
-                  <MyText>Your transaction will be treated with the actual{"\n"}</MyText>
+                <MyText
+                  style={{fontSize: 10, color: '#343434', textAlign: 'center'}}>
+                  NOTE:
+                </MyText>
+                <MyText
+                  style={{fontSize: 10, color: '#343434', textAlign: 'center'}}>
+                  <MyText>
+                    Your transaction will be treated with the actual{'\n'}
+                  </MyText>
                   <MyText>BITCOIN amount we recieve</MyText>
                 </MyText>
               </View>
 
-              <TouchableOpacity activeOpacity={0.9} style={{ marginTop: 10 }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('DashBoardScreen');
+                }}
+                activeOpacity={0.9}
+                style={{marginTop: 10}}>
                 <MyText
                   style={{
                     alignSelf: 'center',
@@ -167,7 +192,6 @@ const TradeSuccesfullScreen2 = ({ navigation }) => {
                 </MyText>
               </TouchableOpacity>
             </View>
-
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -229,7 +253,7 @@ const styles = StyleSheet.create({
     borderColor: '#949494',
     paddingLeft: 10,
     color: '#000',
-    fontFamily:'Nunito-Regular'
+    fontFamily: 'Nunito-Regular',
   },
   GreenButton: {
     // alignSelf:'center',
@@ -248,7 +272,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '100%',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 50 },
+    shadowOffset: {width: 0, height: 50},
     shadowOpacity: 0.25,
     shadowRadius: 5,
     elevation: 5,

@@ -38,14 +38,17 @@ const BanUser: React.FC<Props> = props => {
             flexDirection: 'row',
             justifyContent: 'space-evenly',
             alignItems: 'center',
+            marginTop: hp(1)
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
               onPress={props.handleChange}
-            style={{marginLeft: -30}}>
-            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
+            style={{marginLeft: -40}}>
+            {/* <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
-            </MyText>
+            </MyText> */}
+                        <Image style={{height: wp(5), width: wp(5)}} source={require('../../../../Assets/ICONS/cross.png')} />
+
           </TouchableOpacity>
 
           <MyText
@@ -77,7 +80,7 @@ const BanUser: React.FC<Props> = props => {
               paddingLeft: 20,
               color: '#000',
               fontSize: 12,
-              marginTop: -5,
+              marginTop: hp(3),
               marginBottom: 5,
               fontFamily: 'Nunito-Regular',
             }}

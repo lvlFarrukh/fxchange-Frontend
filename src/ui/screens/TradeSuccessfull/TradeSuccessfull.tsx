@@ -191,7 +191,13 @@ const TradeSuccessfull = ({navigation}) => {
                 </MyText>
               </View>
 
-              <TouchableOpacity activeOpacity={0.9} style={height > 600 && {marginTop: 20}}>
+              <TouchableOpacity 
+                onPress={() => {
+                  navigation.navigate('DashBoardScreen')
+                }}
+                activeOpacity={0.9} 
+                style={height > 600 && {marginTop: 20}}
+              >
                 <MyText
                   style={{
                     alignSelf: 'center',

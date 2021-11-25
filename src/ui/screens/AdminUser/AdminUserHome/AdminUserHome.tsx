@@ -301,8 +301,9 @@ const AdminWithdrawalHome = ({navigation}) => {
 
       <DeleteModal
         isOpen={isDeclineModal}
-        type={'DECLINE'}
-        text={'Are you sure you want to \nDECLINE this transaction'}
+        type={'DELETE'}
+        text={'Are you sure you want to \ndelete '}
+        boldText={'"Jthomas"'}
         onPressAction={declineModalHandleChange}
         handleChange={declineModalHandleChange}
       />

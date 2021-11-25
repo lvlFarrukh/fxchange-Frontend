@@ -41,10 +41,12 @@ const EditRole: React.FC<Props> = props => {
           <TouchableOpacity
             activeOpacity={0.9}
               onPress={props.handleChange}
-            style={{marginLeft: -30}}>
-            <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
+            style={{marginLeft: -40}}>
+            {/* <MyText style={{fontSize: 30, fontWeight: '500', color: '#979797'}}>
               x
-            </MyText>
+            </MyText> */}
+            <Image style={{height: wp(5), width: wp(5)}} source={require('../../../../Assets/ICONS/cross.png')} />
+
           </TouchableOpacity>
 
           <MyText

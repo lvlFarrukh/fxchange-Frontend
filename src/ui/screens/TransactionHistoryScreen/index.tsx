@@ -23,6 +23,7 @@ import Header from '../../components/ModeratePageCard/Header';
 import Modal from 'react-native-modal';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Navbar from '../../components/Navbars/Navbar';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -137,6 +138,7 @@ const index = ({ navigation }) => {
         onPress={
           item?.title === "Bitcoin" ? () => navigation.navigate('TradeBitcoinComplete') :
           item?.title === "Itunes" ? () => navigation.navigate('tradeCardDetails') :
+          item?.title === "Amazon" ? () => {} :
           item?.title === "Withdrawal completed" && toggleModal
         }
         backgroundColor={{ backgroundColor }}
@@ -279,10 +281,11 @@ const index = ({ navigation }) => {
                 marginBottom: -10,
               }}>
               <TouchableOpacity  activeOpacity={0.9} onPress={toggleModal} style={{ marginLeft: -40 }}>
-                <MyText style={{ fontSize: 25, fontWeight: '200', color: 'black' }}>x</MyText>
+                {/* <MyText style={{ fontSize: 25, fontWeight: '200', color: 'black' }}>x</MyText> */}
+                <Image style={{height: wp(5), width: wp(5)}} source={require('../../../Assets/ICONS/cross.png')} />
               </TouchableOpacity>
 
-              <MyText style={{ fontSize: 22, fontWeight: '500', marginLeft: 20, paddingTop: 2 }}>
+              <MyText style={{ fontSize: 22, fontWeight: '500', marginLeft: 20, paddingTop: 2, marginBottom: 8 }}>
                 Withdrawal
               </MyText>
               <MyText></MyText>

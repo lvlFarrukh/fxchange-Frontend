@@ -423,7 +423,6 @@ const AdminWithdrawalHome = ({navigation}) => {
         <Statistics isOpen={isStatisticsModal} handleChange={handleChangeStatistics} action={handleChangeStatistics}/>
         <GenerateStatement isOpen={isGenerateStatement} handleChange={handleChangeGenerateStatement} />
         <PushNotification isOpen={isPushNotification} handleChange={handleChangePushNotification} />
-        <CardModal isOpen={false} handleChange={undefined} data={undefined}  />
       </SafeAreaView>
     <ModeratorNavbar navigation={navigation} activePage={'more'} backgroundColor={undefined}/>
     </View>

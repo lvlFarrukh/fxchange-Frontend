@@ -103,7 +103,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                         </TouchableOpacity> */}
               <TextInput
                 style={styles.TextInputStyle}
-                placeholder={'Amount Sent in USD'}
+                placeholder={'Amount Sent in BTC'}
                 placeholderTextColor={'#949494'}></TextInput>
             </View>
             {/* <TouchableOpacity style={{ borderWidth: 1, borderColor: 'rgba(0,0,0,0.2)', borderRadius: 4, marginTop: 10 }}>
@@ -111,7 +111,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                     </TouchableOpacity> */}
             <TextInput
               style={[styles.TextInputStyle, {marginTop: 10, width: '100%'}]}
-              placeholder={'Amount Sent in USD'}
+              placeholder={'Transaction id (Optional)'}
               placeholderTextColor={'#949494'}></TextInput>
 
             <View

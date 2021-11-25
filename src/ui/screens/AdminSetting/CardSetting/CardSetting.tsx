@@ -16,6 +16,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import MyText from '../../../components/DefaultTextComponent/MyText';
+import CardModal from '../Modals/CardModal';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -27,7 +28,11 @@ const btnSetected: any = {
 };
 
 const CardSetting = ({navigation}) => {
+    const [isCardModal, setisCardModal] = useState(false);
 
+    const handleChangeCardModal = () => {
+        setisCardModal(!isCardModal)
+    }
   return (
     <View
       style={{
@@ -101,7 +106,9 @@ const CardSetting = ({navigation}) => {
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={{
+                        <TouchableOpacity 
+                            onPress={handleChangeCardModal}
+                        style={{
                             width: wp(25),
                             height: wp(25),
                             borderWidth: 1,
@@ -182,6 +189,7 @@ const CardSetting = ({navigation}) => {
           </View>
         </View>
       </SafeAreaView>
+      <CardModal isOpen={isCardModal} handleChange={handleChangeCardModal} data={undefined}  />
 
     </View>
   );
