@@ -43,6 +43,7 @@ const SettingModal: React.FC<Props> = props => {
             alignItems: 'center',
             borderBottomWidth: 1,
             borderColor: '#f1f1f1',
+            paddingBottom: hp(1.)
           }}>
           <TouchableOpacity
             activeOpacity={0.9}
@@ -112,7 +113,7 @@ const SettingModal: React.FC<Props> = props => {
           <MyText
             style={{
               color: '#343434',
-              fontSize: RFValue(15),
+              fontSize: RFValue(14),
               marginTop: 30,
             }}>
             Wallet Address
@@ -124,7 +125,7 @@ const SettingModal: React.FC<Props> = props => {
               marginLeft: 40,
             }}>
             <Image
-              style={{height: wp(6), width: wp(6), alignSelf: 'center', marginTop: 10}}
+              style={{height: wp(6), width: wp(6), alignSelf: 'center', marginTop: 10, marginBottom: hp(0.6)}}
               source={require('../../../../Assets/ICONS/uploadIconGray.png')}
             />
             <MyText style={{fontSize: RFValue(10)}}>Upload Image</MyText>

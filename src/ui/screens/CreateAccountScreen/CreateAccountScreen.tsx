@@ -38,7 +38,7 @@ const CreateAccountScreen = ({ navigation }) => {
               />
             </View>
           </View>
-        {/* <ScrollView > */}
+        <ScrollView >
 
           <View
             style={[
@@ -105,7 +105,7 @@ const CreateAccountScreen = ({ navigation }) => {
                                 </MyText>
                             </View> */}
           </View>
-        {/* </ScrollView> */}
+        </ScrollView>
       </SafeAreaView>
     </View>
   );

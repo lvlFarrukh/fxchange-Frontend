@@ -352,7 +352,7 @@ const AddCard = ({navigation}) => {
                     </MyText>
                     <MyText
                       style={{
-                        fontSize: RFValue(13),
+                        fontSize: RFValue(12),
                         marginLeft: wp(8),
                         marginTop: -6,
                         color: '#d22b18',
@@ -465,6 +465,15 @@ const AddCard = ({navigation}) => {
                   justifyContent: 'center',
                   height: hp(6),
                   marginTop: hp(10),
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
+                  shadowOpacity: 0.23,
+                  shadowRadius: 2.62,
+
+                  elevation: 4,
                 }}>
                 <MyText
                   style={{
@@ -477,11 +486,20 @@ const AddCard = ({navigation}) => {
 
               <TouchableOpacity
                 style={{
-                  backgroundColor: '#f1f1f1',
+                  backgroundColor: '#ffffff',
                   borderRadius: 4,
                   justifyContent: 'center',
                   height: hp(6),
                   marginTop: hp(1),
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
+                  shadowOpacity: 0.23,
+                  shadowRadius: 2.62,
+
+                  elevation: 4,
                 }}>
                 <MyText
                   style={{
@@ -493,13 +511,22 @@ const AddCard = ({navigation}) => {
               </TouchableOpacity>
 
               <TouchableOpacity
-              onPress={declineModalHandleChange}
+                onPress={declineModalHandleChange}
                 style={{
                   backgroundColor: '#d52a18',
                   borderRadius: 4,
                   justifyContent: 'center',
                   height: hp(6),
                   marginTop: hp(1),
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
+                  shadowOpacity: 0.23,
+                  shadowRadius: 2.62,
+
+                  elevation: 4,
                 }}>
                 <MyText
                   style={{

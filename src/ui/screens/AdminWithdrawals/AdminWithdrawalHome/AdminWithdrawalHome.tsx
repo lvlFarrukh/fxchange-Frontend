@@ -134,7 +134,7 @@ const AdminWithdrawalHome = ({navigation}) => {
           <View style={styles.mainBody}>
             <View style={[styles.headerButtons]}>
               <MyText
-                style={[styles.headerButtom, styles.JoinLeft, {...pendingBtn}]}
+                style={[styles.headerButtom, styles.JoinLeft, {paddingLeft: '2%'}, {...pendingBtn}]}
                 onPress={() => {
                   activeButton('pending');
                 }}>
@@ -153,6 +153,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                 style={[
                   styles.headerButtom,
                   styles.JoinRight,
+                  {paddingLeft: '4%'},
                   {...CompletedBtn},
                 ]}
                 onPress={() => {
@@ -219,7 +220,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                 </Fragment>
               )}
 
-              <View style={{paddingBottom: 100}}></View>
+              {/* <View style={{paddingBottom: 100}}></View> */}
             </ScrollView>
           </View>
         </View>

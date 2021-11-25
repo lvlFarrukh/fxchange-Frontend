@@ -16,6 +16,7 @@ import {
 } from 'react-native-responsive-screen';
 import SelectDropdown from 'react-native-select-dropdown';
 import MyText from '../../../components/DefaultTextComponent/MyText';
+import CardModal from './CardModal';
 const {width, height} = Dimensions.get('screen');
 
 interface Props {
@@ -25,7 +26,11 @@ interface Props {
 
 const PushNotification: React.FC<Props> = props => {
   const [sendAsPopup, setsendAsPopup] = useState(true);
+  const [isCardModal, setisCardModal] = useState(false);
 
+  const handleChangeCardModal = () => {
+      setisCardModal(!isCardModal)
+  }
   return (
     <Modal isVisible={props.isOpen}>
       <View
@@ -189,7 +194,10 @@ const PushNotification: React.FC<Props> = props => {
 
         <TouchableOpacity
           activeOpacity={0.9}
-          onPress={props.handleChange}
+          onPress={ 
+            handleChangeCardModal
+            // props.handleChange
+          }
           style={{alignSelf: 'center', marginTop: hp(4)}}>
           <MyText
             style={{
@@ -207,6 +215,8 @@ const PushNotification: React.FC<Props> = props => {
             {width: wp(40), alignSelf: 'center'},
           ]}></View>
       </View>
+      <CardModal isOpen={isCardModal} handleChange={handleChangeCardModal} data={undefined}  />
+
     </Modal>
   );
 };
