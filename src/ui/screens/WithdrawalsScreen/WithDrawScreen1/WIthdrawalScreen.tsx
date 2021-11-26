@@ -11,6 +11,7 @@ import {
   Dimensions,
   SafeAreaView,
   Button,
+  Keyboard,
 } from 'react-native';
 import styles from './Style';
 import Icons from 'react-native-vector-icons/Ionicons';
@@ -21,7 +22,7 @@ import MyText from '../../../components/DefaultTextComponent/MyText';
 const {width, height} = Dimensions.get('screen');
 
 const WithdrawalsScreen = ({navigation}) => {
-
+ 
   return (
     <SafeAreaView
       style={{
@@ -138,7 +139,7 @@ const WithdrawalsScreen = ({navigation}) => {
           </View>
           <View style={styles.mainBodyBottomItems}>
             <Image
-              source={require('../../../../Assets/greenLogo.png')}
+              source={require('../../../../Assets/fejoraLogo.png')}
               style={{width: 120, height: 25}}
             />
             <MyText style={{color: '#4d4d4d', fontSize: 10, marginTop: 5}}>Version 1.0</MyText>

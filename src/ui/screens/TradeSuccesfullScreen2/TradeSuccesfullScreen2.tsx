@@ -43,7 +43,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
         <ScrollView>
           <View style={[styles.whiteCardBg, {height: height - 50}]}>
             <Image
-              source={require('../../../Assets/greenLogo.png')}
+              source={require('../../../Assets/fejoraLogo.png')}
               style={styles.image}
             />
             <Image

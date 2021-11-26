@@ -23,7 +23,9 @@ import Navbar from '../../components/Navbars/Navbar';
 
 const {width, height} = Dimensions.get('screen');
 
+
 const TradeSuccessfull = ({navigation}) => {
+
   return (
     <View
       style={{height: height, width: width, flex: 1}}>
@@ -44,7 +46,7 @@ const TradeSuccessfull = ({navigation}) => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={[styles.whiteCardBg]}>
             <Image
-              source={require('../../../Assets/greenLogo.png')}
+              source={require('../../../Assets/fejoraLogo.png')}
               style={styles.image}
             />
             <Image

@@ -87,7 +87,6 @@ const Routes = () => {
             <Stack.Screen name="AddCard" component={AddCard} />
             <Stack.Screen name="NewsAndUpdates" component={NewsAndUpdates} />
             <Stack.Screen name="Test" component={Test} />
-
         </Stack.Navigator>
     )
 }

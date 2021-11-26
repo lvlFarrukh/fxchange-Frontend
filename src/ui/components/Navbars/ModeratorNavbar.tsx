@@ -17,23 +17,23 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
         //   backgroundColor: '#1bb76d',
         }}>
         <TouchableOpacity onPress={() => { navigation.navigate('AdminWithdrawalHome');}}>
-          {/* {activePage === 'home' ? (
+          {activePage === 'withdrawals' ? (
             <Image
               style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/home-hover.png')}
+              source={require('../../../Assets/ICONS/withdrawals-hover.png')}
             />
           ) : (
             <Image
               style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/home.png')}
+              source={require('../../../Assets/ICONS/withdrawals.png')}
             />
-          )} */}
+          )}
 
-          {activePage === 'withdrawals' ? (
+          {/* {activePage === 'withdrawals' ? (
             <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Withdrawals</Text>
           ) : (
             <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Withdrawals</Text>
-          )}
+          )} */}
 
         </TouchableOpacity>
 
@@ -65,23 +65,23 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           onPress={() => {
             navigation.navigate('AdminUserHome');
           }}>
-           {/* {activePage === 'rates' ? (
+           {activePage === 'user' ? (
             <Image
               style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/rate-hover.png')}
+              source={require('../../../Assets/ICONS/users-hover.png')}
             />
           ) : (
             <Image
               style={{height: 25, width: 25}}
-              source={require('../../../Assets/ICONS/rate.png')}
+              source={require('../../../Assets/ICONS/users.png')}
             />
-          )} */}
+          )}
 
-          {activePage === 'user' ? (
+          {/* {activePage === 'user' ? (
             <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>User</Text>
           ) : (
             <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>User</Text>
-          )}
+          )} */}
 
         </TouchableOpacity>
 

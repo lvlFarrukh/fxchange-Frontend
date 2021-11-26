@@ -246,7 +246,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               <TouchableOpacity
                 style={{marginTop: 10}}
                 onPress={() => {
-                  navigation.navigate('TradeSuccessfull');
+                  navigation.reset({ index: 1 , routes: [{name: 'DashBoardScreen'}, {name: 'TradeSuccessfull'}]});
                 }}>
                 <MyText
                   style={{

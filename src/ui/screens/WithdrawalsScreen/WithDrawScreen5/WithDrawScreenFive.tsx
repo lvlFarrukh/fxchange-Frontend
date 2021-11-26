@@ -273,10 +273,24 @@ const WithDrawScreenFive = ({navigation}) => {
                 </View>
               </View>
               {
-                height < 680 && (
-                  <View style={{height: 150}}></View>
+                height < 680 ? (
+                  isKeyboardVisible ? (
+                    <View style={{height: 350}}></View>
+                  ) : (
+                    <View style={{height: 150}}></View>
+                  )
+                )
+                :
+                isKeyboardVisible && (
+                  <View style={{
+                    height: 400
+                  }}>
+    
+                  </View>
                 )
               }
+
+              
               <View></View>
             </ScrollView>
           </View>

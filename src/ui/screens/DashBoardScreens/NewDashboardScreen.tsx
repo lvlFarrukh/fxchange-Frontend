@@ -32,7 +32,13 @@ const btnSetected: any = {
   //padding: '3%',
 };
 
-const DashboardScreen = ({ navigation }) => {
+const DashboardScreen = ({route, navigation }) => {
+  // const [isTradeComplete, setisTradeComplete] = useState(route?.params?.isTradeSuccessfull);
+  // console.log(route?.params)
+
+  // useEffect(() => {
+  //   setisTradeComplete(true)
+  // }, [])
   return (
     <SafeAreaView
       style={{
@@ -41,7 +47,7 @@ const DashboardScreen = ({ navigation }) => {
         flex: 1,
         backgroundColor: '#1bb76d',
       }}>
-      <StatusBar backgroundColor="#1bb76d" />
+      <StatusBar translucent backgroundColor="transparent" />
       <ScrollView>
         <View style={{ marginLeft: 20, marginTop: hp(2) }}>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

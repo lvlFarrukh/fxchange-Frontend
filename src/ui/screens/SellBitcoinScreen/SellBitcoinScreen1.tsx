@@ -21,7 +21,10 @@ import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -70,7 +73,11 @@ const SellBitcoinScreen1 = ({navigation}) => {
 
             <View style={{marginTop: 20}}>
               <MyText
-                style={{fontSize: RFValue(10), alignSelf: 'center', color: '#686667'}}>
+                style={{
+                  fontSize: RFValue(10),
+                  alignSelf: 'center',
+                  color: '#686667',
+                }}>
                 Estimated Rate (570/$)
               </MyText>
               <MyText
@@ -169,13 +176,15 @@ const SellBitcoinScreen1 = ({navigation}) => {
                   </View>
                 </TouchableOpacity>
               </ImageBackground>
-              
             </View>
-            
 
             <TouchableOpacity activeOpacity={0.9} style={styles.roundButton1}>
               <MyText
-                style={{fontSize: RFValue(35), color: '#1bb76d', paddingBottom: 5}}>
+                style={{
+                  fontSize: RFValue(35),
+                  color: '#1bb76d',
+                  paddingBottom: 5,
+                }}>
                 +
               </MyText>
             </TouchableOpacity>
@@ -193,7 +202,15 @@ const SellBitcoinScreen1 = ({navigation}) => {
               activeOpacity={0.9}
               style={{marginTop: 20, marginBottom: 'auto'}}
               onPress={() => {
-                navigation.navigate('TradeSuccesfullScreen2');
+                navigation.reset({
+                  index: 1,
+                  routes: [
+                    {name: 'DashBoardScreen'},
+                    {
+                      name: 'TradeSuccesfullScreen2',
+                    },
+                  ],
+                });
               }}>
               <MyText
                 style={{
@@ -263,7 +280,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     width: width,
     padding: 20,
-    marginBottom: 50
+    marginBottom: 50,
     // flexWrap: 'wrap',
     // flexDirection: 'row',
     // justifyContent: 'space-between'
@@ -298,7 +315,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     color: '#000',
     fontSize: RFValue(13),
-    fontFamily:'Nunito-Regular'
+    fontFamily: 'Nunito-Regular',
   },
 });
 export default SellBitcoinScreen1;
