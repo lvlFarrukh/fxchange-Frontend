@@ -1,11 +1,11 @@
-import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Slider from 'react-native-hook-image-slider';
 
-import React, { Fragment, useContext, useEffect, useMemo, useState } from 'react';
+import React, {Fragment, useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -19,11 +19,11 @@ import {
   StatusBar,
 } from 'react-native';
 import Header from '../../components/ModeratePageCard/Header';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Navbar from '../../components/Navbars/Navbar';
 import MyText from '../../components/DefaultTextComponent/MyText';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 const btnSetected: any = {
   backgroundColor: '#343434',
   color: 'white',
@@ -32,7 +32,7 @@ const btnSetected: any = {
   //padding: '3%',
 };
 
-const DashboardScreen = ({route, navigation }) => {
+const DashboardScreen = ({route, navigation}) => {
   // const [isTradeComplete, setisTradeComplete] = useState(route?.params?.isTradeSuccessfull);
   // console.log(route?.params)
 
@@ -49,9 +49,9 @@ const DashboardScreen = ({route, navigation }) => {
       }}>
       <StatusBar translucent backgroundColor="transparent" />
       <ScrollView>
-        <View style={{ marginLeft: 20, marginTop: hp(2) }}>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            <MyText style={{ fontSize: 10, color: '#fff' }}>
+        <View style={{marginLeft: 20, marginTop: hp(2)}}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <MyText style={{fontSize: 10, color: '#fff'}}>
               Wallet Balance
             </MyText>
             <MyText
@@ -64,19 +64,19 @@ const DashboardScreen = ({route, navigation }) => {
             </MyText>
           </View>
 
-          <MyText style={{ fontSize: 30, color: '#fff' }}>N50,000</MyText>
+          <MyText style={{fontSize: 30, color: '#fff'}}>N50,000</MyText>
           <MyText></MyText>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{flexDirection: 'row'}}>
             <TouchableOpacity
               activeOpacity={0.9}
               onPress={() => {
                 navigation.navigate('WithDrawScreenSix');
               }}>
-              <MyText style={{ fontSize: 10, color: '#fff', marginBottom: 3 }}>
+              <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                 WITHDRAW FUNDS
               </MyText>
             </TouchableOpacity>
-            <MyText style={{ fontSize: 10, color: '#fff', marginBottom: 3 }}>
+            <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
               {'     '}|{'       '}
             </MyText>
             <TouchableOpacity
@@ -84,7 +84,7 @@ const DashboardScreen = ({route, navigation }) => {
               onPress={() => {
                 navigation.navigate('TransactionHistoryScreen');
               }}>
-              <MyText style={{ fontSize: 10, color: '#fff', marginBottom: 3 }}>
+              <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
                 TRANSECTION HISTORY
               </MyText>
             </TouchableOpacity>
@@ -95,7 +95,10 @@ const DashboardScreen = ({route, navigation }) => {
           style={{
             alignSelf: 'center',
             width: width,
-            height: height > 600 ? height + StatusBar.currentHeight - hp(25) : height + StatusBar.currentHeight - hp(5),
+            height:
+              height > 600
+                ? height + StatusBar.currentHeight - hp(25)
+                : height + StatusBar.currentHeight - hp(5),
             backgroundColor: '#f9f9f9',
             borderTopRightRadius: 30,
             borderTopLeftRadius: 30,
@@ -120,6 +123,15 @@ const DashboardScreen = ({route, navigation }) => {
                 height: wp(24),
                 borderRadius: 15,
                 justifyContent: 'center',
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+                shadowOpacity: 0.23,
+                shadowRadius: 2.62,
+
+                elevation: 4,
               }}>
               <Image
                 style={{
@@ -129,7 +141,7 @@ const DashboardScreen = ({route, navigation }) => {
                 }}
                 source={require('../../../Assets/ICONS/giftcard-edit.png')}
               />
-              <Text
+              <MyText
                 style={{
                   fontSize: RFValue(13),
                   alignSelf: 'center',
@@ -137,7 +149,7 @@ const DashboardScreen = ({route, navigation }) => {
                   marginTop: hp(1),
                 }}>
                 Sell Giftcard
-              </Text>
+              </MyText>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -152,6 +164,15 @@ const DashboardScreen = ({route, navigation }) => {
                 height: wp(24),
                 borderRadius: 15,
                 justifyContent: 'center',
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+                shadowOpacity: 0.23,
+                shadowRadius: 2.62,
+
+                elevation: 4,
               }}>
               <Image
                 style={{
@@ -161,7 +182,7 @@ const DashboardScreen = ({route, navigation }) => {
                 }}
                 source={require('../../../Assets/ICONS/Bitcoin-green.png')}
               />
-              <Text
+              <MyText
                 style={{
                   fontSize: RFValue(13),
                   alignSelf: 'center',
@@ -169,7 +190,7 @@ const DashboardScreen = ({route, navigation }) => {
                   marginTop: hp(1),
                 }}>
                 Sell Bitcoin
-              </Text>
+              </MyText>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -181,6 +202,15 @@ const DashboardScreen = ({route, navigation }) => {
                 height: wp(24),
                 borderRadius: 15,
                 justifyContent: 'center',
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2,
+                },
+                shadowOpacity: 0.23,
+                shadowRadius: 2.62,
+
+                elevation: 4,
               }}>
               <Image
                 style={{
@@ -190,7 +220,7 @@ const DashboardScreen = ({route, navigation }) => {
                 }}
                 source={require('../../../Assets/ICONS/airtime.png')}
               />
-              <Text
+              <MyText
                 style={{
                   fontSize: RFValue(13),
                   alignSelf: 'center',
@@ -198,7 +228,7 @@ const DashboardScreen = ({route, navigation }) => {
                   marginTop: hp(1),
                 }}>
                 Airtime/Data
-              </Text>
+              </MyText>
             </TouchableOpacity>
           </View>
 
@@ -223,7 +253,7 @@ const DashboardScreen = ({route, navigation }) => {
             }}>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('ItunesGiftCardScreen',{
+                navigation.navigate('ItunesGiftCardScreen', {
                   headerTitle: `Itunes GiftCards`,
                 });
               }}
@@ -240,10 +270,10 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                 }}>
                 <Image
-                  style={{ height: wp(8), width: wp(8) }}
+                  style={{height: wp(8), width: wp(8)}}
                   source={require('../../../Assets/CARDS/itunes.png')}
                 />
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -251,7 +281,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginLeft: wp(2.5),
                   }}>
                   Itunes
-                </Text>
+                </MyText>
               </View>
 
               <View
@@ -259,7 +289,7 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -267,7 +297,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginRight: wp(5),
                   }}>
                   N33,000
-                </Text>
+                </MyText>
                 <View
                   style={{
                     backgroundColor: '#e1e1e1',
@@ -292,7 +322,7 @@ const DashboardScreen = ({route, navigation }) => {
 
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('ItunesGiftCardScreen',{
+                navigation.navigate('ItunesGiftCardScreen', {
                   headerTitle: `Amazon GiftCards`,
                 });
               }}
@@ -310,10 +340,10 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                 }}>
                 <Image
-                  style={{ height: wp(8), width: wp(8) }}
+                  style={{height: wp(8), width: wp(8)}}
                   source={require('../../../Assets/CARDS/amazon.png')}
                 />
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -321,7 +351,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginLeft: wp(2.5),
                   }}>
                   Amazon
-                </Text>
+                </MyText>
               </View>
 
               <View
@@ -329,7 +359,7 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -337,7 +367,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginRight: wp(5),
                   }}>
                   N33,000
-                </Text>
+                </MyText>
                 <View
                   style={{
                     backgroundColor: '#e1e1e1',
@@ -362,7 +392,7 @@ const DashboardScreen = ({route, navigation }) => {
 
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('ItunesGiftCardScreen',{
+                navigation.navigate('ItunesGiftCardScreen', {
                   headerTitle: `Stream GiftCards`,
                 });
               }}
@@ -380,10 +410,10 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                 }}>
                 <Image
-                  style={{ height: wp(8), width: wp(8) }}
+                  style={{height: wp(8), width: wp(8)}}
                   source={require('../../../Assets/CARDS/steam.png')}
                 />
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -391,7 +421,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginLeft: wp(2.5),
                   }}>
                   Stream
-                </Text>
+                </MyText>
               </View>
 
               <View
@@ -399,7 +429,7 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -407,7 +437,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginRight: wp(5),
                   }}>
                   N33,000
-                </Text>
+                </MyText>
                 <View
                   style={{
                     backgroundColor: '#e1e1e1',
@@ -432,7 +462,7 @@ const DashboardScreen = ({route, navigation }) => {
 
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('ItunesGiftCardScreen',{
+                navigation.navigate('ItunesGiftCardScreen', {
                   headerTitle: `Google Play GiftCards`,
                 });
               }}
@@ -450,10 +480,10 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                 }}>
                 <Image
-                  style={{ height: wp(8), width: wp(8) }}
+                  style={{height: wp(8), width: wp(8)}}
                   source={require('../../../Assets/CARDS/Googleplay.png')}
                 />
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -461,7 +491,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginLeft: wp(2.5),
                   }}>
                   Google Play
-                </Text>
+                </MyText>
               </View>
 
               <View
@@ -469,7 +499,7 @@ const DashboardScreen = ({route, navigation }) => {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text
+                <MyText
                   style={{
                     color: '#494949',
                     fontSize: RFValue(13),
@@ -477,7 +507,7 @@ const DashboardScreen = ({route, navigation }) => {
                     marginRight: wp(5),
                   }}>
                   N33,000
-                </Text>
+                </MyText>
                 <View
                   style={{
                     backgroundColor: '#e1e1e1',
@@ -499,7 +529,6 @@ const DashboardScreen = ({route, navigation }) => {
                 </View>
               </View>
             </TouchableOpacity>
-
           </View>
 
           <MyText
@@ -520,10 +549,9 @@ const DashboardScreen = ({route, navigation }) => {
               // backgroundColor: 'pink',
               alignContent: 'center',
               borderRadius: 4,
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}>
             <Slider
-
               imageHeight={150}
               activeDotColor={'transparent'}
               emptyDotColor={'transparent'}
@@ -532,12 +560,8 @@ const DashboardScreen = ({route, navigation }) => {
                 'https://i.ibb.co/q1kFVRT/img2.png',
               ]}
             />
-
-
           </View>
-
         </View>
-
       </ScrollView>
       <Navbar
         navigation={navigation}

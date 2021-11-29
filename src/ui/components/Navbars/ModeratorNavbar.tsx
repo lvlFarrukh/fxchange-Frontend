@@ -30,9 +30,9 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           )}
 
           {/* {activePage === 'withdrawals' ? (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Withdrawals</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Withdrawals</MyText>
           ) : (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Withdrawals</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400'}}>Withdrawals</MyText>
           )} */}
 
         </TouchableOpacity>
@@ -54,9 +54,9 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           )}
 
           {/* {activePage === 'trade' ? (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Trade</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>Trade</MyText>
           ) : (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>Trade</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400'}}>Trade</MyText>
           )} */}
 
         </TouchableOpacity>
@@ -78,9 +78,9 @@ const ModeratorNavbar = ({navigation, activePage, backgroundColor}) => {
           )}
 
           {/* {activePage === 'user' ? (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>User</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400', color: '#0a8a40'}}>User</MyText>
           ) : (
-            <Text style={{fontSize: RFValue(15), fontWeight: '400'}}>User</Text>
+            <MyText style={{fontSize: RFValue(15), fontWeight: '400'}}>User</MyText>
           )} */}
 
         </TouchableOpacity>

@@ -60,7 +60,7 @@ const NewsAndUpdates = ({navigation}) => {
               alignSelf: 'center',
               marginBottom: 20,
               width: width,
-              height: height - 100,
+              height: height,
               backgroundColor: '#ffffff',
               borderTopRightRadius: 30,
               borderTopLeftRadius: 30,

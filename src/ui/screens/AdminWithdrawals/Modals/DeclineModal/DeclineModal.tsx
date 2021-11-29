@@ -71,7 +71,7 @@ const DeclineModal: React.FC<Props> = props => {
           </MyText>
           <MyText style={{fontSize: 9}}>Account Name</MyText>
           <MyText style={{fontSize: 15, fontWeight: '500'}}>
-            Fxchange Marketplace
+          Fejora Marketplace
           </MyText>
         </View>
         <View

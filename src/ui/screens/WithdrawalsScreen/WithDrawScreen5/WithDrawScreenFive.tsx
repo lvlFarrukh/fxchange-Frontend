@@ -265,7 +265,7 @@ const WithDrawScreenFive = ({navigation}) => {
                 multiline={true}
               /> */}
                 <View style={styles.updatePassword}>
-                  <TouchableOpacity style={styles.updatePasswordButton}>
+                  <TouchableOpacity onPress={() => navigation.navigate('AdminWithdrawalHome')} style={styles.updatePasswordButton}>
                     <MyText style={{color: 'white', fontSize: 13}}>
                       UPDATE
                     </MyText>

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   mainBody: {
     alignSelf: 'center',
     width: width,
-    height: height - 100,
+    height: height,
     backgroundColor: '#ffffff',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,

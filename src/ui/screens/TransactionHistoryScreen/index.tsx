@@ -158,7 +158,7 @@ const index = ({ navigation }) => {
         style={{
           height: height,
           width: width,
-          flex: 1,
+          // flex: 1,
         }}>
            <StatusBar translucent backgroundColor='transparent' />
         <Header

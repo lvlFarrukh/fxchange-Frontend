@@ -33,7 +33,7 @@ const CreateAccountScreen = ({ navigation }) => {
             <Header navigation={navigation} />
             <View style={{ alignSelf: 'center' }}>
               <Image
-                source={require('../../../Assets/whiteLogo.png')}
+                source={require('../../../Assets/fejoraLogo-white.png')}
                 style={styles.image}
               />
             </View>
@@ -56,7 +56,7 @@ const CreateAccountScreen = ({ navigation }) => {
                     onPress={() => {
                       navigation.navigate('SignInScreen');
                     }}>
-                    <MyText style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</MyText>
+                    <Text style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</Text>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>
@@ -64,7 +64,7 @@ const CreateAccountScreen = ({ navigation }) => {
 
               <TextInput
                 style={styles.TextInputStyle}
-                placeholder={'Username'}
+                placeholder={'Full Name'}
                 placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput

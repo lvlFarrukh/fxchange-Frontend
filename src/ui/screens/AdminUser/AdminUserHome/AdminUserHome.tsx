@@ -209,7 +209,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 0 && (
                 <Fragment>
                   <Active
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}
@@ -221,7 +221,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                     type={'active'}
                   />
                   <Active
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}
@@ -238,7 +238,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 1 && (
                 <Fragment>
                   <Banned
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}
@@ -248,7 +248,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                     navigation={navigation}
                   />
                  <Banned
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}
@@ -263,7 +263,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 2 && (
                 <Fragment>
                  <Moderator
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}
@@ -274,7 +274,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                     navigation={navigation}
                   />
                  <Moderator
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     isEditRole={handleChangeEditModal}

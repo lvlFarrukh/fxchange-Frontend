@@ -380,14 +380,48 @@ const EditRate: React.FC<Props> = props => {
               fontWeight: '600',
               paddingBottom: 5,
             }}>
-            ADD RATE
+            UPDATE RATE
           </MyText>
         </TouchableOpacity>
         <View
           style={[
-            {borderTopWidth: 1.5, borderColor: '#F1F1F1', marginBottom: 20},
+            {borderTopWidth: 1.5, borderColor: '#F1F1F1', marginBottom: 10},
             {width: wp(40), alignSelf: 'center'},
           ]}></View>
+          <TouchableOpacity
+          activeOpacity={0.9}
+          // onPress={props.handleChange}
+          style={{alignSelf: 'center',}}>
+          <MyText
+            style={{
+              color: 'black',
+              fontSize: 14,
+              fontWeight: '600',
+              paddingBottom: 11,
+            }}>
+            DISABLE
+          </MyText>
+        </TouchableOpacity>
+        <View
+          style={[
+            {borderTopWidth: 1.5, borderColor: '#F1F1F1', marginBottom: 5},
+            {width: wp(40), alignSelf: 'center'},
+          ]}></View>
+
+        <TouchableOpacity
+          activeOpacity={0.9}
+          // onPress={props.handleChange}
+          style={{alignSelf: 'center',}}>
+          <MyText
+            style={{
+              color: 'red',
+              fontSize: 14,
+              fontWeight: '600',
+              paddingBottom: 10,
+            }}>
+            DELETE
+          </MyText>
+        </TouchableOpacity>
       </View>
     </Modal>
   );

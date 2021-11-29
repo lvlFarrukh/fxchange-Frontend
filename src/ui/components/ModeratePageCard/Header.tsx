@@ -10,6 +10,8 @@ import {
   Dimensions,
 } from 'react-native';
 import MyText from '../DefaultTextComponent/MyText';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -19,6 +21,9 @@ interface Props {
   style?: any;
   TextColor?: any;
   arrowIconStyle?: any;
+  isSearchIconStyle?: any;
+  // isSearchModal?: any;
+  handleSearchModal?: any
 }
 
 const Header: React.FC<Props> = props => {
@@ -27,6 +32,9 @@ const Header: React.FC<Props> = props => {
   const style = props.style;
   const TextColor = props.TextColor;
   const arrowIconStyle = props.arrowIconStyle;
+  const isSearchIconStyle = props.isSearchIconStyle;
+  // const isSearchModal = props.isSearchModal;
+  const handleSearchModal = props.handleSearchModal;
 
   return (
     <View style={[styles.container, style]}>
@@ -60,7 +68,31 @@ const Header: React.FC<Props> = props => {
         {Heading}
       </MyText>
 
-      <View></View>
+      <View>
+
+        {
+          isSearchIconStyle && (
+            <TouchableOpacity
+              style={{
+                alignSelf: 'center',
+                marginLeft: -55,
+                padding: 10,
+                marginRight: 15,
+              }}
+              onPress={handleSearchModal}>
+              <Image
+                source={require('../../../Assets/ICONS/Search_Icon.png')}
+                style={{
+                  resizeMode: 'contain',
+                  height: wp(6),
+                  width: wp(6)
+                }}
+              />
+            </TouchableOpacity>
+          )
+        }
+        
+      </View>
     </View>
   );
 };

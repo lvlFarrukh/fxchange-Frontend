@@ -57,7 +57,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
                         <View style={{ height: (height*27)/100 }}>
                             <Header navigation={navigation}/>
                             <View style={{ alignSelf: 'center', }}>
-                                <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
+                                <Image source={require('../../../Assets/fejoraLogo-white.png')} style={styles.image} />
                             </View>
                         </View>
                         <View style={[styles.whiteCardBg, { height: (height*75)/100 }]}>
@@ -67,7 +67,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
 
                             <TextInput
                                 style={styles.TextInputStyle}
-                                placeholder={'Email or Phone'}
+                                placeholder={'Email Address'}
                                 placeholderTextColor={'#343434'}
                             >
                             </TextInput>

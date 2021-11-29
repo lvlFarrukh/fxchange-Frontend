@@ -19,7 +19,7 @@ const SplashScreen = ({ navigation }) => {
         <View style={{ height: height, width: width, flex: 1, justifyContent: 'center', backgroundColor: '#1bb76d' }}>
             <StatusBar translucent backgroundColor='transparent' />
             <View style={{ alignSelf: 'center' }}>
-                <Image source={require('../../../Assets/whiteLogo.png')} style={styles.image} />
+                <Image source={require('../../../Assets/fejoraLogo-white.png')} style={styles.image} />
             </View>
         </View>
     )

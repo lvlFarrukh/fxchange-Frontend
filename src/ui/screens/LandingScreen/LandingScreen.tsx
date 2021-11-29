@@ -32,7 +32,7 @@ const LandingScreen = ({navigation}) => {
         }}>
         <View style={styles.LogoNTextContainer}>
           <Image
-            source={require('../../../Assets/whiteLogo.png')}
+            source={require('../../../Assets/fejoraLogo-white.png')}
             style={styles.image}
           />
           <MyText style={styles.text}>A better way to Trade </MyText>
@@ -123,6 +123,8 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 50,
+    marginLeft: -10,
+    marginBottom: 8
   },
   LogoNTextContainer: {
     marginTop: 50,

@@ -148,7 +148,7 @@ const DashboardScreen = ({ navigation }) => {
                     }}
                     source={require('../../../Assets/ICONS/giftcard-edit.png')}
                   />
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(13),
                       alignSelf: 'center',
@@ -156,7 +156,7 @@ const DashboardScreen = ({ navigation }) => {
                       marginTop: hp(1),
                     }}>
                     Sell Giftcard
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -176,7 +176,7 @@ const DashboardScreen = ({ navigation }) => {
                     }}
                     source={require('../../../Assets/ICONS/Bitcoin-green.png')}
                   />
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(13),
                       alignSelf: 'center',
@@ -184,7 +184,7 @@ const DashboardScreen = ({ navigation }) => {
                       marginTop: hp(1),
                     }}>
                     Sell Bitcoin
-                  </Text>
+                  </MyText>
                 </View>
 
                 <View
@@ -204,7 +204,7 @@ const DashboardScreen = ({ navigation }) => {
                     }}
                     source={require('../../../Assets/ICONS/airtime.png')}
                   />
-                  <Text
+                  <MyText
                     style={{
                       fontSize: RFValue(13),
                       alignSelf: 'center',
@@ -212,7 +212,7 @@ const DashboardScreen = ({ navigation }) => {
                       marginTop: hp(1),
                     }}>
                     Airtime/Data
-                  </Text>
+                  </MyText>
                 </View>
               </View>
 
@@ -254,7 +254,7 @@ const DashboardScreen = ({ navigation }) => {
                       style={{ height: wp(8), width: wp(8) }}
                       source={require('../../../Assets/CARDS/itunes.png')}
                     />
-                    <Text
+                    <MyText
                       style={{
                         color: '#494949',
                         fontSize: RFValue(13),
@@ -262,7 +262,7 @@ const DashboardScreen = ({ navigation }) => {
                         marginLeft: wp(2.5),
                       }}>
                       Itunes
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View
@@ -271,9 +271,9 @@ const DashboardScreen = ({ navigation }) => {
                       justifyContent: 'center',
 
                     }}>
-                    <Text style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
+                    <MyText style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
                       N33,000
-                    </Text>
+                    </MyText>
                     <TouchableOpacity
                       style={{
                         backgroundColor: '#e1e1e1',
@@ -315,7 +315,7 @@ const DashboardScreen = ({ navigation }) => {
                       style={{ height: wp(8), width: wp(8) }}
                       source={require('../../../Assets/CARDS/amazon.png')}
                     />
-                    <Text
+                    <MyText
                       style={{
                         color: '#494949',
                         fontSize: RFValue(13),
@@ -323,7 +323,7 @@ const DashboardScreen = ({ navigation }) => {
                         marginLeft: wp(2.5),
                       }}>
                       Amazon
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View
@@ -332,9 +332,9 @@ const DashboardScreen = ({ navigation }) => {
                       justifyContent: 'center',
 
                     }}>
-                    <Text style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
+                    <MyText style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
                       N33,000
-                    </Text>
+                    </MyText>
                     <TouchableOpacity
                       style={{
                         backgroundColor: '#e1e1e1',
@@ -376,7 +376,7 @@ const DashboardScreen = ({ navigation }) => {
                       style={{ height: wp(8), width: wp(8) }}
                       source={require('../../../Assets/CARDS/steam.png')}
                     />
-                    <Text
+                    <MyText
                       style={{
                         color: '#494949',
                         fontSize: RFValue(13),
@@ -384,7 +384,7 @@ const DashboardScreen = ({ navigation }) => {
                         marginLeft: wp(2.5),
                       }}>
                       Stream
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View
@@ -393,9 +393,9 @@ const DashboardScreen = ({ navigation }) => {
                       justifyContent: 'center',
 
                     }}>
-                    <Text style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
+                    <MyText style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
                       N33,000
-                    </Text>
+                    </MyText>
                     <TouchableOpacity
                       style={{
                         backgroundColor: '#e1e1e1',
@@ -438,7 +438,7 @@ const DashboardScreen = ({ navigation }) => {
                       style={{ height: wp(8), width: wp(8) }}
                       source={require('../../../Assets/CARDS/Googleplay.png')}
                     />
-                    <Text
+                    <MyText
                       style={{
                         color: '#494949',
                         fontSize: RFValue(13),
@@ -446,7 +446,7 @@ const DashboardScreen = ({ navigation }) => {
                         marginLeft: wp(2.5),
                       }}>
                       Google Play
-                    </Text>
+                    </MyText>
                   </View>
 
                   <View
@@ -455,9 +455,9 @@ const DashboardScreen = ({ navigation }) => {
                       justifyContent: 'center',
 
                     }}>
-                    <Text style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
+                    <MyText style={{ color: '#494949', fontSize: RFValue(13), marginTop: hp(0.5), marginRight: wp(5) }}>
                       N33,000
-                    </Text>
+                    </MyText>
                     <TouchableOpacity
                       style={{
                         backgroundColor: '#e1e1e1',

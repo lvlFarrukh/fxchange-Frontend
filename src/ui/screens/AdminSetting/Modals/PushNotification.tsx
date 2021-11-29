@@ -108,7 +108,7 @@ const PushNotification: React.FC<Props> = props => {
               fontSize: RFValue(14),
             }}
             underlineColorAndroid="transparent"
-            placeholder="Enter Your Message"
+            placeholder="Write something..."
             placeholderTextColor="#333333"
             numberOfLines={5}
             multiline={true}

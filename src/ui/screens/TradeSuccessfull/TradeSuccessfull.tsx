@@ -76,7 +76,7 @@ const TradeSuccessfull = ({navigation}) => {
                   TRADE ID: #G4558668900
                 </MyText>
               </View>
-              <View style={height > 600 && {marginTop: 30}}>
+              <View style={height > 600 && {marginTop: 10}}>
                 <View
                   style={{
                     flexDirection: 'row',
@@ -174,7 +174,7 @@ const TradeSuccessfull = ({navigation}) => {
                   marginTop: 20,
                   marginBottom: 20,
                   flexDirection: 'column',
-                }, height > 600 && {marginTop: 40}]}>
+                }, height > 600 && {marginTop: 20}]}>
                 <MyText
                   style={{textAlign: 'center', fontSize: 10, color: '#343434'}}>
                   NOTE:
@@ -198,7 +198,7 @@ const TradeSuccessfull = ({navigation}) => {
                   navigation.navigate('DashBoardScreen')
                 }}
                 activeOpacity={0.9} 
-                style={height > 600 && {marginTop: 20}}
+               
               >
                 <MyText
                   style={{

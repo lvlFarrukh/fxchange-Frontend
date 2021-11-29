@@ -109,15 +109,33 @@ const SettingModal: React.FC<Props> = props => {
             placeholderTextColor={'#343434'}></TextInput>
         </View>
 
-        <View style={{flexDirection: 'row'}}>
-          <MyText
+        <View style={{flexDirection: 'row',}}>
+          {/* <MyText
             style={{
               color: '#343434',
               fontSize: RFValue(14),
               marginTop: 30,
             }}>
             Wallet Address
-          </MyText>
+          </MyText> */}
+         <TextInput
+            style={{
+              height: wp(13),
+              width: wp(36),
+              backgroundColor: '#ffffff',
+              borderWidth: 1,
+              borderRadius: 3,
+              borderColor: '#F1F1F1',
+              paddingLeft: 15,
+              color: '#000',
+              fontSize: RFValue(12),
+              marginBottom: 5,
+              marginTop: hp(1),
+              fontFamily: 'Nunito-Regular',
+            }}
+            placeholder={'Wallet Address'}
+            placeholderTextColor={'#343434'}></TextInput>
+
           <TouchableOpacity
             style={{
               flexDirection: 'column',

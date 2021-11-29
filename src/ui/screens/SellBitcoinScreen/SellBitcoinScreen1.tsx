@@ -200,7 +200,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
 
             <TouchableOpacity
               activeOpacity={0.9}
-              style={{marginTop: 20, marginBottom: 'auto'}}
+              style={{marginTop: 20, marginBottom: 160}}
               onPress={() => {
                 navigation.reset({
                   index: 1,
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   whiteCardBg: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     width: width,

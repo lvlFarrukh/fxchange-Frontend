@@ -63,7 +63,7 @@ const CardSetting = ({navigation}) => {
               alignSelf: 'center',
               marginBottom: 20,
               width: width,
-              height: height - 100,
+              height: height,
               backgroundColor: '#ffffff',
               borderTopRightRadius: 30,
               borderTopLeftRadius: 30,
@@ -76,7 +76,7 @@ const CardSetting = ({navigation}) => {
                 style={{
                 paddingTop: hp(3),
                 paddingHorizontal: wp(7),
-                height: '100%',
+                height: height,
                 }}
             >
                 

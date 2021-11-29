@@ -1,5 +1,6 @@
 import {StyleSheet, Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('screen');
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const Style = StyleSheet.create({
   header: {
@@ -34,7 +35,7 @@ const Style = StyleSheet.create({
     // top: '10%',
   },
   headerButtons: {
-    height: '4.5%',
+    height: hp(5),
     width: '35%',
     backgroundColor: 'white',
     borderRadius: 30,

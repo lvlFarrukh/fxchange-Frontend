@@ -53,7 +53,7 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
                 source={require('../../../Assets/CARDS/itunes.png')}
                 style={styles.image}
               />
-              <MyText style={{marginTop: 8, fontSize: 12}}>
+              {/* <MyText style={{marginTop: 8, fontSize: 12}}>
                 Upload all ypur{' '}
                 <MyText style={{fontWeight: '700', fontFamily: 'Nunito-Regular'}}>
                   ITUNES
@@ -62,6 +62,9 @@ const ItunesGiftCardScreen = ({route, navigation}) => {
               </MyText>
               <MyText style={{fontSize: 12}}>
                 then click start Trade to process
+              </MyText> */}
+              <MyText style={{marginTop: 8, fontSize: 12, textAlign: 'center'}}>
+              You can upload multiple cards and{'\n'} combine them into one trade
               </MyText>
             </View>
 

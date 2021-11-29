@@ -166,14 +166,14 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 0 && (
                 <Fragment>
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeMarkAsPaidModal}
                     type={'pending'}
                   />
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeMarkAsPaidModal}
@@ -185,14 +185,14 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 1 && (
                 <Fragment>
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeDeclineModal}
                     type={'declined'}
                   />
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeDeclineModal}
@@ -204,14 +204,14 @@ const AdminWithdrawalHome = ({navigation}) => {
               {navigateState === 2 && (
                 <Fragment>
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeApprovedModal}
                     type={'completed'}
                   />
                   <AdminWithdrawalCard
-                    title={'Fxchange Marketplace'}
+                    title={'Fejora Marketplace'}
                     amount={'N300,000'}
                     date={'DEC 10, 2021 1:30PM'}
                     handleChange={handleChangeApprovedModal}

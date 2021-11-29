@@ -118,7 +118,7 @@ const WithDrawScreenFour = ({ navigation }) => {
               </View>
 
               <View style={[{marginBottom:30}]}>
-                <TouchableOpacity style={styles.updatePasswordButton}>
+                <TouchableOpacity onPress={() => navigation.navigate('AdminWithdrawalHome')} style={styles.updatePasswordButton}>
                   <MyText style={{ color: 'white', fontSize: 15 }}>UPDATE</MyText>
                 </TouchableOpacity>
               </View>

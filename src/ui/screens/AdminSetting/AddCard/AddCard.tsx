@@ -97,7 +97,7 @@ const AddCard = ({navigation}) => {
               alignSelf: 'center',
               marginBottom: 20,
               width: width,
-              height: height - 100,
+              height: height,
               backgroundColor: '#ffffff',
               borderTopRightRadius: 30,
               borderTopLeftRadius: 30,
@@ -460,6 +460,7 @@ const AddCard = ({navigation}) => {
 
               <TouchableOpacity
                 style={{
+                  margin: 5,
                   backgroundColor: '#1bb76d',
                   borderRadius: 4,
                   justifyContent: 'center',
@@ -467,7 +468,7 @@ const AddCard = ({navigation}) => {
                   marginTop: hp(10),
                   shadowColor: '#000',
                   shadowOffset: {
-                    width: 0,
+                    width: 2,
                     height: 2,
                   },
                   shadowOpacity: 0.23,
@@ -486,6 +487,7 @@ const AddCard = ({navigation}) => {
 
               <TouchableOpacity
                 style={{
+                  margin: 5,
                   backgroundColor: '#ffffff',
                   borderRadius: 4,
                   justifyContent: 'center',
@@ -493,7 +495,7 @@ const AddCard = ({navigation}) => {
                   marginTop: hp(1),
                   shadowColor: '#000',
                   shadowOffset: {
-                    width: 0,
+                    width: 2,
                     height: 2,
                   },
                   shadowOpacity: 0.23,
@@ -513,6 +515,8 @@ const AddCard = ({navigation}) => {
               <TouchableOpacity
                 onPress={declineModalHandleChange}
                 style={{
+                  margin: 5,
+                  marginBottom: 50,
                   backgroundColor: '#d52a18',
                   borderRadius: 4,
                   justifyContent: 'center',
@@ -520,7 +524,7 @@ const AddCard = ({navigation}) => {
                   marginTop: hp(1),
                   shadowColor: '#000',
                   shadowOffset: {
-                    width: 0,
+                    width: 2,
                     height: 2,
                   },
                   shadowOpacity: 0.23,
@@ -537,7 +541,7 @@ const AddCard = ({navigation}) => {
                 </MyText>
               </TouchableOpacity>
 
-              <View style={{height: 60}}></View>
+              <View style={{height: 110}}></View>
             </ScrollView>
           </View>
         </View>

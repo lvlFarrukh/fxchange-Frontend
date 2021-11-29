@@ -13,6 +13,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import Icons from 'react-native-vector-icons/Ionicons';
 import SelectDropdown from 'react-native-select-dropdown';
 import MyText from '../../../components/DefaultTextComponent/MyText';
@@ -25,9 +26,19 @@ interface Props {
 
 const GenerateStatement: React.FC<Props> = props => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  const [dateTyle, setdateTyle] = useState(0);
 
   const showDatePicker = () => {
     setDatePickerVisibility(true);
+  };
+
+  const handleConfirm = date => {
+    console.warn('A date has been picked: ', date);
+    hideDatePicker();
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
   };
 
   return (
@@ -162,6 +173,12 @@ const GenerateStatement: React.FC<Props> = props => {
             {width: wp(40), alignSelf: 'center'},
           ]}></View>
       </View>
+      <DateTimePickerModal
+            isVisible={isDatePickerVisible}
+            mode="date"
+            onConfirm={handleConfirm}
+            onCancel={hideDatePicker}
+          />
     </Modal>
   );
 };

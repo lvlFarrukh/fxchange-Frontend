@@ -167,7 +167,7 @@ const WithDrawScreenSix = ({navigation}) => {
                 }}>
                 <MyText style={{fontSize: 12}}>Account Name:</MyText>
                 <MyText style={{fontSize: 12, marginLeft: 10}}>
-                  FxChangeMarketPlace
+                FejoraMarketPlace
                 </MyText>
               </View>
               <View
@@ -244,7 +244,7 @@ const WithDrawScreenSix = ({navigation}) => {
                 <View style={styles.upperCardPortion}>
                   <View>
                     <MyText style={{fontSize: 16, color: '#6683e3'}}>
-                      Fxchange Marketplace
+                    Fejora Marketplace
                     </MyText>
                   </View>
 

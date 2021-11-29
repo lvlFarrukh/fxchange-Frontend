@@ -35,7 +35,7 @@ const SignInScreen = ({navigation}) => {
                   alignSelf: 'center',
                 }}>
                 <Image
-                  source={require('../../../Assets/whiteLogo.png')}
+                  source={require('../../../Assets/fejoraLogo-white.png')}
                   style={styles().image}
                 />
               </View>
@@ -105,7 +105,7 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {
                       navigation.navigate('ModeratorScreen');
                     }}>
-                    <Text style={{color: '#d5431c', fontFamily:'Nunito-Regular'}}> contact us</Text>
+                    <Text style={{color: '#d5431c', fontFamily:'Nunito-Regular'}}> Contact Support</Text>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>

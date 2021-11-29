@@ -58,7 +58,7 @@ const Statistics: React.FC<Props> = props => {
               marginLeft: 20,
               paddingTop: 2,
             }}>
-            Statistics
+            Site Stats
           </MyText>
           <MyText></MyText>
         </View>

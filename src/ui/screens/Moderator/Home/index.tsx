@@ -18,6 +18,10 @@ import styles from './Style';
 import {trades} from '../../../../Assets/dumyData';
 import ModeratorNavbar from '../../../components/Navbars/ModeratorNavbar';
 import MyText from '../../../components/DefaultTextComponent/MyText';
+import Modal from 'react-native-modal';
+import Icons from 'react-native-vector-icons/Ionicons';
+import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('screen');
 const btnSetected: any = {
@@ -33,6 +37,12 @@ const index = ({navigation}) => {
   const [ongoingBtn, setOngoing] = useState({});
   const [CompletedBtn, setCompleted] = useState({});
   const [navigateState, setnavigateState] = useState(0);
+  const [isSearchModal, setisSearchModal] = useState(false);
+
+  const handleSearchModal = () => {
+    setisSearchModal(!isSearchModal)
+  }
+
   const navigateCardDetails = (route, status) => {
     console.log(route)
     if (route === 1) {
@@ -88,15 +98,17 @@ const index = ({navigation}) => {
         flex: 1,
       }}>
       <StatusBar backgroundColor="#1bb76d"/>
-      {/* <View style={styles.header}>
-        <MyText style={styles.headerHeading}>Trades</MyText>
-      </View> */}
+     
     <View style={{height: height, width: width, backgroundColor: '#1bb76d'}}>
     
         <Header
           style={{marginTop: 0}}
           navigation={navigation}
           Heading={'Trades'}
+          arrowIconStyle={{display: 'none'}}
+          isSearchIconStyle={true}
+          // isSearchModal={isSearchModal}
+          handleSearchModal={handleSearchModal}
         />    
 
       <View style={styles.mainBody}>
@@ -183,7 +195,50 @@ const index = ({navigation}) => {
       </View>
     </SafeAreaView>
     <ModeratorNavbar navigation={navigation} activePage={'trade'} backgroundColor={undefined}/>
+    <Modal isVisible={isSearchModal}>
+      <View
+        style={{
+          paddingVertical: 10,
+          paddingHorizontal: wp(5),
+          backgroundColor: '#ffffff',
+          borderRadius: 16,
+          width: wp(80),
+          alignSelf: 'center'
+        }}>
+        
+        <View style={{marginTop: 5}}>
+          <TextInput
+            style={{
+              height: wp(13),
+              backgroundColor: '#ffffff',
+              borderWidth: 1.5,
+              borderRadius: 12,
+              borderColor: '#F1F1F1',
+              paddingLeft: 20,
+              color: '#343434',
+              fontSize: RFValue(16),
+              marginTop: hp(3),
+              marginBottom: 5,
+              fontFamily: 'Nunito-Regular',
+            }}
+            inlineImageLeft='search'
+            placeholder={'Trade ID'}
+            placeholderTextColor={'#343434'}>
+          </TextInput>  
 
+          <Icons style={{position: 'absolute', right: wp(2), top: wp(9)}} name={'ios-search-sharp'} size={RFValue(25)} color={'#343434'} />
+
+          <TouchableOpacity onPress={handleSearchModal} style={{alignSelf: 'center', marginTop: 10, marginBottom: 5}}>
+            <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
+              CANCEL
+            </MyText>  
+          </TouchableOpacity>  
+         
+        </View>
+
+       
+      </View>
+    </Modal>
     </View>
   );
 };

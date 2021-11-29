@@ -111,7 +111,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                   marginLeft: wp(5),
                   marginBottom: 5,
                 }}>
-                Fxchange Admin
+                Fejora Admin
               </MyText>
             </View>
           </View>

@@ -109,7 +109,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
           !isKeyboardVisible && (
             <View style={styles.mainBody}>
             <Image
-              source={require('../../../../Assets/whiteLogo.png')}
+              source={require('../../../../Assets/fejoraLogo-white.png')}
               style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
             />
             <View style={styles.mainBodyContent}>
@@ -121,7 +121,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                   />
                 </View>
                 <MyText style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
-                  fxchange
+                Fejora
                 </MyText>
               </TouchableOpacity>
               <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>
@@ -132,7 +132,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                   />
                 </View>
                 <MyText style={{color: '#666666',fontSize: 7, fontWeight: '600', marginLeft: 4}}>
-                  www.fxchange.com
+                  www.Fejora.com
                 </MyText>
               </TouchableOpacity>
             </View>
