@@ -101,7 +101,7 @@ const DeclineModal: React.FC<Props> = props => {
               require('../../../../Assets/sliderImg2.jpeg'),
               require('../../../../Assets/sliderImg2.jpeg'),
             ]}
-            sliderBoxHeight={imageIndex === 1 ? hp(45) : hp(55)}
+            sliderBoxHeight={hp(55)}
             // onCurrentImagePressed={index =>
             //     console.warn(`image ${index} pressed`)
             // }
@@ -123,7 +123,7 @@ const DeclineModal: React.FC<Props> = props => {
           /> */}
 
           {imageIndex === 1 ? (
-            <View>
+            <View style={{marginTop: 5}}>
               <View
                 style={{
                   backgroundColor: '#0a8a40',
@@ -213,7 +213,7 @@ const DeclineModal: React.FC<Props> = props => {
                   height: hp(10),
                   justifyContent: 'center',
                 },
-                imageIndex === 1 && {marginTop: hp(11)},
+                // imageIndex === 1 && {marginTop: hp(11)},
               ]}>
               <MyText
                 style={{

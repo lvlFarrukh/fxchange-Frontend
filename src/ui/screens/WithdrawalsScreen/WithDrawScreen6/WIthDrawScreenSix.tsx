@@ -149,14 +149,16 @@ const WithDrawScreenSix = ({navigation}) => {
                 <MyText style={{fontSize: 13, fontWeight: '400'}}>
                   BankDetails
                 </MyText>
-                <View style={styles.viewItems}>
+                <TouchableOpacity 
+                  onPress={()=> navigation.navigate('WithdrawalsScreenFive')}
+                  activeOpacity={0.8} style={styles.viewItems}>
                   <MyText style={styles.smBlueText}>Edit</MyText>
 
                   <Image
                     source={require('../../../../Assets/ICONS/arrow=right.png')}
                     style={styles.arrowIcon}
                   />
-                </View>
+                </TouchableOpacity>
               </View>
               <View
                 style={{

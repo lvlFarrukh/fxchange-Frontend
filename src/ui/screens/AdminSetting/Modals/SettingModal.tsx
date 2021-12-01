@@ -173,7 +173,7 @@ const SettingModal: React.FC<Props> = props => {
               marginBottom: 5,
               fontFamily: 'Nunito-Regular',
             }}
-            placeholder={'Range e.g 570'}
+            placeholder={'Rate'}
             placeholderTextColor={'#343434'}></TextInput>
         </View>
 
@@ -200,7 +200,7 @@ const SettingModal: React.FC<Props> = props => {
               marginBottom: 5,
               fontFamily: 'Nunito-Regular',
             }}
-            placeholder={'Range e.g 570'}
+            placeholder={'Rate'}
             placeholderTextColor={'#343434'}></TextInput>
         </View>
 
@@ -227,7 +227,7 @@ const SettingModal: React.FC<Props> = props => {
               marginBottom: 5,
               fontFamily: 'Nunito-Regular',
             }}
-            placeholder={'Range e.g 570'}
+            placeholder={'Rate'}
             placeholderTextColor={'#343434'}></TextInput>
         </View>
 

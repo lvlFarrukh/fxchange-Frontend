@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   updatePassword: {
     justifyContent: 'center',
     // paddingRight: 25,
-    marginTop:90,
+    marginTop:50,
   },
   updatePasswordButton: {
     alignItems: 'center',

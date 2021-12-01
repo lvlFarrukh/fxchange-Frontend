@@ -38,7 +38,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
           width: width,
           backgroundColor: '#d65d0e',
         }}>
-      <StatusBar translucent backgroundColor="transparent" />
+        <StatusBar translucent backgroundColor="transparent" />
 
         <View style={{height: 50, justifyContent: 'center'}}>
           <Header navigation={navigation} Heading={'Sell Bitcoin'} />
@@ -47,7 +47,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
           <View
             style={[
               styles.whiteCardBg,
-              {height: height, paddingHorizontal: wp(10)},
+              {height: height > 1000 ? height : '100%', paddingHorizontal: wp(10)},
             ]}>
             <View
               style={{
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     width: width,
     padding: 20,
-    marginBottom: 50,
+    // marginBottom: 50,
     // flexWrap: 'wrap',
     // flexDirection: 'row',
     // justifyContent: 'space-between'

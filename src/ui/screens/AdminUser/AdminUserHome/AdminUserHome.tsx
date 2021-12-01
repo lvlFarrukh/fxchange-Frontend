@@ -202,7 +202,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                 onPress={() => {
                   activeButton('moderator');
                 }}>
-                Moderates
+                Moderator
               </MyText>
             </View>
             <ScrollView>
