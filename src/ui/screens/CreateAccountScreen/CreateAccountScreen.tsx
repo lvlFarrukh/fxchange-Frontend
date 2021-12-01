@@ -64,7 +64,7 @@ const CreateAccountScreen = ({ navigation }) => {
 
               <TextInput
                 style={styles.TextInputStyle}
-                placeholder={'Full Name'}
+                placeholder={'Username'}
                 placeholderTextColor={'#333333'}></TextInput>
 
               <TextInput

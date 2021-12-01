@@ -926,7 +926,7 @@ const index = ({navigation}) => {
                 </View>
                 <View style={{margin: 2, width: '32%', height: width - 300}}>
                   {/* Upload Button */}
-                  <TouchableOpacity
+                  {/* <TouchableOpacity
                     activeOpacity={0.9}
                     style={[
                       Style.btnShadow,
@@ -958,7 +958,26 @@ const index = ({navigation}) => {
                       marginTop: 5,
                     }}>
                     Upload Image
-                  </MyText>
+                  </MyText> */}
+                   <TouchableOpacity>
+                      <Image style={{
+                        width: wp(9),
+                        height: wp(9),
+                        alignSelf: 'center'
+                      }} source={require('../../../../Assets/ICONS/uploadIconGray.png')} />
+                      
+                      <MyText
+                        style={{
+                          color: 'black',
+                          fontSize: 10,
+                          // fontWeight: '500',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                          fontWeight: 'bold'
+                        }}>
+                        Upload Image
+                      </MyText>
+                    </TouchableOpacity>
                 </View>
               </View>
             </View>

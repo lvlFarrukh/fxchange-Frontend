@@ -77,15 +77,17 @@ const SignInScreen = ({navigation}) => {
 
                 <View style={styles().BottomRowContainer}>
                   <View>
-                    <MyText style={{fontSize: 10}}>
-                      Don't have an account?
-                      <TouchableNativeFeedback
+                  <TouchableNativeFeedback
                         onPress={() => {
                           navigation.navigate('CreateAccountScreen');
                         }}>
+                    <Text style={{fontSize: 10, fontFamily:'Nunito-Regular'}}>
+                      Don't have an account?
+                      
                         <Text style={{color: '#66b486', fontFamily:'Nunito-Regular'}}> SIGNUP</Text>
-                      </TouchableNativeFeedback>
-                    </MyText>
+                    </Text>
+                    </TouchableNativeFeedback>
+
                   </View>
                   <TouchableNativeFeedback
                     onPress={() => {

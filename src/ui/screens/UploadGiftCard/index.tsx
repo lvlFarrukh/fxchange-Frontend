@@ -341,47 +341,26 @@ const index = ({navigation}) => {
               </View>
 
               <View style={{margin: 2, width: '32%', height: width - 300}}>
-                {/* Upload Button */}
-                <TouchableOpacity
-                  activeOpacity={0.9}
-                  style={[
-                    {
-                      shadowColor: '#000',
-                      shadowOffset: {width: 0, height: 50},
-                      shadowOpacity: 1,
-                      shadowRadius: 5,
-                      elevation: 5,
-                    },
-                    {
-                      backgroundColor: '#fefefe',
-                      width: 35,
-                      height: 35,
-                      borderRadius: 50,
-                      alignSelf: 'center',
-                      justifyContent: 'center',
-                    },
-                  ]}>
-                  <MyText
-                    style={{
-                      fontSize: 25,
-                      fontWeight: '600',
-                      color: '#1bb76d',
-                      alignSelf: 'center',
-                      // marginTop: -7
-                    }}>
-                    +
-                  </MyText>
-                </TouchableOpacity>
+                <TouchableOpacity>
+               
+                <Image style={{
+                  width: wp(9),
+                  height: wp(9),
+                  alignSelf: 'center'
+                }} source={require('../../../Assets/ICONS/uploadIconGray.png')} />
+                
                 <MyText
                   style={{
-                    color: '#1bb76d',
+                    color: 'black',
                     fontSize: 10,
-                    fontWeight: '500',
+                    // fontWeight: '500',
                     alignSelf: 'center',
                     marginTop: 5,
+                    fontWeight: 'bold'
                   }}>
                   Upload Image
                 </MyText>
+                </TouchableOpacity>
               </View>
 
               <View

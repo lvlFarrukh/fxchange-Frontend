@@ -121,7 +121,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
                   />
                 </View>
                 <MyText style={{color: '#666666', fontSize: 11.5, fontWeight: '600',paddingBottom: 3}}>
-                Fejora
+                myfejora
                 </MyText>
               </TouchableOpacity>
               <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>

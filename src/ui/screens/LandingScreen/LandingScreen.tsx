@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 50,
-    marginLeft: -10,
+    marginLeft: 5,
     marginBottom: 8
   },
   LogoNTextContainer: {

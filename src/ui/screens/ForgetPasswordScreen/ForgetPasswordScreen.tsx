@@ -67,7 +67,7 @@ const ForgetPasswordScreen = ({ navigation }) => {
 
                             <TextInput
                                 style={styles.TextInputStyle}
-                                placeholder={'Email Address'}
+                                placeholder={'Email address or Username'}
                                 placeholderTextColor={'#343434'}
                             >
                             </TextInput>
