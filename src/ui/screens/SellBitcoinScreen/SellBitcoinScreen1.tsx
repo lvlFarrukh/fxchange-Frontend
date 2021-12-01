@@ -30,17 +30,16 @@ const {width, height} = Dimensions.get('screen');
 
 const SellBitcoinScreen1 = ({navigation}) => {
   return (
-    <View style={{height: height, width: width, flex: 1}}>
-      <StatusBar translucent backgroundColor="transparent" />
-
-      {/* <StatusBar hidden /> */}
+    
       <SafeAreaView
         style={{
-          flex: 1,
+          // flex: 1,
           height: height,
           width: width,
           backgroundColor: '#d65d0e',
         }}>
+      <StatusBar translucent backgroundColor="transparent" />
+
         <View style={{height: 50, justifyContent: 'center'}}>
           <Header navigation={navigation} Heading={'Sell Bitcoin'} />
         </View>
@@ -48,7 +47,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
           <View
             style={[
               styles.whiteCardBg,
-              {height: '100%', paddingHorizontal: wp(10)},
+              {height: height, paddingHorizontal: wp(10)},
             ]}>
             <View
               style={{
@@ -200,7 +199,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
 
             <TouchableOpacity
               activeOpacity={0.9}
-              style={{marginTop: 20, marginBottom: 160}}
+              style={{marginTop: 20, marginBottom: 50}}
               onPress={() => {
                 navigation.reset({
                   index: 1,
@@ -229,14 +228,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
           </View>
         </ScrollView>
       </SafeAreaView>
-      {/* <View style={{position: 'absolute', width: width, bottom: 1}}>
-        <Navbar
-          navigation={navigation}
-          activePage={'home'}
-          backgroundColor={undefined}
-        />
-      </View> */}
-    </View>
+     
   );
 };
 

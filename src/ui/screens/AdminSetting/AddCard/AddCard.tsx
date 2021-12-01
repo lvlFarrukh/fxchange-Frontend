@@ -383,14 +383,14 @@ const AddCard = ({navigation}) => {
                     height: wp(6),
                     width: wp(6),
                   }}
-                  source={require('../../../../Assets/ICONS/greenPlusIcon.png')}
+                  source={require('../../../../Assets/ICONS/kindpng_1121065.png')}
                 />
 
                 <MyText
                   style={{
                     fontSize: RFValue(15),
                     marginLeft: wp(3),
-                    color: '#1cb86e',
+                    color: '#1bb76d',
                   }}>
                   Add a Rate
                 </MyText>
@@ -450,7 +450,7 @@ const AddCard = ({navigation}) => {
                       style={{
                         alignSelf: 'center',
                         fontSize: RFValue(12),
-                        color: '#1ab86e',
+                        color: '#1bb76d',
                       }}>
                       + Upload
                     </MyText>

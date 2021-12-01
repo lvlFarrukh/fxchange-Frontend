@@ -4,6 +4,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Slider from 'react-native-hook-image-slider';
+import {SliderBox} from 'react-native-image-slider-box';
 
 import React, {Fragment, useContext, useEffect, useMemo, useState} from 'react';
 import {
@@ -85,7 +86,7 @@ const DashboardScreen = ({route, navigation}) => {
                 navigation.navigate('TransactionHistoryScreen');
               }}>
               <MyText style={{fontSize: 10, color: '#fff', marginBottom: 3}}>
-                TRANSECTION HISTORY
+                TRANSACTION HISTORY
               </MyText>
             </TouchableOpacity>
           </View>
@@ -551,7 +552,7 @@ const DashboardScreen = ({route, navigation}) => {
               borderRadius: 4,
               overflow: 'hidden',
             }}>
-            <Slider
+            {/* <Slider
               imageHeight={150}
               activeDotColor={'transparent'}
               emptyDotColor={'transparent'}
@@ -559,7 +560,23 @@ const DashboardScreen = ({route, navigation}) => {
                 'https://i.ibb.co/cFghNhF/timon-klauser-3-MAmj1-ZKSZA-unsplash-c2e88811.jpg',
                 'https://i.ibb.co/q1kFVRT/img2.png',
               ]}
-            />
+            /> */}
+            <SliderBox
+              images={[
+                require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg'),
+                require('../../../Assets/img2.png'),
+              ]}
+              sliderBoxHeight={150}
+              // onCurrentImagePressed={index =>
+              //     console.warn(`image ${index} pressed`)
+              // }
+              circleLoop
+              dotStyle={{
+                display: 'none',
+              }}
+              // currentImageEmitter={index => setimageIndex(index + 1)}
+              // parentWidth={this.state.width}
+          />
           </View>
         </View>
       </ScrollView>

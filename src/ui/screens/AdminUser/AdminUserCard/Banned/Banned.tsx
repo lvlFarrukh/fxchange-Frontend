@@ -16,6 +16,7 @@ interface Props {
   isEditRole: () => void;
   isUnbanUser: () => void;
   isDelete: () => void;
+  isStatistics: any,
   navigation: any,
 }
 
@@ -175,6 +176,7 @@ const Banned: React.FC<Props> = props => {
           </TouchableOpacity>
 
           <TouchableOpacity
+            onPress={props?.isStatistics}
             activeOpacity={0.8}
             style={{
               backgroundColor: '#ffffff',

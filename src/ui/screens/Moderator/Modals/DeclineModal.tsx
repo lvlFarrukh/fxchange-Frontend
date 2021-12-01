@@ -22,7 +22,7 @@ interface Props {
   handleChange: any;
   navigation: any;
   toggleDelineModal: any;
-  toggleModal: any
+  toggleModal: any;
 }
 
 const DeclineModal: React.FC<Props> = props => {
@@ -30,12 +30,18 @@ const DeclineModal: React.FC<Props> = props => {
   const navigation = props.navigation;
 
   const switchBtnAction = () => {
-    props.handleChange()
+    props.handleChange();
     navigation.navigate('SwitchGiftCard');
-  }
+  };
 
   return (
-    <Modal isVisible={props.isOpen}>
+    <Modal
+      isVisible={props.isOpen}
+      animationIn={'fadeInRightBig'}
+      animationOut={'fadeOutRightBig'}
+      animationInTiming={600}  
+      animationOutTiming={500}  
+    >
       <View
         style={{
           paddingVertical: 10,
@@ -47,22 +53,23 @@ const DeclineModal: React.FC<Props> = props => {
         }}>
         <View
           style={{
-            paddingHorizontal: wp(8),
+            paddingHorizontal: wp(5),
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginTop: hp(3),
+            marginTop: hp(1),
             height: hp(6),
           }}>
           <TouchableOpacity onPress={props.handleChange}>
             <Image
               style={{width: wp(5), height: wp(5)}}
-              source={require('../../../../Assets/ICONS/cross.png')}
+              source={require('../../../../Assets/ICONS/white-cross.png')}
             />
           </TouchableOpacity>
           <MyText
             style={{
               color: '#ffffff',
               fontSize: RFValue(18),
+              marginLeft: -wp(2),
             }}>
             {imageIndex} of 4
           </MyText>
@@ -74,18 +81,18 @@ const DeclineModal: React.FC<Props> = props => {
           style={{
             backgroundColor: 'black',
             // paddingTop: hp(10),
-            borderTopEndRadius: 40,
-            borderTopStartRadius: 40,
+            // borderTopEndRadius: 40,
+            // borderTopStartRadius: 40,
             height: hp(94),
             paddingTop: hp(8),
-            shadowColor: "#000",
+            shadowColor: '#000',
             shadowOffset: {
               width: 0,
               height: 3,
             },
             shadowOpacity: 0.29,
             shadowRadius: 4.65,
-            
+
             elevation: 7,
           }}>
           <SliderBox
@@ -206,7 +213,7 @@ const DeclineModal: React.FC<Props> = props => {
                   height: hp(10),
                   justifyContent: 'center',
                 },
-                imageIndex === 1 && {marginTop: hp(8)},
+                imageIndex === 1 && {marginTop: hp(11)},
               ]}>
               <MyText
                 style={{

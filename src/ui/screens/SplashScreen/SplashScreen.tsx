@@ -12,7 +12,7 @@ const SplashScreen = ({ navigation }) => {
             // navigation.replace('AdminWithdrawalHome')
             // navigation.replace('AdminUserHome')
             // navigation.replace('Setting')
-        }, 1500);
+        }, 3500);
     }, [])
 
     return (

@@ -244,6 +244,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                     isEditRole={handleChangeEditModal}
                     isUnbanUser={handleChangeUnbanUserModal}
                     isDelete={declineModalHandleChange}
+                    isStatistics={handleChangeStatisticsModal}
                     type={'active'}
                     navigation={navigation}
                   />
@@ -254,6 +255,7 @@ const AdminWithdrawalHome = ({navigation}) => {
                     isEditRole={handleChangeEditModal}
                     isUnbanUser={handleChangeUnbanUserModal}
                     isDelete={declineModalHandleChange}
+                    isStatistics={handleChangeStatisticsModal}
                     type={'active'}
                     navigation={navigation}
                   />

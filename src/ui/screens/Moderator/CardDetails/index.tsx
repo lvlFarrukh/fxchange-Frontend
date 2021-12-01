@@ -111,7 +111,7 @@ const index = ({navigation}) => {
               </View>
 
               <TouchableOpacity
-                style={[Style.headerButtons, {backgroundColor: '#0c8c41'}]}
+                style={[Style.headerButtons, {backgroundColor: '#1bb76d'}]}
                 onPress={handleChangeDeclineModal}>
                 <MyText style={[Style.headerButtom, {color: '#ffffff'}]}>
                   View all Cards
