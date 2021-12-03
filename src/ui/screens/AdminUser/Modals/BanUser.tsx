@@ -133,6 +133,9 @@ const BanUser: React.FC<Props> = props => {
               alignSelf: 'center',
               margin: 7,
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
 
           <SelectDropdown
@@ -179,6 +182,9 @@ const BanUser: React.FC<Props> = props => {
               alignSelf: 'center',
               margin: 7,
               marginBottom: hp(10)
+            }}
+            dropdownStyle={{
+              borderRadius: 10,
             }}
           />
         </View>

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import {
   View,
   Text,
@@ -18,7 +18,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 const {width, height} = Dimensions.get('window');
 
-const index = ({navigation}) => {
+const index = ({route, navigation}) => {
   const countryNames = [
     'US',
     'UK',
@@ -51,7 +51,9 @@ const index = ({navigation}) => {
     'NIKE',
     'FOOTLOCKER',
   ];
-  console.log(height)
+
+  const [isFieldDisabled, setisFieldDisabled] = useState(route?.params?.isRetry ? route?.params?.isRetry : false);
+  console.log(isFieldDisabled)
   return (
     <Fragment>
       <View
@@ -90,7 +92,7 @@ const index = ({navigation}) => {
             <View style={{marginTop: 16}}>
               <TextInput
                 style={{
-                  backgroundColor: '#F1F1F1',
+                  backgroundColor: isFieldDisabled ? '#F1F1F1' : '#ffffff',
                   alignSelf: 'center',
                   borderRadius: 4,
                   borderColor: '#F1F1F1',
@@ -107,7 +109,7 @@ const index = ({navigation}) => {
                 placeholder="ITUNES"
                 placeholderTextColor="#333333"
                 textAlign={'left'}
-                editable={false}
+                editable={isFieldDisabled}
                 // numberOfLines={2}
                 // multiline={true}
               />
@@ -146,7 +148,7 @@ const index = ({navigation}) => {
                 rowStyle={{backgroundColor: 'white', width: '100%', fontFamily:'Nunito-Regular'}}
                 rowTextStyle={{fontSize: 15}}
                 buttonStyle={{
-                  backgroundColor: 'white',
+                  backgroundColor: isFieldDisabled ? '#F1F1F1' : '#ffffff',
                   borderWidth: 1.5,
                   borderColor: '#F1F1F1',
                   borderRadius: 4,
@@ -157,6 +159,10 @@ const index = ({navigation}) => {
                   alignSelf: 'center',
                   margin: 7,
                 }}
+                dropdownStyle={{
+                  borderRadius: 10,
+                }}
+                disabled={isFieldDisabled}
               />
 
               <SelectDropdown
@@ -193,7 +199,7 @@ const index = ({navigation}) => {
                 rowStyle={{backgroundColor: 'white', width: '100%'}}
                 rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
                 buttonStyle={{
-                  backgroundColor: 'white',
+                  backgroundColor: isFieldDisabled ? '#F1F1F1' : '#ffffff',
                   borderWidth: 1.5,
                   borderColor: '#F1F1F1',
                   borderRadius: 4,
@@ -204,6 +210,10 @@ const index = ({navigation}) => {
                   alignSelf: 'center',
                   margin: 7,
                 }}
+                dropdownStyle={{
+                  borderRadius: 10,
+                }}
+                disabled={isFieldDisabled}
               />
 
               <SelectDropdown
@@ -240,7 +250,7 @@ const index = ({navigation}) => {
                 rowStyle={{backgroundColor: 'white', width: '100%'}}
                 rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
                 buttonStyle={{
-                  backgroundColor: 'white',
+                  backgroundColor: isFieldDisabled ? '#F1F1F1' : '#ffffff',
                   borderWidth: 1.5,
                   borderColor: '#F1F1F1',
                   borderRadius: 4,
@@ -251,11 +261,15 @@ const index = ({navigation}) => {
                   alignSelf: 'center',
                   margin: 7,
                 }}
+                dropdownStyle={{
+                  borderRadius: 10,
+                }}
+                disabled={isFieldDisabled}
               />
 
               <TextInput
                 style={{
-                  backgroundColor: 'white',
+                  backgroundColor: isFieldDisabled ? '#F1F1F1' : '#ffffff',
                   alignSelf: 'center',
                   borderRadius: 4,
                   borderColor: '#F1F1F1',
@@ -273,6 +287,7 @@ const index = ({navigation}) => {
                 placeholderTextColor="#333333"
                 textAlign={'left'}
                 numberOfLines={2}
+                editable={!isFieldDisabled}
                 // multiline={true}
               />
 
@@ -401,6 +416,8 @@ const index = ({navigation}) => {
                   justifyContent: 'center',
                 }}
                 onPress={() => {
+                  isFieldDisabled ?
+                  navigation.goBack() :
                   navigation.navigate('ItunesGiftCardScreen');
                 }}>
                 <MyText

@@ -179,6 +179,9 @@ const EditRate: React.FC<Props> = props => {
               alignSelf: 'center',
               marginTop: 20,
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
 
           <SelectDropdown
@@ -227,6 +230,9 @@ const EditRate: React.FC<Props> = props => {
               paddingVertical: 10,
               alignSelf: 'center',
               marginTop: 10,
+            }}
+            dropdownStyle={{
+              borderRadius: 10,
             }}
           />
 
@@ -277,6 +283,9 @@ const EditRate: React.FC<Props> = props => {
               alignSelf: 'center',
               marginTop: 10,
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
 
           <SelectDropdown
@@ -325,6 +334,9 @@ const EditRate: React.FC<Props> = props => {
               paddingVertical: 10,
               alignSelf: 'center',
               marginTop: 10,
+            }}
+            dropdownStyle={{
+              borderRadius: 10,
             }}
           />
 

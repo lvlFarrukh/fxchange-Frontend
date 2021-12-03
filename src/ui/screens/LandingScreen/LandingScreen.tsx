@@ -121,9 +121,10 @@ const LandingScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   image: {
+    resizeMode: 'contain',
     width: 150,
     height: 50,
-    marginLeft: 5,
+    marginLeft: -17,
     marginBottom: 8
   },
   LogoNTextContainer: {

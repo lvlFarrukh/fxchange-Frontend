@@ -229,8 +229,9 @@ const styles = StyleSheet.create({
     height: 20,
   },
   image: {
+    resizeMode: 'contain',
     width: 160,
-    height: 55,
+    height: 50,
     alignSelf: 'center',
     marginTop: 10,
   },

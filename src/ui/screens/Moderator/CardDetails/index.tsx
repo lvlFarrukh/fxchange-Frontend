@@ -880,6 +880,9 @@ const index = ({navigation}) => {
                   paddingVertical: 10,
                   alignSelf: 'center',
                 }}
+                dropdownStyle={{
+                  borderRadius: 10,
+                }}
               />
 
               <View

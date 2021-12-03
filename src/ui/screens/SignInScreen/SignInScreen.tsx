@@ -19,100 +19,112 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('window');
 
 const SignInScreen = ({navigation}) => {
-
   return (
-    <View style={{flex: 1 , height:height,width:width, backgroundColor: '#fafafa',}}>
+    <View
+      style={{
+        flex: 1,
+        height: height,
+        width: width,
+        backgroundColor: '#fafafa',
+      }}>
       <ScrollView>
-          <SafeAreaView style={{flex: 1, height: height, backgroundColor: '#1bb76d'}}>
-            <View style={{flex: 25}}>
-              <Header navigation={navigation} />
-              <View
-                style={{
-                  alignSelf: 'center',
-                }}>
-                <Image
-                  source={require('../../../Assets/fejoraLogo-white.png')}
-                  style={styles().image}
-                />
-              </View>
-            </View>
+        <SafeAreaView
+          style={{flex: 1, height: height, backgroundColor: '#1bb76d'}}>
+          <View style={{flex: 25}}>
+            <Header navigation={navigation} />
             <View
-              style={[
-                styles().whiteCardBg,
-                {flex: 75},
-              ]}>
-              <MyText style={[styles().Heading]}>
-                LOGIN TO YOUR ACCOUNT
-              </MyText>
+              style={{
+                alignSelf: 'center',
+              }}>
+              <Image
+                source={require('../../../Assets/fejoraLogo-white.png')}
+                style={styles().image}
+              />
+            </View>
+          </View>
+          <View style={[styles().whiteCardBg, {flex: 75}]}>
+            <MyText style={[styles().Heading]}>LOGIN TO YOUR ACCOUNT</MyText>
 
-              <TextInput
-                style={styles().TextInputStyle}
-                placeholder={'Email or Phone'}
-                placeholderTextColor={'#333333'}> 
-            </TextInput>
+            <TextInput
+              style={styles().TextInputStyle}
+              placeholder={'Email or Phone'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <TextInput
-                style={styles().TextInputStyle}
-                placeholder={'Password'}
-                placeholderTextColor={'#333333'}
-                //onChangeText={text => setTitle(text)}
-                //value={Title}
-              ></TextInput>
+            <TextInput
+              style={styles().TextInputStyle}
+              placeholder={'Password'}
+              placeholderTextColor={'#333333'}
+              //onChangeText={text => setTitle(text)}
+              //value={Title}
+            ></TextInput>
 
-              <View>
-                <TouchableOpacity
+            <View>
+              <TouchableOpacity
                 activeOpacity={0.9}
-                  style={{alignItems: 'center'}}
-                  onPress={() => {
-                    navigation.navigate('DashBoardScreen');
-                  }}>
-                  <MyText style={styles().GreenButton}>
-                    LOGIN
-                  </MyText>
-                </TouchableOpacity>
+                style={{alignItems: 'center', marginBottom: hp(0.3)}}
+                onPress={() => {
+                  navigation.navigate('DashBoardScreen');
+                }}>
+                <MyText style={styles().GreenButton}>LOGIN</MyText>
+              </TouchableOpacity>
 
-                <View style={styles().BottomRowContainer}>
-                  <View>
-                  <TouchableNativeFeedback
-                        onPress={() => {
-                          navigation.navigate('CreateAccountScreen');
-                        }}>
-                    <Text style={{fontSize: 10, fontFamily:'Nunito-Regular'}}>
-                      Don't have an account?
-                      
-                        <Text style={{color: '#66b486', fontFamily:'Nunito-Regular'}}> SIGNUP</Text>
-                    </Text>
-                    </TouchableNativeFeedback>
-
-                  </View>
+              <View style={styles().BottomRowContainer}>
+                <View>
                   <TouchableNativeFeedback
                     onPress={() => {
-                      navigation.navigate('ForgetPasswordScreen');
+                      navigation.navigate('CreateAccountScreen');
                     }}>
-                    <Text style={{fontSize: 10, color: '#2f568f', fontFamily:'Nunito-Regular'}}>
-                      Forget Password?
+                    <Text style={{fontSize: 10, fontFamily: 'Nunito-Regular'}}>
+                      Don't have an account?
+                      <Text
+                        style={{
+                          color: '#66b486',
+                          fontFamily: 'Nunito-Regular',
+                        }}>
+                        {' '}
+                        SIGNUP
+                      </Text>
                     </Text>
                   </TouchableNativeFeedback>
                 </View>
-              </View>
-
-              <View style={styles().lastViewStyle}>
-                <MyText style={{fontSize: 12}}>
-                  Having any troubles?
-                  <TouchableNativeFeedback
-                    onPress={() => {
-                      navigation.navigate('ModeratorScreen');
+                <TouchableNativeFeedback
+                  onPress={() => {
+                    navigation.navigate('ForgetPasswordScreen');
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 10,
+                      color: '#2f568f',
+                      fontFamily: 'Nunito-Regular',
                     }}>
-                    <Text style={{color: '#d5431c', fontFamily:'Nunito-Regular'}}> Contact Support</Text>
-                  </TouchableNativeFeedback>
-                </MyText>
+                    Forget Password?
+                  </Text>
+                </TouchableNativeFeedback>
               </View>
             </View>
-          </SafeAreaView>
+
+            <View style={styles().lastViewStyle}>
+              <MyText style={{fontSize: 12}}>
+                Having any troubles?
+                <TouchableNativeFeedback
+                  onPress={() => {
+                    navigation.navigate('ModeratorScreen');
+                  }}>
+                  <Text
+                    style={{color: '#d5431c', fontFamily: 'Nunito-Regular'}}>
+                    {' '}
+                    Contact Support
+                  </Text>
+                </TouchableNativeFeedback>
+              </MyText>
+            </View>
+          </View>
+        </SafeAreaView>
       </ScrollView>
     </View>
   );
@@ -121,6 +133,7 @@ const SignInScreen = ({navigation}) => {
 const styles = () =>
   StyleSheet.create({
     image: {
+      resizeMode: 'contain',
       width: 150,
       height: 50,
       marginTop: 22,
@@ -142,19 +155,19 @@ const styles = () =>
       alignSelf: 'center',
       fontSize: 13,
       color: '#343434',
-    //   marginBottom: 5,
+      //   marginBottom: 5,
     },
     TextInputStyle: {
-        height: 46,
+      height: 46,
       backgroundColor: '#Fafafa',
       borderWidth: 1.5,
       borderRadius: 3,
       paddingLeft: 10,
       color: 'black',
-    //   marginTop: 5,
+      //   marginTop: 5,
       borderColor: '#F1F1F1',
-      fontSize: 12, 
-      fontFamily:'Nunito-Regular'
+      fontSize: 12,
+      fontFamily: 'Nunito-Regular',
     },
     GreenButton: {
       // alignSelf:'center',
@@ -165,10 +178,10 @@ const styles = () =>
       borderColor: '#1bb76d',
       borderRadius: 3,
       paddingHorizontal: 10,
-    //   paddingVertical: 15,
+      //   paddingVertical: 15,
       fontSize: 12.5,
       paddingTop: 10,
-    //   fontWeight: '700',
+      //   fontWeight: '700',
       color: '#fafafa',
       backgroundColor: '#1bb76d',
       alignSelf: 'center',
@@ -191,6 +204,6 @@ const styles = () =>
       marginTop: 50,
       marginBottom: 10,
       alignSelf: 'center',
-    }
+    },
   });
 export default SignInScreen;

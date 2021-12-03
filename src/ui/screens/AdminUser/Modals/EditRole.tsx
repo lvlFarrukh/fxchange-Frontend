@@ -132,6 +132,9 @@ const EditRole: React.FC<Props> = props => {
               margin: 7,
               marginBottom: hp(15)
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
         </View>
 

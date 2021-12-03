@@ -20,7 +20,10 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
 import Navbar from '../../components/Navbars/Navbar';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 const {width, height} = Dimensions.get('window');
 
@@ -82,7 +85,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                     paddingTop: height > 600 ? 20 : 0,
                     paddingBottom: 15,
                     paddingHorizontal: 30,
-                    marginTop: hp(3)
+                    marginTop: hp(3),
                   }}>
                   <View>
                     <MyText style={{fontSize: 11}}>WALLET</MyText>
@@ -179,7 +182,7 @@ const TradeSuccesfullScreen2 = ({navigation}) => {
                   navigation.navigate('DashBoardScreen');
                 }}
                 activeOpacity={0.9}
-                style={{marginTop: height > 600 ? 20 : hp(2),}}>
+                style={{marginTop: height > 600 ? 20 : hp(2)}}>
                 <MyText
                   style={{
                     alignSelf: 'center',
@@ -208,8 +211,9 @@ const styles = StyleSheet.create({
     height: 20,
   },
   image: {
+    resizeMode: 'contain',
     width: 160,
-    height: 55,
+    height: 50,
     alignSelf: 'center',
     marginTop: 10,
   },

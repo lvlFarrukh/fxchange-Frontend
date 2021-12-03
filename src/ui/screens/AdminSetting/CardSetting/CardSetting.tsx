@@ -92,7 +92,11 @@ const CardSetting = ({navigation}) => {
                             justifyContent: 'space-between'
                         }}
                     >
-                        <TouchableOpacity style={{
+                        <TouchableOpacity 
+                            onPress={() => {
+                                navigation.navigate('AddCard');
+                            }}
+                        style={{
                             width: wp(25),
                             height: wp(25),
                             borderWidth: 1,
@@ -107,7 +111,9 @@ const CardSetting = ({navigation}) => {
                         </TouchableOpacity>
 
                         <TouchableOpacity 
-                            onPress={handleChangeCardModal}
+                             onPress={() => {
+                                navigation.navigate('AddCard');
+                            }}
                         style={{
                             width: wp(25),
                             height: wp(25),
@@ -122,7 +128,11 @@ const CardSetting = ({navigation}) => {
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={{
+                        <TouchableOpacity
+                            onPress={() => {
+                                navigation.navigate('AddCard');
+                            }}
+                        style={{
                             width: wp(25),
                             height: wp(25),
                             borderWidth: 1,

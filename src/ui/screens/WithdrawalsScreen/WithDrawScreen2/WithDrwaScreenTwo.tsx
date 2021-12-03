@@ -110,7 +110,7 @@ const WithdrawalsScreenTwo = ({navigation}) => {
             <View style={styles.mainBody}>
             <Image
               source={require('../../../../Assets/fejoraLogo-white.png')}
-              style={{height: 55, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
+              style={{height: 45, resizeMode: 'contain', marginTop: 50, marginBottom: 30}}
             />
             <View style={styles.mainBodyContent}>
               <TouchableOpacity activeOpacity={0.9} style={styles.mainBodyButtonStyle}>

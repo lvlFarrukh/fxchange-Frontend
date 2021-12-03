@@ -29,6 +29,7 @@ import {
 const {width, height} = Dimensions.get('screen');
 
 const SellBitcoinScreen1 = ({navigation}) => {
+  console.log(height)
   return (
     
       <SafeAreaView
@@ -47,7 +48,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
           <View
             style={[
               styles.whiteCardBg,
-              {height: height > 1000 ? height : '100%', paddingHorizontal: wp(10)},
+              {height: height > 900 ? height : '100%', paddingHorizontal: wp(10)},
             ]}>
             <View
               style={{
@@ -117,7 +118,7 @@ const SellBitcoinScreen1 = ({navigation}) => {
                     </TouchableOpacity> */}
             <TextInput
               style={[styles.TextInputStyle, {marginTop: 10, width: '100%'}]}
-              placeholder={'Transaction id (Optional)'}
+              placeholder={'Transaction id or Hash'}
               placeholderTextColor={'#949494'}></TextInput>
 
             <View

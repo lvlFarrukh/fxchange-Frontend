@@ -23,7 +23,8 @@ interface Props {
   arrowIconStyle?: any;
   isSearchIconStyle?: any;
   // isSearchModal?: any;
-  handleSearchModal?: any
+  handleSearchModal?: any;
+  backArrowRoute?: any;
 }
 
 const Header: React.FC<Props> = props => {
@@ -35,6 +36,7 @@ const Header: React.FC<Props> = props => {
   const isSearchIconStyle = props.isSearchIconStyle;
   // const isSearchModal = props.isSearchModal;
   const handleSearchModal = props.handleSearchModal;
+  const backArrowRoute = props.backArrowRoute;
 
   return (
     <View style={[styles.container, style]}>
@@ -46,6 +48,9 @@ const Header: React.FC<Props> = props => {
           paddingLeft: -10,
         }}
         onPress={() => {
+          backArrowRoute ?
+          navigation.navigate(backArrowRoute)
+          :
           navigation.goBack();
         }}>
         <Image

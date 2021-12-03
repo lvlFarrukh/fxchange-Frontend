@@ -177,6 +177,9 @@ const AddRate: React.FC<Props> = props => {
               alignSelf: 'center',
               marginTop: 20,
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
 
           <SelectDropdown
@@ -224,6 +227,9 @@ const AddRate: React.FC<Props> = props => {
               paddingVertical: 10,
               alignSelf: 'center',
               marginTop: 10,
+            }}
+            dropdownStyle={{
+              borderRadius: 10,
             }}
           />
 
@@ -273,6 +279,9 @@ const AddRate: React.FC<Props> = props => {
               alignSelf: 'center',
               marginTop: 10,
             }}
+            dropdownStyle={{
+              borderRadius: 10,
+            }}
           />
 
           <SelectDropdown
@@ -320,6 +329,9 @@ const AddRate: React.FC<Props> = props => {
               paddingVertical: 10,
               alignSelf: 'center',
               marginTop: 10,
+            }}
+            dropdownStyle={{
+              borderRadius: 10,
             }}
           />
 

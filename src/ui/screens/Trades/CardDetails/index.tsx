@@ -292,7 +292,7 @@ const index = ({navigation}) => {
                 <TouchableOpacity
                   activeOpacity={0.9}
                   onPress={() => {
-                    navigation.navigate('UploadGiftCard');
+                    navigation.navigate('UploadGiftCard',{isRetry:true});
                   }}
                   style={[
                     {

@@ -154,6 +154,9 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 borderWidth: 1.5,
                 borderColor: '#F1F1F1',
               }}
+              dropdownStyle={{
+                borderRadius: 10,
+              }}
             />
           </View>
           <View
@@ -205,6 +208,9 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 paddingRight: 10,
                 paddingVertical: 10,
                 height: 45,
+              }}
+              dropdownStyle={{
+                borderRadius: 10,
               }}
             />
           </View>
@@ -258,6 +264,9 @@ const giftCards = ({activeButton, bitcoin, giftCards}) => {
                 paddingRight: 10,
                 paddingVertical: 10,
                 height: 45,
+              }}
+              dropdownStyle={{
+                borderRadius: 10,
               }}
             />
           </View>

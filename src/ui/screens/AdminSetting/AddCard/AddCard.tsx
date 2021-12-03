@@ -158,6 +158,9 @@ const AddCard = ({navigation}) => {
                   alignSelf: 'center',
                   marginTop: 10,
                 }}
+                dropdownStyle={{
+                  borderRadius: 10,
+                }}
               />
 
               <MyText

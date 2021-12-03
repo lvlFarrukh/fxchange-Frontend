@@ -545,6 +545,7 @@ const DashboardScreen = ({route, navigation}) => {
           <View
             style={{
               marginTop: 20,
+              marginBottom: hp(2),
               // marginHorizontal: 20,
               // padding: 2,
               // backgroundColor: 'pink',
@@ -566,7 +567,9 @@ const DashboardScreen = ({route, navigation}) => {
                 require('../../../Assets/timon-klauser-3MAmj1ZKSZA-unsplash.c2e88811.jpg'),
                 require('../../../Assets/img2.png'),
               ]}
+              autoplay={true}
               sliderBoxHeight={150}
+              // resizeMode={'contain'}
               // onCurrentImagePressed={index =>
               //     console.warn(`image ${index} pressed`)
               // }
@@ -578,6 +581,7 @@ const DashboardScreen = ({route, navigation}) => {
               // parentWidth={this.state.width}
           />
           </View>
+          
         </View>
       </ScrollView>
       <Navbar

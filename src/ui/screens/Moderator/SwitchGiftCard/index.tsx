@@ -131,6 +131,9 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 margin: 7,
               }}
+              dropdownStyle={{
+                borderRadius: 10,
+              }}
             />
 
             <SelectDropdown
@@ -178,6 +181,9 @@ const index = ({navigation}) => {
                 alignSelf: 'center',
                 margin: 7,
               }}
+              dropdownStyle={{
+                borderRadius: 10,
+              }}
             />
 
             <SelectDropdown
@@ -224,6 +230,9 @@ const index = ({navigation}) => {
                 paddingVertical: 10,
                 alignSelf: 'center',
                 margin: 7,
+              }}
+              dropdownStyle={{
+                borderRadius: 10,
               }}
             />
 

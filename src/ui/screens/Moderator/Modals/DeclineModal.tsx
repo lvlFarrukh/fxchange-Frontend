@@ -84,7 +84,6 @@ const DeclineModal: React.FC<Props> = props => {
             // borderTopEndRadius: 40,
             // borderTopStartRadius: 40,
             height: hp(94),
-            paddingTop: hp(8),
             shadowColor: '#000',
             shadowOffset: {
               width: 0,
@@ -101,7 +100,10 @@ const DeclineModal: React.FC<Props> = props => {
               require('../../../../Assets/sliderImg2.jpeg'),
               require('../../../../Assets/sliderImg2.jpeg'),
             ]}
-            sliderBoxHeight={hp(55)}
+            parentWidth={wp(100)}
+            sliderBoxHeight={wp(100)}
+            resizeMode={'contain'}
+            activeOpacity={1}
             // onCurrentImagePressed={index =>
             //     console.warn(`image ${index} pressed`)
             // }
@@ -123,7 +125,7 @@ const DeclineModal: React.FC<Props> = props => {
           /> */}
 
           {imageIndex === 1 ? (
-            <View style={{marginTop: 5}}>
+            <View>
               <View
                 style={{
                   backgroundColor: '#0a8a40',
@@ -157,7 +159,7 @@ const DeclineModal: React.FC<Props> = props => {
               </View>
             </View>
           ) : (
-            <View style={{marginTop: 5}}>
+            <View>
               <View
                 style={{
                   backgroundColor: '#0a8a40',

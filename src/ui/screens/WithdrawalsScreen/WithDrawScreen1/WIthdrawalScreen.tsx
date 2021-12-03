@@ -140,7 +140,7 @@ const WithdrawalsScreen = ({navigation}) => {
           <View style={styles.mainBodyBottomItems}>
             <Image
               source={require('../../../../Assets/fejoraLogo.png')}
-              style={{width: 120, height: 25}}
+              style={{resizeMode: 'contain',width: 120, height: 25}}
             />
             <MyText style={{color: '#4d4d4d', fontSize: 10, marginTop: 5}}>Version 1.0</MyText>
             <View style={{width: '100%', marginVertical: 15, marginTop: 30}}>

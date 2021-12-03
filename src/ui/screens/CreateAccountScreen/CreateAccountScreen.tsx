@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -15,87 +15,92 @@ import {
   Keyboard,
   StatusBar,
 } from 'react-native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import MyText from '../../components/DefaultTextComponent/MyText';
 import Header from '../../components/ModeratePageCard/Header';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import { RFValue } from 'react-native-responsive-fontsize';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import {RFValue} from 'react-native-responsive-fontsize';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 
-const CreateAccountScreen = ({ navigation }) => {
-
+const CreateAccountScreen = ({navigation}) => {
   return (
-    <View style={{ flex: 1, height: height , width: width }}>
-      <SafeAreaView style={{flex: 1, height: height, width: width , backgroundColor: '#1bb76d' }}>
-          <View style={{ height: height*0.25 }}>
-            <Header navigation={navigation} />
-            <View style={{ alignSelf: 'center' }}>
-              <Image
-                source={require('../../../Assets/fejoraLogo-white.png')}
-                style={styles.image}
-              />
-            </View>
+    <View style={{flex: 1, height: height, width: width}}>
+      <SafeAreaView
+        style={{
+          flex: 1,
+          height: height,
+          width: width,
+          backgroundColor: '#1bb76d',
+        }}>
+        <View style={{height: height * 0.25}}>
+          <Header navigation={navigation} />
+          <View style={{alignSelf: 'center'}}>
+            <Image
+              source={require('../../../Assets/fejoraLogo-white.png')}
+              style={styles.image}
+            />
           </View>
-        <ScrollView >
-
-          <View
-            style={[
-              styles.whiteCardBg,
-              { height: height*0.75 },
-            ]}>
+        </View>
+        <ScrollView>
+          <View style={[styles.whiteCardBg, {height: height * 0.75}]}>
             <View>
               <MyText style={[styles.Heading]}>CREATE AN ACCOUNT</MyText>
 
               <View style={styles.BottomRowContainer}>
                 <View></View>
-                <MyText style={{ fontSize: RFValue(10), color: '#000' }}>
+                <MyText style={{fontSize: RFValue(10), color: '#000'}}>
                   Click Here to
                   <TouchableNativeFeedback
                     onPress={() => {
                       navigation.navigate('SignInScreen');
                     }}>
-                    <Text style={{ color: '#66b486', fontFamily:'Nunito-Regular' }}> LOGIN</Text>
+                    <Text
+                      style={{color: '#66b486', fontFamily: 'Nunito-Regular'}}>
+                      {' '}
+                      LOGIN
+                    </Text>
                   </TouchableNativeFeedback>
                 </MyText>
               </View>
             </View>
 
-              <TextInput
-                style={styles.TextInputStyle}
-                placeholder={'Username'}
-                placeholderTextColor={'#333333'}></TextInput>
+            <TextInput
+              style={styles.TextInputStyle}
+              placeholder={'Username'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <TextInput
-                style={styles.TextInputStyle}
-                placeholder={'Email Address'}
-                placeholderTextColor={'#333333'}></TextInput>
+            <TextInput
+              style={styles.TextInputStyle}
+              placeholder={'Email Address'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <TextInput
-                style={styles.TextInputStyle}
-                placeholder={'Phone Number'}
-                placeholderTextColor={'#333333'}></TextInput>
+            <TextInput
+              style={styles.TextInputStyle}
+              placeholder={'Phone Number'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <TextInput
-                style={styles.TextInputStyle}
-                placeholder={'Password'}
-                placeholderTextColor={'#333333'}></TextInput>
+            <TextInput
+              style={styles.TextInputStyle}
+              placeholder={'Password'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <TextInput
-                style={styles.TextInputStyle}
-                placeholder={'Repeat Password'}
-                placeholderTextColor={'#333333'}></TextInput>
+            <TextInput
+              style={styles.TextInputStyle}
+              placeholder={'Repeat Password'}
+              placeholderTextColor={'#333333'}></TextInput>
 
-              <View>
-                <TouchableOpacity
+            <View>
+              <TouchableOpacity
                 activeOpacity={0.9}
-                  style={{alignItems: 'center'}}
-                  
-                >
-                  <MyText style={styles.GreenButton}>CREATE ACCOUNT</MyText>
-                </TouchableOpacity>
-              </View>
+                style={{alignItems: 'center'}}>
+                <MyText style={styles.GreenButton}>CREATE ACCOUNT</MyText>
+              </TouchableOpacity>
+            </View>
 
             {/* <View style={styles.lastViewStyle}>
                                 <MyText style={{ fontSize: 12, }}>Having any troubles?
@@ -113,6 +118,7 @@ const CreateAccountScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   image: {
+    resizeMode: 'contain',
     width: 150,
     height: 50,
     marginTop: 25,
@@ -127,7 +133,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     justifyContent: 'space-evenly',
     paddingHorizontal: 30,
-    paddingVertical: 30
+    paddingVertical: 30,
   },
   Heading: {
     fontWeight: '700',
@@ -145,7 +151,7 @@ const styles = StyleSheet.create({
     height: hp(7),
     marginBottom: 10,
     fontSize: RFValue(11),
-    fontFamily:'Nunito-Regular'
+    fontFamily: 'Nunito-Regular',
   },
   GreenButton: {
     // alignSelf:'center',
@@ -164,11 +170,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '100%',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 50 },
+    shadowOffset: {width: 0, height: 50},
     shadowOpacity: 0.25,
     shadowRadius: 5,
     elevation: 5,
-    marginBottom: 50
+    marginBottom: 50,
   },
   BottomRowContainer: {
     flexDirection: 'row',
