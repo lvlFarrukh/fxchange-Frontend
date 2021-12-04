@@ -28,7 +28,7 @@ import {
 
 const {width, height} = Dimensions.get('screen');
 
-const WithDrawScreenFive = ({navigation}) => {
+const AdminMyAccount = ({navigation}) => {
   console.log('with drawel screen');
 
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
@@ -383,4 +383,4 @@ const WithDrawScreenFive = ({navigation}) => {
   );
 };
 
-export default WithDrawScreenFive;
+export default AdminMyAccount;

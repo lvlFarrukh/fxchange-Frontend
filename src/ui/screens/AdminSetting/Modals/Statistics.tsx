@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
 import {
@@ -25,11 +26,13 @@ interface Props {
 
 const Statistics: React.FC<Props> = props => {
   return (
-    <Modal isVisible={props.isOpen}>
+    <Modal isVisible={props.isOpen} style={{width: wp(95), alignSelf: 'center'}}>
+    <ScrollView>
+
       <View
         style={{
           paddingVertical: 10,
-          paddingHorizontal: 30,
+          paddingHorizontal: wp(6),
           backgroundColor: '#ffffff',
           borderRadius: 16,
         }}>
@@ -71,18 +74,29 @@ const Statistics: React.FC<Props> = props => {
 
         <View style={{marginBottom: hp(5)}}> 
           <View>
+
+          <MyText style={{fontSize: RFValue(16), color: '#343434', marginTop: hp(2)}}>
+            Giftcard Trades
+          </MyText>
+          <View
+              style={{
+                borderTopWidth: 1.5,
+                borderColor: '#F1F1F1',
+                marginTop: 8,
+              }}></View>
+
             <View
               style={{
                 flexDirection: 'row',
                 marginTop: 20,
               }}>
               <View style={{width: wp(35)}}>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Total Trades
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -91,12 +105,12 @@ const Statistics: React.FC<Props> = props => {
               </View>
 
               <View>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Completed Trades
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -119,12 +133,12 @@ const Statistics: React.FC<Props> = props => {
                 marginTop: 10,
               }}>
               <View style={{width: wp(35)}}>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Declined Trades
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -132,12 +146,97 @@ const Statistics: React.FC<Props> = props => {
                 </MyText>
               </View>
               <View>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Trades in Progress
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
+                    color: '#353535',
+                    fontWeight: '600',
+                  }}>
+                  10,605 ($30)
+                </MyText>
+              </View>
+            </View>
+
+            <MyText style={{fontSize: RFValue(16), color: '#343434', marginTop: hp(6)}}>
+              Bitcoin Trade
+            </MyText>
+            <View
+              style={{
+                borderTopWidth: 1.5,
+                borderColor: '#F1F1F1',
+                marginTop: 8,
+              }}></View>
+
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 20,
+              }}>
+              <View style={{width: wp(35)}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
+                  Total Trades
+                </MyText>
+                <MyText
+                  style={{
+                    fontSize: RFValue(16),
+                    color: '#353535',
+                    fontWeight: '600',
+                  }}>
+                  20,000
+                </MyText>
+              </View>
+
+              <View>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
+                  Completed Trades
+                </MyText>
+                <MyText
+                  style={{
+                    fontSize: RFValue(16),
+                    color: '#353535',
+                    fontWeight: '600',
+                  }}>
+                  19,000 ($40)
+                </MyText>
+              </View>
+            </View>
+
+              <View
+                style={{
+                  borderTopWidth: 1.5,
+                  borderColor: '#F1F1F1',
+                  marginTop: 15,
+                }}></View>
+
+            <View
+              style={{
+                flexDirection: 'row',
+                // justifyContent: 'space-between',
+                marginTop: 10,
+              }}>
+              <View style={{width: wp(35)}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
+                  Declined Trades
+                </MyText>
+                <MyText
+                  style={{
+                    fontSize: RFValue(16),
+                    color: '#353535',
+                    fontWeight: '600',
+                  }}>
+                  50 ($10)
+                </MyText>
+              </View>
+              <View>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
+                  Trades in Progress
+                </MyText>
+                <MyText
+                  style={{
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -147,11 +246,11 @@ const Statistics: React.FC<Props> = props => {
             </View>
 
             <View
-              style={{
-                borderTopWidth: 1.5,
-                borderColor: '#F1F1F1',
-                marginTop: 15,
-              }}></View>
+                style={{
+                  borderTopWidth: 1.5,
+                  borderColor: '#F1F1F1',
+                  marginTop: 15,
+                }}></View>
 
             <View
               style={{
@@ -159,12 +258,12 @@ const Statistics: React.FC<Props> = props => {
                 marginTop: 10,
               }}>
               <View style={{width: wp(35)}}>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Total User
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -172,12 +271,12 @@ const Statistics: React.FC<Props> = props => {
                 </MyText>
               </View>
               <View>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Active User
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -199,12 +298,12 @@ const Statistics: React.FC<Props> = props => {
                 marginTop: 10,
               }}>
               <View style={{width: wp(35)}}>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Online User
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -212,12 +311,12 @@ const Statistics: React.FC<Props> = props => {
                 </MyText>
               </View>
               <View>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Banned Users
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -239,12 +338,12 @@ const Statistics: React.FC<Props> = props => {
                 marginTop: 10,
               }}>
               <View style={{width: wp(35)}}>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Wallet Balance
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -252,12 +351,12 @@ const Statistics: React.FC<Props> = props => {
                 </MyText>
               </View>
               <View>
-                <MyText style={{fontSize: RFValue(9), color: '#343434'}}>
+                <MyText style={{fontSize: RFValue(15), color: '#343434'}}>
                   Total Amount Withdrawn
                 </MyText>
                 <MyText
                   style={{
-                    fontSize: RFValue(18),
+                    fontSize: RFValue(16),
                     color: '#353535',
                     fontWeight: '600',
                   }}>
@@ -270,6 +369,8 @@ const Statistics: React.FC<Props> = props => {
         </View>
       
       </View>
+    </ScrollView>
+
     </Modal>
   );
 };

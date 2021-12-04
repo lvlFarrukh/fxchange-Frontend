@@ -22,7 +22,7 @@ import MyText from '../../../components/DefaultTextComponent/MyText';
 
 const {width, height} = Dimensions.get('window');
 
-const WithDrawScreenFour = ({navigation}) => {
+const AdminChangePassword = ({navigation}) => {
   console.log('with drawel screen');
 
   return (
@@ -47,6 +47,7 @@ const WithDrawScreenFour = ({navigation}) => {
             navigation={navigation}
             style={{marginTop: 25}}
             Heading={''}
+            backArrowRoute={'Setting'}
           />
         </View>
         {/* check this StatusBar.currentHeight bar if it's missing some space in the bottom */}
@@ -154,4 +155,4 @@ const WithDrawScreenFour = ({navigation}) => {
   );
 };
 
-export default WithDrawScreenFour;
+export default AdminChangePassword;

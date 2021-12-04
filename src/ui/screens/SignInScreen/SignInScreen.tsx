@@ -52,7 +52,7 @@ const SignInScreen = ({navigation}) => {
 
             <TextInput
               style={styles().TextInputStyle}
-              placeholder={'Email or Phone'}
+              placeholder={'Email or Username'}
               placeholderTextColor={'#333333'}></TextInput>
 
             <TextInput

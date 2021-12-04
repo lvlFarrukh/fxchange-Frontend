@@ -327,7 +327,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <TouchableOpacity
                 activeOpacity={0.9}
                 onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
+                  navigation.navigate('AdminMyAccount');
                 }}>
                 <View
                   style={{
@@ -359,7 +359,7 @@ const AdminWithdrawalHome = ({navigation}) => {
               <TouchableOpacity         
                 activeOpacity={0.9}
                 onPress={() => {
-                //   navigation.navigate('WithdrawalsScreenFive');
+                  navigation.navigate('AdminChangePasswordScreen');
                 }}>
                 <View
                   style={{

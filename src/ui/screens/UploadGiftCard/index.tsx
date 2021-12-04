@@ -109,7 +109,7 @@ const index = ({route, navigation}) => {
                 placeholder="ITUNES"
                 placeholderTextColor="#333333"
                 textAlign={'left'}
-                editable={isFieldDisabled}
+                editable={!isFieldDisabled}
                 // numberOfLines={2}
                 // multiline={true}
               />

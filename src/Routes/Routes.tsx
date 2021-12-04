@@ -39,6 +39,8 @@ import Setting from '../ui/screens/AdminSetting/Setting/Setting'
 import CardSetting from '../ui/screens/AdminSetting/CardSetting/CardSetting'
 import AddCard from '../ui/screens/AdminSetting/AddCard/AddCard'
 import NewsAndUpdates from '../ui/screens/AdminSetting/NewAndUpdate/NewsAndUpdates'
+import AdminChangePasswordScreen from '../ui/screens/AdminSetting/AdminChangePassword/AdminChangePassword'
+import AdminMyAccount from '../ui/screens/AdminSetting/AdminMyAccount/AdminMyAccount'
 
 const Stack = createStackNavigator();
 
@@ -86,6 +88,9 @@ const Routes = () => {
             <Stack.Screen name="CardSetting" component={CardSetting} />
             <Stack.Screen name="AddCard" component={AddCard} />
             <Stack.Screen name="NewsAndUpdates" component={NewsAndUpdates} />
+            <Stack.Screen name="AdminChangePasswordScreen" component={AdminChangePasswordScreen} />
+            <Stack.Screen name="AdminMyAccount" component={AdminMyAccount} />
+
             <Stack.Screen name="Test" component={Test} />
         </Stack.Navigator>
     )

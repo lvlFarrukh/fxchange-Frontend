@@ -57,6 +57,7 @@ const index = ({navigation}) => {
           width: width,
           backgroundColor: '#d65d0e',
         }}>
+        <StatusBar translucent backgroundColor="#d65d0e" />
         <Header
           style={{marginTop: 35}}
           navigation={navigation}
@@ -86,8 +87,22 @@ const index = ({navigation}) => {
 
           <View style={{marginTop: 16}}>
           <SelectDropdown
-              disabled={true}
-              data={countryNames}
+              // disabled={true}
+              data={[
+                'ITUNES',
+                'STEAM',
+                'GOOGLE PLAY',
+                'SEPHORA',
+                'AMERICAN EXPRESS',
+                'VANILLA',
+                'WALMART',
+                'VISA',
+                'EBAY',
+                'AMAZON',
+                'NORDSTROM',
+                'NIKE',
+                'FOOTLOCKER',
+              ]}
               onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index);
               }}
@@ -120,7 +135,7 @@ const index = ({navigation}) => {
               rowStyle={{backgroundColor: 'white', width: '100%'}}
               rowTextStyle={{fontSize: 15, fontFamily:'Nunito-Regular'}}
               buttonStyle={{
-                backgroundColor: '#F1F1F1',
+                backgroundColor: '#ffffff',
                 borderWidth: 1.5,
                 borderColor: '#F1F1F1',
                 borderRadius: 4,
